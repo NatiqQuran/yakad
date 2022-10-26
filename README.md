@@ -1,2 +1,2 @@
-# mash
-React based frontend ui library
+# Qadr
+React based frontend framework

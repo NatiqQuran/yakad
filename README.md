@@ -1,2 +1,2 @@
-# Van Yakad
+# Yakad
 React based frontend framework

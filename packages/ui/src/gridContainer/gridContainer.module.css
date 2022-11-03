@@ -1,0 +1,4 @@
+.gridcontainer {
+    display: grid;
+    box-sizing: border-box;
+}

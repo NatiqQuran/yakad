@@ -12,13 +12,18 @@ interface GridItemProps extends React.HTMLAttributes<HTMLDivElement> {
 
 // Custom Button Element
 function GridItem(props: GridItemProps) {
-  const joinedStyles = joinStyles(
-    props.xl ? { gridColumn: "span " + props.xl } : {},
-    props.style!
+  const joinedClassNames = joinClassNames(
+    props.xl ? styles["xl" + props.xl] : "",
+    props.lg ? styles["lg" + props.lg] : "",
+    props.md ? styles["md" + props.md] : "",
+    props.md ? styles["sm" + props.md] : "",
+    props.md ? styles["xs" + props.md] : "",
+
+    props.className!
   );
 
   return (
-    <div {...props} style={joinedStyles}>
+    <div {...props} className={joinedClassNames}>
       {props.children}
     </div>
   );

@@ -4,7 +4,7 @@ import styles from "./button.module.css";
 import SvgIcon from "../svgIcon/svgIcon";
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  variant?: "text" | "outlined" | "filled" | "tonal" | "elevated";
+  variant?: "text" | "outlined" | "filled" | "tonal" | "elevated" | "link";
   size?: "small" | "medium" | "large";
   borderStyle?: "none" | "semi" | "rounded";
   icon?: JSX.Element;

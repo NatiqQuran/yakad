@@ -3,11 +3,6 @@ import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./gridContainer.module.css";
 
 interface GridContainerProps extends React.HTMLAttributes<HTMLDivElement> {
-  xs?: number;
-  sm?: number;
-  md?: number;
-  lg?: number;
-  xl?: number;
   rowGap?: number;
   columnGap?: number;
 }
@@ -19,7 +14,6 @@ function GridContainer(props: GridContainerProps) {
     props.className!
   );
   const joinedStyles = joinStyles(
-    props.xl ? { gridTemplateColumns: " 1fr".repeat(props.xl) } : {},
     { columnGap: props.columnGap ? props.columnGap + "rem" : "1.5rem" },
     { rowGap: props.rowGap ? props.rowGap + "rem" : "1.5rem" },
     props.style!

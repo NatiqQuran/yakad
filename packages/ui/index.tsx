@@ -16,6 +16,7 @@ import Row from "./row/row";
 import Spacer from "./spacer/spacer";
 import Stack from "./stack/stack";
 import SvgIcon from "./svgIcon/svgIcon";
+import Loading from "./loading/loading";
 
 export {
     Button,
@@ -36,4 +37,5 @@ export {
     Stack,
     Spacer,
     SvgIcon,
+    Loading,
 };

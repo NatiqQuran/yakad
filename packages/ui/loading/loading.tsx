@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./loading.module.css";
 import { joinClassNames } from "@yakad/lib";
 

@@ -1,4 +1,5 @@
 .button {
+    position: relative;
     display: flex;
     align-items: center;
     line-height: 3rem;
@@ -88,7 +89,7 @@
 }
 .link {
     background: transparent;
-    display: block;
+    display: flex;
     position: relative;
     transition: 0.3s;
 }
@@ -105,9 +106,39 @@
     background-color: var(--secondaryColor);
     transition: 0.3s;
 }
+
 .link:hover {
     box-shadow: none;
 }
 .link:hover:before {
     width: calc(100% - var(--padding));
+}
+
+.loadingPositionCenter:disabled {
+    color: transparent;
+    fill: transparent;
+}
+.positionCenter {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.button:disabled {
+    cursor: default;
+    box-shadow: none;
+    box-shadow: inset 0 0 10rem #7d7d7d20;
+}
+.button.link:disabled:before {
+    display: none;
+}
+
+.loading .displayOnDisabled {
+    display: none;
+}
+.loading:disabled .displayOnDisabled {
+    display: block;
+}
+.loading:disabled .hideOnDisabled {
+    display: none;
 }

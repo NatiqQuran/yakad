@@ -1,0 +1,23 @@
+.input {
+    box-sizing: border-box;
+    display: block;
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 0.5ch;
+    background: repeating-linear-gradient(
+            90deg,
+            #7d7d7d 0,
+            #7d7d7d 1ch,
+            transparent 0,
+            transparent 1.5ch
+        )
+        0 100%/100% 0.2rem no-repeat;
+    color: transparent;
+    text-shadow: 0 0 0 var(--onSurfaceColor);
+    font: 5ch consolas, monospace;
+    letter-spacing: 0.5ch;
+}
+.input:focus {
+    outline: none;
+}

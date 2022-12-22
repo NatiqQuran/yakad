@@ -60,6 +60,10 @@
 .input.outlined + .placeholder {
     padding: 0 0.5rem;
 }
+.input.outlined + .placeholder {
+    border-color: var(--onBackgroundColor);
+    background: var(--surfaceColor);
+}
 
 .input.outlined:valid,
 .input.outlined:focus + .placeholder {
@@ -75,4 +79,15 @@
 
 .input:invalid {
     border-color: var(--errorColor);
+}
+
+.input:invalid + .placeholder {
+    color: var(--errorColor);
+}
+.input.standard:focus:invalid {
+    border-color: var(--errorColor);
+}
+.input.filled:invalid {
+    border-bottom: solid 0.2rem var(--errorColor);
+    border-radius: 0;
 }

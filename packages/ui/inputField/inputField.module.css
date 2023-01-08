@@ -7,7 +7,7 @@
     left: 1.2rem;
     transform: translateY(-50%);
     font-size: 1rem;
-    color: var(--onBackgroundColor);
+    color: var(--onBackgroundColor, #000000);
     transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
 }
 .input:placeholder-shown + .placeholder {
@@ -18,7 +18,7 @@
 .input:focus + .placeholder {
     top: 0rem;
     font-size: 1rem;
-    color: var(--onBackgroundColor);
+    color: var(--onBackgroundColor, #000000);
 }
 
 .input {
@@ -28,7 +28,7 @@
     outline: none;
     transition: border-color 0.3 ease;
     box-sizing: border-box;
-    color: var(--onBackgroundColor);
+    color: var(--onBackgroundColor, #000000);
     -webkit-appearance: none;
     -ms-appearance: none;
     -moz-appearance: none;
@@ -37,8 +37,6 @@
 .input::after {
     font-size: 1.4rem;
     display: block;
-    background-color: red;
-    content: "Hello";
     z-index: 10;
 }
 
@@ -49,7 +47,7 @@
 }
 .input.standard:valid,
 .input.standard:focus {
-    border-color: var(--primaryColor);
+    border-color: var(--primaryColor, #121212);
 }
 
 .input.outlined {
@@ -61,14 +59,14 @@
     padding: 0 0.5rem;
 }
 .input.outlined + .placeholder {
-    border-color: var(--onBackgroundColor);
-    background: var(--surfaceColor);
+    border-color: var(--onBackgroundColor, #000000);
+    background: var(--surfaceColor, #222222);
 }
 
 .input.outlined:valid,
 .input.outlined:focus + .placeholder {
-    border-color: var(--onBackgroundColor);
-    background: var(--surfaceColor);
+    border-color: var(--onBackgroundColor, #000000);
+    background: var(--surfaceColor, #222222);
 }
 
 .input.filled {
@@ -78,16 +76,16 @@
 }
 
 .input:invalid {
-    border-color: var(--errorColor);
+    border-color: var(--errorColor, #b00020);
 }
 
 .input:invalid + .placeholder {
-    color: var(--errorColor);
+    color: var(--errorColor, #b00020);
 }
 .input.standard:focus:invalid {
-    border-color: var(--errorColor);
+    border-color: var(--errorColor, #b00020);
 }
 .input.filled:invalid {
-    border-bottom: solid 0.2rem var(--errorColor);
+    border-bottom: solid 0.2rem var(--errorColor, #b00020);
     border-radius: 0;
 }

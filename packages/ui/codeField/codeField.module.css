@@ -14,7 +14,7 @@
         )
         0 100%/100% 0.2rem no-repeat;
     color: transparent;
-    text-shadow: 0 0 0 var(--onSurfaceColor);
+    text-shadow: 0 0 0 var(--onSurfaceColor, #ffffff);
     font: 5ch consolas, monospace;
     letter-spacing: 0.5ch;
 }

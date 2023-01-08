@@ -4,6 +4,7 @@ import styles from "./codeField.module.css";
 
 interface CodeFieldsProps extends React.HTMLAttributes<HTMLElement> {
     length?: number;
+    name?: string;
 }
 
 function CodeField(props: CodeFieldsProps) {
@@ -16,6 +17,7 @@ function CodeField(props: CodeFieldsProps) {
 
     return (
         <input
+            name={props.name}
             minLength={props.length}
             maxLength={props.length}
             className={joinedClassNames}

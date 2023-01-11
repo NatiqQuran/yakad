@@ -47,7 +47,7 @@
 }
 .input.standard:valid,
 .input.standard:focus {
-    border-color: var(--primaryColor, #121212);
+    border-color: var(--secondaryColor, #121212);
 }
 
 .input.outlined {
@@ -60,13 +60,13 @@
 }
 .input.outlined + .placeholder {
     border-color: var(--onBackgroundColor, #000000);
-    background: var(--surfaceColor, #222222);
+    background: var(--backgroundColor, #ffffff);
 }
 
 .input.outlined:valid,
 .input.outlined:focus + .placeholder {
     border-color: var(--onBackgroundColor, #000000);
-    background: var(--surfaceColor, #222222);
+    background: var(--backgroundColor, #ffffff);
 }
 
 .input.filled {

@@ -72,19 +72,19 @@
     border: 0.1rem solid #7d7d7d70;
 }
 .filled {
-    background: var(--secondaryColor, #1e64d4);
-    color: var(--onSecondaryColor, #ffffff);
-    fill: var(--onSecondaryColor, #ffffff);
+    background: var(--primaryColor, #1e64d4);
+    color: var(--onPrimaryColor, #ffffff);
+    fill: var(--onPrimaryColor, #ffffff);
 }
 .tonal {
-    background: var(--secondaryContainerColor, #c2e7ff);
-    color: var(--onSecondaryContainerColor, #002021);
-    fill: var(--onSecondaryContainerColor, #002021);
+    background: var(--primaryContainerColor, #c2e7ff);
+    color: var(--onPrimaryContainerColor, #002021);
+    fill: var(--onPrimaryContainerColor, #002021);
 }
 .elevated {
-    background-color: var(--onPrimaryColor, #ffffff);
-    color: var(--surfaceColor, #1e64d4);
-    fill: var(--surfaceColor, #1e64d4);
+    background-color: var(--onSecondaryColor, #ffffff);
+    color: var(--primaryColor, #1e64d4);
+    fill: var(--primaryColor, #1e64d4);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .link {
@@ -103,7 +103,7 @@
     height: 0.1rem;
     padding: 0;
     margin: 0 auto;
-    background-color: var(--secondaryColor, #1e64d4);
+    background-color: var(--primaryColor, #1e64d4);
     transition: 0.3s;
 }
 

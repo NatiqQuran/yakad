@@ -1,0 +1,244 @@
+.blue {
+    --LightPrimaryColor: #1e64d4;
+    --LightPrimaryContainerColor: #c2e7ff;
+    --LightSecondaryColor: #121212;
+    --LightSecondaryContainerColor: #d9e7cb;
+    --LightTertiaryColor: #386a20;
+    --LightTertiaryContainerColor: #b7f397;
+    --LightBackgroundColor: #ffffff;
+    --LightSurfaceColor: #222222;
+    --LightErrorColor: #b00020;
+    --LightErrorContainerColor: #f9dedc;
+    --LightOnPrimaryColor: #ffffff;
+    --LightOnPrimaryContainerColor: #002021;
+    --LightOnSecondaryColor: #ffffff;
+    --LightOnSecondaryContainerColor: #131f0d;
+    --LightOnTertiaryColor: #ffffff;
+    --LightOnTertiaryContainerColor: #042100;
+    --LightOnBackgroundColor: #000000;
+    --LightOnSurfaceColor: #ffffff;
+    --LightOnErrorColor: #ffffff;
+    --LightOnErrorContainerColor: #410e0b;
+
+    --DarkDarkrimaryColor: #c2e7ff;
+    --DarkPrimaryContainerColor: #1e64d4;
+    --DarkSecondaryColor: #d9e7cb;
+    --DarkSecondaryContainerColor: #3e4a36;
+    --DarkTertiaryColor: #b7f397;
+    --DarkTertiaryContainerColor: #386a20;
+    --DarkBackgroundColor: #1a1c18;
+    --DarkSurfaceColor: #1a1c18;
+    --DarkErrorColor: #b00020;
+    --DarkErrorContainerColor: #f9dedc;
+    --DarkOnPrimaryColor: #003738;
+    --DarkOnPrimaryContainerColor: #c2e7ff;
+    --DarkOnSecondaryColor: #121212;
+    --DarkOnSecondaryContainerColor: #d9e7cb;
+    --DarkOnTertiaryColor: #042100;
+    --DarkOnTertiaryContainerColor: #b7f397;
+    --DarkOnBackgroundColor: #ffffff;
+    --DarkOnSurfaceColor: #ffffff;
+    --DarkOnErrorColor: #ffffff;
+    --DarkOnErrorContainerColor: #410e0b;
+}
+.green {
+    --LightPrimaryColor: #386a20;
+    --LightPrimaryContainerColor: #cad7bd;
+    --LightSecondaryColor: #121212;
+    --LightSecondaryContainerColor: #d9e7cb;
+    --LightTertiaryColor: #19686a;
+    --LightTertiaryContainerColor: #a8eff0;
+    --LightBackgroundColor: #ffffff;
+    --LightSurfaceColor: #222222;
+    --LightErrorColor: #b00020;
+    --LightErrorContainerColor: #f9dedc;
+    --LightOnPrimaryColor: #ffffff;
+    --LightOnPrimaryContainerColor: #131f0d;
+    --LightOnSecondaryColor: #ffffff;
+    --LightOnSecondaryContainerColor: #131f0d;
+    --LightOnTertiaryColor: #ffffff;
+    --LightOnTertiaryContainerColor: #002021;
+    --LightOnBackgroundColor: #000000;
+    --LightOnSurfaceColor: #ffffff;
+    --LightOnErrorColor: #ffffff;
+    --LightOnErrorContainerColor: #410e0b;
+
+    --DarkDarkrimaryColor: #cad7bd;
+    --DarkPrimaryContainerColor: #205107;
+    --DarkSecondaryColor: #d9e7cb;
+    --DarkSecondaryContainerColor: #3e4a36;
+    --DarkTertiaryColor: #a8eff0;
+    --DarkTertiaryContainerColor: #1e64d4;
+    --DarkBackgroundColor: #1a1c18;
+    --DarkSurfaceColor: #1a1c18;
+    --DarkErrorColor: #b00020;
+    --DarkErrorContainerColor: #f9dedc;
+    --DarkOnPrimaryColor: #386a20;
+    --DarkOnPrimaryContainerColor: #cad7bd;
+    --DarkOnSecondaryColor: #121212;
+    --DarkOnSecondaryContainerColor: #d9e7cb;
+    --DarkOnTertiaryColor: #19686a;
+    --DarkOnTertiaryContainerColor: #a8eff0;
+    --DarkOnBackgroundColor: #ffffff;
+    --DarkOnSurfaceColor: #ffffff;
+    --DarkOnErrorColor: #ffffff;
+    --DarkOnErrorContainerColor: #410e0b;
+}
+
+.pink {
+    --LightPrimaryColor: #9c4146;
+    --LightPrimaryContainerColor: #ffdad9;
+    --LightSecondaryColor: #121212;
+    --LightSecondaryContainerColor: #d9e7cb;
+    --LightTertiaryColor: #604003;
+    --LightTertiaryContainerColor: #f1d1a2;
+    --LightBackgroundColor: #ffffff;
+    --LightSurfaceColor: #222222;
+    --LightErrorColor: #b00020;
+    --LightErrorContainerColor: #f9dedc;
+    --LightOnPrimaryColor: #ffffff;
+    --LightOnPrimaryContainerColor: #2d1516;
+    --LightOnSecondaryColor: #ffffff;
+    --LightOnSecondaryContainerColor: #131f0d;
+    --LightOnTertiaryColor: #ffffff;
+    --LightOnTertiaryContainerColor: #46381f;
+    --LightOnBackgroundColor: #000000;
+    --LightOnSurfaceColor: #ffffff;
+    --LightOnErrorColor: #ffffff;
+    --LightOnErrorContainerColor: #410e0b;
+
+    --DarkDarkrimaryColor: #ffdad9;
+    --DarkPrimaryContainerColor: #9c4146;
+    --DarkSecondaryColor: #d9e7cb;
+    --DarkSecondaryContainerColor: #3e4a36;
+    --DarkTertiaryColor: #f1d1a2;
+    --DarkTertiaryContainerColor: #281800;
+    --DarkBackgroundColor: #1a1c18;
+    --DarkSurfaceColor: #1a1c18;
+    --DarkErrorColor: #b00020;
+    --DarkErrorContainerColor: #f9dedc;
+    --DarkOnPrimaryColor: #9c4146;
+    --DarkOnPrimaryContainerColor: #ffdad9;
+    --DarkOnSecondaryColor: #121212;
+    --DarkOnSecondaryContainerColor: #d9e7cb;
+    --DarkOnTertiaryColor: #604003;
+    --DarkOnTertiaryContainerColor: #f1d1a2;
+    --DarkOnBackgroundColor: #ffffff;
+    --DarkOnSurfaceColor: #ffffff;
+    --DarkOnErrorColor: #ffffff;
+    --DarkOnErrorContainerColor: #410e0b;
+}
+
+.grow {
+    --LightPrimaryColor: #616200;
+    --LightPrimaryContainerColor: #e6e4bf;
+    --LightSecondaryColor: #121212;
+    --LightSecondaryContainerColor: #d9e7cb;
+    --LightTertiaryColor: #bfedd9;
+    --LightTertiaryContainerColor: #f1d1a2;
+    --LightBackgroundColor: #ffffff;
+    --LightSurfaceColor: #222222;
+    --LightErrorColor: #b00020;
+    --LightErrorContainerColor: #f9dedc;
+    --LightOnPrimaryColor: #ffffff;
+    --LightOnPrimaryContainerColor: #1c1d06;
+    --LightOnSecondaryColor: #ffffff;
+    --LightOnSecondaryContainerColor: #131f0d;
+    --LightOnTertiaryColor: #ffffff;
+    --LightOnTertiaryContainerColor: #0c3637;
+    --LightOnBackgroundColor: #000000;
+    --LightOnSurfaceColor: #ffffff;
+    --LightOnErrorColor: #ffffff;
+    --LightOnErrorContainerColor: #410e0b;
+
+    --DarkDarkrimaryColor: #e6e4bf;
+    --DarkPrimaryContainerColor: #616200;
+    --DarkSecondaryColor: #d9e7cb;
+    --DarkSecondaryContainerColor: #3e4a36;
+    --DarkTertiaryColor: #b7f397;
+    --DarkTertiaryContainerColor: #386a20;
+    --DarkBackgroundColor: #1a1c18;
+    --DarkSurfaceColor: #1a1c18;
+    --DarkErrorColor: #b00020;
+    --DarkErrorContainerColor: #f9dedc;
+    --DarkOnPrimaryColor: #616200;
+    --DarkOnPrimaryContainerColor: #e6e4bf;
+    --DarkOnSecondaryColor: #121212;
+    --DarkOnSecondaryContainerColor: #d9e7cb;
+    --DarkOnTertiaryColor: #042100;
+    --DarkOnTertiaryContainerColor: #b7f397;
+    --DarkOnBackgroundColor: #ffffff;
+    --DarkOnSurfaceColor: #ffffff;
+    --DarkOnErrorColor: #ffffff;
+    --DarkOnErrorContainerColor: #410e0b;
+}
+
+.system,
+.light {
+    --primaryColor: var(--LightPrimaryColor);
+    --primaryContainerColor: var(--LightPrimaryContainerColor);
+    --secondaryColor: var(--LightSecondaryColor);
+    --secondaryContainerColor: var(--LightSecondaryContainerColor);
+    --tertiaryColor: var(--LightTertiaryColor);
+    --tertiaryContainerColor: var(--LightTertiaryContainerColor);
+    --backgroundColor: var(--LightBackgroundColor);
+    --surfaceColor: var(--LightSurfaceColor);
+    --errorColor: var(--LightErrorColor);
+    --errorContainerColor: var(--LightErrorContainerColor);
+    --onPrimaryColor: var(--LightOnPrimaryColor);
+    --onPrimaryContainerColor: var(--LightOnPrimaryContainerColor);
+    --onSecondaryColor: var(--LightOnSecondaryColor);
+    --onSecondaryContainerColor: var(--LightOnSecondaryContainerColor);
+    --onTertiaryColor: var(--LightOnTertiaryColor);
+    --onTertiaryContainerColor: var(--DarkonTertiaryContainerColor);
+    --onBackgroundColor: var(--LightOnBackgroundColor);
+    --onSurfaceColor: var(--LightOnSurfaceColor);
+    --onErrorColor: var(--LightOnErrorColor);
+    --onErrorContainerColor: var(--LightOnErrorContainerColor);
+}
+.dark {
+    --primaryColor: var(--DarkPrimaryColor);
+    --primaryContainerColor: var(--DarkPrimaryContainerColor);
+    --secondaryColor: var(--DarkSecondaryColor);
+    --secondaryContainerColor: var(--DarkSecondaryContainerColor);
+    --tertiaryColor: var(--DarkTertiaryColor);
+    --tertiaryContainerColor: var(--DarkTertiaryContainerColor);
+    --backgroundColor: var(--DarkBackgroundColor);
+    --surfaceColor: var(--DarkSurfaceColor);
+    --errorColor: var(--DarkErrorColor);
+    --errorContainerColor: var(--DarkErrorContainerColor);
+    --onPrimaryColor: var(--DarkOnPrimaryColor);
+    --onPrimaryContainerColor: var(--DarkOnPrimaryContainerColor);
+    --onSecondaryColor: var(--DarkOnSecondaryColor);
+    --onSecondaryContainerColor: var(--DarkOnSecondaryContainerColor);
+    --onTertiaryColor: var(--DarkOnTertiaryColor);
+    --onTertiaryContainerColor: var(--DarkonTertiaryContainerColor);
+    --onBackgroundColor: var(--DarkOnBackgroundColor);
+    --onSurfaceColor: var(--DarkOnSurfaceColor);
+    --onErrorColor: var(--DarkOnErrorColor);
+    --onErrorContainerColor: var(--DarkOnErrorContainerColor);
+}
+@media (prefers-color-scheme: dark) {
+    .system {
+        --primaryColor: var(--DarkPrimaryColor);
+        --primaryContainerColor: var(--DarkPrimaryContainerColor);
+        --secondaryColor: var(--DarkSecondaryColor);
+        --secondaryContainerColor: var(--DarkSecondaryContainerColor);
+        --tertiaryColor: var(--DarkTertiaryColor);
+        --tertiaryContainerColor: var(--DarkTertiaryContainerColor);
+        --backgroundColor: var(--DarkBackgroundColor);
+        --surfaceColor: var(--DarkSurfaceColor);
+        --errorColor: var(--DarkErrorColor);
+        --errorContainerColor: var(--DarkErrorContainerColor);
+        --onPrimaryColor: var(--DarkOnPrimaryColor);
+        --onPrimaryContainerColor: var(--DarkOnPrimaryContainerColor);
+        --onSecondaryColor: var(--DarkOnSecondaryColor);
+        --onSecondaryContainerColor: var(--DarkOnSecondaryContainerColor);
+        --onTertiaryColor: var(--DarkOnTertiaryColor);
+        --onTertiaryContainerColor: var(--DarkonTertiaryContainerColor);
+        --onBackgroundColor: var(--DarkOnBackgroundColor);
+        --onSurfaceColor: var(--DarkOnSurfaceColor);
+        --onErrorColor: var(--DarkOnErrorColor);
+        --onErrorContainerColor: var(--DarkOnErrorContainerColor);
+    }
+}

@@ -1,7 +1,7 @@
 .blue {
     --LightPrimaryColor: #1e64d4;
     --LightPrimaryContainerColor: #c2e7ff;
-    --LightSecondaryColor: #121212;
+    --LightSecondaryColor: #55624c;
     --LightSecondaryContainerColor: #d9e7cb;
     --LightTertiaryColor: #386a20;
     --LightTertiaryContainerColor: #b7f397;
@@ -32,7 +32,7 @@
     --DarkErrorContainerColor: #f9dedc;
     --DarkOnPrimaryColor: #003738;
     --DarkOnPrimaryContainerColor: #c2e7ff;
-    --DarkOnSecondaryColor: #121212;
+    --DarkOnSecondaryColor: #55624c;
     --DarkOnSecondaryContainerColor: #d9e7cb;
     --DarkOnTertiaryColor: #042100;
     --DarkOnTertiaryContainerColor: #b7f397;
@@ -44,7 +44,7 @@
 .green {
     --LightPrimaryColor: #386a20;
     --LightPrimaryContainerColor: #cad7bd;
-    --LightSecondaryColor: #121212;
+    --LightSecondaryColor: #55624c;
     --LightSecondaryContainerColor: #d9e7cb;
     --LightTertiaryColor: #19686a;
     --LightTertiaryContainerColor: #a8eff0;
@@ -75,7 +75,7 @@
     --DarkErrorContainerColor: #f9dedc;
     --DarkOnPrimaryColor: #386a20;
     --DarkOnPrimaryContainerColor: #cad7bd;
-    --DarkOnSecondaryColor: #121212;
+    --DarkOnSecondaryColor: #55624c;
     --DarkOnSecondaryContainerColor: #d9e7cb;
     --DarkOnTertiaryColor: #19686a;
     --DarkOnTertiaryContainerColor: #a8eff0;
@@ -88,7 +88,7 @@
 .pink {
     --LightPrimaryColor: #9c4146;
     --LightPrimaryContainerColor: #ffdad9;
-    --LightSecondaryColor: #121212;
+    --LightSecondaryColor: #55624c;
     --LightSecondaryContainerColor: #d9e7cb;
     --LightTertiaryColor: #604003;
     --LightTertiaryContainerColor: #f1d1a2;
@@ -119,7 +119,7 @@
     --DarkErrorContainerColor: #f9dedc;
     --DarkOnPrimaryColor: #9c4146;
     --DarkOnPrimaryContainerColor: #ffdad9;
-    --DarkOnSecondaryColor: #121212;
+    --DarkOnSecondaryColor: #55624c;
     --DarkOnSecondaryContainerColor: #d9e7cb;
     --DarkOnTertiaryColor: #604003;
     --DarkOnTertiaryContainerColor: #f1d1a2;
@@ -132,7 +132,7 @@
 .grow {
     --LightPrimaryColor: #616200;
     --LightPrimaryContainerColor: #e6e4bf;
-    --LightSecondaryColor: #121212;
+    --LightSecondaryColor: #55624c;
     --LightSecondaryContainerColor: #d9e7cb;
     --LightTertiaryColor: #bfedd9;
     --LightTertiaryContainerColor: #f1d1a2;
@@ -163,7 +163,7 @@
     --DarkErrorContainerColor: #f9dedc;
     --DarkOnPrimaryColor: #616200;
     --DarkOnPrimaryContainerColor: #e6e4bf;
-    --DarkOnSecondaryColor: #121212;
+    --DarkOnSecondaryColor: #55624c;
     --DarkOnSecondaryContainerColor: #d9e7cb;
     --DarkOnTertiaryColor: #042100;
     --DarkOnTertiaryContainerColor: #b7f397;

@@ -17,6 +17,7 @@ function CodeField(props: CodeFieldsProps) {
 
     return (
         <input
+            {...props}
             name={props.name}
             minLength={props.length}
             maxLength={props.length}

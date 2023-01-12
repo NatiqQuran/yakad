@@ -1,4 +1,4 @@
-import Reat from "react";
+import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./thame.module.css";
 

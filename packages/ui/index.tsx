@@ -19,7 +19,7 @@ import SvgIcon from "./svgIcon/svgIcon";
 import Loading from "./loading/loading";
 import CodeField from "./codeField/codeField";
 import InputField from "./inputField/inputField";
-import Theme from "./theme/thame";
+import Theme from "./theme/theme";
 export {
     Button,
     AppBar,

@@ -20,6 +20,7 @@ function InputField(props: InputFieldProps) {
     return (
         <label className={styles.field}>
             <input
+                {...props}
                 name={props.name}
                 disabled={props.disabled}
                 placeholder="&nbsp;"

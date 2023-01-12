@@ -19,7 +19,7 @@ import SvgIcon from "./svgIcon/svgIcon";
 import Loading from "./loading/loading";
 import CodeField from "./codeField/codeField";
 import InputField from "./inputField/inputField";
-import Thame from "./thame/thame";
+import Theme from "./theme/thame";
 export {
     Button,
     AppBar,
@@ -42,5 +42,5 @@ export {
     Loading,
     CodeField,
     InputField,
-    Thame,
+    Theme,
 };

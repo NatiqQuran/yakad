@@ -2,9 +2,10 @@ import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./codeField.module.css";
 
-interface CodeFieldsProps extends React.HTMLAttributes<HTMLElement> {
+interface CodeFieldsProps extends React.HTMLAttributes<HTMLInputElement> {
     length?: number;
     name?: string;
+    type?: string;
 }
 
 function CodeField(props: CodeFieldsProps) {
@@ -19,6 +20,7 @@ function CodeField(props: CodeFieldsProps) {
         <input
             {...props}
             name={props.name}
+            type={props.type}
             minLength={props.length}
             maxLength={props.length}
             className={joinedClassNames}

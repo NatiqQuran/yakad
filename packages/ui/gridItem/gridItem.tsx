@@ -16,8 +16,8 @@ function GridItem(props: GridItemProps) {
         props.xl ? styles["xl" + props.xl] : "",
         props.lg ? styles["lg" + props.lg] : "",
         props.md ? styles["md" + props.md] : "",
-        props.md ? styles["sm" + props.md] : "",
-        props.md ? styles["xs" + props.md] : "",
+        props.sm ? styles["sm" + props.sm] : "",
+        props.xs ? styles["xs" + props.xs] : "",
         props.className!
     );
 

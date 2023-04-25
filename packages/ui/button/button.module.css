@@ -65,16 +65,21 @@
     box-shadow: inset 0 0 10rem #7d7d7d30;
 }
 .button:invalid {
-    border: 0.1rem solid var(--errorColor, #b00020);
+    border: 0.1rem solid var(--errorColor, #b3261e);
 }
 
 .outlined {
     border: 0.1rem solid #7d7d7d70;
 }
 .filled {
-    background: var(--primaryColor, #1e64d4);
+    background: var(--primaryColor, #0b57d0);
     color: var(--onPrimaryColor, #ffffff);
     fill: var(--onPrimaryColor, #ffffff);
+}
+.filledtonal {
+    background: var(--primaryContainerColor, #d3e3fd);
+    color: var(--onPrimaryContainerColor, #041e49);
+    fill: var(--onPrimaryContainerColor, #041e49);
 }
 .tonal {
     background: var(--primaryContainerColor, #c2e7ff);
@@ -83,8 +88,8 @@
 }
 .elevated {
     background-color: var(--onSecondaryColor, #ffffff);
-    color: var(--primaryColor, #1e64d4);
-    fill: var(--primaryColor, #1e64d4);
+    color: var(--primaryColor, #0b57d0);
+    fill: var(--primaryColor, #0b57d0);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .link {

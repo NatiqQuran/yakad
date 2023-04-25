@@ -82,9 +82,9 @@
     fill: var(--onPrimaryContainerColor, #041e49);
 }
 .tonal {
-    background: var(--primaryContainerColor, #c2e7ff);
-    color: var(--onPrimaryContainerColor, #002021);
-    fill: var(--onPrimaryContainerColor, #002021);
+    background: var(--tertiaryColor, #c4eed0);
+    color: var(--onTertiaryColor, #072711);
+    fill: var(--onTertiaryColor, #072711);
 }
 .elevated {
     background-color: var(--onSecondaryColor, #ffffff);

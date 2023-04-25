@@ -2,7 +2,7 @@
     position: fixed;
     max-width: 100%;
     transition: transform 0.3s;
-    background: var(--backgroundColor);
+    background: var(--surfaceContainerColor, #f3edf7);
     overflow-y: auto;
 }
 

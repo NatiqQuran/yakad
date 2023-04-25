@@ -5,6 +5,6 @@
     box-sizing: border-box;
     width: 100%;
     background: var(--surfaceColor, #fef7ff);
-    color: var(--onsurfaceColor, #1c1b1f);
-    fill: var(--onsurfaceColor, #1c1b1f);
+    color: var(--onSurfaceColor, #1c1b1f);
+    fill: var(--onSurfaceColor, #1c1b1f);
 }

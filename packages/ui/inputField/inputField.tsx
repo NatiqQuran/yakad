@@ -8,6 +8,8 @@ interface InputFieldProps extends React.HTMLAttributes<HTMLInputElement> {
     placeholder?: string;
     disabled?: boolean;
     name?: string;
+    value?: string;
+    required?: string;
 }
 
 function InputField(props: InputFieldProps) {
@@ -25,6 +27,8 @@ function InputField(props: InputFieldProps) {
                 disabled={props.disabled}
                 placeholder="&nbsp;"
                 type={props.type}
+                value={props.value}
+                required={props.required}
                 className={joinedClassNames}
             />
             <span className={styles.placeholder}>{props.placeholder}</span>

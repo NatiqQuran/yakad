@@ -4,7 +4,7 @@ import styles from "./theme.module.css";
 
 interface ThemeProps extends React.HTMLAttributes<HTMLElement> {
     mode?: "light" | "dark" | "system";
-    color?: "green" | "pink" | "grow" | "blue";
+    color?: "green" | "pink" | "grow" | "blue" | "purple";
 }
 
 function Theme(props: ThemeProps) {

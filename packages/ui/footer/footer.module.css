@@ -1,4 +1,7 @@
 .footer {
+    background: var(--surfaceContainerColor, #f3edf7);
+    color: var(--onSurfaceColor, #1c1b1f);
+    fill: var(--onSurfaceColor, #1c1b1f);
     display: flex;
     flex-direction: row;
     width: 100%;

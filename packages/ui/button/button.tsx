@@ -7,7 +7,14 @@ import Loading from "../loading/loading";
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     loading?: boolean;
     size?: "small" | "medium" | "large";
-    variant?: "text" | "outlined" | "filled" | "tonal" | "elevated" | "link";
+    variant?:
+        | "text"
+        | "outlined"
+        | "filled"
+        | "filledtonal"
+        | "tonal"
+        | "elevated"
+        | "link";
     borderStyle?: "none" | "semi" | "rounded";
     icon?: JSX.Element;
     iconPosition?: "start" | "end";

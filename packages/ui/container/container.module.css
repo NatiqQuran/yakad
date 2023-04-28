@@ -2,22 +2,33 @@ div.container {
     display: flex;
     flex-direction: inherit;
     width: 100%;
+    padding: 2rem;
     margin: auto;
     box-sizing: border-box;
 }
 
 div.container.xs {
     max-width: 44.4rem;
+    padding-left: calc((100% - 44.4rem)/2);
+    padding-right: calc((100% - 44.4rem)/2);
 }
 div.container.sm {
     max-width: 60rem;
+    padding-left: calc((100% - 60rem)/2);
+    padding-right: calc((100% - 60rem)/2);
 }
 div.container.md {
     max-width: 90rem;
+    padding-left: calc((100% - 90rem)/2);
+    padding-right: calc((100% - 90rem)/2);
 }
 div.container.lg {
     max-width: 120rem;
+    padding-left: calc((100% - 120rem)/2);
+    padding-right: calc((100% - 120rem)/2);
 }
 div.container.xl {
     max-width: 150rem;
+    padding-left: calc((100% - 150rem)/2);
+    padding-right: calc((100% - 150rem)/2);
 }

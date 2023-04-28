@@ -32,3 +32,8 @@ div.container.xl {
     padding-left: calc((100% - 150rem)/2);
     padding-right: calc((100% - 150rem)/2);
 }
+
+div.container.dotted {
+    background-image: radial-gradient(var(--surfaceContainerLowColor) 0.8px, var(--surfaceContainerHighestColor) 0.5px);
+    background-size: 10px 10px;
+}

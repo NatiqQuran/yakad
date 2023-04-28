@@ -6,11 +6,13 @@ type ScreenSize = "xs" | "sm" | "md" | "lg" | "xl";
 
 interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   maxWidth?: ScreenSize;
+  background?: "dotted";
 }
 
 function Container(props: ContainerProps) {
   const joinedClassNames = joinClassNames(
     props.maxWidth ? styles[props.maxWidth] : "",
+    props.background ? styles[props.background] : "",
     styles.container,
     props.className!
   );

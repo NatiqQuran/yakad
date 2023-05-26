@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     line-height: 3rem;
+    font-weight: 700;
     padding: 0 var(--padding);
     border: none;
     background: none;
@@ -15,7 +16,7 @@
 .small {
     min-width: 3rem;
     height: 3rem;
-    --padding: 1.2rem;
+    --padding: 2rem;
     gap: 0.4rem;
     font-size: 1.2rem;
     --border-radius: 1.5rem;
@@ -23,15 +24,15 @@
 .medium {
     min-width: 4rem;
     height: 4rem;
-    --padding: 1.8rem;
+    --padding: 2.4rem;
     gap: 0.8rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     --border-radius: 2rem;
 }
 .large {
     min-width: 5rem;
     height: 5rem;
-    --padding: 2.6rem;
+    --padding: 3.2rem;
     gap: 1.1rem;
     font-size: 1.8rem;
     --border-radius: 2.5rem;
@@ -58,7 +59,8 @@
 @media (pointer: fine) {
     .button:hover {
         cursor: pointer;
-        box-shadow: inset 0 0 10rem #7d7d7d20;
+        box-shadow: inset 0 0 10rem #00000010;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 }
 .button:active {
@@ -67,8 +69,14 @@
 .button:invalid {
     border: 0.1rem solid var(--errorColor, #b3261e);
 }
+.text {
+    color: var(--primaryColor, #0b57d0);
+    fill: var(--primaryColor, #0b57d0);
+}
 
 .outlined {
+    color: var(--primaryColor, #0b57d0);
+    fill: var(--primaryColor, #0b57d0);
     border: 0.1rem solid #7d7d7d70;
 }
 .filled {
@@ -97,6 +105,16 @@
     display: flex;
     position: relative;
     transition: 0.3s;
+}
+.fab {
+    border-radius: 1.3rem;
+    height: 5.6rem;
+    min-width: unset;
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    background: var(--primaryContainerColor, #d3e3fd);
+    color: var(--onPrimaryContainerColor, #041e49);
+    fill: var(--onPrimaryContainerColor, #041e49);
 }
 .link:before {
     content: "";

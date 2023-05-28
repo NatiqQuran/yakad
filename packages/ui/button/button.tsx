@@ -14,7 +14,8 @@ interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
         | "filledtonal"
         | "tonal"
         | "elevated"
-        | "link";
+        | "link"
+        | "fab";
     borderStyle?: "none" | "semi" | "rounded";
     icon?: JSX.Element;
     iconPosition?: "start" | "end";

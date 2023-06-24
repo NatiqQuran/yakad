@@ -20,19 +20,18 @@ function InputField(props: InputFieldProps) {
     );
 
     return (
-        <label className={styles.field}>
-            <input
-                {...props}
-                name={props.name}
-                disabled={props.disabled}
-                placeholder="&nbsp;"
-                type={props.type}
-                value={props.value}
-                required={props.required}
-                className={joinedClassNames}
-            />
-            <span className={styles.placeholder}>{props.placeholder}</span>
-        </label>
+       <label className={styles.label}>
+      <input
+        {...props}
+        name={props.name}
+        disabled={props.disabled}
+        placeholder="  "
+        type={props.type}
+        value={props.value}
+        className={joinedClassNames}
+      />
+      <span className={styles.span}>{props.placeholder}</span>
+    </label>
     );
 }
 

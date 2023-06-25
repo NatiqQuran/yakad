@@ -5,13 +5,13 @@
     margin: 0.5rem auto;
     background: none;
     border: none;
-    border-top: 0.1rem solid var(--primaryContainerColor, #d3e3fd);
+    border-top: 0.1rem solid rgb(var(--primaryContainerColor, 211 227 253));
 }
 .dotted {
-    border-top: 0.4rem dotted var(--primaryContainerColor, #d3e3fd);
+    border-top: 0.4rem dotted rgb(var(--primaryContainerColor, 211 227 253));
 }
 .dashed {
-    border-top: 0.2rem dashed var(--primaryContainerColor, #d3e3fd);
+    border-top: 0.2rem dashed rgb(var(--primaryContainerColor, 211 227 253));
 }
 .shortLine {
     width: 30rem;

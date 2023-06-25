@@ -25,6 +25,7 @@
     --LightSurfaceContainerHightColor: #ece6f0;
     --LightSurfaceContainerHighestColor: #e6e0e9;
     --LightOnSurfaceColor: #1c1b1f;
+    --LightOnSurfaceRGBColor:26 28 30;
     --LightOnSurfaceVariantColor: #49454e;
     --LightOutlineColor: #79747e;
     --LightOutlineVariantColor: #c4c7c5;
@@ -54,6 +55,7 @@
     --DarkSurfaceContainerHightColor: #2b2930;
     --DarkSurfaceContainerHighestColor: #36343b;
     --DarkOnSurfaceColor: #e6e1e5;
+    --DarkOnSurfaceRGBColor:227 226 230;
     --DarkOnSurfaceVariantColor: #cac4d0;
     --DarkOutlineColor: #938f99;
     --DarkOutlineVariantColor: #444746;
@@ -84,6 +86,7 @@
     --LightSurfaceContainerHightColor: #ece6f0;
     --LightSurfaceContainerHighestColor: #e6e0e9;
     --LightOnSurfaceColor: #1c1b1f;
+    --LightOnSurfaceRGBColor:26 28 30;
     --LightOnSurfaceVariantColor: #49454e;
     --LightOutlineColor: #79747e;
     --LightOutlineVariantColor: #c4c7c5;
@@ -113,6 +116,7 @@
     --DarkSurfaceContainerHightColor: #2b2930;
     --DarkSurfaceContainerHighestColor: #36343b;
     --DarkOnSurfaceColor: #e6e1e5;
+    --DarkOnSurfaceRGBColor:227 226 230;
     --DarkOnSurfaceVariantColor: #cac4d0;
     --DarkOutlineColor: #938f99;
     --DarkOutlineVariantColor: #444746;
@@ -144,6 +148,7 @@
     --LightSurfaceContainerHightColor: #ece6f0;
     --LightSurfaceContainerHighestColor: #e6e0e9;
     --LightOnSurfaceColor: #1c1b1f;
+    --LightOnSurfaceRGBColor:26 28 30;
     --LightOnSurfaceVariantColor: #49454e;
     --LightOutlineColor: #79747e;
     --LightOutlineVariantColor: #c4c7c5;
@@ -173,6 +178,7 @@
     --DarkSurfaceContainerHightColor: #2b2930;
     --DarkSurfaceContainerHighestColor: #36343b;
     --DarkOnSurfaceColor: #e6e1e5;
+    --DarkOnSurfaceRGBColor:227 226 230;
     --DarkOnSurfaceVariantColor: #cac4d0;
     --DarkOutlineColor: #938f99;
     --DarkOutlineVariantColor: #444746;
@@ -204,6 +210,7 @@
     --LightSurfaceContainerHightColor: #ece6f0;
     --LightSurfaceContainerHighestColor: #e6e0e9;
     --LightOnSurfaceColor: #1c1b1f;
+    --LightOnSurfaceRGBColor:26 28 30;
     --LightOnSurfaceVariantColor: #49454e;
     --LightOutlineColor: #79747e;
     --LightOutlineVariantColor: #c4c7c5;
@@ -233,6 +240,7 @@
     --DarkSurfaceContainerHightColor: #2b2930;
     --DarkSurfaceContainerHighestColor: #36343b;
     --DarkOnSurfaceColor: #e6e1e5;
+    --DarkOnSurfaceRGBColor:227 226 230;
     --DarkOnSurfaceVariantColor: #cac4d0;
     --DarkOutlineColor: #938f99;
     --DarkOutlineVariantColor: #444746;
@@ -266,6 +274,7 @@
     --LightSurfaceContainerHightColor: #ece6f0;
     --LightSurfaceContainerHighestColor: #e6e0e9;
     --LightOnSurfaceColor: #1c1b1f;
+    --LightOnSurfaceRGBColor:26 28 30;
     --LightOnSurfaceVariantColor: #49454e;
     --LightOutlineColor: #79747e;
     --LightOutlineVariantColor: #c4c7c5;
@@ -297,6 +306,7 @@
     --DarkSurfaceContainerHightColor: #2b2930;
     --DarkSurfaceContainerHighestColor: #36343b;
     --DarkOnSurfaceColor: #e6e1e5;
+    --DarkOnSurfaceRGBColor:227 226 230;
     --DarkOnSurfaceVariantColor: #cac4d0;
     --DarkOutlineColor: #938f99;
     --DarkOutlineVariantColor: #444746;
@@ -328,6 +338,7 @@
     --surfaceContainerHightColor: var(--LightSurfaceContainerHightColor);
     --surfaceContainerHighestColor: var(--LightSurfaceContainerHighestColor);
     --onSurfaceColor: var(--LightOnSurfaceColor);
+    --onSurfaceRGBColor:var(--LightOnSurfaceRGBColor);
     --onSurfaceVariantColor: var(--LightOnSurfaceVariantColor);
     --outlineColor: var(--LightOutlineColor);
     --outlineVariantColor: var(--LightOutlineVariantColor);
@@ -357,6 +368,7 @@
     --surfaceContainerHightColor: var(--DarkSurfaceContainerHightColor);
     --surfaceContainerHighestColor: var(--DarkSurfaceContainerHighestColor);
     --onSurfaceColor: var(--DarkOnSurfaceColor);
+    --onSurfaceRGBColor:var(--DarkOnSurfaceRGBColor);
     --onSurfaceVariantColor: var(--DarkOnSurfaceVariantColor);
     --outlineColor: var(--DarkOutlineColor);
     --outlineVariantColor: var(--DarkOutlineVariantColor);
@@ -387,6 +399,7 @@
         --surfaceContainerHightColor: var(--DarkSurfaceContainerHightColor);
         --surfaceContainerHighestColor: var(--DarkSurfaceContainerHighestColor);
         --onSurfaceColor: var(--DarkOnSurfaceColor);
+        --onSurfaceRGBColor:var(--DarkOnSurfaceRGBColor);
         --onSurfaceVariantColor: var(--DarkOnSurfaceVariantColor);
         --outlineColor: var(--DarkOutlineColor);
         --outlineVariantColor: var(--DarkOutlineVariantColor);

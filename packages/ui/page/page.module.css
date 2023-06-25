@@ -4,7 +4,7 @@
     min-height: 100vh;
     box-sizing: border-box;
     width: 100%;
-    background: var(--surfaceColor, #fef7ff);
-    color: var(--onSurfaceColor, #1c1b1f);
-    fill: var(--onSurfaceColor, #1c1b1f);
+    background: rgb(var(--surfaceColor, 254 247 255));
+    color: rgb(var(--onSurfaceColor, 28 27 31));
+    fill: rgb(var(--onSurfaceColor, 28 27 31));
 }

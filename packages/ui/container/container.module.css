@@ -9,31 +9,34 @@ div.container {
 
 div.container.xs {
     max-width: 44.4rem;
-    padding-left: calc((100% - 44.4rem)/2);
-    padding-right: calc((100% - 44.4rem)/2);
+    padding-left: calc((100% - 44.4rem) / 2);
+    padding-right: calc((100% - 44.4rem) / 2);
 }
 div.container.sm {
     max-width: 60rem;
-    padding-left: calc((100% - 60rem)/2);
-    padding-right: calc((100% - 60rem)/2);
+    padding-left: calc((100% - 60rem) / 2);
+    padding-right: calc((100% - 60rem) / 2);
 }
 div.container.md {
     max-width: 90rem;
-    padding-left: calc((100% - 90rem)/2);
-    padding-right: calc((100% - 90rem)/2);
+    padding-left: calc((100% - 90rem) / 2);
+    padding-right: calc((100% - 90rem) / 2);
 }
 div.container.lg {
     max-width: 120rem;
-    padding-left: calc((100% - 120rem)/2);
-    padding-right: calc((100% - 120rem)/2);
+    padding-left: calc((100% - 120rem) / 2);
+    padding-right: calc((100% - 120rem) / 2);
 }
 div.container.xl {
     max-width: 150rem;
-    padding-left: calc((100% - 150rem)/2);
-    padding-right: calc((100% - 150rem)/2);
+    padding-left: calc((100% - 150rem) / 2);
+    padding-right: calc((100% - 150rem) / 2);
 }
 
 div.container.dotted {
-    background-image: radial-gradient(var(--surfaceContainerLowestColor) 0.8px, var(--surfaceContainerHighestColor) 0.5px);
+    background-image: radial-gradient(
+        rgb(var(--surfaceContainerLowestColor)) 0.8px,
+        rgb(var(--surfaceContainerHighestColor)) 0.5px
+    );
     background-size: 10px 10px;
 }

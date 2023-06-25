@@ -16,7 +16,7 @@
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  caret-color: #a6c8ff;
+  caret-color: var(--primaryColor,#0b57d0 );
 }
 .input.outlined {
   border-top-color: transparent;
@@ -55,21 +55,21 @@
 }
 .input.outlined:focus {
   border-top-color: transparent;
-  box-shadow: inset 1px 0 #a7c8ff, inset -1px 0 #a7c8ff, inset 0 -1px #a7c8ff;
+  box-shadow: inset 1px 0 var(--primaryColor,#0b57d0 ), inset -1px 0 var(--primaryColor,#0b57d0 ), inset 0 -1px var(--primaryColor,#0b57d0 );
 }
 .input:focus + .span {
-  color: #a6c8ff;
+  color: var(--primaryColor,#0b57d0 );
 }
 .input.outlined:focus + .span::after {
-  box-shadow: inset 0 1px #a6c8ff;
-  border-top-color: #a6c8ff !important;
+  box-shadow: inset 0 1px var(--primaryColor,#0b57d0 );
+  border-top-color: var(--primaryColor,#0b57d0 ) !important;
 }
 .input.filled:focus + .span::after {
   transform: scale(1);
 }
 .input.outlined:focus + .span::before {
-  box-shadow: inset 0 1px #a6c8ff;
-  border-top-color: #a6c8ff !important;
+  box-shadow: inset 0 1px var(--primaryColor,#0b57d0 );
+  border-top-color: var(--primaryColor,#0b57d0 ) !important;
 }
 
 .input.outlined:not(:focus):placeholder-shown {
@@ -158,7 +158,7 @@
   bottom: 0rem;
   width: 100%;
   height: 0.2rem;
-  background-color: #a7c8ff;
+  background-color: var(--primaryColor,#0b57d0 );
   transform-origin: center bottom;
   transform: scaleX(0);
   transition: transform 0.3s ease 0s;

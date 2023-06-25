@@ -67,37 +67,37 @@
     box-shadow: inset 0 0 10rem #7d7d7d30;
 }
 .button:invalid {
-    border: 0.1rem solid var(--errorColor, #b3261e);
+    border: 0.1rem solid rgb(var(--errorColor, 179 38 30));
 }
 .text {
-    color: var(--primaryColor, #0b57d0);
-    fill: var(--primaryColor, #0b57d0);
+    color: rgb(var(--primaryColor, 11 87 208));
+    fill: rgb(var(--primaryColor, 11 87 208));
 }
 
 .outlined {
-    color: var(--primaryColor, #0b57d0);
-    fill: var(--primaryColor, #0b57d0);
+    color: rgb(var(--primaryColor, 11 87 208));
+    fill: rgb(var(--primaryColor, 11 87 208));
     border: 0.1rem solid #7d7d7d70;
 }
 .filled {
-    background: var(--primaryColor, #0b57d0);
-    color: var(--onPrimaryColor, #ffffff);
-    fill: var(--onPrimaryColor, #ffffff);
+    background: rgb(var(--primaryColor, 11 87 208));
+    color: rgb(var(--onPrimaryColor, 255 255 255));
+    fill: rgb(var(--onPrimaryColor, 255 255 255));
 }
 .filledtonal {
-    background: var(--primaryContainerColor, #d3e3fd);
-    color: var(--onPrimaryContainerColor, #041e49);
-    fill: var(--onPrimaryContainerColor, #041e49);
+    background: rgb(var(--primaryContainerColor, 211 227 253));
+    color: rgb(var(--onPrimaryContainerColor, 4 30 73));
+    fill: rgb(var(--onPrimaryContainerColor, 4 30 73));
 }
 .tonal {
-    background: var(--tertiaryColor, #c4eed0);
-    color: var(--onTertiaryColor, #072711);
-    fill: var(--onTertiaryColor, #072711);
+    background: rgb(var(--tertiaryColor, 196 238 208));
+    color: rgb(var(--onTertiaryColor, 7 39 17));
+    fill: rgb(var(--onTertiaryColor, 7 39 17));
 }
 .elevated {
-    background-color: var(--onSecondaryColor, #ffffff);
-    color: var(--primaryColor, #0b57d0);
-    fill: var(--primaryColor, #0b57d0);
+    background-color: rgb(var(--onSecondaryColor, 255 255 255));
+    color: rgb(var(--primaryColor, 11 87 208));
+    fill: rgb(var(--primaryColor, 11 87 208));
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .link {
@@ -112,9 +112,9 @@
     min-width: unset;
     padding: 1.6rem;
     font-size: 1.6rem;
-    background: var(--primaryContainerColor, #d3e3fd);
-    color: var(--onPrimaryContainerColor, #041e49);
-    fill: var(--onPrimaryContainerColor, #041e49);
+    background: rgb(var(--primaryContainerColor, 211 227 253));
+    color: rgb(var(--onPrimaryContainerColor, 4 30 73));
+    fill: rgb(var(--onPrimaryContainerColor, 4, 30, 73));
 }
 .link:before {
     content: "";
@@ -126,7 +126,7 @@
     height: 0.1rem;
     padding: 0;
     margin: 0 auto;
-    background-color: var(--primaryColor, #1e64d4);
+    background-color: rgb(var(--primaryColor, 30 100 212));
     transition: 0.3s;
 }
 

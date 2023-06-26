@@ -6,31 +6,17 @@
     overflow: hidden;
 }
 .input {
-<<<<<<< HEAD
-  box-sizing: border-box;
-  margin: 0rem;
-  border-image: initial;
-  width: 100%;
-  height: inherit;
-  color: rgb(var(--onSurfaceRGBColor, 26 28 30) / 0.87);
-  box-shadow: none;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  caret-color: var(--primaryColor,#0b57d0 );
-=======
     box-sizing: border-box;
     margin: 0rem;
     border-image: initial;
     width: 100%;
     height: inherit;
-    color: rgb(227 226 230 / 0.87);
+    color: rgb(var(--onSurfaceColor, 28 27 31) / 0.87);
     box-shadow: none;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
     caret-color: rgb(var(--primaryColor, 11 87 208));
->>>>>>> origin/HEAD
 }
 .input.outlined {
     border-top-color: transparent;
@@ -54,17 +40,6 @@
     cursor: text;
 }
 .input.filled {
-<<<<<<< HEAD
-  display: block;
-  border-right: none;
-  border-left: none;
-  border-top: 2.7rem solid transparent;
-  border-bottom: solid 0.1rem rgb(var(--onSurfaceRGBColor, 26 28 30) / 0.6);
-  border-radius: 0.4rem 0.4rem 0rem 0rem;
-  padding: 0rem 1.2rem 1rem;
-  background-color: rgb(var(--onSurfaceRGBColor, 26 28 30)/ 0.04);
-  transition: border-bottom 0.2s ease 0s, background-color 0.2s ease 0s;
-=======
     display: block;
     border-right: none;
     border-left: none;
@@ -72,9 +47,8 @@
     border-bottom: solid 0.1rem rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
     border-radius: 0.4rem 0.4rem 0rem 0rem;
     padding: 0rem 1.2rem 1rem;
-    background-color: rgb(227 226 230/ 0.04);
+    background-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.04);
     transition: border-bottom 0.2s ease 0s, background-color 0.2s ease 0s;
->>>>>>> origin/HEAD
 }
 .input:focus {
     outline: none;
@@ -101,11 +75,7 @@
 }
 
 .input.outlined:not(:focus):placeholder-shown {
-<<<<<<< HEAD
-  border-top-color: rgb(var(--onSurfaceRGBColor, 26 28 30)/ 0.6);
-=======
     border-top-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
->>>>>>> origin/HEAD
 }
 .input.outlined:not(:focus):placeholder-shown + .span {
     font-size: inherit;
@@ -116,23 +86,6 @@
     line-height: 4.8rem;
 }
 .input + .span {
-<<<<<<< HEAD
-  position: absolute;
-  color: rgb(var(--onSurfaceRGBColor, 26 28 30) / 0.6);
-  font-size: 75%;
-  transition: color 0.2s ease 0s, font-size 0.2s ease 0s,
-    line-height 0.2s ease 0s;
-}
-.input.outlined + .span {
-  top: 0rem;
-  left: 0rem;
-  display: flex;
-  border-color: rgb(var(--onSurfaceRGBColor, 26 28 30)/ 0.6);
-  width: 100%;
-  max-height: 100%;
-  line-height: 1.5rem;
-  cursor: text;
-=======
     position: absolute;
     color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
     font-size: 75%;
@@ -148,7 +101,6 @@
     max-height: 100%;
     line-height: 1.5rem;
     cursor: text;
->>>>>>> origin/HEAD
 }
 .input.filled + .span {
     inset: 0rem;
@@ -162,23 +114,6 @@
     border-top-color: transparent;
 }
 .input.outlined + .span::before {
-<<<<<<< HEAD
-  margin-right: 0.4rem;
-  border-left: 0.1 solid transparent;
-  border-radius: 0.4rem 0rem;
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  margin-top: 0.6rem;
-  border-top-width: 0.1rem;
-  border-top-style: solid;
-  border-top-color: rgb(var(--onSurfaceRGBColor, 26 28 30) / 0.6);
-  min-width: 1rem;
-  height: 0.8rem;
-  pointer-events: none;
-  box-shadow: transparent 0px 1px inset;
-  transition: border-color 0.2s ease 0s, box-shadow 0.2s ease 0s;
-=======
     margin-right: 0.4rem;
     border-left: 0.1 solid transparent;
     border-radius: 0.4rem 0rem;
@@ -194,7 +129,6 @@
     pointer-events: none;
     box-shadow: transparent 0px 1px inset;
     transition: border-color 0.2s ease 0s, box-shadow 0.2s ease 0s;
->>>>>>> origin/HEAD
 }
 
 .input.outlined:not(:focus):placeholder-shown + .span::after {
@@ -205,22 +139,6 @@
     display: block;
 }
 .input.outlined + .span::after {
-<<<<<<< HEAD
-  flex-grow: 1;
-  margin-left: 0.4rem;
-  border-right: 0.1rem solid transparent;
-  border-radius: 0rem 0.4rem;
-  box-sizing: border-box;
-  margin-top: 0.6rem;
-  border-top-width: 0.1rem;
-  border-top-style: solid;
-  border-top-color: rgb(var(--onSurfaceRGBColor, 26 28 30)/ 0.6);
-  min-width: 1rem;
-  height: 0.8rem;
-  pointer-events: none;
-  box-shadow: transparent 0px 1px inset;
-  transition: border-color 0.2s ease 0s, box-shadow 0.2s ease 0s;
-=======
     flex-grow: 1;
     margin-left: 0.4rem;
     border-right: 0.1rem solid transparent;
@@ -235,7 +153,6 @@
     pointer-events: none;
     box-shadow: transparent 0px 1px inset;
     transition: border-color 0.2s ease 0s, box-shadow 0.2s ease 0s;
->>>>>>> origin/HEAD
 }
 .input.filled + .span::after {
     position: absolute;

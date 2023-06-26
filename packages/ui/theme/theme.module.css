@@ -15,22 +15,6 @@
     --LightOnErrorColor: 255 255 255;
     --LightOnErrorContainerColor: 65 14 11;
     /* neutral colors */
-<<<<<<< HEAD
-    --LightSurfaceColor: #fef7ff;
-    --LightSurfaceVariantColor: #e7e0ec;
-    --LightSurfaceDimColor: #ded8e1;
-    --LightSurfaceBrightColor: #fef7ff;
-    --LightSurfaceContainerLowestColor: #ffffff;
-    --LightSurfaceContainerLowColor: #f7f2fa;
-    --LightSurfaceContainerColor: #f3edf7;
-    --LightSurfaceContainerHightColor: #ece6f0;
-    --LightSurfaceContainerHighestColor: #e6e0e9;
-    --LightOnSurfaceColor: #1c1b1f;
-    --LightOnSurfaceRGBColor:26 28 30;
-    --LightOnSurfaceVariantColor: #49454e;
-    --LightOutlineColor: #79747e;
-    --LightOutlineVariantColor: #c4c7c5;
-=======
     --LightSurfaceColor: 254 247 255;
     --LightSurfaceVariantColor: 231 224 236;
     --LightSurfaceDimColor: 222 216 225;
@@ -44,7 +28,6 @@
     --LightOnSurfaceVariantColor: 73 69 78;
     --LightOutlineColor: 121 116 126;
     --LightOutlineVariantColor: 196 199 197;
->>>>>>> origin/HEAD
 
     --DarkPrimaryColor: 168 199 250;
     --DarkPrimaryContainerColor: 8 66 160;
@@ -61,22 +44,6 @@
     --DarkOnErrorColor: 96 20 16;
     --DarkOnErrorContainerColor: 249 222 220;
     /* neutral colors */
-<<<<<<< HEAD
-    --DarkSurfaceColor: #141218;
-    --DarkSurfaceVariantColor: #49454f;
-    --DarkSurfaceDimColor: #141218;
-    --DarkSurfaceBrightColor: #3b383e;
-    --DarkSurfaceContainerLowestColor: #0f0d13;
-    --DarkSurfaceContainerLowColor: #1d1b20;
-    --DarkSurfaceContainerColor: #211f26;
-    --DarkSurfaceContainerHightColor: #2b2930;
-    --DarkSurfaceContainerHighestColor: #36343b;
-    --DarkOnSurfaceColor: #e6e1e5;
-    --DarkOnSurfaceRGBColor:227 226 230;
-    --DarkOnSurfaceVariantColor: #cac4d0;
-    --DarkOutlineColor: #938f99;
-    --DarkOutlineVariantColor: #444746;
-=======
     --DarkSurfaceColor: 20 18 24;
     --DarkSurfaceVariantColor: 73 69 79;
     --DarkSurfaceDimColor: 20 18 24;
@@ -90,7 +57,6 @@
     --DarkOnSurfaceVariantColor: 202 196 208;
     --DarkOutlineColor: 147 143 153;
     --DarkOutlineVariantColor: 68 71 70;
->>>>>>> origin/HEAD
 }
 .green {
     --LightPrimaryColor: 56 106 32;
@@ -108,22 +74,6 @@
     --LightOnErrorColor: 255 255 255;
     --LightOnErrorContainerColor: 65 14 11;
     /* neutral colors */
-<<<<<<< HEAD
-    --LightSurfaceColor: #fef7ff;
-    --LightSurfaceVariantColor: #e7e0ec;
-    --LightSurfaceDimColor: #ded8e1;
-    --LightSurfaceBrightColor: #fef7ff;
-    --LightSurfaceContainerLowestColor: #ffffff;
-    --LightSurfaceContainerLowColor: #f7f2fa;
-    --LightSurfaceContainerColor: #f3edf7;
-    --LightSurfaceContainerHightColor: #ece6f0;
-    --LightSurfaceContainerHighestColor: #e6e0e9;
-    --LightOnSurfaceColor: #1c1b1f;
-    --LightOnSurfaceRGBColor:26 28 30;
-    --LightOnSurfaceVariantColor: #49454e;
-    --LightOutlineColor: #79747e;
-    --LightOutlineVariantColor: #c4c7c5;
-=======
     --LightSurfaceColor: 254 247 255;
     --LightSurfaceVariantColor: 231 224 236;
     --LightSurfaceDimColor: 222 216 225;
@@ -137,7 +87,6 @@
     --LightOnSurfaceVariantColor: 73 69 78;
     --LightOutlineColor: 121 116 126;
     --LightOutlineVariantColor: 196 199 197;
->>>>>>> origin/HEAD
 
     --DarkPrimaryColor: 156 214 125;
     --DarkPrimaryContainerColor: 32 81 7;
@@ -154,22 +103,6 @@
     --DarkOnErrorColor: 96 20 16;
     --DarkOnErrorContainerColor: 249 222 220;
     /* neutral colors */
-<<<<<<< HEAD
-    --DarkSurfaceColor: #141218;
-    --DarkSurfaceVariantColor: #49454f;
-    --DarkSurfaceDimColor: #141218;
-    --DarkSurfaceBrightColor: #3b383e;
-    --DarkSurfaceContainerLowestColor: #0f0d13;
-    --DarkSurfaceContainerLowColor: #1d1b20;
-    --DarkSurfaceContainerColor: #211f26;
-    --DarkSurfaceContainerHightColor: #2b2930;
-    --DarkSurfaceContainerHighestColor: #36343b;
-    --DarkOnSurfaceColor: #e6e1e5;
-    --DarkOnSurfaceRGBColor:227 226 230;
-    --DarkOnSurfaceVariantColor: #cac4d0;
-    --DarkOutlineColor: #938f99;
-    --DarkOutlineVariantColor: #444746;
-=======
     --DarkSurfaceColor: 20 18 24;
     --DarkSurfaceVariantColor: 73 69 79;
     --DarkSurfaceDimColor: 20 18 24;
@@ -183,7 +116,6 @@
     --DarkOnSurfaceVariantColor: 202 196 208;
     --DarkOutlineColor: 147 143 153;
     --DarkOutlineVariantColor: 68 71 70;
->>>>>>> origin/HEAD
 }
 
 .pink {
@@ -202,22 +134,6 @@
     --LightOnErrorColor: 255 255 255;
     --LightOnErrorContainerColor: 65 14 11;
     /* neutral colors */
-<<<<<<< HEAD
-    --LightSurfaceColor: #fef7ff;
-    --LightSurfaceVariantColor: #e7e0ec;
-    --LightSurfaceDimColor: #ded8e1;
-    --LightSurfaceBrightColor: #fef7ff;
-    --LightSurfaceContainerLowestColor: #ffffff;
-    --LightSurfaceContainerLowColor: #f7f2fa;
-    --LightSurfaceContainerColor: #f3edf7;
-    --LightSurfaceContainerHightColor: #ece6f0;
-    --LightSurfaceContainerHighestColor: #e6e0e9;
-    --LightOnSurfaceColor: #1c1b1f;
-    --LightOnSurfaceRGBColor:26 28 30;
-    --LightOnSurfaceVariantColor: #49454e;
-    --LightOutlineColor: #79747e;
-    --LightOutlineVariantColor: #c4c7c5;
-=======
     --LightSurfaceColor: 254 247 255;
     --LightSurfaceVariantColor: 231 224 236;
     --LightSurfaceDimColor: 222 216 225;
@@ -231,7 +147,6 @@
     --LightOnSurfaceVariantColor: 73 69 78;
     --LightOutlineColor: 121 116 126;
     --LightOutlineVariantColor: 196 199 197;
->>>>>>> origin/HEAD
 
     --DarkPrimaryColor: 255 179 181;
     --DarkPrimaryContainerColor: 125 42 48;
@@ -248,22 +163,6 @@
     --DarkOnErrorColor: 96 20 16;
     --DarkOnErrorContainerColor: 249 222 220;
     /* neutral colors */
-<<<<<<< HEAD
-    --DarkSurfaceColor: #141218;
-    --DarkSurfaceVariantColor: #49454f;
-    --DarkSurfaceDimColor: #141218;
-    --DarkSurfaceBrightColor: #3b383e;
-    --DarkSurfaceContainerLowestColor: #0f0d13;
-    --DarkSurfaceContainerLowColor: #1d1b20;
-    --DarkSurfaceContainerColor: #211f26;
-    --DarkSurfaceContainerHightColor: #2b2930;
-    --DarkSurfaceContainerHighestColor: #36343b;
-    --DarkOnSurfaceColor: #e6e1e5;
-    --DarkOnSurfaceRGBColor:227 226 230;
-    --DarkOnSurfaceVariantColor: #cac4d0;
-    --DarkOutlineColor: #938f99;
-    --DarkOutlineVariantColor: #444746;
-=======
     --DarkSurfaceColor: 20 18 24;
     --DarkSurfaceVariantColor: 73 69 79;
     --DarkSurfaceDimColor: 20 18 24;
@@ -277,7 +176,6 @@
     --DarkOnSurfaceVariantColor: 202 196 208;
     --DarkOutlineColor: 147 143 153;
     --DarkOutlineVariantColor: 68 71 70;
->>>>>>> origin/HEAD
 }
 
 .grow {
@@ -296,22 +194,6 @@
     --LightOnErrorColor: 255 255 255;
     --LightOnErrorContainerColor: 65 14 11;
     /* neutral colors */
-<<<<<<< HEAD
-    --LightSurfaceColor: #fef7ff;
-    --LightSurfaceVariantColor: #e7e0ec;
-    --LightSurfaceDimColor: #ded8e1;
-    --LightSurfaceBrightColor: #fef7ff;
-    --LightSurfaceContainerLowestColor: #ffffff;
-    --LightSurfaceContainerLowColor: #f7f2fa;
-    --LightSurfaceContainerColor: #f3edf7;
-    --LightSurfaceContainerHightColor: #ece6f0;
-    --LightSurfaceContainerHighestColor: #e6e0e9;
-    --LightOnSurfaceColor: #1c1b1f;
-    --LightOnSurfaceRGBColor:26 28 30;
-    --LightOnSurfaceVariantColor: #49454e;
-    --LightOutlineColor: #79747e;
-    --LightOutlineVariantColor: #c4c7c5;
-=======
     --LightSurfaceColor: 254 247 255;
     --LightSurfaceVariantColor: 231 224 236;
     --LightSurfaceDimColor: 222 216 225;
@@ -325,7 +207,6 @@
     --LightOnSurfaceVariantColor: 73 69 78;
     --LightOutlineColor: 121 116 126;
     --LightOutlineVariantColor: 196 199 197;
->>>>>>> origin/HEAD
 
     --DarkPrimaryColor: 203 204 88;
     --DarkPrimaryContainerColor: 73 74 0;
@@ -342,22 +223,6 @@
     --DarkOnErrorColor: 96 20 16;
     --DarkOnErrorContainerColor: 249 222 220;
     /* neutral colors */
-<<<<<<< HEAD
-    --DarkSurfaceColor: #141218;
-    --DarkSurfaceVariantColor: #49454f;
-    --DarkSurfaceDimColor: #141218;
-    --DarkSurfaceBrightColor: #3b383e;
-    --DarkSurfaceContainerLowestColor: #0f0d13;
-    --DarkSurfaceContainerLowColor: #1d1b20;
-    --DarkSurfaceContainerColor: #211f26;
-    --DarkSurfaceContainerHightColor: #2b2930;
-    --DarkSurfaceContainerHighestColor: #36343b;
-    --DarkOnSurfaceColor: #e6e1e5;
-    --DarkOnSurfaceRGBColor:227 226 230;
-    --DarkOnSurfaceVariantColor: #cac4d0;
-    --DarkOutlineColor: #938f99;
-    --DarkOutlineVariantColor: #444746;
-=======
     --DarkSurfaceColor: 20 18 24;
     --DarkSurfaceVariantColor: 73 69 79;
     --DarkSurfaceDimColor: 20 18 24;
@@ -371,7 +236,6 @@
     --DarkOnSurfaceVariantColor: 202 196 208;
     --DarkOutlineColor: 147 143 153;
     --DarkOutlineVariantColor: 68 71 70;
->>>>>>> origin/HEAD
 }
 .purple {
     --LightPrimaryColor: 103 80 164;
@@ -392,22 +256,6 @@
     --LightOnErrorColor: 255 255 255;
     --LightOnErrorContainerColor: 65 14 11;
     /* neutral colors */
-<<<<<<< HEAD
-    --LightSurfaceColor: #fef7ff;
-    --LightSurfaceVariantColor: #e7e0ec;
-    --LightSurfaceDimColor: #ded8e1;
-    --LightSurfaceBrightColor: #fef7ff;
-    --LightSurfaceContainerLowestColor: #ffffff;
-    --LightSurfaceContainerLowColor: #f7f2fa;
-    --LightSurfaceContainerColor: #f3edf7;
-    --LightSurfaceContainerHightColor: #ece6f0;
-    --LightSurfaceContainerHighestColor: #e6e0e9;
-    --LightOnSurfaceColor: #1c1b1f;
-    --LightOnSurfaceRGBColor:26 28 30;
-    --LightOnSurfaceVariantColor: #49454e;
-    --LightOutlineColor: #79747e;
-    --LightOutlineVariantColor: #c4c7c5;
-=======
     --LightSurfaceColor: 254 247 255;
     --LightSurfaceVariantColor: 231 224 236;
     --LightSurfaceDimColor: 222 216 225;
@@ -421,7 +269,6 @@
     --LightOnSurfaceVariantColor: 73 69 78;
     --LightOutlineColor: 121 116 126;
     --LightOutlineVariantColor: 196 199 197;
->>>>>>> origin/HEAD
 
     --DarkPrimaryColor: 208 188 255;
     --DarkPrimaryContainerColor: 79 55 139;
@@ -440,22 +287,6 @@
     --DarkOnErrorColor: 96 20 16;
     --DarkOnErrorContainerColor: 249 222 220;
     /* neutral colors */
-<<<<<<< HEAD
-    --DarkSurfaceColor: #141218;
-    --DarkSurfaceVariantColor: #49454f;
-    --DarkSurfaceDimColor: #141218;
-    --DarkSurfaceBrightColor: #3b383e;
-    --DarkSurfaceContainerLowestColor: #0f0d13;
-    --DarkSurfaceContainerLowColor: #1d1b20;
-    --DarkSurfaceContainerColor: #211f26;
-    --DarkSurfaceContainerHightColor: #2b2930;
-    --DarkSurfaceContainerHighestColor: #36343b;
-    --DarkOnSurfaceColor: #e6e1e5;
-    --DarkOnSurfaceRGBColor:227 226 230;
-    --DarkOnSurfaceVariantColor: #cac4d0;
-    --DarkOutlineColor: #938f99;
-    --DarkOutlineVariantColor: #444746;
-=======
     --DarkSurfaceColor: 20 18 24;
     --DarkSurfaceVariantColor: 73 69 79;
     --DarkSurfaceDimColor: 20 18 24;
@@ -469,7 +300,6 @@
     --DarkOnSurfaceVariantColor: 202 196 208;
     --DarkOutlineColor: 147 143 153;
     --DarkOutlineVariantColor: 68 71 70;
->>>>>>> origin/HEAD
 }
 
 .system,
@@ -498,7 +328,7 @@
     --surfaceContainerHightColor: var(--LightSurfaceContainerHightColor);
     --surfaceContainerHighestColor: var(--LightSurfaceContainerHighestColor);
     --onSurfaceColor: var(--LightOnSurfaceColor);
-    --onSurfaceRGBColor:var(--LightOnSurfaceRGBColor);
+    --onSurfaceRGBColor: var(--LightOnSurfaceRGBColor);
     --onSurfaceVariantColor: var(--LightOnSurfaceVariantColor);
     --outlineColor: var(--LightOutlineColor);
     --outlineVariantColor: var(--LightOutlineVariantColor);
@@ -528,7 +358,7 @@
     --surfaceContainerHightColor: var(--DarkSurfaceContainerHightColor);
     --surfaceContainerHighestColor: var(--DarkSurfaceContainerHighestColor);
     --onSurfaceColor: var(--DarkOnSurfaceColor);
-    --onSurfaceRGBColor:var(--DarkOnSurfaceRGBColor);
+    --onSurfaceRGBColor: var(--DarkOnSurfaceRGBColor);
     --onSurfaceVariantColor: var(--DarkOnSurfaceVariantColor);
     --outlineColor: var(--DarkOutlineColor);
     --outlineVariantColor: var(--DarkOutlineVariantColor);
@@ -559,7 +389,7 @@
         --surfaceContainerHightColor: var(--DarkSurfaceContainerHightColor);
         --surfaceContainerHighestColor: var(--DarkSurfaceContainerHighestColor);
         --onSurfaceColor: var(--DarkOnSurfaceColor);
-        --onSurfaceRGBColor:var(--DarkOnSurfaceRGBColor);
+        --onSurfaceRGBColor: var(--DarkOnSurfaceRGBColor);
         --onSurfaceVariantColor: var(--DarkOnSurfaceVariantColor);
         --outlineColor: var(--DarkOutlineColor);
         --outlineVariantColor: var(--DarkOutlineVariantColor);

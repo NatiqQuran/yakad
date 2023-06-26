@@ -1,6 +1,6 @@
 {
     "name": "@yakad/ui",
-    "version": "1.2.52-beta",
+    "version": "1.2.58-beta",
     "description": "",
     "main": "./src/index.js",
     "scripts": {

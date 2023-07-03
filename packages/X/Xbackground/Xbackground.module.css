@@ -1,0 +1,49 @@
+.background {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.fixed {
+    background-attachment: fixed;
+}
+
+.background.dotted {
+    border-bottom: 1px solid rgb(203 213 224);
+    background-color: rgb(var(--surfaceContainerHighestColor, 230 224 233));
+    background-image: radial-gradient(
+        rgb(var(--surfaceContainerLowestColor, 255 255 255)) 0.8px,
+        rgb(var(--surfaceContainerHighestColor, 230 224 233)) 0.5px
+    );
+    background-size: 10px 10px;
+    box-shadow: inset 0px -11px 16px -10px rgb(125 125 125);
+}
+.background.strips {
+    background-size: 50px 50px;
+    background-color: rgb(var(--surfaceDimColor, 222 216 225));
+    background-image: -webkit-linear-gradient(
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 50%,
+        transparent
+    );
+    background-image: -moz-linear-gradient(
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 50%,
+        transparent
+    );
+    background-image: -ms-linear-gradient(
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 50%,
+        transparent
+    );
+    background-image: -o-linear-gradient(
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 50%,
+        transparent
+    );
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 50%,
+        transparent
+    );
+}

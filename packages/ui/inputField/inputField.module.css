@@ -11,7 +11,7 @@
     border-image: initial;
     width: 100%;
     height: inherit;
-    color: rgb(227 226 230 / 0.87);
+    color: rgb(var(--onSurfaceColor, 28 27 31) / 0.87);
     box-shadow: none;
     font-family: inherit;
     font-size: inherit;
@@ -47,7 +47,7 @@
     border-bottom: solid 0.1rem rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
     border-radius: 0.4rem 0.4rem 0rem 0rem;
     padding: 0rem 1.2rem 1rem;
-    background-color: rgb(227 226 230/ 0.04);
+    background-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.04);
     transition: border-bottom 0.2s ease 0s, background-color 0.2s ease 0s;
 }
 .input:focus {

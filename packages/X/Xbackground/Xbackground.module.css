@@ -1,15 +1,14 @@
-.div {
+.background {
     width: 100%;
     background-position: center;
-}
-.div.fixed {
-    background-attachment: fixed;
-}
-.div.image {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.div.dotted {
+.fixed {
+    background-attachment: fixed;
+}
+
+.background.dotted {
     border-bottom: 1px solid rgb(203 213 224);
     background-color: rgb(var(--surfaceContainerHighestColor, 230 224 233));
     background-image: radial-gradient(
@@ -19,7 +18,7 @@
     background-size: 10px 10px;
     box-shadow: inset 0px -11px 16px -10px rgb(125 125 125);
 }
-.div.strips {
+.background.strips {
     background-size: 50px 50px;
     background-color: rgb(var(--surfaceDimColor, 222 216 225));
     background-image: -webkit-linear-gradient(

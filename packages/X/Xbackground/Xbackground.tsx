@@ -9,7 +9,7 @@ interface XbackgroundProps extends React.HTMLAttributes<HTMLElement> {
 
 function Xbackground(props: XbackgroundProps) {
     const joinedClassNames = joinClassNames(
-        styles.div,
+        styles.background,
         props.variant ? styles[props.variant] : "",
         props.backgroundfixed ? styles.fixed : "",
         props.backgroundimage ? styles.image : "",

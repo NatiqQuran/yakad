@@ -3,6 +3,7 @@ import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./Xbackground.module.css";
 interface XbackgroundProps extends React.HTMLAttributes<HTMLElement> {
     variant?: "dotted" | "strips";
+    separator?: "shadowinside" | "shadowoutside";
     backgroundfixed?: boolean;
     backgroundimage?: string;
 }
@@ -13,6 +14,7 @@ function Xbackground(props: XbackgroundProps) {
         props.variant ? styles[props.variant] : "",
         props.backgroundfixed ? styles.fixed : "",
         props.backgroundimage ? styles.image : "",
+        props.separator ? styles[props.separator] : "",
         props.className!
     );
     const joinedStyles = joinStyles(

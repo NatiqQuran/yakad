@@ -9,11 +9,15 @@ interface ThemeProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 function Theme(props: ThemeProps) {
+    const zoomPercentage = props.zoom ? props.zoom / 100 * 62.5 : 62.5;
+    document.documentElement.style.setProperty('font-size', zoomPercentage + '%');
+
     const joinedClassNames = joinClassNames(
         props.mode ? styles[props.mode] : styles.system,
         props.color ? styles[props.color] : styles.blue,
         props.className!
     );
+
     return (
         <div {...props} className={joinedClassNames}>
             {props.children}

@@ -118,7 +118,7 @@
     --DarkOutlineVariantColor: 68 71 70;
 }
 
-.pink {
+.red {
     --LightPrimaryColor: 156 65 70;
     --LightPrimaryContainerColor: 255 218 219;
     --LightSecondaryColor: 98 91 113;
@@ -178,7 +178,7 @@
     --DarkOutlineVariantColor: 68 71 70;
 }
 
-.growth {
+.yellow {
     --LightPrimaryColor: 97 98 0;
     --LightPrimaryContainerColor: 232 233 113;
     --LightSecondaryColor: 98 91 113;

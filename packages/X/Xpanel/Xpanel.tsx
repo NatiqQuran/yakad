@@ -35,42 +35,45 @@ interface XpanelProps extends React.HTMLAttributes<HTMLElement> {
     menuItemsChild?: menuItemChild[];
 }
 
-function NavigationList(props: NavigationListProps) {
-    const [collapsedList, setcollapsedList] = React.useState(true);
+interface CollapseList {
+    [n: number]: boolean;
+}
 
-    const handleClickcollapseList = () => {
-        setcollapsedList(!collapsedList);
-    };
+function NavigationList(props: NavigationListProps) {
+    const [collapsedList, setcollapsedList] = React.useState<CollapseList>({});
+
+    const handleClickcollapseList = (index: number) =>
+        setcollapsedList(object => ({ [index]: object[index] ? !object[index] : false, ...object }));
 
     return (
         <List direction="column">
             {props.menuItems
                 ? props.menuItems.map((item, index) => (
-                      <ListItem>
-                          <Button
-                              borderStyle="semi"
-                              onClick={
-                                  item.childs
-                                      ? handleClickcollapseList
-                                      : item.onclick
-                              }
-                          >
-                              {item.name}
-                              <Spacer />
-                          </Button>
-                          <List collapsed={collapsedList}>
-                              {item.childs
-                                  ? item.childs.map((child) => (
-                                        <ListItem>
-                                            <Button onClick={child.onclick}>
-                                                {child.name}
-                                            </Button>
-                                        </ListItem>
-                                    ))
-                                  : null}
-                          </List>
-                      </ListItem>
-                  ))
+                    <ListItem>
+                        <Button
+                            borderStyle="semi"
+                            onClick={
+                                item.childs
+                                    ? () => handleClickcollapseList(index)
+                                    : item.onclick
+                            }
+                        >
+                            {item.name}
+                            <Spacer />
+                        </Button>
+                        <List collapsed={collapsedList[index]}>
+                            {item.childs
+                                ? item.childs.map((child) => (
+                                    <ListItem>
+                                        <Button onClick={child.onclick}>
+                                            {child.name}
+                                        </Button>
+                                    </ListItem>
+                                ))
+                                : null}
+                        </List>
+                    </ListItem>
+                ))
                 : "No menu items"}
         </List>
     );

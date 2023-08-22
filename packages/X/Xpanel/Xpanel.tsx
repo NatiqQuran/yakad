@@ -43,7 +43,7 @@ function NavigationList(props: NavigationListProps) {
     const [collapsedList, setcollapsedList] = React.useState<CollapseList>({});
 
     const handleClickcollapseList = (index: number) =>
-        setcollapsedList(object => ({ [index]: object[index] ? !object[index] : false, ...object }));
+        setcollapsedList(object => ({ ...object, [index]: object[index] ? !object[index] : false }));
 
     return (
         <List direction="column">

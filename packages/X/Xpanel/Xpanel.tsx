@@ -14,25 +14,25 @@ import { useMedia } from "@yakad/lib";
 import { ReactComponent as Menu } from "../assets/svg/menu.svg";
 import { ReactComponent as Close } from "../assets/svg/close.svg";
 
-interface menuItemChild {
+interface MenuItemChild {
     name: string;
     onclick?: MouseEventHandler<HTMLButtonElement>;
 }
-interface menuItem {
+interface MenuItem {
     name: string;
     onclick?: MouseEventHandler<HTMLButtonElement>;
-    childs?: menuItemChild[];
+    childs?: MenuItemChild[];
 }
 
 interface NavigationListProps extends React.HTMLAttributes<HTMLElement> {
-    menuItems?: menuItem[];
-    menuItemsChild?: menuItemChild[];
+    menuItems?: MenuItem[];
+    menuItemsChild?: MenuItemChild[];
 }
 
 interface XpanelProps extends React.HTMLAttributes<HTMLElement> {
     name?: string;
-    menuItems?: menuItem[];
-    menuItemsChild?: menuItemChild[];
+    menuItems?: MenuItem[];
+    menuItemsChild?: MenuItemChild[];
 }
 
 interface CollapseList {

@@ -1,3 +1,4 @@
 import Xgetstart from "./Xgetstart/Xgetstart";
 import Xbackground from "./Xbackground/Xbackground";
-export { Xgetstart, Xbackground };
+import Xpanel from "./Xpanel/Xpanel";
+export { Xgetstart, Xbackground, Xpanel };

@@ -1,3 +1,5 @@
+"use client";
+
 import {
     AppBar,
     Button,
@@ -8,19 +10,22 @@ import {
     Page,
     Spacer,
 } from "@yakad/ui";
+
 import React, { MouseEventHandler, useState } from "react";
 
-// import { ReactComponent as Menu } from "../assets/svg/menu.svg";
-// import { ReactComponent as Close } from "../assets/svg/close.svg";
+//import { ReactComponent as Menu } from "../assets/svg/menu.svg";
+//import { ReactComponent as Close } from "../assets/svg/close.svg";
 
 interface MenuItemChild {
     name: string;
     onclick?: MouseEventHandler<HTMLButtonElement>;
+    selected?: boolean;
 }
 interface MenuItem {
     name: string;
     onclick?: MouseEventHandler<HTMLButtonElement>;
     childs?: MenuItemChild[];
+    selected?: boolean;
 }
 
 interface NavigationListProps extends React.HTMLAttributes<HTMLElement> {
@@ -31,7 +36,6 @@ interface NavigationListProps extends React.HTMLAttributes<HTMLElement> {
 interface XpanelProps extends React.HTMLAttributes<HTMLElement> {
     name?: string;
     menuItems?: MenuItem[];
-    menuItemsChild?: MenuItemChild[];
 }
 
 interface CollapseList {
@@ -44,38 +48,39 @@ function NavigationList(props: NavigationListProps) {
     const handleClickcollapseList = (index: number) =>
         setcollapsedList((object) => ({
             ...object,
-            [index]: object[index] ? !object[index] : false,
+            [index]: object[index] ? !object[index] : true,
         }));
 
     return (
         <List direction="column">
             {props.menuItems
                 ? props.menuItems.map((item, index) => (
-                      <ListItem>
-                          <Button
-                              borderStyle="semi"
-                              onClick={
-                                  item.childs
-                                      ? () => handleClickcollapseList(index)
-                                      : item.onclick
-                              }
-                          >
-                              {item.name}
-                              <Spacer />
-                          </Button>
-                          <List collapsed={collapsedList[index]}>
-                              {item.childs
-                                  ? item.childs.map((child) => (
-                                        <ListItem>
-                                            <Button onClick={child.onclick}>
-                                                {child.name}
-                                            </Button>
-                                        </ListItem>
-                                    ))
-                                  : null}
-                          </List>
-                      </ListItem>
-                  ))
+                    <ListItem key={index}>
+                        <Button
+                            variant={item.selected ? "tonal" : "text"}
+                            borderStyle="semi"
+                            onClick={
+                                item.childs
+                                    ? () => handleClickcollapseList(index)
+                                    : item.onclick
+                            }
+                        >
+                            {item.name}
+                            <Spacer />
+                        </Button>
+                        <List collapsed={collapsedList[index] ? false : true} key={index}>
+                            {item.childs
+                                ? item.childs.map((child) => (
+                                    <ListItem>
+                                        <Button size="small" variant={child.selected ? "tonal" : "text"} onClick={child.onclick}>
+                                            {child.name}
+                                        </Button>
+                                    </ListItem>
+                                ))
+                                : null}
+                        </List>
+                    </ListItem>
+                ))
                 : "No menu items"}
         </List>
     );
@@ -88,7 +93,7 @@ function Xpanel(props: XpanelProps) {
     return (
         <Page>
             <AppBar>
-                <Button onClick={toggleNavOpen}>Menu</Button>
+                <Button onClick={toggleNavOpen} icon={<Menu />} />
 
                 <h1>{props.name}</h1>
             </AppBar>

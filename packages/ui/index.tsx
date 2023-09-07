@@ -20,6 +20,7 @@ import Loading from "./loading/loading";
 import CodeField from "./codeField/codeField";
 import InputField from "./inputField/inputField";
 import Theme from "./theme/theme";
+import ClickAwayListener from "./clickAwayListener/clickAwayListener";
 export {
     Button,
     AppBar,
@@ -43,4 +44,5 @@ export {
     CodeField,
     InputField,
     Theme,
+    ClickAwayListener,
 };

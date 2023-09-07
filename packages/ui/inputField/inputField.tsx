@@ -9,7 +9,7 @@ interface InputFieldProps extends React.HTMLAttributes<HTMLInputElement> {
     disabled?: boolean;
     name?: string;
     value?: string;
-    required?: string;
+    required?: boolean;
 }
 
 function InputField(props: InputFieldProps) {
@@ -20,18 +20,18 @@ function InputField(props: InputFieldProps) {
     );
 
     return (
-       <label className={styles.label}>
-      <input
-        {...props}
-        name={props.name}
-        disabled={props.disabled}
-        placeholder="  "
-        type={props.type}
-        value={props.value}
-        className={joinedClassNames}
-      />
-      <span className={styles.span}>{props.placeholder}</span>
-    </label>
+        <label className={styles.label}>
+            <input
+                {...props}
+                name={props.name}
+                disabled={props.disabled}
+                placeholder="  "
+                type={props.type}
+                value={props.value}
+                className={joinedClassNames}
+            />
+            <span className={styles.span}>{props.placeholder}</span>
+        </label>
     );
 }
 

@@ -1,4 +1,8 @@
+#Ignore
 /node_modules
 *.js
 *.js.map
 *.ts
+
+#Allow
+!declarations.d.ts

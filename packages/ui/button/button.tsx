@@ -1,11 +1,10 @@
 import React from "react";
 import { joinClassNames } from "@yakad/lib";
-import styles from "./button.module.css";
 import SvgIcon from "../svgIcon/svgIcon";
 import Loading from "../loading/loading";
+import styles from "./button.module.css";
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-    loading?: boolean;
     size?: "small" | "medium" | "large";
     variant?:
         | "text"
@@ -16,36 +15,39 @@ interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
         | "elevated"
         | "link"
         | "fab";
-    borderStyle?: "none" | "semi" | "rounded";
+    borderStyle?: "none" | "semi" | "squircle" | "rounded";
     icon?: JSX.Element;
     iconPosition?: "start" | "end";
-    loadingPosition?: "default" | "center";
+    loadingPosition?: "auto" | "center";
     loadingVariant?: "scaleOut" | "dots" | "spinner";
     disabled?: boolean;
 }
 
-interface svgSizeMap {
+interface iconSizeMap {
     small: number;
     medium: number;
     large: number;
 }
 
-const svgSizeMaps: svgSizeMap = {
+const iconSizeMaps: iconSizeMap = {
     small: 2,
     medium: 2.4,
-    large: 3,
+    large: 3.2,
 };
 
 function Button(props: ButtonProps) {
-    const startChildren = props.iconPosition === "end";
+    const startWithChildren = props.iconPosition === "end";
     const centerLoading =
-        !props.icon || (props.loading && props.loadingPosition === "center");
+        !props.icon ||
+        (props.loadingVariant && props.loadingPosition === "center");
 
     const joinedClassNames = joinClassNames(
         styles.button,
-        props.loading ? styles.loading : "",
         props.variant ? styles[props.variant] : styles.text,
-        props.loading && centerLoading ? styles.loadingPositionCenter : "",
+        props.loadingVariant ? styles.loading : "",
+        props.loadingVariant && centerLoading
+            ? styles.loadingPositionCenter
+            : "",
         props.size ? styles[props.size] : styles.medium,
         props.borderStyle ? styles[props.borderStyle] : styles.rounded,
         props.icon && !props.children ? styles.iconButton : "",
@@ -54,8 +56,8 @@ function Button(props: ButtonProps) {
 
     return (
         <button {...props} className={joinedClassNames}>
-            {startChildren ? props.children : null}
-            {props.loading ? (
+            {startWithChildren ? props.children : null}
+            {props.loadingVariant ? (
                 <div
                     className={joinClassNames(
                         centerLoading ? styles.positionCenter : "",
@@ -70,14 +72,14 @@ function Button(props: ButtonProps) {
                     className={styles.hideOnDisabled}
                     size={
                         props.size
-                            ? svgSizeMaps[props.size]
-                            : svgSizeMaps.medium
+                            ? iconSizeMaps[props.size]
+                            : iconSizeMaps.medium
                     }
                 >
                     {props.icon}
                 </SvgIcon>
             ) : null}
-            {!startChildren ? props.children : null}
+            {!startWithChildren ? props.children : null}
         </button>
     );
 }

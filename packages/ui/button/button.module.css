@@ -52,6 +52,9 @@
 [dir="rtl"] .semi {
     border-radius: var(--border-radius) 0 0 var(--border-radius);
 }
+.squircle {
+    border-radius: calc(var(--border-radius) / 2);
+}
 .rounded {
     border-radius: var(--border-radius);
 }

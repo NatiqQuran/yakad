@@ -73,46 +73,49 @@ function NavigationList(props: NavigationListProps) {
 
     return (
         <List direction="column">
-            {props.menuItems
-                ? props.menuItems.map((item, index) => (
-                      <ListItem key={index}>
-                          <Button
-                              variant={item.selected ? "tonal" : "text"}
-                              borderStyle="semi"
-                              onClick={
-                                  item.childs
-                                      ? () => handleClickcollapseList(index)
-                                      : item.onclick
-                              }
-                          >
-                              {item.name}
-                              <Spacer />
-                          </Button>
-                          <List
-                              collapsed={collapsedList[index] ? false : true}
-                              key={index}
-                          >
-                              {item.childs
-                                  ? item.childs.map((child) => (
-                                        <ListItem>
-                                            <Button
-                                                size="small"
-                                                variant={
-                                                    child.selected
-                                                        ? "tonal"
-                                                        : "text"
-                                                }
-                                                onClick={child.onclick}
-                                            >
-                                                {child.name}
-                                            </Button>
-                                        </ListItem>
-                                    ))
-                                  : null}
-                          </List>
-                      </ListItem>
-                  ))
-                : "No menu items"}
+            {props.menuItems ? (
+                props.menuItems.map((item, index) => (
+                    <ListItem key={index}>
+                        <Button
+                            variant={item.selected ? "tonal" : "text"}
+                            borderStyle="semi"
+                            onClick={
+                                item.childs
+                                    ? () => handleClickcollapseList(index)
+                                    : item.onclick
+                            }
+                        >
+                            {item.name}
+                            <Spacer />
+                        </Button>
+                        <List
+                            direction="column"
+                            collapsed={collapsedList[index] ? false : true}
+                            key={index}
+                        >
+                            {item.childs
+                                ? item.childs.map((child) => (
+                                      <ListItem>
+                                          <Button
+                                              size="small"
+                                              variant={
+                                                  child.selected
+                                                      ? "tonal"
+                                                      : "text"
+                                              }
+                                              onClick={child.onclick}
+                                          >
+                                              {child.name}
+                                          </Button>
+                                      </ListItem>
+                                  ))
+                                : null}
+                        </List>
+                    </ListItem>
+                ))
+            ) : (
+                <h3>No menu items</h3>
+            )}
         </List>
     );
 }

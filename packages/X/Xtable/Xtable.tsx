@@ -1,3 +1,4 @@
+import React from "react";
 import { joinClassNames } from "@yakad/lib";
 import styles from "./Xtable.module.css";
 

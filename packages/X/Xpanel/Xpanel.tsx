@@ -32,6 +32,7 @@ interface NavigationListProps extends React.HTMLAttributes<HTMLElement> {
 interface XpanelProps extends React.HTMLAttributes<HTMLElement> {
     name?: string;
     menuItems?: MenuItem[];
+    appbarChildren?: JSX.Element;
 }
 
 interface CollapseList {
@@ -47,6 +48,8 @@ export default function Xpanel(props: XpanelProps) {
             <AppBar>
                 <Button icon={<Symbol icon="menu" />} onClick={toggleNavOpen} />
                 <h1>{props.name ? props.name : "Panel"}</h1>
+                <Spacer />
+                {props.appbarChildren}
             </AppBar>
             <Main onClick={() => setNavOpen(false)}>{props.children}</Main>
 

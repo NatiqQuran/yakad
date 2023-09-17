@@ -8,8 +8,8 @@ interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
     foot?: any;
 }
 
-export default function Table(props: TableProps) {
-    const joinedClassNames = joinClassNames(styles.table, props.className!);
+export default function Xtable(props: TableProps) {
+    const joinedClassNames = joinClassNames(props.className!);
 
     const headKeys = props.head ? Object.keys(props.head) : null;
     const dataKeys = props.data ? Object.keys(props.data[0]) : null;

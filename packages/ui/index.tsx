@@ -21,6 +21,7 @@ import CodeField from "./codeField/codeField";
 import InputField from "./inputField/inputField";
 import Theme from "./theme/theme";
 import ClickAwayListener from "./clickAwayListener/clickAwayListener";
+import { Table, Thead, Tbody, Tfoot, Tr, Th, Td } from "./table/table";
 export {
     Button,
     AppBar,
@@ -45,4 +46,11 @@ export {
     InputField,
     Theme,
     ClickAwayListener,
+    Table,
+    Thead,
+    Tbody,
+    Tfoot,
+    Tr,
+    Th,
+    Td,
 };

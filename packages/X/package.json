@@ -1,6 +1,6 @@
 {
     "name": "@yakad/x",
-    "version": "1.0.15-beta",
+    "version": "1.0.16-beta",
     "description": "",
     "main": "./src/index.js",
     "scripts": {
@@ -12,17 +12,17 @@
         "url": "git+https://github.com/NatiqQuran/yakad.git"
     },
     "author": "Natiq",
-    "license": "GPL-3.0",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/NatiqQuran/yakad/issues"
     },
-    "homepage": "https://github.com/NatiqQuran/yakad#readme",
+    "homepage": "https://yakad.natiq.net",
     "dependencies": {
         "@types/react": "18.0.24",
         "@types/react-dom": "18.0.6",
         "@yakad/lib": "1.0.5",
         "@yakad/symbols": "1.0.0",
-        "@yakad/ui": "1.2.74-beta",
+        "@yakad/ui": "1.2.77-beta",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-router-dom": "6.4.2",

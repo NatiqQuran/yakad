@@ -18,11 +18,11 @@
         "ui"
     ],
     "author": "Natiq",
-    "license": "GPL-3.0",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/NatiqQuran/yakad/issues"
     },
-    "homepage": "https://github.com/NatiqQuran/yakad#readme",
+    "homepage": "https://yakad.natiq.net",
     "dependencies": {
         "typescript": "^4.8.4"
     }

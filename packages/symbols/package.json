@@ -12,7 +12,7 @@
         "url": "git+https://github.com/NatiqQuran/yakad.git"
     },
     "author": "Natiq",
-    "license": "GPL-3.0",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/NatiqQuran/yakad/issues"
     },

@@ -1,6 +1,6 @@
 import React from "react";
 import { joinClassNames } from "@yakad/lib";
-import styles from "./Xtable.module.css";
+import { Table, Thead, Tbody, Tfoot, Tr, Th, Td } from "@yakad/ui";
 
 interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
     head?: any;
@@ -16,38 +16,38 @@ export default function Table(props: TableProps) {
     const footKeys = props.foot ? Object.keys(props.foot) : null;
 
     return (
-        <table {...props} className={joinedClassNames}>
-            <thead>
-                <tr>
+        <Table {...props} className={joinedClassNames}>
+            <Thead>
+                <Tr>
                     {props.head
-                        ? headKeys?.map((cell) => <th>{props.head[cell]}</th>)
-                        : dataKeys?.map((cell) => <th>{cell}</th>)}
-                </tr>
-            </thead>
-            <tbody>
+                        ? headKeys?.map((cell) => <Th>{props.head[cell]}</Th>)
+                        : dataKeys?.map((cell) => <Th>{cell}</Th>)}
+                </Tr>
+            </Thead>
+            <Tbody>
                 {props.data
                     ? props.data.map((row) => (
-                          <tr>
+                          <Tr>
                               {props.head
                                   ? headKeys?.map((cell) => (
-                                        <td>{row[cell]}</td>
+                                        <Td>{row[cell]}</Td>
                                     ))
                                   : dataKeys?.map((cell) => (
-                                        <td>{row[cell]}</td>
+                                        <Td>{row[cell]}</Td>
                                     ))}
-                          </tr>
+                          </Tr>
                       ))
                     : "No data"}
-            </tbody>
+            </Tbody>
             {props.foot ? (
-                <tfoot>
-                    <tr>
+                <Tfoot>
+                    <Tr>
                         {headKeys?.map((cell) => (
-                            <th>{props.foot[cell]}</th>
+                            <Th>{props.foot[cell]}</Th>
                         ))}
-                    </tr>
-                </tfoot>
+                    </Tr>
+                </Tfoot>
             ) : null}
-        </table>
+        </Table>
     );
 }

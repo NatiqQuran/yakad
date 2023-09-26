@@ -6,6 +6,7 @@ interface CodeFieldsProps extends React.HTMLAttributes<HTMLInputElement> {
     length?: number;
     name?: string;
     type?: string;
+    size?: "small" | "medium" | "large";
 }
 
 function sliceOverLength(
@@ -23,7 +24,11 @@ function sliceOverLength(
 function CodeField(this: any, props: CodeFieldsProps) {
     const length: number = props.length ? props.length : 6;
 
-    const joinedClassNames = joinClassNames(styles.input, props.className!);
+    const joinedClassNames = joinClassNames(
+        styles.input,
+        props.size ? styles[props.size] : styles.medium,
+        props.className!
+    );
 
     const joinedStyles = joinStyles(
         { width: "calc(1.5ch * " + props.length + ")" },

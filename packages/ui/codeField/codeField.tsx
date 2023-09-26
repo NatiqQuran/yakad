@@ -8,7 +8,21 @@ interface CodeFieldsProps extends React.HTMLAttributes<HTMLInputElement> {
     type?: string;
 }
 
-function CodeField(props: CodeFieldsProps) {
+function sliceOverLength(
+    event: React.FormEvent<HTMLInputElement>,
+    length: number
+) {
+    const targetInput = event.target as HTMLInputElement;
+    const targetLength = targetInput.value.length;
+    if (targetLength > length)
+        targetInput.value = targetInput.value.slice(0, targetLength - 1);
+
+    targetInput.value = targetInput.value.replace(/[^0-9]+/, "");
+}
+
+function CodeField(this: any, props: CodeFieldsProps) {
+    const length: number = props.length ? props.length : 6;
+
     const joinedClassNames = joinClassNames(styles.input, props.className!);
 
     const joinedStyles = joinStyles(
@@ -18,13 +32,15 @@ function CodeField(props: CodeFieldsProps) {
 
     return (
         <input
-            {...props}
             name={props.name}
-            type={props.type}
-            minLength={props.length}
-            maxLength={props.length}
+            type="number"
+            minLength={length}
+            maxLength={length}
             className={joinedClassNames}
             style={joinedStyles}
+            onInput={(event) => sliceOverLength(event, length)}
+            autoComplete="off"
+            pattern="[0-9]"
         />
     );
 }

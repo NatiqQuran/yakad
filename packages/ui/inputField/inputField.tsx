@@ -29,6 +29,7 @@ function InputField(props: InputFieldProps) {
                 type={props.type}
                 value={props.value}
                 className={joinedClassNames}
+                autoFocus
             />
             <span className={styles.span}>{props.placeholder}</span>
         </label>

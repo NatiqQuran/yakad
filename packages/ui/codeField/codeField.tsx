@@ -7,7 +7,7 @@ interface CodeFieldsProps extends React.HTMLAttributes<HTMLInputElement> {
     name?: string;
     type?: string;
     autoFocus?: boolean;
-    onFilled?: any;
+    onFilled?: Function;
 }
 
 function onInputHandler(

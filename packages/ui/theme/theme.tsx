@@ -9,7 +9,7 @@ interface ThemeProps extends React.HTMLAttributes<HTMLElement> {
     zoom?: number;
 }
 
-function Theme(props: ThemeProps) {
+export default function Theme(props: ThemeProps) {
     const zoomPercentage = props.zoom ? (props.zoom / 100) * 62.5 : 62.5;
     //   document.documentElement.style.setProperty("font-size", zoomPercentage + "%");
 
@@ -25,5 +25,3 @@ function Theme(props: ThemeProps) {
         </div>
     );
 }
-
-export default Theme;

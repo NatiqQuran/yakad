@@ -11,7 +11,7 @@ interface GridItemProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 // Custom Button Element
-function GridItem(props: GridItemProps) {
+export default function GridItem(props: GridItemProps) {
     const joinedClassNames = joinClassNames(
         props.xl ? styles["xl" + props.xl] : "",
         props.lg ? styles["lg" + props.lg] : "",
@@ -27,5 +27,3 @@ function GridItem(props: GridItemProps) {
         </div>
     );
 }
-
-export default GridItem;

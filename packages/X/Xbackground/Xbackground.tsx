@@ -8,7 +8,7 @@ interface XbackgroundProps extends React.HTMLAttributes<HTMLElement> {
     backgroundimage?: string;
 }
 
-function Xbackground(props: XbackgroundProps) {
+export default function Xbackground(props: XbackgroundProps) {
     const joinedClassNames = joinClassNames(
         styles.background,
         props.variant ? styles[props.variant] : "",
@@ -30,5 +30,3 @@ function Xbackground(props: XbackgroundProps) {
         </div>
     );
 }
-
-export default Xbackground;

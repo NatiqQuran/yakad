@@ -2,7 +2,7 @@ import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./main.module.css";
 
-interface MainProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface MainProps extends React.HTMLAttributes<HTMLDivElement> {
     navOpen?: boolean;
 }
 

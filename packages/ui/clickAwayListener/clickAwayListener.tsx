@@ -2,7 +2,8 @@
 
 import React, { useEffect, useRef } from "react";
 
-interface ClickAwayListenerProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ClickAwayListenerProps
+    extends React.HTMLAttributes<HTMLDivElement> {
     onClickAway: React.MouseEventHandler<HTMLDivElement>;
 }
 

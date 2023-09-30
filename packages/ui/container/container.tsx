@@ -4,7 +4,7 @@ import styles from "./container.module.css";
 
 type ScreenSize = "xs" | "sm" | "md" | "lg" | "xl";
 
-interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     maxWidth?: ScreenSize;
     background?: "dotted";
 }

@@ -3,7 +3,7 @@ import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./theme.module.css";
 import "./zoom.css";
 
-interface ThemeProps extends React.HTMLAttributes<HTMLElement> {
+export interface ThemeProps extends React.HTMLAttributes<HTMLElement> {
     mode?: "light" | "dark" | "system";
     color?: "green" | "red" | "yellow" | "blue" | "purple";
     zoom?: number;

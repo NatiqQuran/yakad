@@ -2,7 +2,8 @@ import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./codeField.module.css";
 
-interface CodeFieldsProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface CodeFieldsProps
+    extends React.HTMLAttributes<HTMLInputElement> {
     length?: number;
     name?: string;
     type?: string;

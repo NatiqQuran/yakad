@@ -2,7 +2,7 @@ import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./gridItem.module.css";
 
-interface GridItemProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface GridItemProps extends React.HTMLAttributes<HTMLDivElement> {
     xs?: number;
     sm?: number;
     md?: number;

@@ -2,7 +2,7 @@ import React from "react";
 import { joinClassNames } from "@yakad/lib";
 import styles from "./list.module.css";
 
-interface ListProps extends React.HTMLAttributes<HTMLUListElement> {
+export interface ListProps extends React.HTMLAttributes<HTMLUListElement> {
     direction?: "row" | "column";
     collapsed?: boolean;
 }

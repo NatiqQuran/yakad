@@ -2,7 +2,7 @@ import React from "react";
 import { joinClassNames } from "@yakad/lib";
 import styles from "./navigation.module.css";
 
-interface NavigationProps extends React.HTMLAttributes<HTMLElement> {
+export interface NavigationProps extends React.HTMLAttributes<HTMLElement> {
     anchor?: "left" | "right" | "top" | "bottom" | "auto";
     open: boolean;
 }

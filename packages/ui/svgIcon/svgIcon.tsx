@@ -6,7 +6,7 @@ interface SvgIconProps extends React.HTMLAttributes<HTMLElement> {
     size?: number;
 }
 
-function SvgIcon(props: SvgIconProps) {
+export default function SvgIcon(props: SvgIconProps) {
     const joinedClassNames = joinClassNames(styles.svg, props.className!);
 
     const joinedStyles = joinStyles(
@@ -22,5 +22,3 @@ function SvgIcon(props: SvgIconProps) {
         </div>
     );
 }
-
-export default SvgIcon;

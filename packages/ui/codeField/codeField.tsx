@@ -6,7 +6,7 @@ interface CodeFieldsProps extends React.HTMLAttributes<HTMLInputElement> {
     length?: number;
     name?: string;
     type?: string;
-    size?: "small" | "medium" | "large";
+    autoFocus?: boolean;
 }
 
 function sliceOverLength(
@@ -21,14 +21,10 @@ function sliceOverLength(
     targetInput.value = targetInput.value.replace(/[^0-9]+/, "");
 }
 
-function CodeField(this: any, props: CodeFieldsProps) {
+export default function CodeField(this: any, props: CodeFieldsProps) {
     const length: number = props.length ? props.length : 6;
 
-    const joinedClassNames = joinClassNames(
-        styles.input,
-        props.size ? styles[props.size] : styles.medium,
-        props.className!
-    );
+    const joinedClassNames = joinClassNames(styles.input, props.className!);
 
     const joinedStyles = joinStyles(
         { width: "calc(1.5ch * " + props.length + ")" },
@@ -46,8 +42,7 @@ function CodeField(this: any, props: CodeFieldsProps) {
             onInput={(event) => sliceOverLength(event, length)}
             autoComplete="off"
             pattern="[0-9]"
+            autoFocus={props.autoFocus}
         />
     );
 }
-
-export default CodeField;

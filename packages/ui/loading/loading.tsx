@@ -7,7 +7,7 @@ interface LoadingProps extends React.HTMLAttributes<HTMLButtonElement> {
     variant?: "scaleOut" | "dots" | "spinner";
 }
 
-function Loading(props: LoadingProps) {
+export default function Loading(props: LoadingProps) {
     const joinedClassNames = joinClassNames(
         styles.loading,
         props.size ? styles[props.size] : styles.medium,
@@ -21,5 +21,3 @@ function Loading(props: LoadingProps) {
         </div>
     );
 }
-
-export default Loading;

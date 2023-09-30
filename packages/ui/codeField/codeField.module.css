@@ -15,6 +15,7 @@
     color: transparent;
     text-shadow: 0 0 0 rgb(var(--secondaryColor, 98 91 113));
     letter-spacing: 0.5ch;
+    font-size: 4rem;
 }
 .input:focus {
     outline: none;
@@ -23,13 +24,4 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-.small {
-    font: 5ch consolas, monospace;
-}
-.medium {
-    font: 7ch consolas, monospace;
-}
-.large {
-    font: 11ch consolas, monospace;
 }

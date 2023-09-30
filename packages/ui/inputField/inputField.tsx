@@ -10,9 +10,10 @@ interface InputFieldProps extends React.HTMLAttributes<HTMLInputElement> {
     name?: string;
     value?: string;
     required?: boolean;
+    autoFocus?: boolean;
 }
 
-function InputField(props: InputFieldProps) {
+export default function InputField(props: InputFieldProps) {
     const joinedClassNames = joinClassNames(
         styles.input,
         props.variant ? styles[props.variant] : styles.standard,
@@ -29,11 +30,9 @@ function InputField(props: InputFieldProps) {
                 type={props.type}
                 value={props.value}
                 className={joinedClassNames}
-                autoFocus
+                autoFocus={props.autoFocus}
             />
             <span className={styles.span}>{props.placeholder}</span>
         </label>
     );
 }
-
-export default InputField;

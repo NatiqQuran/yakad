@@ -35,7 +35,7 @@ const iconSizeMaps: iconSizeMap = {
     large: 3.2,
 };
 
-function Button(props: ButtonProps) {
+export default function Button(props: ButtonProps) {
     const startWithChildren = props.iconPosition === "end";
     const centerLoading =
         !props.icon ||
@@ -83,5 +83,3 @@ function Button(props: ButtonProps) {
         </button>
     );
 }
-
-export default Button;

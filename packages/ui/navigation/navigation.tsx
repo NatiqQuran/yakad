@@ -7,7 +7,7 @@ interface NavigationProps extends React.HTMLAttributes<HTMLElement> {
     open: boolean;
 }
 
-function Navigation(props: NavigationProps) {
+export default function Navigation(props: NavigationProps) {
     const joinedClassNames = joinClassNames(
         styles.navigation,
         props.anchor ? styles[props.anchor] : styles.auto,
@@ -20,5 +20,3 @@ function Navigation(props: NavigationProps) {
         </nav>
     );
 }
-
-export default Navigation;

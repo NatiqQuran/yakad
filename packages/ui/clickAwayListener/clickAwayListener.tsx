@@ -6,7 +6,7 @@ interface ClickAwayListenerProps extends React.HTMLAttributes<HTMLDivElement> {
     onClickAway: React.MouseEventHandler<HTMLDivElement>;
 }
 
-function ClickAwayListener(props: ClickAwayListenerProps) {
+export default function ClickAwayListener(props: ClickAwayListenerProps) {
     const ref = useRef(null);
 
     useEffect(() => {
@@ -25,5 +25,3 @@ function ClickAwayListener(props: ClickAwayListenerProps) {
 
     return <div ref={ref}>{props.children}</div>;
 }
-
-export default ClickAwayListener;

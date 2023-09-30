@@ -8,7 +8,7 @@ interface GridContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 // Custom Button Element
-function GridContainer(props: GridContainerProps) {
+export default function GridContainer(props: GridContainerProps) {
     const joinedClassNames = joinClassNames(
         styles.gridcontainer,
         props.className!
@@ -24,5 +24,3 @@ function GridContainer(props: GridContainerProps) {
         </div>
     );
 }
-
-export default GridContainer;

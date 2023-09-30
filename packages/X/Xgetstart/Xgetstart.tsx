@@ -7,7 +7,7 @@ interface XgetstartProps extends React.HTMLAttributes<HTMLElement> {
     //what type we should choose for logo?
 }
 
-function Xgetstart(props: XgetstartProps) {
+export default function Xgetstart(props: XgetstartProps) {
     const joinedClassNames = joinClassNames(props.className!);
 
     const joinedStyles = joinStyles({ padding: "3rem 0" }, props.style!);
@@ -42,5 +42,3 @@ function Xgetstart(props: XgetstartProps) {
         </Container>
     );
 }
-
-export default Xgetstart;

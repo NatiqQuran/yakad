@@ -13,7 +13,7 @@ interface CodeFieldsProps extends React.HTMLAttributes<HTMLInputElement> {
 function onInputHandler(
     event: React.FormEvent<HTMLInputElement>,
     inputLength: number,
-    onFilled: any
+    onFilled: Function
 ): void {
     const targetInputElement = event.target as HTMLInputElement;
     removeUnNumberChars(targetInputElement);

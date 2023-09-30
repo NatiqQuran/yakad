@@ -7,18 +7,29 @@ interface CodeFieldsProps extends React.HTMLAttributes<HTMLInputElement> {
     name?: string;
     type?: string;
     autoFocus?: boolean;
+    onFilled?: any;
 }
 
-function sliceOverLength(
+function onInputHandler(
     event: React.FormEvent<HTMLInputElement>,
-    length: number
-) {
-    const targetInput = event.target as HTMLInputElement;
-    const targetLength = targetInput.value.length;
-    if (targetLength > length)
-        targetInput.value = targetInput.value.slice(0, targetLength - 1);
-
-    targetInput.value = targetInput.value.replace(/[^0-9]+/, "");
+    inputLength: number,
+    onFilled: any
+): void {
+    const targetInputElement = event.target as HTMLInputElement;
+    removeUnNumberChars(targetInputElement);
+    if (inputLength == targetInputElement.value.length) onFilled();
+    sliceOverLength(targetInputElement, inputLength);
+}
+function sliceOverLength(
+    inputElement: HTMLInputElement,
+    inputLength: number
+): void {
+    const targetLength = inputElement.value.length;
+    if (targetLength > inputLength)
+        inputElement.value = inputElement.value.slice(0, inputLength);
+}
+function removeUnNumberChars(inputElement: HTMLInputElement): void {
+    inputElement.value = inputElement.value.replace(/[^0-9]+/, "");
 }
 
 export default function CodeField(this: any, props: CodeFieldsProps) {
@@ -39,7 +50,7 @@ export default function CodeField(this: any, props: CodeFieldsProps) {
             maxLength={length}
             className={joinedClassNames}
             style={joinedStyles}
-            onInput={(event) => sliceOverLength(event, length)}
+            onInput={(event) => onInputHandler(event, length, props.onFilled)}
             autoComplete="off"
             pattern="[0-9]"
             autoFocus={props.autoFocus}

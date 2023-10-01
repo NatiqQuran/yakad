@@ -39,8 +39,13 @@ interface CollapseList {
     [n: number]: boolean;
 }
 
+const DEFAULT_NAV_OPEN_STATE = true;
+
 export default function Xpanel(props: XpanelProps) {
-    const [navOpen, setNavOpen] = useState<boolean>(false);
+    const [navOpen, setNavOpen] = React.useState<boolean>(
+        DEFAULT_NAV_OPEN_STATE
+    );
+
     const toggleNavOpen = () => setNavOpen((value) => !value);
 
     return (
@@ -51,7 +56,9 @@ export default function Xpanel(props: XpanelProps) {
                 <Spacer />
                 {props.appbarChildren}
             </AppBar>
-            <Main onClick={() => setNavOpen(false)}>{props.children}</Main>
+            <Main navOpen={navOpen} onClick={() => setNavOpen(false)}>
+                {props.children}
+            </Main>
 
             <Navigation open={navOpen}>
                 <Button
@@ -100,7 +107,11 @@ function NavigationList(props: NavigationListProps) {
                                 ? item.childs.map((child) => (
                                       <ListItem>
                                           <Button
+                                              style={{
+                                                  marginInlineStart: "1rem",
+                                              }}
                                               size="small"
+                                              borderStyle="semi"
                                               variant={
                                                   child.selected
                                                       ? "tonal"

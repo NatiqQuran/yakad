@@ -1,7 +1,7 @@
 import React from "react";
-import { Button } from "@yakad/ui";
 import { useRouter } from "next/navigation";
-import { ButtonProps } from "@yakad/ui/button/button";
+import { Button } from "@yakad/ui";
+import { ButtonProps } from "@yakad/ui/types";
 
 export default function XbackButton(props: ButtonProps) {
     const router = useRouter();

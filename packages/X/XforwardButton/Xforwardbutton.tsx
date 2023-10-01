@@ -1,28 +1,9 @@
 import React from "react";
 import { Button } from "@yakad/ui";
 import { useRouter } from "next/navigation";
+import { ButtonProps } from "@yakad/ui/button/button";
 
-interface XforwardButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-    name?: string;
-    size?: "small" | "medium" | "large";
-    variant?:
-        | "text"
-        | "outlined"
-        | "filled"
-        | "filledtonal"
-        | "tonal"
-        | "elevated"
-        | "link"
-        | "fab";
-    borderStyle?: "none" | "semi" | "squircle" | "rounded";
-    icon?: JSX.Element;
-    iconPosition?: "start" | "end";
-    loadingPosition?: "auto" | "center";
-    loadingVariant?: "scaleOut" | "dots" | "spinner";
-    disabled?: boolean;
-}
-
-export default function XforwardButton(props: XforwardButtonProps) {
+export default function XforwardButton(props: ButtonProps) {
     const router = useRouter();
 
     return (

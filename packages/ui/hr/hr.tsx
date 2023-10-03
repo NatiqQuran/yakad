@@ -2,7 +2,7 @@ import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./hr.module.css";
 
-interface HrProps extends React.HTMLAttributes<HTMLElement> {
+export interface HrProps extends React.HTMLAttributes<HTMLElement> {
     variant?: "dotted" | "dashed" | "shortLine";
     height?: number;
     marginTopBottom?: number;

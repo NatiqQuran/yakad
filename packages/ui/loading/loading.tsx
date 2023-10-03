@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./loading.module.css";
 import { joinClassNames } from "@yakad/lib";
 
-interface LoadingProps extends React.HTMLAttributes<HTMLButtonElement> {
+export interface LoadingProps extends React.HTMLAttributes<HTMLButtonElement> {
     size?: "small" | "medium" | "large";
     variant?: "scaleOut" | "dots" | "spinner";
 }

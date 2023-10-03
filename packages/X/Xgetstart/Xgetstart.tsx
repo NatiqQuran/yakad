@@ -2,12 +2,12 @@ import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import { GridContainer, GridItem, SvgIcon, Container } from "@yakad/ui";
 
-interface XgetstartProps extends React.HTMLAttributes<HTMLElement> {
+interface XgetStartProps extends React.HTMLAttributes<HTMLElement> {
     logo?: any;
     //what type we should choose for logo?
 }
 
-export default function Xgetstart(props: XgetstartProps) {
+export default function XgetStart(props: XgetStartProps) {
     const joinedClassNames = joinClassNames(props.className!);
 
     const joinedStyles = joinStyles({ padding: "3rem 0" }, props.style!);

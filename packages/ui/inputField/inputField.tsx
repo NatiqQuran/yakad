@@ -2,7 +2,8 @@ import React from "react";
 import { joinClassNames } from "@yakad/lib";
 import styles from "./inputField.module.css";
 
-interface InputFieldProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface InputFieldProps
+    extends React.HTMLAttributes<HTMLInputElement> {
     variant?: "standard" | "outlined" | "filled";
     type?: string;
     placeholder?: string;

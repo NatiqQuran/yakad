@@ -2,7 +2,7 @@ import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./svgIcon.module.css";
 
-interface SvgIconProps extends React.HTMLAttributes<HTMLElement> {
+export interface SvgIconProps extends React.HTMLAttributes<HTMLElement> {
     size?: number;
 }
 

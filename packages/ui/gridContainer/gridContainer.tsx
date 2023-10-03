@@ -2,7 +2,8 @@ import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./gridContainer.module.css";
 
-interface GridContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface GridContainerProps
+    extends React.HTMLAttributes<HTMLDivElement> {
     rowGap?: number;
     columnGap?: number;
 }

@@ -4,7 +4,7 @@ import SvgIcon from "../svgIcon/svgIcon";
 import Loading from "../loading/loading";
 import styles from "./button.module.css";
 
-interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     size?: "small" | "medium" | "large";
     variant?:
         | "text"

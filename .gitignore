@@ -1,6 +1,8 @@
 #Ignore
 *.js
 *.js.map
+*.ts
 
 #Allow
 !declarations.d.ts
+!/packages/lib/*.ts

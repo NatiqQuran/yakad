@@ -1,6 +1,6 @@
 {
     "name": "@yakad/x",
-    "version": "1.0.26-beta",
+    "version": "1.0.33-beta",
     "description": "",
     "main": "./src/index.js",
     "scripts": {
@@ -22,7 +22,7 @@
         "@types/react-dom": "18.0.6",
         "@yakad/lib": "1.0.5",
         "@yakad/symbols": "1.0.0",
-        "@yakad/ui": "1.2.84-beta",
+        "@yakad/ui": "1.2.92-beta",
         "react": "18.2.0",
         "react-router-dom": "6.4.2",
         "next": "13.4.19",

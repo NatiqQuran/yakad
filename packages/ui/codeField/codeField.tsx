@@ -14,11 +14,11 @@ export interface CodeFieldsProps
 function onInputHandler(
     event: React.FormEvent<HTMLInputElement>,
     inputLength: number,
-    onFilled: Function
+    onFilled: Function | undefined
 ): void {
     const targetInputElement = event.target as HTMLInputElement;
     removeUnNumberChars(targetInputElement);
-    if (inputLength == targetInputElement.value.length) onFilled();
+    if (inputLength == targetInputElement.value.length) onFilled?.();
     sliceOverLength(targetInputElement, inputLength);
 }
 function sliceOverLength(

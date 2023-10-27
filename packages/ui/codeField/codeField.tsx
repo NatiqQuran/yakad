@@ -18,7 +18,7 @@ function onInputHandler(
 ): void {
     const targetInputElement = event.target as HTMLInputElement;
     removeUnNumberChars(targetInputElement);
-    if (inputLength == targetInputElement.value.length) onFilled?.();
+    if (inputLength == targetInputElement.value.length && onFilled) onFilled();
     sliceOverLength(targetInputElement, inputLength);
 }
 function sliceOverLength(

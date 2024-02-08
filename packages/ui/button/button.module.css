@@ -12,6 +12,7 @@
     user-select: none;
     cursor: pointer;
     box-sizing: border-box;
+    text-decoration: none;
 }
 .small {
     min-width: 3rem;

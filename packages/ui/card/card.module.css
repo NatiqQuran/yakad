@@ -1,6 +1,7 @@
 .card {
     width: 100%;
     padding: 3rem;
+    margin: auto;
     box-sizing: border-box;
     border-radius: 2rem;
     background: rgb(var(--surfaceContainerHighestColor, 230 224 233));

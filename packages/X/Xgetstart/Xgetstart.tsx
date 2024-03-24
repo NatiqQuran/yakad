@@ -10,7 +10,7 @@ interface XgetStartProps extends React.HTMLAttributes<HTMLElement> {
 export default function XgetStart(props: XgetStartProps) {
     const joinedClassNames = joinClassNames(props.className!);
 
-    const joinedStyles = joinStyles({ padding: "3rem 0" }, props.style!);
+    const joinedStyles = joinStyles({ padding: "6rem 0" }, props.style!);
 
     return (
         <Container

@@ -2,8 +2,16 @@ import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./appBar.module.css";
 
-export default function AppBar(props: React.HTMLAttributes<HTMLElement>) {
-    const joinedClassNames = joinClassNames(styles.header, props.className!);
+export interface AppbarProps extends React.HTMLAttributes<HTMLDivElement> {
+    positionSticky?: boolean;
+}
+
+export default function AppBar(props: AppbarProps) {
+    const joinedClassNames = joinClassNames(
+        styles.header,
+        props.className!,
+        props.positionSticky ? styles.Sticky : null
+    );
 
     return (
         <header {...props} className={joinedClassNames}>

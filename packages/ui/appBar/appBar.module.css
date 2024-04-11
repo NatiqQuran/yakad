@@ -14,5 +14,6 @@
     user-select: none;
 }
 .sticky {
-    position: fixeds;
+    position: sticky;
+    top: 0;
 }

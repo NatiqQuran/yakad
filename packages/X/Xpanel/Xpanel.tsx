@@ -50,7 +50,7 @@ export default function Xpanel(props: XpanelProps) {
 
     return (
         <Page>
-            <AppBar>
+            <AppBar positionSticky>
                 <Button icon={<Symbol icon="menu" />} onClick={toggleNavOpen} />
                 <h1>{props.name ? props.name : "Panel"}</h1>
                 <Spacer />

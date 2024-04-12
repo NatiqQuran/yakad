@@ -13,3 +13,7 @@
     fill: rgb(var(--onSurfaceColor, 28 27 31));
     user-select: none;
 }
+.sticky {
+    position: sticky;
+    top: 0;
+}

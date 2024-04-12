@@ -9,13 +9,13 @@ interface SymbolProps extends React.HTMLAttributes<HTMLElement> {
     size?: number | "small" | "medium" | "large";
 }
 
-interface symbolSizeMap {
+interface SymbolSizeMap {
     small: number;
     medium: number;
     large: number;
 }
 
-const symbolSizeMaps: symbolSizeMap = {
+const symbolSizeMaps: SymbolSizeMap = {
     small: 2,
     medium: 2.4,
     large: 3.2,

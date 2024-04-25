@@ -13,8 +13,6 @@
 .column {
     flex-direction: column;
     align-items: stretch;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .collapsed {

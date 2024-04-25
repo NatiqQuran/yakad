@@ -11,7 +11,6 @@ import {
     Page,
     Spacer,
 } from "@yakad/ui";
-import Symbol from "@yakad/symbols";
 
 interface MenuItem {
     name: string;
@@ -56,7 +55,13 @@ export default function Xpanel(props: XpanelProps) {
                 <Spacer />
                 {props.appbarChildren}
             </AppBar>
-            <Main navOpen={navOpen} onClick={() => setNavOpen(false)}>
+            <Main
+                style={{
+                    height: "calc(100vh - 5rem)",
+                }}
+                navOpen={navOpen}
+                onClick={() => setNavOpen(false)}
+            >
                 {props.children}
             </Main>
 

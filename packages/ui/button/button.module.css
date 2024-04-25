@@ -1,5 +1,4 @@
 .button {
-    position: relative;
     display: flex;
     align-items: center;
     line-height: 2rem;
@@ -121,14 +120,14 @@
 .medium.fab {
     border-radius: 1.3rem;
     height: 5.6rem;
-    min-width: 5.6;
+    min-width: 5.6rem;
     --padding: 1.6rem;
     font-size: 1.6rem;
 }
 .large.fab {
     border-radius: 1.5rem;
     height: 6.6rem;
-    min-width: 6.6;
+    min-width: 6.6rem;
     --padding: 1.8rem;
     font-size: 1.8rem;
 }

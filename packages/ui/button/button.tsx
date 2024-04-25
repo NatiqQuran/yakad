@@ -1,6 +1,5 @@
 import React from "react";
 import { joinClassNames } from "@yakad/lib";
-import SvgIcon from "../svgIcon/svgIcon";
 import Loading from "../loading/loading";
 import styles from "./button.module.css";
 import { iconsCode } from "@yakad/symbols/types";
@@ -77,7 +76,7 @@ export default function Button(props: ButtonProps) {
                             ? iconSizeMaps[props.size]
                             : iconSizeMaps.medium
                     }
-                    icon={[props.icon]}
+                    icon={props.icon}
                 />
             ) : null}
             {!startWithChildren ? props.children : null}

@@ -1,5 +1,5 @@
 # Yakad
-React based frontend framework
+NextJS/React based frontend framework
 
 ```
 npm i @yakad/ui

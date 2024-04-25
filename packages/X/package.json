@@ -1,6 +1,6 @@
 {
     "name": "@yakad/x",
-    "version": "1.0.38-beta",
+    "version": "1.0.41-beta",
     "description": "",
     "main": "./src/index.js",
     "scripts": {

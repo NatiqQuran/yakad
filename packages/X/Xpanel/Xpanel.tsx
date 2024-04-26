@@ -57,7 +57,7 @@ export default function Xpanel(props: XpanelProps) {
             </AppBar>
             <Main
                 style={{
-                    height: "calc(100vh - 5rem)",
+                    minHeight: "calc(100vh - 5rem)",
                 }}
                 navOpen={navOpen}
                 onClick={() => setNavOpen(false)}

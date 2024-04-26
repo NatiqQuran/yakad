@@ -3,7 +3,7 @@ div.container {
     flex-direction: column;
     width: 100%;
     padding: 2rem;
-    margin: auto;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 

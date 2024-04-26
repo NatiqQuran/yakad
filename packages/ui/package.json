@@ -1,6 +1,6 @@
 {
     "name": "@yakad/ui",
-    "version": "1.2.98-beta",
+    "version": "1.2.102-beta",
     "description": "",
     "main": "./src/index.js",
     "scripts": {
@@ -21,6 +21,7 @@
         "@types/react": "18.0.24",
         "@types/react-dom": "18.0.6",
         "@yakad/lib": "1.0.5",
+        "@yakad/symbols": "1.0.2",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "typescript": "4.8.4"

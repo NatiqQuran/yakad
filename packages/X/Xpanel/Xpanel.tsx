@@ -11,7 +11,6 @@ import {
     Page,
     Spacer,
 } from "@yakad/ui";
-import Symbol from "@yakad/symbols";
 
 interface MenuItem {
     name: string;
@@ -51,18 +50,24 @@ export default function Xpanel(props: XpanelProps) {
     return (
         <Page>
             <AppBar positionSticky>
-                <Button icon={<Symbol icon="menu" />} onClick={toggleNavOpen} />
+                <Button icon="menu" onClick={toggleNavOpen} />
                 <h1>{props.name ? props.name : "Panel"}</h1>
                 <Spacer />
                 {props.appbarChildren}
             </AppBar>
-            <Main navOpen={navOpen} onClick={() => setNavOpen(false)}>
+            <Main
+                style={{
+                    minHeight: "calc(100vh - 5rem)",
+                }}
+                navOpen={navOpen}
+                onClick={() => setNavOpen(false)}
+            >
                 {props.children}
             </Main>
 
             <Navigation open={navOpen}>
                 <Button
-                    icon={<Symbol icon="close" />}
+                    icon="close"
                     onClick={toggleNavOpen}
                     style={{ marginRight: "0.5rem" }}
                 />

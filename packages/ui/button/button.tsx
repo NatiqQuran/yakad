@@ -1,8 +1,9 @@
 import React from "react";
 import { joinClassNames } from "@yakad/lib";
-import SvgIcon from "../svgIcon/svgIcon";
 import Loading from "../loading/loading";
 import styles from "./button.module.css";
+import { iconsCode } from "@yakad/symbols/types";
+import Symbol from "@yakad/symbols";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     size?: "small" | "medium" | "large";
@@ -16,7 +17,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
         | "link"
         | "fab";
     borderStyle?: "none" | "semi" | "squircle" | "rounded";
-    icon?: JSX.Element;
+    icon?: iconsCode;
     iconPosition?: "start" | "end";
     loadingPosition?: "auto" | "center";
     loadingVariant?: "scaleOut" | "dots" | "spinner";
@@ -68,16 +69,15 @@ export default function Button(props: ButtonProps) {
                 </div>
             ) : null}
             {props.icon ? (
-                <SvgIcon
+                <Symbol
                     className={styles.hideOnDisabled}
                     size={
                         props.size
                             ? iconSizeMaps[props.size]
                             : iconSizeMaps.medium
                     }
-                >
-                    {props.icon}
-                </SvgIcon>
+                    icon={props.icon}
+                />
             ) : null}
             {!startWithChildren ? props.children : null}
         </button>

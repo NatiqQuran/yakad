@@ -1,6 +1,7 @@
 .main {
     display: flex;
     flex-direction: column;
+    align-self: flex-end;
     box-sizing: border-box;
     width: 100%;
     transition: width 0.3s;

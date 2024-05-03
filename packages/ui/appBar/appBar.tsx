@@ -10,7 +10,7 @@ export default function AppBar(props: AppbarProps) {
     const joinedClassNames = joinClassNames(
         styles.header,
         props.className!,
-        props.positionSticky ? styles.sticky : null
+        props.positionSticky ? styles.sticky : ""
     );
 
     return (

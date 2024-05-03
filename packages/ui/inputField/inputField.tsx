@@ -17,7 +17,8 @@ export interface InputFieldProps
 export default function InputField(props: InputFieldProps) {
     const joinedClassNames = joinClassNames(
         styles.input,
-        props.variant ? styles[props.variant] : styles.standard,
+        props.variant ? styles[props.variant] : styles.outlined,
+        // Default style must be standard. but standard input is not designed in css
         props.className!
     );
 
@@ -28,9 +29,9 @@ export default function InputField(props: InputFieldProps) {
                 name={props.name}
                 disabled={props.disabled}
                 placeholder="  "
+                className={joinedClassNames}
                 type={props.type}
                 value={props.value}
-                className={joinedClassNames}
                 autoFocus={props.autoFocus}
             />
             <span className={styles.span}>{props.placeholder}</span>

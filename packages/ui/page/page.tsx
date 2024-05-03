@@ -7,7 +7,7 @@ export default function Page(props: React.HTMLAttributes<HTMLDivElement>) {
 
     return (
         <div {...props} className={joinedClassNames}>
-            {props.children}
+            {props.children as any}
         </div>
     );
 }

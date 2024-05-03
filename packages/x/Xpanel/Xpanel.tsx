@@ -62,7 +62,7 @@ export default function Xpanel(props: XpanelProps) {
                 navOpen={navOpen}
                 onClick={() => setNavOpen(false)}
             >
-                {props.children}
+                {props.children as any}
             </Main>
 
             <Navigation open={navOpen}>

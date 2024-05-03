@@ -19,7 +19,7 @@ export default function Container(props: ContainerProps) {
 
     return (
         <div {...props} className={joinedClassNames}>
-            {props.children}
+            {props.children as any}
         </div>
     );
 }

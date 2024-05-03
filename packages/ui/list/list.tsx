@@ -17,7 +17,7 @@ export default function List(props: ListProps) {
 
     return (
         <ul {...props} className={joinedClassNames}>
-            {props.children}
+            {props.children as any}
         </ul>
     );
 }

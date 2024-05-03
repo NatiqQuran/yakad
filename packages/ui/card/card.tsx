@@ -7,7 +7,7 @@ export default function Card(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <div {...props} className={joinedClassNames}>
-            {props.children}
+            {props.children as any}
         </div>
     );
 }

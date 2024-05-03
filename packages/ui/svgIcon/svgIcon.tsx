@@ -18,7 +18,7 @@ export default function SvgIcon(props: SvgIconProps) {
 
     return (
         <div {...props} className={joinedClassNames} style={joinedStyles}>
-            {props.children}
+            {props.children as any}
         </div>
     );
 }

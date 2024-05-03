@@ -16,7 +16,7 @@ export default function Xtable(props: TableProps) {
     const footKeys = props.foot ? Object.keys(props.foot) : null;
 
     return (
-        <Table {...props} className={joinedClassNames}>
+        <Table style={props.style} className={joinedClassNames}>
             <Thead>
                 <Tr>
                     {props.head

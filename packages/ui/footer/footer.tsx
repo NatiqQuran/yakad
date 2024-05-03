@@ -7,7 +7,7 @@ export default function Footer(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <footer {...props} className={joinedClassNames}>
-            {props.children}
+            {props.children as any}
         </footer>
     );
 }

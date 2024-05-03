@@ -16,7 +16,7 @@ export default function Navigation(props: NavigationProps) {
 
     return (
         <nav {...props} className={joinedClassNames}>
-            {props.children}
+            {props.children as any}
         </nav>
     );
 }

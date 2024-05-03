@@ -15,7 +15,7 @@ export default function AppBar(props: AppbarProps) {
 
     return (
         <header {...props} className={joinedClassNames}>
-            {props.children}
+            {props.children as any}
         </header>
     );
 }

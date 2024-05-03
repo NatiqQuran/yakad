@@ -1,21 +1,23 @@
 .label {
-    padding-top: 0.6rem;
-    font-size: 1.3rem;
     position: relative;
     display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 0.6rem;
+    font-size: 1.3rem;
     overflow: hidden;
 }
 .input {
     box-sizing: border-box;
-    margin: 0rem;
-    border-image: initial;
     width: 100%;
     height: inherit;
-    color: rgb(var(--onSurfaceColor, 28 27 31) / 0.87);
+    margin: 0rem;
+    border-image: initial;
     box-shadow: none;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
+    color: rgb(var(--onSurfaceColor, 28 27 31) / 0.87);
     caret-color: rgb(var(--primaryColor, 11 87 208));
 }
 .input.outlined {

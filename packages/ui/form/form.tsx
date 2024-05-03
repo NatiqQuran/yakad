@@ -15,7 +15,7 @@ export default function Form(props: React.HTMLAttributes<HTMLFormElement>) {
                 props.onSubmit!(null as any);
             }}
         >
-            {props.children}
+            {props.children as any}
         </form>
     );
 }

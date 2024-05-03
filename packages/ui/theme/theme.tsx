@@ -21,7 +21,7 @@ export default function Theme(props: ThemeProps) {
 
     return (
         <div {...props} className={joinedClassNames}>
-            {props.children}
+            {props.children as any}
         </div>
     );
 }

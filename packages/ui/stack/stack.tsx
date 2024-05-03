@@ -7,7 +7,7 @@ export default function Stack(props: React.HTMLAttributes<HTMLDivElement>) {
 
     return (
         <div {...props} className={joinedClassNames}>
-            {props.children}
+            {props.children as any}
         </div>
     );
 }

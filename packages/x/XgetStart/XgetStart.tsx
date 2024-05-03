@@ -5,6 +5,7 @@ import { GridContainer, GridItem, SvgIcon, Container } from "@yakad/ui";
 interface XgetStartProps extends React.HTMLAttributes<HTMLElement> {
     logo?: any;
     //what type we should choose for logo?
+    children: React.ReactNode;
 }
 
 export default function XgetStart(props: XgetStartProps) {
@@ -35,7 +36,7 @@ export default function XgetStart(props: XgetStartProps) {
                         padding: "0 2rem",
                     }}
                 >
-                    {props.children}
+                    {props.children as any}
                 </GridItem>
             </GridContainer>
         </Container>

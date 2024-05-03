@@ -23,7 +23,7 @@ export default function GridItem(props: GridItemProps) {
 
     return (
         <div {...props} className={joinedClassNames}>
-            {props.children}
+            {props.children as any}
         </div>
     );
 }

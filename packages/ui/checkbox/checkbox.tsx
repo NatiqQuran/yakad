@@ -8,6 +8,7 @@ import { joinClassNames } from "@yakad/lib";
 export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
     name?: string;
     label?: string;
+    checked?: boolean;
     disabled?: boolean;
 }
 
@@ -17,12 +18,11 @@ export default function Chekbox(props: CheckboxProps) {
         props.label ? styles.labeled : ""
     );
 
-    const [checked, setChecked] = React.useState<boolean>();
-    const onChangeCheckboxHandler = (
-        event: React.FormEvent<HTMLInputElement>
-    ) => {
-        const targetInputElement = event.target as HTMLInputElement;
-        setChecked(targetInputElement.checked);
+    const [checked, setChecked] = React.useState<boolean>(
+        props.checked ? props.checked : false
+    );
+    const onClickCheckboxHandler = () => {
+        setChecked((value) => !value);
     };
 
     return (
@@ -35,14 +35,15 @@ export default function Chekbox(props: CheckboxProps) {
             <Button
                 disabled={props.disabled}
                 icon={checked ? "check_box" : "check_box_outline_blank"}
+                onClick={(event) => onClickCheckboxHandler()}
             />
             <input
                 {...props}
                 className={styles.input}
                 type="checkbox"
                 name={props.name}
+                checked={checked}
                 disabled={props.disabled}
-                onChange={(event) => onChangeCheckboxHandler(event)}
             />
         </div>
     );

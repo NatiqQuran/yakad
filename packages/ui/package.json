@@ -1,6 +1,6 @@
 {
     "name": "@yakad/ui",
-    "version": "1.2.110-beta",
+    "version": "1.2.111-beta",
     "description": "UI components for NextJS/React",
     "main": "./src/index.js",
     "scripts": {

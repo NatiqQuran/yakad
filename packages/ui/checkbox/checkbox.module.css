@@ -1,0 +1,27 @@
+.checkbox {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 4rem;
+  height: 4rem;
+}
+.checkbox.labeled {
+  width: 100%;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.label {
+  display: block;
+  width: auto;
+  margin: 0.9rem 1rem;
+  margin-inline-end: auto;
+  line-height: 2.2rem;
+  font-size: 1.4rem;
+}

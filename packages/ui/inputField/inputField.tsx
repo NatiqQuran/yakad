@@ -4,7 +4,7 @@ import styles from "./inputField.module.css";
 
 export interface InputFieldProps
     extends React.HTMLAttributes<HTMLInputElement> {
-    variant?: "standard" | "outlined" | "filled";
+    variant?: "outlined" | "filled";
     type?: string;
     placeholder?: string;
     disabled?: boolean;
@@ -18,7 +18,6 @@ export default function InputField(props: InputFieldProps) {
     const joinedClassNames = joinClassNames(
         styles.input,
         props.variant ? styles[props.variant] : styles.outlined,
-        // Default style must be standard. but standard input is not designed in css
         props.className!
     );
 

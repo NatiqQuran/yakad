@@ -1,0 +1,22 @@
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    width: 4rem;
+    height: 4rem;
+}
+.checkbox.labeled {
+    width: 100%;
+}
+
+.input {
+    display: none;
+}
+
+.label {
+    display: block;
+    width: auto;
+    margin: 0.9rem 1rem;
+    margin-inline-end: auto;
+    line-height: 2.2rem;
+    font-size: 1.4rem;
+}

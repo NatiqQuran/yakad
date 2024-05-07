@@ -6,15 +6,7 @@ export default function Form(props: React.HTMLAttributes<HTMLFormElement>) {
     const joinedClassNames = joinClassNames(styles.form, props.className!);
 
     return (
-        <form
-            {...props}
-            className={joinedClassNames}
-            onSubmit={(e) => {
-                e.preventDefault();
-
-                props.onSubmit!(null as any);
-            }}
-        >
+        <form {...props} className={joinedClassNames}>
             {props.children as any}
         </form>
     );

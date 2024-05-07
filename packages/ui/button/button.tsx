@@ -6,6 +6,7 @@ import { iconsCode } from "@yakad/symbols/types";
 import Symbol from "@yakad/symbols";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+    type?: "button" | "reset" | "submit";
     size?: "small" | "medium" | "large";
     variant?:
         | "text"
@@ -56,7 +57,7 @@ export default function Button(props: ButtonProps) {
     );
 
     return (
-        <button {...props} className={joinedClassNames}>
+        <button {...props} type={props.type} className={joinedClassNames}>
             {startWithChildren ? props.children : null}
             {props.loadingVariant ? (
                 <div

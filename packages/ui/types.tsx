@@ -12,6 +12,7 @@ import { MainProps } from "./main/main";
 import { NavigationProps } from "./navigation/navigation";
 import { SvgIconProps } from "./svgIcon/svgIcon";
 import { ThemeProps } from "./theme/theme";
+import { CheckboxProps } from "./checkbox/checkbox";
 
 export {
     type ButtonProps,
@@ -28,4 +29,5 @@ export {
     type NavigationProps,
     type SvgIconProps,
     type ThemeProps,
+    type CheckboxProps,
 };

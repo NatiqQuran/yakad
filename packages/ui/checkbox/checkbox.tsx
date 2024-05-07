@@ -33,9 +33,9 @@ export default function Chekbox(props: CheckboxProps) {
                 </label>
             ) : null}
             <Button
-                disabled={props.disabled}
                 icon={checked ? "check_box" : "check_box_outline_blank"}
                 onClick={(event) => onClickCheckboxHandler()}
+                disabled={props.disabled}
             />
             <input
                 {...props}

@@ -22,6 +22,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     loadingPosition?: "auto" | "center";
     loadingVariant?: "scaleOut" | "dots" | "spinner";
     disabled?: boolean;
+    submit?: boolean;
 }
 
 interface iconSizeMap {
@@ -56,7 +57,11 @@ export default function Button(props: ButtonProps) {
     );
 
     return (
-        <button {...props} className={joinedClassNames}>
+        <button
+            type={props.submit ? "submit" : "button"}
+            {...props}
+            className={joinedClassNames}
+        >
             {startWithChildren ? props.children : null}
             {props.loadingVariant ? (
                 <div

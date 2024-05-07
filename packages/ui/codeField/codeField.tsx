@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./codeField.module.css";
@@ -51,7 +53,9 @@ export default function CodeField(this: any, props: CodeFieldsProps) {
             maxLength={length}
             className={joinedClassNames}
             style={joinedStyles}
-            onInput={(event) => onInputHandler(event, length, props.onFilled)}
+            onInput={(event) =>
+                onInputHandler(event, length ? length : 6, props.onFilled)
+            }
             autoComplete="off"
             pattern="[0-9]"
             autoFocus={props.autoFocus}

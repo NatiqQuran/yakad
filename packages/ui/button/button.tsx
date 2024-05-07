@@ -6,6 +6,7 @@ import { iconsCode } from "@yakad/symbols/types";
 import Symbol from "@yakad/symbols";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+    type?: "button" | "reset" | "submit";
     size?: "small" | "medium" | "large";
     variant?:
         | "text"
@@ -22,7 +23,6 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     loadingPosition?: "auto" | "center";
     loadingVariant?: "scaleOut" | "dots" | "spinner";
     disabled?: boolean;
-    submit?: boolean;
 }
 
 interface iconSizeMap {
@@ -57,11 +57,7 @@ export default function Button(props: ButtonProps) {
     );
 
     return (
-        <button
-            type={props.submit ? "submit" : "button"}
-            {...props}
-            className={joinedClassNames}
-        >
+        <button {...props} type={props.type} className={joinedClassNames}>
             {startWithChildren ? props.children : null}
             {props.loadingVariant ? (
                 <div

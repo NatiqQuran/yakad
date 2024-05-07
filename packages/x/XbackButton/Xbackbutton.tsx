@@ -9,7 +9,7 @@ export default function XbackButton(props: ButtonProps) {
     const router = useRouter();
 
     return (
-        <Button {...props} onClick={() => router.back()}>
+        <Button type="button" {...props} onClick={() => router.back()}>
             {props.children ? props.children : "back"}
         </Button>
     );

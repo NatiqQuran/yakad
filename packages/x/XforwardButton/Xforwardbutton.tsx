@@ -9,7 +9,7 @@ export default function XforwardButton(props: ButtonProps) {
     const router = useRouter();
 
     return (
-        <Button {...props} onClick={() => router.forward()}>
+        <Button type="button" {...props} onClick={() => router.forward()}>
             {props.children ? props.children : "forward"}
         </Button>
     );

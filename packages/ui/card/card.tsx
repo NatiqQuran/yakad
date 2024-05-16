@@ -2,12 +2,20 @@ import React from "react";
 import { joinClassNames } from "@yakad/lib";
 import styles from "./card.module.css";
 
-export default function Card(props: React.HTMLAttributes<HTMLElement>) {
-    const joinedClassNames = joinClassNames(styles.card, props.className!);
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+    align?: "start" | "center" | "end";
+}
+
+export default function Card(props: CardProps) {
+    const joinedClassNames = joinClassNames(
+        styles.card,
+        props.align ? styles[props.align] : styles.start,
+        props.className!
+    );
 
     return (
         <div {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </div>
     );
 }

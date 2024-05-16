@@ -62,7 +62,7 @@ export default function Xpanel(props: XpanelProps) {
                 navOpen={navOpen}
                 onClick={() => setNavOpen(false)}
             >
-                {props.children as any}
+                {props.children as React.ReactNode}
             </Main>
 
             <Navigation open={navOpen}>

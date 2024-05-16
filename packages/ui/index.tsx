@@ -3,7 +3,6 @@ import AppBar from "./appBar/appBar";
 import Card from "./card/card";
 import Container from "./container/container";
 import Footer from "./footer/footer";
-import Form from "./form/form";
 import GridContainer from "./gridContainer/gridContainer";
 import GridItem from "./gridItem/gridItem";
 import Hr from "./hr/hr";
@@ -29,7 +28,6 @@ export {
     Card,
     Container,
     Footer,
-    Form,
     GridContainer,
     GridItem,
     Hr,

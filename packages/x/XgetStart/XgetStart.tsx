@@ -36,7 +36,7 @@ export default function XgetStart(props: XgetStartProps) {
                         padding: "0 2rem",
                     }}
                 >
-                    {props.children as any}
+                    {props.children as React.ReactNode}
                 </GridItem>
             </GridContainer>
         </Container>

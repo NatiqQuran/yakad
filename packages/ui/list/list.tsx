@@ -17,7 +17,7 @@ export default function List(props: ListProps) {
 
     return (
         <ul {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </ul>
     );
 }

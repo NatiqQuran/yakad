@@ -24,5 +24,5 @@ export default function ClickAwayListener(props: ClickAwayListenerProps) {
             document.removeEventListener("click", handleOutSideClick, true);
     }, [props.onClickAway]);
 
-    return <div ref={ref}>{props.children as any}</div>;
+    return <div ref={ref}>{props.children as React.ReactNode}</div>;
 }

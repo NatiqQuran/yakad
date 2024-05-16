@@ -4,3 +4,16 @@
     gap: 1.5rem;
     box-sizing: border-box;
 }
+
+.start {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.end {
+    justify-content: flex-end;
+    align-items: flex-end;
+}

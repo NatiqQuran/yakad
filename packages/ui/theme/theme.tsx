@@ -21,7 +21,7 @@ export default function Theme(props: ThemeProps) {
 
     return (
         <div {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </div>
     );
 }

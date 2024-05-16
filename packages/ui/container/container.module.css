@@ -22,3 +22,16 @@ div.container.lg {
 div.container.xl {
     max-width: 150rem;
 }
+
+.start {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.end {
+    justify-content: flex-end;
+    align-items: flex-end;
+}

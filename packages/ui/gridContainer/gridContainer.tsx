@@ -21,7 +21,7 @@ export default function GridContainer(props: GridContainerProps) {
     );
     return (
         <div {...props} className={joinedClassNames} style={joinedStyles}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </div>
     );
 }

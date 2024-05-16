@@ -7,7 +7,7 @@ export default function Card(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <div {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </div>
     );
 }

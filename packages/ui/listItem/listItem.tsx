@@ -4,7 +4,7 @@ import styles from "./listItem.module.css";
 export default function ListItem(props: React.HTMLAttributes<HTMLLIElement>) {
     return (
         <li className={styles.listItem} {...props}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </li>
     );
 }

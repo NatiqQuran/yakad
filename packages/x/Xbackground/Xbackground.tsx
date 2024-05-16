@@ -26,7 +26,7 @@ export default function Xbackground(props: XbackgroundProps) {
 
     return (
         <div style={joinedStyles} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </div>
     );
 }

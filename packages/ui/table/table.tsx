@@ -7,7 +7,7 @@ export function Table(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <table {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </table>
     );
 }
@@ -17,7 +17,7 @@ export function Thead(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <thead {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </thead>
     );
 }
@@ -27,7 +27,7 @@ export function Tbody(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <tbody {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </tbody>
     );
 }
@@ -37,7 +37,7 @@ export function Tfoot(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <tfoot {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </tfoot>
     );
 }
@@ -47,7 +47,7 @@ export function Tr(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <tr {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </tr>
     );
 }
@@ -57,7 +57,7 @@ export function Th(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <th {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </th>
     );
 }
@@ -67,7 +67,7 @@ export function Td(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <td {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </td>
     );
 }

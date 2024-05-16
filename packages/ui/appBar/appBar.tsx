@@ -15,7 +15,7 @@ export default function AppBar(props: AppbarProps) {
 
     return (
         <header {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </header>
     );
 }

@@ -17,7 +17,7 @@ export default function Main(props: MainProps) {
 
     return (
         <main {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </main>
     );
 }

@@ -7,7 +7,7 @@ export default function Row(props: React.HTMLAttributes<HTMLDivElement>) {
 
     return (
         <div {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </div>
     );
 }

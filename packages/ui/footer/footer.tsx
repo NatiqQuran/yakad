@@ -7,7 +7,7 @@ export default function Footer(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <footer {...props} className={joinedClassNames}>
-            {props.children as any}
+            {props.children as React.ReactNode}
         </footer>
     );
 }

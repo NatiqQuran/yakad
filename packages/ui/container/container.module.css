@@ -25,13 +25,16 @@ div.container.xl {
 
 .start {
     justify-content: flex-start;
+    align-content: flex-start;
     align-items: flex-start;
 }
 .center {
     justify-content: center;
+    align-content: center;
     align-items: center;
 }
 .end {
     justify-content: flex-end;
+    align-content: flex-end;
     align-items: flex-end;
 }

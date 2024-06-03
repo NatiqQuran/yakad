@@ -1,5 +1,5 @@
 import React from "react";
-import { joinClassNames, joinStyles } from "@yakad/lib";
+import { joinClassNames } from "@yakad/lib";
 import styles from "./container.module.css";
 
 type ScreenSize = "xs" | "sm" | "md" | "lg" | "xl";

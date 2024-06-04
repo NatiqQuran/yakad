@@ -1,9 +1,22 @@
 .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    min-height: 5rem;
+    padding: 0.5rem 2rem;
+    gap: 1rem;
     background: rgb(var(--surfaceContainerColor, 243 237 247));
     color: rgb(var(--onSurfaceColor, 28 27 31));
     fill: rgb(var(--onSurfaceColor, 28 27 31));
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    box-sizing: border-box;
+}
+
+.start {
+    justify-content: flex-start;
+}
+.center {
+    justify-content: center;
+}
+.end {
+    justify-content: flex-end;
 }

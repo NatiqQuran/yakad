@@ -1,5 +1,5 @@
 import React from "react";
-import { joinClassNames, joinStyles } from "@yakad/lib";
+import { joinClassNames } from "@yakad/lib";
 import styles from "./row.module.css";
 
 interface RowProps extends React.HTMLAttributes<HTMLDivElement> {

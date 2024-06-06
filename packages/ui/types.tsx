@@ -13,6 +13,8 @@ import { NavigationProps } from "./navigation/navigation";
 import { SvgIconProps } from "./svgIcon/svgIcon";
 import { ThemeProps } from "./theme/theme";
 import { CheckboxProps } from "./checkbox/checkbox";
+import { RadioGroupProps } from "./radioGroup/radioGroup";
+import { RadioButtonProps } from "./radioButton/radioButton";
 
 export {
     type ButtonProps,
@@ -30,4 +32,6 @@ export {
     type SvgIconProps,
     type ThemeProps,
     type CheckboxProps,
+    type RadioGroupProps,
+    type RadioButtonProps,
 };

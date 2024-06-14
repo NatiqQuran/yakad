@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, forwardRef, useEffect } from "react";
-import styles from "./radiobutton.module.css";
+import styles from "./radioButton.module.css";
 import Button from "../button/button";
 import { joinClassNames } from "@yakad/lib";
 

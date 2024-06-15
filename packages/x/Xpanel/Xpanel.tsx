@@ -39,6 +39,7 @@ interface CollapseList {
 }
 
 export default function Xpanel(props: XpanelProps) {
+    const [mounted, setMounted] = React.useState<boolean>(false);
     const [navOpen, setNavOpen] = React.useState<boolean>(false);
     const toggleNavOpen = () => setNavOpen((value) => !value);
 
@@ -48,10 +49,12 @@ export default function Xpanel(props: XpanelProps) {
         } else {
             setNavOpen(true);
         }
+        setMounted(true);
     };
     useEffect(() => {
         window.addEventListener("resize", handleNavDependOnWindowSize);
-        handleNavDependOnWindowSize();
+        !mounted ? handleNavDependOnWindowSize() : null;
+        setMounted(true);
     });
 
     return (
@@ -64,7 +67,7 @@ export default function Xpanel(props: XpanelProps) {
             </AppBar>
             <Main
                 style={{
-                    minHeight: "calc(100vh - 5rem)",
+                    minHeight: "calc(100vh - 6rem)",
                 }}
                 navOpen={navOpen}
                 onClick={() => setNavOpen(false)}

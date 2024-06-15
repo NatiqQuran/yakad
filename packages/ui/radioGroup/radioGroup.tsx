@@ -36,7 +36,6 @@ export default function RadioGroup(props: RadioGroupProps) {
 
     return (
         <div>
-            <h1>Clicked: {checked}</h1>
             {props.children
                 ? moreThanOneChildExist
                     ? renderChildrens()

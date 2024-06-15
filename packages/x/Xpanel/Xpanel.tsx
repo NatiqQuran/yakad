@@ -43,17 +43,15 @@ export default function Xpanel(props: XpanelProps) {
     const [navOpen, setNavOpen] = React.useState<boolean>(false);
     const toggleNavOpen = () => setNavOpen((value) => !value);
 
-    const handleNavDependOnWindowSize = () => {
-        if (window.innerWidth <= 1200) {
-            setNavOpen(false);
-        } else {
-            setNavOpen(true);
-        }
-        setMounted(true);
+    const handleClickAwayNav = () => {
+        window.innerWidth <= 1200 ? setNavOpen(false) : null;
+    };
+    const handleNavOpenDependOnWindowSize = () => {
+        setNavOpen(window.innerWidth <= 1200 ? false : true), setMounted(true);
     };
     useEffect(() => {
-        window.addEventListener("resize", handleNavDependOnWindowSize);
-        !mounted ? handleNavDependOnWindowSize() : null;
+        window.addEventListener("resize", handleNavOpenDependOnWindowSize);
+        !mounted ? handleNavOpenDependOnWindowSize() : null;
         setMounted(true);
     });
 
@@ -70,7 +68,7 @@ export default function Xpanel(props: XpanelProps) {
                     minHeight: "calc(100vh - 6rem)",
                 }}
                 navOpen={navOpen}
-                onClick={() => setNavOpen(false)}
+                onClick={() => handleClickAwayNav()}
             >
                 {props.children as any}
             </Main>

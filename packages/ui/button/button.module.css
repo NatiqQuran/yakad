@@ -1,5 +1,6 @@
 .button {
     display: flex;
+    position: relative;
     align-items: center;
     line-height: 2rem;
     font-weight: 700;

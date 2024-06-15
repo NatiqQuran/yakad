@@ -4,8 +4,8 @@
     align-items: center;
     box-sizing: border-box;
     width: 100%;
-    height: 5rem;
-    padding: 0.5rem 2rem;
+    height: 6rem;
+    padding: 0 2rem;
     border-bottom: 0.1rem solid #7d7d7d40;
     gap: 1rem;
     background: rgb(var(--surfaceContainerColor, 243 237 247));

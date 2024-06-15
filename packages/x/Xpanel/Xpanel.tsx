@@ -1,6 +1,6 @@
 "use client";
 
-import React, { MouseEventHandler, useState } from "react";
+import React, { MouseEventHandler, useEffect, useState } from "react";
 import {
     AppBar,
     Button,
@@ -38,14 +38,21 @@ interface CollapseList {
     [n: number]: boolean;
 }
 
-const DEFAULT_NAV_OPEN_STATE = true;
-
 export default function Xpanel(props: XpanelProps) {
-    const [navOpen, setNavOpen] = React.useState<boolean>(
-        DEFAULT_NAV_OPEN_STATE
-    );
-
+    const [navOpen, setNavOpen] = React.useState<boolean>(false);
     const toggleNavOpen = () => setNavOpen((value) => !value);
+
+    const handleNavDependOnWindowSize = () => {
+        if (window.innerWidth <= 1200) {
+            setNavOpen(false);
+        } else {
+            setNavOpen(true);
+        }
+    };
+    useEffect(() => {
+        window.addEventListener("resize", handleNavDependOnWindowSize);
+        handleNavDependOnWindowSize();
+    });
 
     return (
         <Page>
@@ -62,15 +69,10 @@ export default function Xpanel(props: XpanelProps) {
                 navOpen={navOpen}
                 onClick={() => setNavOpen(false)}
             >
-                {props.children as React.ReactNode}
+                {props.children as any}
             </Main>
 
             <Navigation open={navOpen}>
-                <Button
-                    icon="close"
-                    onClick={toggleNavOpen}
-                    style={{ marginRight: "0.5rem" }}
-                />
                 <NavigationList menuItems={props.menuItems} />
             </Navigation>
         </Page>
@@ -92,7 +94,13 @@ function NavigationList(props: NavigationListProps) {
                 props.menuItems.map((item, index) => (
                     <ListItem key={index}>
                         <Button
-                            variant={item.selected ? "tonal" : "text"}
+                            variant={
+                                item.selected
+                                    ? "filled"
+                                    : collapsedList[index]
+                                    ? "elevated"
+                                    : "text"
+                            }
                             borderStyle="semi"
                             onClick={
                                 item.childs
@@ -107,19 +115,21 @@ function NavigationList(props: NavigationListProps) {
                             direction="column"
                             collapsed={collapsedList[index] ? false : true}
                             key={index}
+                            style={{
+                                marginInlineStart: "1rem",
+                                marginBottom: "0.5rem",
+                                borderInlineStart: "0.1rem solid #72727272",
+                            }}
                         >
                             {item.childs
                                 ? item.childs.map((child) => (
                                       <ListItem>
                                           <Button
-                                              style={{
-                                                  marginInlineStart: "1rem",
-                                              }}
                                               size="small"
                                               borderStyle="semi"
                                               variant={
                                                   child.selected
-                                                      ? "tonal"
+                                                      ? "filled"
                                                       : "text"
                                               }
                                               onClick={child.onclick}

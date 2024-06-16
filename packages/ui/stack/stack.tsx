@@ -9,7 +9,7 @@ interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
 export default function Stack(props: StackProps) {
     const joinedClassNames = joinClassNames(
         styles.stack,
-        props.align ? styles[props.align] : styles.start,
+        props.align ? styles[props.align] : null,
         props.className!
     );
 

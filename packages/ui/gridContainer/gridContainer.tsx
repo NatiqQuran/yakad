@@ -4,8 +4,7 @@ import styles from "./gridContainer.module.css";
 
 export interface GridContainerProps
     extends React.HTMLAttributes<HTMLDivElement> {
-    rowGap?: number;
-    columnGap?: number;
+    gap?: number;
 }
 
 // Custom Button Element
@@ -15,8 +14,8 @@ export default function GridContainer(props: GridContainerProps) {
         props.className!
     );
     const joinedStyles = joinStyles(
-        { columnGap: props.columnGap ? props.columnGap + "rem" : "1.5rem" },
-        { rowGap: props.rowGap ? props.rowGap + "rem" : "1.5rem" },
+        { columnGap: props.gap ? props.gap + "rem" : "1.5rem" },
+        { rowGap: props.gap ? props.gap + "rem" : "1.5rem" },
         props.style!
     );
     return (

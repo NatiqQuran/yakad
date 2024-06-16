@@ -1,11 +1,13 @@
 .footer {
     display: flex;
+    box-sizing: border-box;
     flex-direction: row;
     align-items: center;
     width: 100%;
     min-height: 5rem;
     padding: 0.5rem 2rem;
     gap: 1rem;
+    z-index: 1;
     background: rgb(var(--surfaceContainerColor, 243 237 247));
     color: rgb(var(--onSurfaceColor, 28 27 31));
     fill: rgb(var(--onSurfaceColor, 28 27 31));

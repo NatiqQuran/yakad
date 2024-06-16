@@ -1,7 +1,6 @@
 .gridcontainer {
     display: grid;
-    align-items: center;
-    width: 100%;
     box-sizing: border-box;
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }

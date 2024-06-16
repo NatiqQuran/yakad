@@ -4,6 +4,7 @@
     max-width: 100%;
     padding: 1rem 0;
     transition: transform 0.3s;
+    z-index: 2;
     background: rgb(var(--surfaceContainerColor, 243 237 247));
     color: rgb(var(--onSurfaceColor, 28 27 31));
     fill: rgb(var(--onSurfaceColor, 28 27 31));

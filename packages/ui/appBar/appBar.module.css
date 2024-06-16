@@ -8,6 +8,7 @@
     padding: 0 2rem;
     border-bottom: 0.1rem solid #7d7d7d40;
     gap: 1rem;
+    z-index: 1;
     background: rgb(var(--surfaceContainerColor, 243 237 247));
     color: rgb(var(--onSurfaceColor, 28 27 31));
     fill: rgb(var(--onSurfaceColor, 28 27 31));

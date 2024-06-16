@@ -44,7 +44,7 @@ export default function Xpanel(props: XpanelProps) {
     const toggleNavOpen = () => setNavOpen((value) => !value);
 
     const handleClickAwayNav = () => {
-        window.innerWidth <= 1200 ? setNavOpen(false) : null;
+        window.innerWidth <= 1000 ? setNavOpen(false) : null;
     };
     const handleNavOpenDependOnWindowSize = () => {
         setNavOpen(window.innerWidth <= 1200 ? false : true), setMounted(true);

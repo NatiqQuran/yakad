@@ -12,7 +12,7 @@ export default function Main(props: MainProps) {
 
     const joinedClassNames = joinClassNames(
         styles.main,
-        props.align ? styles[props.align] : styles.start,
+        props.align ? styles[props.align] : null,
         navOpenClass,
         props.className!
     );

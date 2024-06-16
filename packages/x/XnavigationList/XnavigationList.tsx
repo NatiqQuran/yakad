@@ -1,5 +1,5 @@
-import { Button, List, ListItem, Spacer } from "@yakad/ui";
 import React, { MouseEventHandler } from "react";
+import { Button, List, ListItem, Spacer } from "@yakad/ui";
 
 interface MenuItem {
     name: string;
@@ -40,8 +40,8 @@ export default function XnavigationList(props: XnavigationListProps) {
                                 item.selected
                                     ? "filled"
                                     : collapsedList[index]
-                                        ? "elevated"
-                                        : "text"
+                                    ? "elevated"
+                                    : "text"
                             }
                             borderStyle="semi"
                             onClick={
@@ -65,21 +65,21 @@ export default function XnavigationList(props: XnavigationListProps) {
                         >
                             {item.childs
                                 ? item.childs.map((child) => (
-                                    <ListItem>
-                                        <Button
-                                            size="small"
-                                            borderStyle="semi"
-                                            variant={
-                                                child.selected
-                                                    ? "filled"
-                                                    : "text"
-                                            }
-                                            onClick={child.onclick}
-                                        >
-                                            {child.name}
-                                        </Button>
-                                    </ListItem>
-                                ))
+                                      <ListItem>
+                                          <Button
+                                              size="small"
+                                              borderStyle="semi"
+                                              variant={
+                                                  child.selected
+                                                      ? "filled"
+                                                      : "text"
+                                              }
+                                              onClick={child.onclick}
+                                          >
+                                              {child.name}
+                                          </Button>
+                                      </ListItem>
+                                  ))
                                 : null}
                         </List>
                     </ListItem>

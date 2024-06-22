@@ -1,0 +1,23 @@
+.header {
+    height: 17rem !important;
+}
+.main {
+    margin-top: -8rem;
+}
+.card {
+    max-width: 35rem;
+    z-index: 2;
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        display: none !important;
+    }
+    .main {
+        margin-top: initial;
+    }
+    .card {
+        background: none !important;
+        box-shadow: none !important;
+    }
+}

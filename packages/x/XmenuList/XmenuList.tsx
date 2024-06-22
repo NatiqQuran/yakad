@@ -14,14 +14,14 @@ interface MenuItemChild {
     selected?: boolean;
 }
 
-interface XnavigationListProps extends React.HTMLAttributes<HTMLElement> {
+interface XmenuListProps extends React.HTMLAttributes<HTMLElement> {
     menuItems?: MenuItem[];
 }
 
 interface CollapseList {
     [n: number]: boolean;
 }
-export default function XnavigationList(props: XnavigationListProps) {
+export default function XmenuList(props: XmenuListProps) {
     const [collapsedList, setcollapsedList] = React.useState<CollapseList>({});
 
     const handleClickcollapseList = (index: number) =>

@@ -5,12 +5,16 @@ import styles from "./gridContainer.module.css";
 export interface GridContainerProps
     extends React.HTMLAttributes<HTMLDivElement> {
     gap?: number;
+    columns?: 10 | 12;
 }
 
 // Custom Button Element
 export default function GridContainer(props: GridContainerProps) {
     const joinedClassNames = joinClassNames(
         styles.gridcontainer,
+        props.columns
+            ? styles["gridColumns" + props.columns]
+            : styles.gridColumns12,
         props.className!
     );
     const joinedStyles = joinStyles(

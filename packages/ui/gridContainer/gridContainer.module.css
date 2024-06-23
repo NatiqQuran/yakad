@@ -2,5 +2,11 @@
     display: grid;
     box-sizing: border-box;
     width: 100%;
+}
+
+.gridColumns10 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.gridColumns12 {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }

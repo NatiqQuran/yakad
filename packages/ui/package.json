@@ -1,6 +1,6 @@
 {
     "name": "@yakad/ui",
-    "version": "1.2.159-beta",
+    "version": "1.2.161-beta",
     "description": "UI components for NextJS/React",
     "main": "./src/index.js",
     "scripts": {
@@ -20,7 +20,7 @@
     "dependencies": {
         "react": "18.3.1",
         "react-dom": "18.3.1",
-        "@yakad/lib": "1.0.5",
+        "@yakad/lib": "1.0.6",
         "@yakad/symbols": "1.0.4"
     },
     "devDependencies": {

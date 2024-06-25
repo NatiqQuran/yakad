@@ -1,6 +1,6 @@
 {
     "name": "@yakad/lib",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "JS frontend library for NextJS/React",
     "main": "./dist/index.js",
     "scripts": {

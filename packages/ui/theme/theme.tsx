@@ -16,6 +16,7 @@ export default function Theme(props: ThemeProps) {
     const joinedClassNames = joinClassNames(
         props.mode ? styles[props.mode] : styles.system,
         props.color ? styles[props.color] : styles.blue,
+        styles.theme,
         props.className!
     );
 

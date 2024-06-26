@@ -1,3 +1,7 @@
+.theme {
+    font-size: 1.6rem;
+}
+
 .blue {
     --LightPrimaryColor: 11 87 208;
     --LightPrimaryContainerColor: 211 227 253;

@@ -3,12 +3,18 @@
     border-spacing: unset;
     width: 100%;
     border-radius: 0.7rem;
-    font-size: 1.4rem;
     overflow: hidden;
 }
 
 .thead {
     border: 0.1rem solid red;
+    font-size: 1.6rem;
+}
+.tbody {
+    font-size: 1.4rem;
+}
+.tfoot {
+    font-size: 1.6rem;
 }
 
 .tbody .tr:nth-child(even) {
@@ -31,6 +37,10 @@
 .th,
 .td {
     padding: 0 1rem;
-    min-height: 3.2rem;
-    line-height: 3.2rem;
+}
+.th div,
+.td div {
+    display: flex;
+    align-items: center;
+    min-height: 4rem;
 }

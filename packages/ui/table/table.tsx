@@ -57,7 +57,7 @@ export function Th(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <th {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
+            <div>{props.children as React.ReactNode}</div>
         </th>
     );
 }
@@ -67,7 +67,7 @@ export function Td(props: React.HTMLAttributes<HTMLElement>) {
 
     return (
         <td {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
+            <div>{props.children as React.ReactNode}</div>
         </td>
     );
 }

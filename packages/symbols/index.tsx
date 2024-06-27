@@ -25,7 +25,7 @@ export default function Symbol(props: SymbolProps) {
     const joinedClassNames = joinClassNames(
         styles.materialIcons,
         props.type ? styles[props.type] : styles.default,
-        props.mirror ? styles[props.mirror + "Mirror"] : null,
+        props.mirror ? styles[props.mirror + "Mirror"] : "",
         props.className!
     );
 

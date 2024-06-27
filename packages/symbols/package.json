@@ -1,6 +1,6 @@
 {
     "name": "@yakad/symbols",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Easy to use Material Symbols",
     "main": "./src/index.js",
     "scripts": {

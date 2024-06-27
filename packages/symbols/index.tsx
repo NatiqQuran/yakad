@@ -7,6 +7,7 @@ interface SymbolProps extends React.HTMLAttributes<HTMLElement> {
     icon: iconsCode;
     type?: "default" | "outlined" | "round" | "sharp" | "twoTone";
     size?: number | "small" | "medium" | "large";
+    mirror?: "horizontal" | "vertical" | "diagonal";
 }
 
 interface SymbolSizeMap {
@@ -14,7 +15,6 @@ interface SymbolSizeMap {
     medium: number;
     large: number;
 }
-
 const symbolSizeMaps: SymbolSizeMap = {
     small: 2,
     medium: 2.4,
@@ -25,6 +25,7 @@ export default function Symbol(props: SymbolProps) {
     const joinedClassNames = joinClassNames(
         styles.materialIcons,
         props.type ? styles[props.type] : styles.default,
+        props.mirror ? styles[props.mirror + "Mirror"] : null,
         props.className!
     );
 

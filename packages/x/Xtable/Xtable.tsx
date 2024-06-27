@@ -1,6 +1,7 @@
 import React from "react";
 import { joinClassNames } from "@yakad/lib";
-import { Table, Thead, Tbody, Tfoot, Tr, Th, Td } from "@yakad/ui";
+import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, Button } from "@yakad/ui";
+import styles from "./Xtable.module.css";
 
 interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
     head?: any;
@@ -11,30 +12,40 @@ interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
 export default function Xtable(props: TableProps) {
     const joinedClassNames = joinClassNames(props.className!);
 
-    const headKeys = props.head ? Object.keys(props.head) : null;
     const dataKeys = props.data ? Object.keys(props.data[0]) : null;
-    const footKeys = props.foot ? Object.keys(props.foot) : null;
+    const headKeys = props.head ? Object.keys(props.head) : dataKeys;
+    const footKeys = props.foot ? Object.keys(props.foot) : headKeys;
 
     return (
         <Table style={props.style} className={joinedClassNames}>
             <Thead>
                 <Tr>
-                    {props.head
-                        ? headKeys?.map((cell) => <Th>{props.head[cell]}</Th>)
-                        : dataKeys?.map((cell) => <Th>{cell}</Th>)}
+                    {headKeys?.map((item) => (
+                        <Th className={styles.th}>
+                            <div style={{ marginInlineEnd: "0.5rem" }}>
+                                {props.head ? props.head[item] : item}
+                            </div>
+                            <Button
+                                className={styles.button}
+                                size="small"
+                                icon="sort"
+                            />
+                            <Button
+                                className={styles.button}
+                                size="small"
+                                icon="search"
+                            />
+                        </Th>
+                    ))}
                 </Tr>
             </Thead>
             <Tbody>
                 {props.data
                     ? props.data.map((row) => (
                           <Tr>
-                              {props.head
-                                  ? headKeys?.map((cell) => (
-                                        <Td>{row[cell]}</Td>
-                                    ))
-                                  : dataKeys?.map((cell) => (
-                                        <Td>{row[cell]}</Td>
-                                    ))}
+                              {headKeys?.map((cell) => (
+                                  <Td>{row[cell]}</Td>
+                              ))}
                           </Tr>
                       ))
                     : "No data"}

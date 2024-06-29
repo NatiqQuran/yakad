@@ -36,11 +36,6 @@
 
 .th,
 .td {
-    padding: 0 1rem;
-}
-.th div,
-.td div {
-    display: flex;
-    align-items: center;
-    min-height: 4rem;
+    padding: 0.5rem 1rem;
+    line-height: 3rem;
 }

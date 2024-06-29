@@ -2,8 +2,6 @@ import React from "react";
 import { joinClassNames } from "@yakad/lib";
 import Loading from "../loading/loading";
 import styles from "./button.module.css";
-import { iconsCode } from "@yakad/symbols/types";
-import Symbol from "@yakad/symbols";
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     type?: "button" | "reset" | "submit";
@@ -18,7 +16,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
         | "link"
         | "fab";
     borderStyle?: "none" | "semi" | "squircle" | "rounded";
-    icon?: iconsCode;
+    icon?: JSX.Element;
     iconPosition?: "start" | "end";
     loadingPosition?: "auto" | "center";
     loadingVariant?: "scaleOut" | "dots" | "spinner";
@@ -69,17 +67,7 @@ export default function Button(props: ButtonProps) {
                     <Loading size={props.size} variant={props.loadingVariant} />
                 </div>
             ) : null}
-            {props.icon ? (
-                <Symbol
-                    className={styles.hideOnDisabled}
-                    size={
-                        props.size
-                            ? iconSizeMaps[props.size]
-                            : iconSizeMaps.medium
-                    }
-                    icon={props.icon}
-                />
-            ) : null}
+            {props.icon ? props.icon : null}
             {!startWithChildren ? props.children : null}
         </button>
     );

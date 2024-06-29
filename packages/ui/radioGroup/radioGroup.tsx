@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 
 export interface RadioGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     name: string;
@@ -10,12 +10,11 @@ export interface RadioGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 export default function RadioGroup(props: RadioGroupProps) {
     const [checked, setChecked] = useState<number | null>(null);
 
-    const moreThanOneChildExist =
-        (props.children as React.ReactNode[]).map !== undefined;
+    const arrayChildren = Children.toArray(props.children);
 
     const renderChildrens = () =>
-        (props.children as React.ReactNode[]).map(
-            (item: React.ReactNode, index: number) =>
+        (arrayChildren as React.ReactElement[]).map(
+            (item: React.ReactElement, index: number) =>
                 React.cloneElement(item as React.ReactElement, {
                     handleChecked: () => setChecked(index),
                     handleDefaultChecked: () => setChecked(index),
@@ -25,22 +24,5 @@ export default function RadioGroup(props: RadioGroupProps) {
                 })
         );
 
-    const renderOneChild = () =>
-        React.cloneElement(props.children as React.ReactElement, {
-            handleChecked: () => setChecked(0),
-            handleDefaultChecked: () => setChecked(0),
-            nameFromRadioGroup: props.name,
-            defaultValue: props.defaultValue,
-            checked: checked == 0 ? true : false,
-        });
-
-    return (
-        <div>
-            {props.children
-                ? moreThanOneChildExist
-                    ? renderChildrens()
-                    : renderOneChild()
-                : null}
-        </div>
-    );
+    return <div>{props.children ? renderChildrens() : null}</div>;
 }

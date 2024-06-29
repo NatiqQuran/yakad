@@ -89,3 +89,13 @@
     /* Support for IE. */
     font-feature-settings: "liga";
 }
+
+.horizontalMirror {
+    transform: scale(1, -1);
+}
+.verticalMirror {
+    transform: scale(-1, 1);
+}
+.diagonalMirror {
+    transform: scale(-1, -1);
+}

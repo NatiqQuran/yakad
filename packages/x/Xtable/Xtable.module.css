@@ -1,0 +1,7 @@
+.th .button {
+    visibility: hidden;
+}
+
+.th:hover .button {
+    visibility: visible;
+}

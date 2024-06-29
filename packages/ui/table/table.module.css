@@ -8,13 +8,13 @@
 
 .thead {
     border: 0.1rem solid red;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 .tbody {
     font-size: 1.4rem;
 }
 .tfoot {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 
 .tbody .tr:nth-child(even) {

@@ -1,14 +1,8 @@
 "use client";
 
 import React, { useEffect } from "react";
-import {
-    AppBar,
-    Button,
-    Main,
-    Navigation,
-    Page,
-    Spacer,
-} from "@yakad/ui";
+import { AppBar, Button, Main, Navigation, Page, Spacer } from "@yakad/ui";
+import Symbol from "@yakad/symbols";
 
 interface XpanelProps extends React.HTMLAttributes<HTMLElement> {
     name?: string;
@@ -38,7 +32,7 @@ export default function Xpanel(props: XpanelProps) {
     return (
         <Page>
             <AppBar positionSticky>
-                <Button icon="menu" onClick={toggleNavOpen} />
+                <Button icon={<Symbol icon="menu" />} onClick={toggleNavOpen} />
                 <h1>{props.name ? props.name : "Panel"}</h1>
                 <Spacer />
                 {props.appbarChildren}
@@ -53,9 +47,7 @@ export default function Xpanel(props: XpanelProps) {
                 {props.children as any}
             </Main>
 
-            <Navigation open={navOpen}>
-                {props.navigationChildren}
-            </Navigation>
+            <Navigation open={navOpen}>{props.navigationChildren}</Navigation>
         </Page>
     );
 }

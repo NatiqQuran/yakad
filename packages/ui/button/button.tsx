@@ -16,7 +16,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
         | "link"
         | "fab";
     borderStyle?: "none" | "semi" | "squircle" | "rounded";
-    icon?: React.ReactNode;
+    icon?: JSX.Element;
     iconPosition?: "start" | "end";
     loadingPosition?: "auto" | "center";
     loadingVariant?: "scaleOut" | "dots" | "spinner";

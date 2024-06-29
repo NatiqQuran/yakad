@@ -1,6 +1,7 @@
 import React from "react";
 import { joinClassNames } from "@yakad/lib";
 import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, Button } from "@yakad/ui";
+import Symbol from "@yakad/symbols";
 import styles from "./Xtable.module.css";
 
 interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
@@ -28,12 +29,12 @@ export default function Xtable(props: TableProps) {
                             <Button
                                 className={styles.button}
                                 size="small"
-                                icon="sort"
+                                icon={<Symbol icon="sort" />}
                             />
                             <Button
                                 className={styles.button}
                                 size="small"
-                                icon="search"
+                                icon={<Symbol icon="sort" />}
                             />
                         </Th>
                     ))}

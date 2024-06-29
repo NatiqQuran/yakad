@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import Button from "../button/button";
-import styles from "./checkbox.module.css";
 import { joinClassNames } from "@yakad/lib";
+import Symbol from "@yakad/symbols";
+import styles from "./checkbox.module.css";
+import Button from "../button/button";
 
 export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
     name?: string;
@@ -34,7 +35,11 @@ export default function Chekbox(props: CheckboxProps) {
             ) : null}
             <Button
                 type="button"
-                icon={checked ? "check_box" : "check_box_outline_blank"}
+                icon={
+                    <Symbol
+                        icon={checked ? "check_box" : "check_box_outline_blank"}
+                    />
+                }
                 onClick={(event) => onClickCheckboxHandler()}
                 disabled={props.disabled}
             />

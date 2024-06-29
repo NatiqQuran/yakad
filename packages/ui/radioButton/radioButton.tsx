@@ -4,6 +4,7 @@ import React, { useState, useRef, forwardRef, useEffect } from "react";
 import styles from "./radioButton.module.css";
 import Button from "../button/button";
 import { joinClassNames } from "@yakad/lib";
+import Symbol from "@yakad/symbols";
 
 export interface RadioButtonProps
     extends React.HTMLAttributes<HTMLInputElement> {
@@ -48,9 +49,13 @@ export default function RadioButton(props: RadioButtonProps) {
             <Button
                 disabled={props.disabled}
                 icon={
-                    props.checked
-                        ? "radio_button_checked"
-                        : "radio_button_unchecked"
+                    <Symbol
+                        icon={
+                            props.checked
+                                ? "radio_button_checked"
+                                : "radio_button_unchecked"
+                        }
+                    />
                 }
                 onClick={onClickRadioButtonHandler}
             />

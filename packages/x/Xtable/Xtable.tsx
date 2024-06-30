@@ -1,16 +1,6 @@
 import React, { Children, ReactElement } from "react";
 import { joinClassNames } from "@yakad/lib";
-import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    Button,
-    Row,
-} from "../../../packages/ui";
+import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, Button, Row } from "@yakad/ui";
 import Symbol from "@yakad/symbols";
 import styles from "./Xtable.module.css";
 import { XtColumnProps } from "../XtColumn/XtColumn";
@@ -21,46 +11,45 @@ interface TableProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export default function Xtable(props: TableProps) {
-    const joinedClassNames = joinClassNames(props.className!);
-
     const arrayChildren = Children.toArray(props.children);
 
-    const listOfXtColumns: XtColumnProps[] = arrayChildren.map(
+    const xtColumns: XtColumnProps[] = arrayChildren.map(
         (child: React.ReactElement<XtColumnProps>) => ({
             dataKey: child.props.dataKey,
+            headTitle: child.props.headTitle,
+            footTitle: child.props.footTitle,
+            footFunc: child.props.footFunc,
             alignText: child.props.alignText,
+            sortable: child.props.sortable,
+            searchable: child.props.searchable,
             defaultHidden: child.props.defaultHidden,
         })
     );
 
-    let haveFooter: boolean = arrayChildren.some(
-        (child: React.ReactElement) => {
-            if (child.props.footTitle || child.props.footFunc) return true;
-        }
-    );
-
-    const collectedDataKeys = props.data ? Object.keys(props.data[0]) : null;
+    let haveFooter: boolean = xtColumns.some((child: XtColumnProps) => {
+        if (child.footTitle || child.footFunc) return true;
+    });
 
     return props.children ? (
-        <Table style={props.style} className={joinedClassNames}>
+        <Table {...props}>
             <Thead>
                 <Tr>
-                    {arrayChildren.map((child: React.ReactElement) => (
+                    {xtColumns.map((child: XtColumnProps) => (
                         <Th className={styles.th}>
                             <Row>
                                 <div style={{ marginInlineEnd: "0.5rem" }}>
-                                    {child.props.headTitle
-                                        ? child.props.headTitle
-                                        : "[" + child.props.dataKey + "]"}
+                                    {child.headTitle
+                                        ? child.headTitle
+                                        : "[" + child.dataKey + "]"}
                                 </div>
-                                {child.props.sortable ? (
+                                {child.sortable ? (
                                     <Button
                                         className={styles.button}
                                         size="small"
                                         icon={<Symbol icon="sort" />}
                                     />
                                 ) : null}
-                                {child.props.searchable ? (
+                                {child.searchable ? (
                                     <Button
                                         className={styles.button}
                                         size="small"
@@ -76,7 +65,7 @@ export default function Xtable(props: TableProps) {
                 {props.data
                     ? props.data.map((row) => (
                           <Tr>
-                              {listOfXtColumns?.map((cell) => (
+                              {xtColumns.map((cell) => (
                                   <Td
                                       style={{
                                           textAlign: cell.alignText
@@ -93,28 +82,37 @@ export default function Xtable(props: TableProps) {
             </Tbody>
             {haveFooter ? (
                 <Tfoot>
-                    {arrayChildren?.map((child: React.ReactElement) => (
+                    {xtColumns.map((child: XtColumnProps) => (
                         <Th
                             style={{
-                                textAlign: child.props.alignText
-                                    ? child.props.alignText
+                                textAlign: child.alignText
+                                    ? child.alignText
                                     : "start",
                             }}
                         >
-                            {child.props.footTitle
-                                ? child.props.footTitle + " "
-                                : null}
-                            {child.props.footFunc ? child.props.footFunc : null}
+                            {child.footTitle ? child.footTitle + " " : null}
+                            {child.footFunc ? child.footFunc : null}
                         </Th>
                     ))}
                 </Tfoot>
             ) : null}
         </Table>
     ) : (
-        <Table style={props.style} className={joinedClassNames}>
+        <XtableLiteView {...props} data={props.data} />
+    );
+}
+
+interface XtableLiteViewProps extends React.HTMLAttributes<HTMLDivElement> {
+    data: any[];
+}
+function XtableLiteView(props: XtableLiteViewProps) {
+    const dataKeys = props.data ? Object.keys(props.data[0]) : null;
+
+    return (
+        <Table {...props}>
             <Thead>
                 <Tr>
-                    {collectedDataKeys?.map((key) => (
+                    {dataKeys?.map((key) => (
                         <Th>{"[" + key + "]"}</Th>
                     ))}
                 </Tr>
@@ -123,7 +121,7 @@ export default function Xtable(props: TableProps) {
                 {props.data
                     ? props.data.map((row) => (
                           <Tr>
-                              {collectedDataKeys?.map((cell) => (
+                              {dataKeys?.map((cell) => (
                                   <Td>{row[cell]}</Td>
                               ))}
                           </Tr>
@@ -133,8 +131,3 @@ export default function Xtable(props: TableProps) {
         </Table>
     );
 }
-
-interface FastDataViewTableProps {
-    ElementProps: any;
-}
-function FastDataViewTable() {}

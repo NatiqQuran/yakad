@@ -5,7 +5,7 @@ export interface XtColumnProps {
     dataKey: string;
     headTitle?: string;
     footTitle?: string;
-    footFunc?: "sum";
+    footFunc?: "sum" | "average";
     alignText?: "start" | "center" | "end";
     sortable?: boolean;
     searchable?: boolean;

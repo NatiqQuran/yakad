@@ -6,41 +6,35 @@
     overflow: hidden;
 }
 
-.thead {
-    border: 0.1rem solid red;
-    font-size: 1.5rem;
-}
-.tbody {
-    font-size: 1.4rem;
-}
-.tfoot {
-    font-size: 1.5rem;
-}
-
-.tbody .tr:nth-child(even) {
+.tr:nth-child(even) {
     background-color: #7d7d7d20;
 }
-.tbody .tr:hover {
+.tr:hover {
     background-color: #7d7d7d30;
 }
 
 .thead .th {
     border-bottom: 0.2rem solid #7d7d7d40;
-    background-color: rgb(var(--surfaceContainerColor, 243 237 247));
-    text-align: start;
 }
 .tfoot .th {
     border-top: 0.2rem solid #7d7d7d40;
-    background-color: rgb(var(--surfaceContainerColor, 243 237 247));
 }
 
-.th,
-.td {
-    padding: 0 1rem;
+.th {
+    padding: 1rem;
+    background-color: rgb(var(--surfaceContainerColor, 243 237 247));
+    border-inline-start: 0.1rem solid #7d7d7d15;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-align: start;
 }
-.th div,
-.td div {
-    display: flex;
-    align-items: center;
-    min-height: 4rem;
+.td {
+    border-inline-start: 0.1rem solid #7d7d7d15;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    line-height: 3rem;
+}
+.th:nth-child(1),
+.td:nth-child(1) {
+    border-inline-start: initial;
 }

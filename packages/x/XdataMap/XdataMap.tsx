@@ -6,7 +6,7 @@ interface XdataMapProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export default function XdataMap(props: XdataMapProps) {
-    const dataKeys: string[] = props.data ? Object.keys(props.data[0]) : null;
+    const dataKeys: string[] = Object.keys(props.data[0]);
 
     return (
         <Table {...props}>

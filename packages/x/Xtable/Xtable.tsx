@@ -1,66 +1,55 @@
 import React, { Children, ReactElement } from "react";
 import { joinClassNames } from "@yakad/lib";
-import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    Button,
-    Row,
-} from "../../../packages/ui";
+import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, Button, Row } from "@yakad/ui";
 import Symbol from "@yakad/symbols";
 import styles from "./Xtable.module.css";
 import { XtColumnProps } from "../XtColumn/XtColumn";
 
 interface TableProps extends React.HTMLAttributes<HTMLDivElement> {
-    data?: any[];
+    data: any[];
     children: ReactElement<XtColumnProps> | Array<ReactElement<XtColumnProps>>;
 }
 
 export default function Xtable(props: TableProps) {
-    const joinedClassNames = joinClassNames(props.className!);
-
     const arrayChildren = Children.toArray(props.children);
 
-    const listOfXtColumns: XtColumnProps[] = arrayChildren.map(
-        (child: React.ReactElement<XtColumnProps>) => ({
-            dataKey: child.props.dataKey,
-            alignText: child.props.alignText,
-            defaultHidden: child.props.defaultHidden,
-        })
-    );
+    const xtColumnsData: XtColumnProps[] = (
+        arrayChildren as Array<ReactElement<XtColumnProps>>
+    ).map((child: ReactElement<XtColumnProps>) => ({
+        dataKey: child.props.dataKey,
+        headTitle: child.props.headTitle,
+        footTitle: child.props.footTitle,
+        footFunc: child.props.footFunc,
+        alignText: child.props.alignText,
+        sortable: child.props.sortable,
+        searchable: child.props.searchable,
+        defaultHidden: child.props.defaultHidden,
+    }));
 
-    let haveFooter: boolean = arrayChildren.some(
-        (child: React.ReactElement) => {
-            if (child.props.footTitle || child.props.footFunc) return true;
-        }
-    );
+    let haveFooter: boolean = xtColumnsData.some((item: XtColumnProps) => {
+        if (item.footTitle || item.footFunc) return true;
+    });
 
-    const collectedDataKeys = props.data ? Object.keys(props.data[0]) : null;
-
-    return props.children ? (
-        <Table style={props.style} className={joinedClassNames}>
+    return (
+        <Table {...props}>
             <Thead>
                 <Tr>
-                    {arrayChildren.map((child: React.ReactElement) => (
+                    {xtColumnsData.map((item: XtColumnProps) => (
                         <Th className={styles.th}>
                             <Row>
                                 <div style={{ marginInlineEnd: "0.5rem" }}>
-                                    {child.props.headTitle
-                                        ? child.props.headTitle
-                                        : "[" + child.props.dataKey + "]"}
+                                    {item.headTitle
+                                        ? item.headTitle
+                                        : "[" + item.dataKey + "]"}
                                 </div>
-                                {child.props.sortable ? (
+                                {item.sortable ? (
                                     <Button
                                         className={styles.button}
                                         size="small"
                                         icon={<Symbol icon="sort" />}
                                     />
                                 ) : null}
-                                {child.props.searchable ? (
+                                {item.searchable ? (
                                     <Button
                                         className={styles.button}
                                         size="small"
@@ -73,68 +62,38 @@ export default function Xtable(props: TableProps) {
                 </Tr>
             </Thead>
             <Tbody>
-                {props.data
-                    ? props.data.map((row) => (
-                          <Tr>
-                              {listOfXtColumns?.map((cell) => (
-                                  <Td
-                                      style={{
-                                          textAlign: cell.alignText
-                                              ? cell.alignText
-                                              : "start",
-                                      }}
-                                  >
-                                      {row[cell.dataKey]}
-                                  </Td>
-                              ))}
-                          </Tr>
-                      ))
-                    : "No data"}
+                {props.data.map((row) => (
+                    <Tr>
+                        {xtColumnsData.map((item) => (
+                            <Td
+                                style={{
+                                    textAlign: item.alignText
+                                        ? item.alignText
+                                        : "start",
+                                }}
+                            >
+                                {row[item.dataKey]}
+                            </Td>
+                        ))}
+                    </Tr>
+                ))}
             </Tbody>
             {haveFooter ? (
                 <Tfoot>
-                    {arrayChildren?.map((child: React.ReactElement) => (
+                    {xtColumnsData.map((item: XtColumnProps) => (
                         <Th
                             style={{
-                                textAlign: child.props.alignText
-                                    ? child.props.alignText
+                                textAlign: item.alignText
+                                    ? item.alignText
                                     : "start",
                             }}
                         >
-                            {child.props.footTitle
-                                ? child.props.footTitle + " "
-                                : null}
-                            {child.props.footFunc ? child.props.footFunc : null}
+                            {item.footTitle ? item.footTitle + " " : null}
+                            {item.footFunc ? item.footFunc : null}
                         </Th>
                     ))}
                 </Tfoot>
             ) : null}
         </Table>
-    ) : (
-        <Table style={props.style} className={joinedClassNames}>
-            <Thead>
-                <Tr>
-                    {collectedDataKeys?.map((key) => (
-                        <Th>{"[" + key + "]"}</Th>
-                    ))}
-                </Tr>
-            </Thead>
-            <Tbody>
-                {props.data
-                    ? props.data.map((row) => (
-                          <Tr>
-                              {collectedDataKeys?.map((cell) => (
-                                  <Td>{row[cell]}</Td>
-                              ))}
-                          </Tr>
-                      ))
-                    : "No data"}
-            </Tbody>
-        </Table>
     );
 }
-
-interface FastDataViewTableProps {
-    ElementProps: any;
-}
-function FastDataViewTable() {}

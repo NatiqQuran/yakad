@@ -13,14 +13,8 @@
     background-color: #7d7d7d30;
 }
 
-.thead .th {
-    border-bottom: 0.2rem solid #7d7d7d40;
-}
-.tfoot .th {
-    border-top: 0.2rem solid #7d7d7d40;
-}
-
-.th {
+.th,
+.tf {
     padding: 1rem;
     background-color: rgb(var(--surfaceContainerColor, 243 237 247));
     border-inline-start: 0.1rem solid #7d7d7d15;
@@ -28,6 +22,13 @@
     line-height: 3rem;
     text-align: start;
 }
+.th {
+    border-bottom: 0.2rem solid #7d7d7d40;
+}
+.tf {
+    border-top: 0.2rem solid #7d7d7d40;
+}
+
 .td {
     border-inline-start: 0.1rem solid #7d7d7d15;
     padding: 0.5rem 1rem;

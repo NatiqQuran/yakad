@@ -1,6 +1,6 @@
 {
     "name": "@yakad/x",
-    "version": "1.0.96-beta",
+    "version": "1.0.97-beta",
     "description": "Extreme components for NextJS",
     "main": "./src/index.js",
     "scripts": {

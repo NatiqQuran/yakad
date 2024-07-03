@@ -1,5 +1,6 @@
 import { ButtonProps } from "./button/button";
 import { ClickAwayListenerProps } from "./clickAwayListener/clickAwayListener";
+import { CodeBoxProps } from "./codeBox/codeBox";
 import { CodeFieldsProps } from "./codeField/codeField";
 import { ContainerProps } from "./container/container";
 import { GridContainerProps } from "./gridContainer/gridContainer";
@@ -18,6 +19,7 @@ import { RadioButtonProps } from "./radioButton/radioButton";
 
 export {
     type ButtonProps,
+    type CodeBoxProps,
     type ClickAwayListenerProps,
     type CodeFieldsProps,
     type ContainerProps,

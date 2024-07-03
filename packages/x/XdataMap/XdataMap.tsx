@@ -13,7 +13,7 @@ export default function XdataMap(props: XdataMapProps) {
             <Thead>
                 <Tr>
                     {dataKeys?.map((key) => (
-                        <Th>{"[" + key.toUpperCase + "]"}</Th>
+                        <Th>{"[" + key.toUpperCase() + "]"}</Th>
                     ))}
                 </Tr>
             </Thead>

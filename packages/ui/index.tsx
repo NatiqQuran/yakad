@@ -1,6 +1,7 @@
 import Button from "./button/button";
 import AppBar from "./appBar/appBar";
 import Card from "./card/card";
+import CodeBox from "./codeBox/codeBox";
 import Container from "./container/container";
 import Footer from "./footer/footer";
 import GridContainer from "./gridContainer/gridContainer";
@@ -29,6 +30,7 @@ export {
     Button,
     AppBar,
     Card,
+    CodeBox,
     Container,
     Footer,
     GridContainer,

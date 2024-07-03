@@ -1,6 +1,6 @@
 {
     "name": "@yakad/x",
-    "version": "1.0.96-beta",
+    "version": "1.0.99-beta",
     "description": "Extreme components for NextJS",
     "main": "./src/index.js",
     "scripts": {
@@ -20,7 +20,7 @@
     "dependencies": {
         "@yakad/lib": "1.0.8",
         "@yakad/symbols": "1.0.7",
-        "@yakad/ui": "1.2.172-beta",
+        "@yakad/ui": "1.2.176-beta",
         "react": "18.3.1",
         "react-router-dom": "6.23.1"
     },

@@ -1,0 +1,7 @@
+.xthRow .button {
+    visibility: hidden;
+}
+
+.xthRow:hover .button {
+    visibility: visible;
+}

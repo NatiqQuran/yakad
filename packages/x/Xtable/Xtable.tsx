@@ -1,4 +1,4 @@
-import React, { Children, ReactElement } from "react";
+import React, { ReactElement } from "react";
 import { joinClassNames } from "@yakad/lib";
 import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, Button, Row } from "@yakad/ui";
 import Symbol from "@yakad/symbols";
@@ -11,7 +11,7 @@ interface TableProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export default function Xtable(props: TableProps) {
-    const arrayChildren = Children.toArray(props.children);
+    const arrayChildren = React.Children.toArray(props.children);
 
     const xtColumnsData: XtColumnProps[] = (
         arrayChildren as Array<ReactElement<XtColumnProps>>
@@ -81,7 +81,7 @@ export default function Xtable(props: TableProps) {
             {haveFooter ? (
                 <Tfoot>
                     {xtColumnsData.map((item: XtColumnProps) => (
-                        <Th
+                        <Td
                             style={{
                                 textAlign: item.alignText
                                     ? item.alignText
@@ -90,7 +90,7 @@ export default function Xtable(props: TableProps) {
                         >
                             {item.footTitle ? item.footTitle + " " : null}
                             {item.footFunc ? item.footFunc : null}
-                        </Th>
+                        </Td>
                     ))}
                 </Tfoot>
             ) : null}

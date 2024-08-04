@@ -3,6 +3,7 @@ import AppBar from "./appBar/appBar";
 import Card from "./card/card";
 import CodeBox from "./codeBox/codeBox";
 import Container from "./container/container";
+import DisplayOnScreen from "./displayOnScreen/displayOnScreen";
 import Footer from "./footer/footer";
 import GridContainer from "./gridContainer/gridContainer";
 import GridItem from "./gridItem/gridItem";
@@ -32,6 +33,7 @@ export {
     Card,
     CodeBox,
     Container,
+    DisplayOnScreen,
     Footer,
     GridContainer,
     GridItem,

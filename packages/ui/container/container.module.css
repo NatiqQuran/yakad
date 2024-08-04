@@ -5,6 +5,7 @@ div.container {
     padding: 2rem;
     margin: 0 auto;
     box-sizing: border-box;
+    overflow-x: auto;
 }
 
 div.container.xs {

@@ -3,6 +3,7 @@
     box-sizing: border-box;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     min-height: 5rem;
     padding: 0.5rem 2rem;

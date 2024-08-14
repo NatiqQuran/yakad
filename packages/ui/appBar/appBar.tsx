@@ -9,8 +9,8 @@ export interface AppbarProps extends React.HTMLAttributes<HTMLDivElement> {
 export default function AppBar(props: AppbarProps) {
     const joinedClassNames = joinClassNames(
         styles.header,
-        props.className!,
-        props.positionSticky ? styles.sticky : ""
+        props.positionSticky ? styles.sticky : "",
+        props.className!
     );
 
     return (

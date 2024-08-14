@@ -26,6 +26,7 @@ import Chekbox from "./checkbox/checkbox";
 import RadioGroup from "./radioGroup/radioGroup";
 import RadioButton from "./radioButton/radioButton";
 import { Table, Thead, Tbody, Tfoot, Tr, Th, Td } from "./table/table";
+import Select from "./select/select"
 
 export {
     Button,
@@ -62,4 +63,5 @@ export {
     Tr,
     Th,
     Td,
+    Select,
 };

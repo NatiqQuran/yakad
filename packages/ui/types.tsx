@@ -15,6 +15,7 @@ import { ThemeProps } from "./theme/theme";
 import { CheckboxProps } from "./checkbox/checkbox";
 import { RadioGroupProps } from "./radioGroup/radioGroup";
 import { RadioButtonProps } from "./radioButton/radioButton";
+import {SelectProps} from "./select/select"
 
 export {
     type ButtonProps,
@@ -34,4 +35,5 @@ export {
     type CheckboxProps,
     type RadioGroupProps,
     type RadioButtonProps,
+    type SelectProps,
 };

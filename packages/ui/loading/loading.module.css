@@ -1,3 +1,6 @@
+.extraSmall {
+    --size: 1.2rem;
+}
 .small {
     --size: 2rem;
 }
@@ -7,6 +10,9 @@
 .large {
     --size: 3rem;
 }
+.extraLarge {
+    --siza: 5rem;
+}
 
 .loading {
     display: flex;
@@ -14,6 +20,7 @@
     justify-content: center;
     width: var(--size);
     height: var(--size);
+    margin: auto;
     box-sizing: border-box;
     --color: #7d7d7d;
 }

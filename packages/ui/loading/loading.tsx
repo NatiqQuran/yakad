@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./loading.module.css";
 import { joinClassNames } from "@yakad/lib";
 
-export interface LoadingProps extends React.HTMLAttributes<HTMLButtonElement> {
-    size?: "small" | "medium" | "large";
+export interface LoadingProps extends React.HTMLAttributes<HTMLDivElement> {
+    size?: "extraSmall" | "small" | "medium" | "large" | "extraLarge";
     variant?: "scaleOut" | "dots" | "spinner";
 }
 
@@ -16,7 +16,7 @@ export default function Loading(props: LoadingProps) {
     );
 
     return (
-        <div className={joinedClassNames}>
+        <div {...props} className={joinedClassNames}>
             <div></div>
         </div>
     );

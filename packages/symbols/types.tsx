@@ -1,4 +1,4 @@
-export type iconsCode =
+export type IconCode =
     | "10k"
     | "10mp"
     | "11mp"

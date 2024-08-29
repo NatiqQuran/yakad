@@ -1,24 +1,18 @@
 .div {
     position: relative;
+    display: inline-block;
+    box-sizing: border-box;
     width: 100%;
-}
-.select ~ .label {
-    position: absolute;
-    font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 1.5rem;
-    color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
-}
-
-.select.filled ~ .label {
-    left: 1rem;
-    top: 0.5rem;
+    padding-top: 0.6rem;
+    font-size: 1.3rem;
+    overflow: hidden;
 }
 .select {
+    box-sizing: border-box;
     width: 100%;
-    height: 100%;
     margin: 0rem;
-    box-shadow: none;
+    border-image: initial;
+    background-color: rgb(var(--surfaceContainerHighestColor, 230 224 233));
     color: rgb(var(--onSurfaceColor, 28 27 31) / 0.87);
     caret-color: rgb(var(--primaryColor, 11 87 208));
 }
@@ -28,116 +22,127 @@
 .select:focus {
     outline: none;
 }
-.select.filled {
+
+.select ~ .label {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
-    border-right: none;
-    border-left: none;
-    border-top: 0.1rem solid transparent;
-    border-bottom: none;
-    padding: 2rem 1.3rem 1rem 1.3rem;
-    border-radius: 0.4rem 0.4rem 0rem 0rem;
-    margin-top: 0.5;
-    background-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.04);
-    transition: border-bottom 0.2s ease 0s, margin-bottom 0.2s ease 0s,
-        background-color 0.2s ease 0s;
+    width: 100%;
+    height: 100%;
+    font-size: 1.3rem;
+    color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
+    transition: 0.3s;
+    pointer-events: none;
 }
 .select:focus ~ .label {
     color: rgb(var(--primaryColor, 11 87 208));
 }
 
-.borderdiv {
-    box-sizing: border-box;
-    width: 100%;
-    height: 0.2rem;
-    border-bottom: 0.1rem solid rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
-    transition: 0.3s;
-    background-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.04);
-}
-.select:hover ~ .borderdiv {
-    border-bottom: 0.2rem solid rgb(var(--onSurfaceColor, 28 27 31));
-}
-
-.borderdiv::before {
-    content: "";
-    display: block;
-    margin: auto;
-    width: 0;
-    height: 0.2rem;
-    transition: 0.3s;
-    background-color: rgb(var(--primaryColor, 11 87 208));
-}
-
-.select:focus ~ .borderdiv::before {
-    width: 100%;
-}
-
-.select.outlined ~ .borderdiv {
-    display: none;
-}
+/********************************************* OutLined */
 .select.outlined {
-    margin-top: 0.5rem;
-    border-top-color: transparent;
-    background-color: transparent;
+    height: 5rem;
+    padding: 1.5rem 1.3rem;
     border-width: 0.1rem;
     border-style: solid;
+    border-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
     border-radius: 0.4rem;
-    padding: 1.5rem 1.3rem;
+    background-color: transparent;
 }
+.select.outlined::placeholder {
+    color: transparent;
+}
+.select.outlined:focus {
+    border-width: 0.2rem;
+    border-color: rgb(var(--primaryColor, 11 87 208));
+}
+.select.outlined.havePlaceHolder:focus,
+.select.outlined.havePlaceHolder:not(:placeholder-shown) {
+    border-top-color: transparent;
+}
+
 .select.outlined ~ .label {
-    top: 0;
-    left: 0rem;
     display: flex;
     border-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
     width: 100%;
     max-height: 100%;
-    line-height: 1rem;
-    cursor: text;
+    line-height: 6rem;
 }
+.select.outlined:focus ~ .label,
+.select.outlined:not(:placeholder-shown) ~ .label {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+.select.outlined ~ .label::before,
 .select.outlined ~ .label::after {
-    flex-grow: 1;
-    content: "";
-    margin-left: 0.4rem;
-    border-right: 0.1rem solid transparent;
-    border-radius: 0rem 0.4rem;
-    box-sizing: border-box;
     margin-top: 0.6rem;
     border-top-width: 0.1rem;
     border-top-style: solid;
-    border-top-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
-    min-width: 1rem;
-    height: 0.8rem;
-    transition: border-color 0.2s ease 0s, box-shadow 0.2s ease 0s;
-    box-shadow: inset 0 1px rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
-    border-top-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6) !important;
+    border-color: transparent;
+    content: "";
+}
+.select.outlined:not(:placeholder-shown) ~ .label::before,
+.select.outlined:not(:placeholder-shown) ~ .label::after {
+    border-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
 }
 .select.outlined ~ .label::before {
-    margin-right: 0.4rem;
-    border-left: 0.1 solid transparent;
+    width: 1rem;
+    margin-right: 1.2rem;
     border-radius: 0.4rem 0rem;
-    content: "";
+}
+.select.outlined ~ .label::after {
+    width: 100%;
+    margin-left: 1.2rem;
+    border-radius: 0rem 0.4rem;
+}
+.select.outlined:focus ~ .label::before,
+.select.outlined:focus ~ .label::after {
+    border-width: 0.2rem;
+    border-top-color: rgb(var(--primaryColor, 11 87 208));
+}
+
+/********************************************* Filled */
+.select.filled {
+    height: 5rem;
+    padding: 0 1.2rem;
+    border: none;
+    border-bottom: solid 0.1rem rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
+    border-radius: 0.4rem 0.4rem 0rem 0rem;
+    background-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.04);
+}
+.select.filled.havePlaceHolder {
+    padding: 2rem 1.2rem 0.5rem;
+}
+.select.filled::placeholder {
+    color: transparent;
+}
+
+.select.filled ~ .label {
     display: block;
     box-sizing: border-box;
-    margin-top: 0.6rem;
-    border-top-width: 0.1rem;
-    border-top-style: solid;
-    border-top-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
-    min-width: 1rem;
-    height: 0.8rem;
-    transition: border-color 0.2s ease 0s, box-shadow 0.2s ease 0s;
-    box-shadow: inset 0 1px rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
-    border-top-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6) !important;
+    line-height: 6rem;
+    padding: 0 1rem;
 }
-.select.outlined:focus ~ .label::after {
-    box-shadow: inset 0 1px rgb(var(--primaryColor, 11 87 208));
-    border-top-color: rgb(var(--primaryColor, 11 87 208)) !important;
+.select.filled:focus ~ .label,
+.select.filled:not(:placeholder-shown) ~ .label {
+    font-size: 1.1rem;
+    line-height: 4rem;
 }
-.select.outlined:focus ~ .label::before {
-    box-shadow: inset 0 1px rgb(var(--primaryColor, 11 87 208));
-    border-top-color: rgb(var(--primaryColor, 11 87 208)) !important;
+
+.select.filled ~ .label::after {
+    position: absolute;
+    left: 0rem;
+    content: "";
+    bottom: 0rem;
+    width: 100%;
+    height: 0.2rem;
+    display: inline-block;
+    background-color: rgb(var(--primaryColor, 11 87 208));
+    transform: scaleX(0);
+    transition: transform 0.3s ease 0s;
 }
-.select.outlined:focus {
-    border-top-color: transparent;
-    box-shadow: inset 1px 0 rgb(var(--primaryColor, 11 87 208)),
-        inset -1px 0 rgb(var(--primaryColor, 11 87 208)),
-        inset 0 -1px rgb(var(--primaryColor, 11 87 208));
+.select.filled:focus ~ .label::after {
+    transform: scale(1);
+    content: "";
 }

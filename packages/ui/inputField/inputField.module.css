@@ -19,6 +19,9 @@
 .input:focus {
     outline: none;
 }
+.input::placeholder {
+    color: transparent;
+}
 
 .input ~ .label {
     position: absolute;
@@ -40,14 +43,9 @@
 .input.outlined {
     height: 5rem;
     padding: 1.5rem 1.3rem;
-    border-width: 0.1rem;
-    border-style: solid;
-    border-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
+    border: 0.1rem solid rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
     border-radius: 0.4rem;
     background-color: transparent;
-}
-.input.outlined::placeholder {
-    color: transparent;
 }
 .input.outlined:focus {
     border-width: 0.2rem;
@@ -110,9 +108,6 @@
 }
 .input.filled.havePlaceHolder {
     padding: 2rem 1.2rem 0.5rem;
-}
-.input.filled::placeholder {
-    color: transparent;
 }
 
 .input.filled ~ .label {

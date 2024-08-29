@@ -1,11 +1,6 @@
 div.container {
     display: flex;
-    flex-direction: inherit;
-    justify-content: inherit;
-    align-content: inherit;
-    align-items: inherit;
-    flex-wrap: inherit;
-    gap: inherit;
+    flex-direction: column;
     width: 100%;
     padding: 0 2rem;
     margin: 0 auto;

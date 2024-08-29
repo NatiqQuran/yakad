@@ -18,22 +18,25 @@ export default function InputField(props: InputFieldProps) {
     const joinedClassNames = joinClassNames(
         styles.input,
         props.variant ? styles[props.variant] : styles.outlined,
+        props.placeholder ? styles.havePlaceHolder : "",
         props.className!
     );
 
     return (
-        <label className={styles.label}>
+        <div className={styles.div}>
             <input
                 {...props}
                 name={props.name}
                 disabled={props.disabled}
-                placeholder="  "
+                placeholder=" "
                 className={joinedClassNames}
                 type={props.type}
                 value={props.value}
                 autoFocus={props.autoFocus}
             />
-            <span className={styles.span}>{props.placeholder}</span>
-        </label>
+            {props.placeholder ? (
+                <label className={styles.label}>{props.placeholder}</label>
+            ) : null}
+        </div>
     );
 }

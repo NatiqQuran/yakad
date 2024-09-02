@@ -16,11 +16,9 @@
     color: rgb(var(--onSurfaceColor, 28 27 31) / 0.87);
     caret-color: rgb(var(--primaryColor, 11 87 208));
 }
+
 .input:focus {
     outline: none;
-}
-.input::placeholder {
-    color: transparent;
 }
 
 .input ~ .label {
@@ -30,26 +28,57 @@
     display: block;
     width: 100%;
     height: 100%;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
     transition: 0.3s;
     pointer-events: none;
 }
+@media (pointer: fine) {
+    .input:hover ~ .label {
+        color: rgb(var(--onSurfaceVariantColor, 73 69 78));
+    }
+}
 .input:focus ~ .label {
     color: rgb(var(--primaryColor, 11 87 208));
+}
+.input:disabled ~ .label {
+    color: rgb(var(--onSurfaceColor, 28 27 31) / 0.38);
+}
+.input:invalid ~ .label,
+.input:invalid:focus ~ .label {
+    color: rgb(var(--errorColor, 11 87 208));
 }
 
 /********************************************* OutLined */
 .input.outlined {
     height: 5rem;
     padding: 1.5rem 1.3rem;
-    border: 0.1rem solid rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
+    border-width: 0.1rem;
+    border-style: solid;
+    border-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
     border-radius: 0.4rem;
     background-color: transparent;
+}
+@media (pointer: fine) {
+    .input.outlined:hover {
+        border-color: rgb(var(--onSurfaceVariantColor, 73 69 78));
+    }
 }
 .input.outlined:focus {
     border-width: 0.2rem;
     border-color: rgb(var(--primaryColor, 11 87 208));
+}
+.input.outlined:disabled {
+    border-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.38);
+}
+.input.outlined:invalid {
+    border-color: rgb(var(--errorColor, 11 87 208));
+}
+.input.outlined:invalid:focus {
+    border-color: rgb(var(--errorColor, 11 87 208));
+}
+.input.outlined::placeholder {
+    color: transparent;
 }
 .input.outlined.havePlaceHolder:focus,
 .input.outlined.havePlaceHolder:not(:placeholder-shown) {
@@ -81,6 +110,10 @@
 .input.outlined:not(:placeholder-shown) ~ .label::after {
     border-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.6);
 }
+.input.outlined:invalid:not(:placeholder-shown) ~ .label::before,
+.input.outlined:invalid:not(:placeholder-shown) ~ .label::after {
+    border-color: rgb(var(--errorColor, 11 87 208));
+}
 .input.outlined ~ .label::before {
     width: 1rem;
     margin-right: 1.2rem;
@@ -96,6 +129,10 @@
     border-width: 0.2rem;
     border-top-color: rgb(var(--primaryColor, 11 87 208));
 }
+.input.outlined:invalid:focus ~ .label::before,
+.input.outlined:invalid:focus ~ .label::after {
+    border-color: rgb(var(--errorColor, 11 87 208));
+}
 
 /********************************************* Filled */
 .input.filled {
@@ -106,8 +143,23 @@
     border-radius: 0.4rem 0.4rem 0rem 0rem;
     background-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.04);
 }
+@media (pointer: fine) {
+    .input.input.filled:hover {
+        border-color: rgb(var(--onSurfaceVariantColor, 73 69 78));
+        background-color: rgb(var(--onSurfaceVariantColor, 73 69 78) / 0.04);
+    }
+}
+.input.filled:disabled {
+    border-bottom: solid 0.1rem rgb(var(--onSurfaceColor, 28 27 31) / 0.38);
+}
+.input.filled:invalid {
+    border-bottom-color: rgb(var(--errorColor, 11 87 208));
+}
 .input.filled.havePlaceHolder {
     padding: 2rem 1.2rem 0.5rem;
+}
+.input.filled::placeholder {
+    color: transparent;
 }
 
 .input.filled ~ .label {
@@ -137,4 +189,7 @@
 .input.filled:focus ~ .label::after {
     transform: scale(1);
     content: "";
+}
+.input.filled:invalid ~ .label::after {
+    background-color: rgb(var(--errorColor, 11 87 208));
 }

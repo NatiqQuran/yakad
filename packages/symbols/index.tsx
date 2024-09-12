@@ -1,10 +1,10 @@
 import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
-import { iconsCode } from "./iconsCode";
+import { IconCode } from "./types";
 import styles from "./style.module.css";
 
 interface SymbolProps extends React.HTMLAttributes<HTMLElement> {
-    icon: iconsCode;
+    icon: IconCode;
     type?: "default" | "outlined" | "round" | "sharp" | "twoTone";
     size?: number | "small" | "medium" | "large";
     mirror?: "horizontal" | "vertical" | "diagonal";

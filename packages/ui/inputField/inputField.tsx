@@ -5,6 +5,7 @@ import styles from "./inputField.module.css";
 export interface InputFieldProps
     extends React.HTMLAttributes<HTMLInputElement> {
     variant?: "outlined" | "filled";
+    siza?: "small" | "normal";
     type?: string;
     placeholder?: string;
     disabled?: boolean;
@@ -12,12 +13,14 @@ export interface InputFieldProps
     value?: string;
     required?: boolean;
     autoFocus?: boolean;
+    error?: boolean;
 }
 
 export default function InputField(props: InputFieldProps) {
     const joinedClassNames = joinClassNames(
         styles.input,
         props.variant ? styles[props.variant] : styles.outlined,
+        props.siza ? styles[props.siza] : styles.normal,
         props.placeholder ? styles.havePlaceHolder : "",
         props.className!
     );

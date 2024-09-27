@@ -1,6 +1,7 @@
 import React, { DetailedHTMLProps, SelectHTMLAttributes } from "react";
 import { joinClassNames } from "@yakad/lib";
 import styles from "./select.module.css";
+import inputStyles from "../inputField/inputField.module.css";
 
 export interface SelectProps
     extends DetailedHTMLProps<
@@ -8,24 +9,25 @@ export interface SelectProps
         HTMLSelectElement
     > {
     variant?: "outlined" | "filled";
-    siza?: "small" | "normal";
+    boxSize?: "small" | "normal";
     placeholder?: string;
 }
 export default function Select(props: SelectProps) {
     const joinedClassNames = joinClassNames(
         styles.select,
-        props.variant ? styles[props.variant] : styles.outlined,
-        props.siza ? styles[props.siza] : styles.normal,
-        props.placeholder ? styles.havePlaceHolder : "",
+        inputStyles.input,
+        props.variant ? inputStyles[props.variant] : inputStyles.outlined,
+        props.boxSize ? inputStyles[props.boxSize] : inputStyles.normal,
+        props.placeholder ? inputStyles.havePlaceHolder : "",
         props.className!
     );
     return (
-        <div className={styles.div}>
+        <div className={inputStyles.div}>
             <select {...props} className={joinedClassNames}>
                 {props.children}
             </select>
             {props.placeholder ? (
-                <label className={styles.label}>{props.placeholder}</label>
+                <label className={inputStyles.label}>{props.placeholder}</label>
             ) : null}
         </div>
     );

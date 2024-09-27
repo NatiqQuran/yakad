@@ -61,6 +61,10 @@
     border-radius: 0.4rem;
     background-color: transparent;
 }
+.select.outlined.small {
+    padding: 0.75rem 1.3rem;
+    height: 3.5rem;
+}
 @media (pointer: fine) {
     .select.outlined:hover {
         border-color: rgb(var(--onSurfaceVariantColor, 73 69 78));
@@ -93,6 +97,9 @@
     width: 100%;
     max-height: 100%;
     line-height: 6rem;
+}
+.select.outlined ~ .label {
+    line-height: 4.5rem;
 }
 .select.outlined:focus ~ .label,
 .select.outlined:not(:placeholder-shown) ~ .label {
@@ -145,6 +152,9 @@
     border-radius: 0.4rem 0.4rem 0rem 0rem;
     background-color: rgb(var(--onSurfaceColor, 28 27 31) / 0.04);
 }
+.select.filled.small {
+    height: 3.5rem;
+}
 @media (pointer: fine) {
     .select.select.filled:hover {
         border-color: rgb(var(--onSurfaceVariantColor, 73 69 78));
@@ -160,6 +170,10 @@
 .select.filled.havePlaceHolder {
     padding: 2rem 1.2rem 0.5rem;
 }
+.select.filled.small.havePlaceHolder {
+    padding: 1.5rem 1.2rem 0.5rem;
+}
+
 .select.filled::placeholder {
     color: transparent;
 }
@@ -170,12 +184,18 @@
     line-height: 6rem;
     padding: 0 1rem;
 }
+.select.filled.small ~ .label {
+    line-height: 4.5rem;
+}
 .select.filled:focus ~ .label,
 .select.filled:not(:placeholder-shown) ~ .label {
     font-size: 1.1rem;
     line-height: 4rem;
 }
-
+.select.filled:focus.small ~ .label,
+.select.filled.small:not(:placeholder-shown) ~ .label {
+    line-height: 3rem;
+}
 .select.filled ~ .label::after {
     position: absolute;
     left: 0rem;

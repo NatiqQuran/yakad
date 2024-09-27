@@ -8,12 +8,14 @@ export interface SelectProps
         HTMLSelectElement
     > {
     variant?: "outlined" | "filled";
+    siza?: "small" | "normal";
     placeholder?: string;
 }
 export default function Select(props: SelectProps) {
     const joinedClassNames = joinClassNames(
         styles.select,
         props.variant ? styles[props.variant] : styles.outlined,
+        props.siza ? styles[props.siza] : styles.normal,
         props.placeholder ? styles.havePlaceHolder : "",
         props.className!
     );

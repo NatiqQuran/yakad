@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
+        "outDir": "build",
+        "rootDir": "./src",
         "noImplicitAny": true,
         "module": "es2022",
         "target": "es2022",
         "jsx": "react",
-        "allowJs": false,
+        "allowJs": true,
         "moduleResolution": "node",
         "declaration": true,
         "sourceMap": true,

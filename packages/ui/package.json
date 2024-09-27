@@ -1,22 +1,28 @@
 {
     "name": "@yakad/ui",
     "version": "1.2.193-beta",
+    "private": false,
+    "author": "Natiq",
     "description": "UI components for NextJS/React",
-    "main": "./src/index.js",
-    "scripts": {
-        "build": "tsc",
-        "test": "echo hector test: not impl"
-    },
+    "main": "./src/index.ts",
+    "keywords": [
+        "yakad",
+        "react",
+        "react-component"
+    ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/NatiqQuran/yakad.git"
+        "url": "git+https://github.com/NatiqQuran/yakad.git",
+        "directory": "packages/ui"
     },
-    "author": "Natiq",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/NatiqQuran/yakad/issues"
     },
     "homepage": "https://yakad.natiq.net",
+    "scripts": {
+        "build": "tsc"
+    },
     "dependencies": {
         "react": "18.3.1",
         "react-dom": "18.3.1",
@@ -27,5 +33,9 @@
         "@types/react": "18.3.3",
         "@types/react-dom": "18.3.0",
         "typescript": "5.4.5"
+    },
+    "publishConfig": {
+        "access": "public",
+        "directory": "build"
     }
 }

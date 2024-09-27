@@ -1,7 +1,7 @@
 import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import { IconCode } from "./types";
-import styles from "./style.module.css";
+import styles from "./public/css/style.module.css";
 
 interface SymbolProps extends React.HTMLAttributes<HTMLElement> {
     icon: IconCode;

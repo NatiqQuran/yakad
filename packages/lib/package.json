@@ -1,33 +1,37 @@
 {
     "name": "@yakad/lib",
     "version": "1.0.9",
+    "private": false,
+    "author": "Natiq",
     "description": "JS frontend library for NextJS/React",
-    "main": "./dist/index.js",
-    "scripts": {
-        "build": "tsc",
-        "test": "echo hector test: not impl"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
+    "main": "./build/index.js",
+    "keywords": [
+        "yakad",
+        "react",
+        "react-component"
+    ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/NatiqQuran/yakad.git"
+        "url": "git+https://github.com/NatiqQuran/yakad.git",
+        "directory": "packages/lib"
     },
-    "keywords": [
-        "ui"
-    ],
-    "author": "Natiq",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/NatiqQuran/yakad/issues"
     },
     "homepage": "https://yakad.natiq.net",
+    "scripts": {
+        "build": "tsc"
+    },
     "dependencies": {
         "react": "18.3.1"
     },
     "devDependencies": {
         "@types/react": "18.3.3",
         "typescript": "5.4.5"
+    },
+    "publishConfig": {
+        "access": "public",
+        "directory": "build"
     }
 }

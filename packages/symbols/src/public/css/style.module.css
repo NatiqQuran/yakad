@@ -2,52 +2,52 @@
     font-family: "Material Icons";
     font-style: normal;
     font-weight: 400;
-    src: url(./fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
     src: local("Material Icons"), local("MaterialIcons-Regular"),
-        url(./fonts/MaterialIcons-Regular.woff2) format("woff2"),
-        url(./fonts/MaterialIcons-Regular.woff) format("woff"),
-        url(./fonts/MaterialIcons-Regular.ttf) format("truetype");
+        url(../fonts/MaterialIcons-Regular.woff2) format("woff2"),
+        url(../fonts/MaterialIcons-Regular.woff) format("woff"),
+        url(../fonts/MaterialIcons-Regular.ttf) format("truetype");
 }
 @font-face {
     font-family: "Material Icons Outlined";
     font-style: normal;
     font-weight: 400;
-    src: url(./fonts/MaterialIconsOutlined-Regular.eot); /* For IE6-8 */
+    src: url(../fonts/MaterialIconsOutlined-Regular.eot); /* For IE6-8 */
     src: local("Material Icons Outlined"),
         local("MaterialIconsOutlined-Regular"),
-        url(./fonts/MaterialIconsOutlined-Regular.woff2) format("woff2"),
-        url(./fonts/MaterialIconsOutlined-Regular.woff) format("woff"),
-        url(./fonts/MaterialIconsOutlined-Regular.ttf) format("truetype");
+        url(../fonts/MaterialIconsOutlined-Regular.woff2) format("woff2"),
+        url(../fonts/MaterialIconsOutlined-Regular.woff) format("woff"),
+        url(../fonts/MaterialIconsOutlined-Regular.ttf) format("truetype");
 }
 @font-face {
     font-family: "Material Icons Round";
     font-style: normal;
     font-weight: 400;
-    src: url(./fonts/MaterialIconsRound-Regular.eot); /* For IE6-8 */
+    src: url(../fonts/MaterialIconsRound-Regular.eot); /* For IE6-8 */
     src: local("Material Icons Round"), local("MaterialIconsRound-Regular"),
-        url(./fonts/MaterialIconsRound-Regular.woff2) format("woff2"),
-        url(./fonts/MaterialIconsRound-Regular.woff) format("woff"),
-        url(./fonts/MaterialIconsRound-Regular.ttf) format("truetype");
+        url(../fonts/MaterialIconsRound-Regular.woff2) format("woff2"),
+        url(../fonts/MaterialIconsRound-Regular.woff) format("woff"),
+        url(../fonts/MaterialIconsRound-Regular.ttf) format("truetype");
 }
 @font-face {
     font-family: "Material Icons Sharp";
     font-style: normal;
     font-weight: 400;
-    src: url(./fonts/MaterialIconsSharp-Regular.eot); /* For IE6-8 */
+    src: url(../fonts/MaterialIconsSharp-Regular.eot); /* For IE6-8 */
     src: local("Material Icons Sharp"), local("MaterialIconsSharp-Regular"),
-        url(./fonts/MaterialIconsSharp-Regular.woff2) format("woff2"),
-        url(./fonts/MaterialIconsSharp-Regular.woff) format("woff"),
-        url(./fonts/MaterialIconsSharp-Regular.ttf) format("truetype");
+        url(../fonts/MaterialIconsSharp-Regular.woff2) format("woff2"),
+        url(../fonts/MaterialIconsSharp-Regular.woff) format("woff"),
+        url(../fonts/MaterialIconsSharp-Regular.ttf) format("truetype");
 }
 @font-face {
     font-family: "Material Icons TwoTone";
     font-style: normal;
     font-weight: 400;
-    src: url(./fonts/MaterialIconsTwoTone-Regular.eot); /* For IE6-8 */
+    src: url(../fonts/MaterialIconsTwoTone-Regular.eot); /* For IE6-8 */
     src: local("Material Icons TwoTone"), local("MaterialIconsTwoTone-Regular"),
-        url(./fonts/MaterialIconsTwoTone-Regular.woff2) format("woff2"),
-        url(./fonts/MaterialIconsTwoTone-Regular.woff) format("woff"),
-        url(./fonts/MaterialIconsTwoTone-Regular.ttf) format("truetype");
+        url(../fonts/MaterialIconsTwoTone-Regular.woff2) format("woff2"),
+        url(../fonts/MaterialIconsTwoTone-Regular.woff) format("woff"),
+        url(../fonts/MaterialIconsTwoTone-Regular.ttf) format("truetype");
 }
 
 .default {

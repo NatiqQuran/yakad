@@ -1,8 +1,4 @@
-#Ignore
-*.js
-*.js.map
-*.ts
-
-#Allow
-!declarations.d.ts
-!/packages/lib/*.ts
+build
+build-tests
+node_modules
+package-lock.json

@@ -1,14 +1,13 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "es2022",
-    "target": "es2022",
-    "jsx": "react",
-    "allowJs": true,
-    "moduleResolution": "node",
-    "declaration": true,
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true
-  }
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "es2022",
+        "target": "es2022",
+        "allowJs": false,
+        "moduleResolution": "node",
+        "declaration": true,
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true
+    }
 }

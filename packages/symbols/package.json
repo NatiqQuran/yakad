@@ -1,10 +1,10 @@
 {
     "name": "@yakad/symbols",
-    "version": "1.0.8",
+    "version": "1.0.15",
     "private": false,
     "author": "Natiq",
     "description": "Easy to use Material Symbols",
-    "main": "./src/index.ts",
+    "main": "./build/index.js",
     "keywords": [
         "yakad",
         "react",
@@ -21,7 +21,9 @@
     },
     "homepage": "https://yakad.natiq.net",
     "scripts": {
-        "build": "tsc"
+        "clean": "rimraf build/",
+        "copy-files": "copyfiles -u 1 src/public/**/* build/",
+        "build": "npm run clean && tsc && npm run copy-files"
     },
     "dependencies": {
         "react": "18.3.1",
@@ -29,6 +31,8 @@
     },
     "devDependencies": {
         "@types/react": "18.3.3",
+        "copyfiles": "2.4.1",
+        "rimraf": "6.0.1",
         "typescript": "5.4.5"
     },
     "publishConfig": {

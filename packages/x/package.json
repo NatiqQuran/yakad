@@ -1,10 +1,10 @@
 {
     "name": "@yakad/x",
-    "version": "1.0.106-beta",
+    "version": "1.0.112-beta",
     "private": false,
     "author": "Natiq",
     "description": "Extreme components for NextJS",
-    "main": "./src/index.ts",
+    "main": "./build/index.js",
     "keywords": [
         "yakad",
         "react",
@@ -21,7 +21,9 @@
     },
     "homepage": "https://yakad.natiq.net",
     "scripts": {
-        "build": "tsc"
+        "clean": "rimraf build/",
+        "copy-files": "copyfiles -u 1 src/**/*.css build/",
+        "build": "npm run clean && tsc && npm run copy-files"
     },
     "dependencies": {
         "@yakad/lib": "1.0.8",
@@ -33,6 +35,8 @@
     "devDependencies": {
         "@types/react": "18.3.3",
         "@types/react-dom": "18.3.0",
+        "copyfiles": "2.4.1",
+        "rimraf": "6.0.1",
         "typescript": "5.4.5"
     },
     "publishConfig": {

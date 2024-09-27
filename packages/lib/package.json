@@ -4,7 +4,7 @@
     "private": false,
     "author": "Natiq",
     "description": "JS frontend library for NextJS/React",
-    "main": "./src/index.ts",
+    "main": "./build/index.js",
     "keywords": [
         "yakad",
         "react",

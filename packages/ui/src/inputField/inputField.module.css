@@ -96,7 +96,7 @@
     max-height: 100%;
     line-height: 6rem;
 }
-.input.outlined ~ .label {
+.input.outlined.small ~ .label {
     line-height: 4.5rem;
 }
 .input.outlined:focus ~ .label,

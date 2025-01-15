@@ -13,11 +13,7 @@ export default function XgetStart(props: XgetStartProps) {
     const joinedStyles = joinStyles({ padding: "6rem 0" }, props.style!);
 
     return (
-        <Container
-            maxWidth="lg"
-            className={joinedClassNames}
-            style={joinedStyles}
-        >
+        <Container size="lg" className={joinedClassNames} style={joinedStyles}>
             {/* remove class and choose background */}
             <GridContainer style={{ rowGap: "8rem" }}>
                 <GridItem md={12} xl={5}>

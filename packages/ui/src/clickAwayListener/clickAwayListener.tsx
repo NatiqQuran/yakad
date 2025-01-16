@@ -1,12 +1,10 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { joinClassNames } from "@yakad/lib";
-import styles from "./clickAwayListener.module.css";
 
-export interface ClickAwayListenerProps
-    extends React.HTMLAttributes<HTMLDivElement> {
+export interface ClickAwayListenerProps {
     onclickaway: Function;
+    children?: React.ReactNode;
 }
 
 export default function ClickAwayListener(props: ClickAwayListenerProps) {
@@ -25,9 +23,5 @@ export default function ClickAwayListener(props: ClickAwayListenerProps) {
             document.removeEventListener("click", handleOutSideClick, true);
     }, [props.onclickaway]);
 
-    return (
-        <div ref={ref} {...props}>
-            {props.children as React.ReactNode}
-        </div>
-    );
+    return <div ref={ref}>{props.children as React.ReactNode}</div>;
 }

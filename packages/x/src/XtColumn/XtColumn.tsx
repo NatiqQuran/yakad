@@ -2,14 +2,14 @@ import { Card } from "@yakad/ui";
 import React from "react";
 
 export interface XtColumnProps {
-    dataKey: string;
-    headTitle?: string;
-    footTitle?: string;
-    footFunc?: "sum" | "average";
-    alignText?: "start" | "center" | "end";
+    datakey: string;
+    headtitle?: string;
+    foottitle?: string;
+    footfunc?: "sum" | "average";
+    aligntext?: "start" | "center" | "end";
     sortable?: boolean;
     searchable?: boolean;
-    defaultHidden?: boolean;
+    defaulthidden?: boolean;
 }
 
 export default function XtColumn(props: XtColumnProps) {

@@ -4,11 +4,11 @@ import styles from "./main.module.css";
 
 export interface MainProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
-    navOpen?: boolean;
+    navopen?: boolean;
 }
 
 export default function Main(props: MainProps) {
-    const navOpenClass = props.navOpen ? styles.navOpen : "";
+    const navOpenClass = props.navopen ? styles.navOpen : "";
 
     const joinedClassNames = joinClassNames(
         styles.main,

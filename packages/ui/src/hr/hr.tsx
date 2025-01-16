@@ -5,7 +5,7 @@ import styles from "./hr.module.css";
 export interface HrProps extends React.HTMLAttributes<HTMLElement> {
     variant?: "dotted" | "dashed" | "shortLine";
     height?: number;
-    marginTopBottom?: number;
+    margintopbottom?: number;
 }
 
 export default function Hr(props: HrProps) {
@@ -17,10 +17,10 @@ export default function Hr(props: HrProps) {
 
     const joinedStyles = joinStyles(
         props.height ? { borderTopWidth: props.height + "rem" } : {},
-        props.marginTopBottom
+        props.margintopbottom
             ? joinStyles(
-                  { marginTop: props.marginTopBottom + "rem" },
-                  { marginBottom: props.marginTopBottom + "rem" }
+                  { marginTop: props.margintopbottom + "rem" },
+                  { marginBottom: props.margintopbottom + "rem" }
               )
             : {},
         props.style!

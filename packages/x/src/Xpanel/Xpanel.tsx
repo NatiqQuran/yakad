@@ -6,8 +6,8 @@ import Symbol from "@yakad/symbols";
 
 interface XpanelProps extends React.HTMLAttributes<HTMLElement> {
     name?: string;
-    appbarChildren?: JSX.Element;
-    navigationChildren?: JSX.Element;
+    appbarchildren?: JSX.Element;
+    navigationchildren?: JSX.Element;
 }
 
 export default function Xpanel(props: XpanelProps) {
@@ -31,23 +31,23 @@ export default function Xpanel(props: XpanelProps) {
 
     return (
         <Page>
-            <AppBar positionSticky>
+            <AppBar positionsticky>
                 <Button icon={<Symbol icon="menu" />} onClick={toggleNavOpen} />
                 <h1>{props.name ? props.name : "Panel"}</h1>
                 <Spacer />
-                {props.appbarChildren}
+                {props.appbarchildren}
             </AppBar>
             <Main
                 style={{
                     minHeight: "calc(100vh - 6rem)",
                 }}
-                navOpen={navOpen}
+                navopen={navOpen}
                 onClick={() => handleClickAwayNav()}
             >
                 {props.children as any}
             </Main>
 
-            <Navigation open={navOpen}>{props.navigationChildren}</Navigation>
+            <Navigation open={navOpen}>{props.navigationchildren}</Navigation>
         </Page>
     );
 }

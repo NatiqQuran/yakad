@@ -11,10 +11,10 @@ export function XTr(props: XTrProps) {
 }
 
 export interface XThProps extends React.HTMLAttributes<HTMLElement> {
-    alignText?: "start" | "center" | "end";
+    aligntext?: "start" | "center" | "end";
     sortable?: boolean;
     searchable?: boolean;
-    defaultHidden?: boolean;
+    defaulthidden?: boolean;
 }
 export function XTh(props: XThProps) {
     return <Th>XTh can only be used inside XTr witch inside XThead</Th>;

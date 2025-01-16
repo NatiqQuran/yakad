@@ -9,8 +9,8 @@ export interface CodeFieldsProps
     length?: number;
     name?: string;
     type?: string;
-    autoFocus?: boolean;
-    onFilled?: Function;
+    autofocus?: boolean;
+    onfilled?: Function;
 }
 
 function onInputHandler(
@@ -23,6 +23,7 @@ function onInputHandler(
     if (inputLength == targetInputElement.value.length && onFilled) onFilled();
     sliceOverLength(targetInputElement, inputLength);
 }
+
 function sliceOverLength(
     inputElement: HTMLInputElement,
     inputLength: number
@@ -31,6 +32,7 @@ function sliceOverLength(
     if (targetLength > inputLength)
         inputElement.value = inputElement.value.slice(0, inputLength);
 }
+
 function removeUnNumberChars(inputElement: HTMLInputElement): void {
     inputElement.value = inputElement.value.replace(/[^0-9]+/, "");
 }
@@ -54,7 +56,7 @@ export default function CodeField(this: any, props: CodeFieldsProps) {
             className={joinedClassNames}
             style={joinedStyles}
             onInput={(event) =>
-                onInputHandler(event, length ? length : 6, props.onFilled)
+                onInputHandler(event, length ? length : 6, props.onfilled)
             }
             autoComplete="off"
             pattern="[0-9]"

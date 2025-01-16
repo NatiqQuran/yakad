@@ -5,23 +5,21 @@ import styles from "./Xbackground.module.css";
 interface XbackgroundProps extends React.HTMLAttributes<HTMLElement> {
     variant?: "dotted" | "strips";
     separator?: "shadowinside" | "shadowoutside";
-    backgroundImage?: any;
-    backgroundFixed?: boolean;
+    image?: any;
+    fixed?: boolean;
 }
 
 export default function Xbackground(props: XbackgroundProps) {
     const joinedClassNames = joinClassNames(
         styles.background,
         props.variant ? styles[props.variant] : "",
-        props.backgroundFixed ? styles.fixed : "",
-        props.backgroundImage ? styles.image : "",
+        props.fixed ? styles.fixed : "",
+        props.image ? styles.image : "",
         props.separator ? styles[props.separator] : "",
         props.className!
     );
     const joinedStyles = joinStyles(
-        props.backgroundImage
-            ? { backgroundImage: `url(${props.backgroundImage.src})` }
-            : {},
+        props.image ? { backgroundImage: `url(${props.image.src})` } : {},
         props.style!
     );
 

@@ -9,7 +9,7 @@ export interface SelectProps
         HTMLSelectElement
     > {
     variant?: "outlined" | "filled";
-    boxSize?: "small" | "normal";
+    boxsize?: "small" | "normal";
     placeholder?: string;
 }
 export default function Select(props: SelectProps) {
@@ -17,7 +17,7 @@ export default function Select(props: SelectProps) {
         styles.select,
         inputStyles.input,
         props.variant ? inputStyles[props.variant] : inputStyles.outlined,
-        props.boxSize ? inputStyles[props.boxSize] : inputStyles.normal,
+        props.boxsize ? inputStyles[props.boxsize] : inputStyles.normal,
         props.placeholder ? inputStyles.havePlaceHolder : "",
         props.className!
     );

@@ -15,7 +15,7 @@ interface MenuItemChild {
 }
 
 interface XmenuListProps extends React.HTMLAttributes<HTMLElement> {
-    menuItems?: MenuItem[];
+    menuitems?: MenuItem[];
 }
 
 interface CollapseList {
@@ -32,8 +32,8 @@ export default function XmenuList(props: XmenuListProps) {
 
     return (
         <List direction="column">
-            {props.menuItems ? (
-                props.menuItems.map((item, index) => (
+            {props.menuitems ? (
+                props.menuitems.map((item, index) => (
                     <ListItem key={index}>
                         <Button
                             variant={
@@ -43,7 +43,7 @@ export default function XmenuList(props: XmenuListProps) {
                                     ? "elevated"
                                     : "text"
                             }
-                            borderStyle="semi"
+                            borderstyle="semi"
                             onClick={
                                 item.childs
                                     ? () => handleClickcollapseList(index)
@@ -68,7 +68,7 @@ export default function XmenuList(props: XmenuListProps) {
                                       <ListItem>
                                           <Button
                                               size="small"
-                                              borderStyle="semi"
+                                              borderstyle="semi"
                                               variant={
                                                   child.selected
                                                       ? "filled"

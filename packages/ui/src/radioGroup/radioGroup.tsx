@@ -4,7 +4,7 @@ import React, { Children, useState } from "react";
 
 export interface RadioGroupProps extends React.HTMLAttributes<HTMLDivElement> {
     name: string;
-    defaultValue?: string;
+    defaultvalue?: string;
 }
 
 export default function RadioGroup(props: RadioGroupProps) {
@@ -16,10 +16,9 @@ export default function RadioGroup(props: RadioGroupProps) {
         (arrayChildren as React.ReactElement[]).map(
             (item: React.ReactElement, index: number) =>
                 React.cloneElement(item as React.ReactElement, {
-                    handleChecked: () => setChecked(index),
-                    handleDefaultChecked: () => setChecked(index),
-                    nameFromRadioGroup: props.name,
-                    defaultValue: props.defaultValue,
+                    handlechecked: () => setChecked(index),
+                    namefromradiogroup: props.name,
+                    defaultvalue: props.defaultvalue,
                     checked: checked == index ? true : false,
                 })
         );

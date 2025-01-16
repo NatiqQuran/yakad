@@ -6,7 +6,7 @@ import Button from "../button/button";
 import styles from "./codeBox.module.css";
 
 export interface CodeBoxProps extends React.HTMLAttributes<HTMLDivElement> {
-    copyButton?: boolean;
+    copybutton?: boolean;
 }
 
 export default function CodeBox(props: CodeBoxProps) {

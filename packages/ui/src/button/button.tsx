@@ -15,11 +15,11 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
         | "elevated"
         | "link"
         | "fab";
-    borderStyle?: "none" | "semi" | "squircle" | "rounded";
+    borderstyle?: "none" | "semi" | "squircle" | "rounded";
     icon?: JSX.Element;
-    iconPosition?: "start" | "end";
-    loadingPosition?: "auto" | "center";
-    loadingVariant?: "scaleOut" | "dots" | "spinner";
+    iconposition?: "start" | "end";
+    loadingposition?: "auto" | "center";
+    loadingvariant?: "scaleOut" | "dots" | "spinner";
     disabled?: boolean;
 }
 
@@ -36,20 +36,20 @@ const iconSizeMaps: iconSizeMap = {
 };
 
 export default function Button(props: ButtonProps) {
-    const startWithChildren = props.iconPosition === "end";
+    const startWithChildren = props.iconposition === "end";
     const centerLoading =
         !props.icon ||
-        (props.loadingVariant && props.loadingPosition === "center");
+        (props.loadingvariant && props.loadingposition === "center");
 
     const joinedClassNames = joinClassNames(
         styles.button,
         props.variant ? styles[props.variant] : styles.text,
-        props.loadingVariant ? styles.loading : "",
-        props.loadingVariant && centerLoading
-            ? styles.loadingPositionCenter
+        props.loadingvariant ? styles.loading : "",
+        props.loadingvariant && centerLoading
+            ? styles.loadingpositionCenter
             : "",
         props.size ? styles[props.size] : styles.medium,
-        props.borderStyle ? styles[props.borderStyle] : styles.rounded,
+        props.borderstyle ? styles[props.borderstyle] : styles.rounded,
         props.icon && !props.children ? styles.iconButton : "",
         props.className!
     );
@@ -57,14 +57,14 @@ export default function Button(props: ButtonProps) {
     return (
         <button {...props} type={props.type} className={joinedClassNames}>
             {startWithChildren ? props.children : null}
-            {props.loadingVariant ? (
+            {props.loadingvariant ? (
                 <div
                     className={joinClassNames(
                         centerLoading ? styles.positionCenter : "",
                         styles.displayOnDisabled
                     )}
                 >
-                    <Loading size={props.size} variant={props.loadingVariant} />
+                    <Loading size={props.size} variant={props.loadingvariant} />
                 </div>
             ) : null}
             {props.icon ? props.icon : null}

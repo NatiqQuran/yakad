@@ -4,15 +4,15 @@ import styles from "./displayOnScreen.module.css";
 
 export interface DisplayOnScreenProps
     extends React.HTMLAttributes<HTMLElement> {
-    largerThan?: "xs" | "sm" | "md" | "lg" | "xl";
-    smallerOrEqualTo?: "xs" | "sm" | "md" | "lg" | "xl";
+    largerthan?: "xs" | "sm" | "md" | "lg" | "xl";
+    smallerorequalto?: "xs" | "sm" | "md" | "lg" | "xl";
 }
 
 export default function DisplayOnScreen(props: DisplayOnScreenProps) {
     const joinedClassNames = joinClassNames(
-        props.largerThan ? styles[props.largerThan + "LargerThan"] : "",
-        props.smallerOrEqualTo
-            ? styles[props.smallerOrEqualTo + "SmallerOrEqual"]
+        props.largerthan ? styles[props.largerthan + "LargerThan"] : "",
+        props.smallerorequalto
+            ? styles[props.smallerorequalto + "SmallerOrEqual"]
             : "",
         props.className!
     );

@@ -3,13 +3,13 @@ import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./appBar.module.css";
 
 export interface AppbarProps extends React.HTMLAttributes<HTMLDivElement> {
-    positionSticky?: boolean;
+    positionsticky?: boolean;
 }
 
 export default function AppBar(props: AppbarProps) {
     const joinedClassNames = joinClassNames(
         styles.header,
-        props.positionSticky ? styles.sticky : "",
+        props.positionsticky ? styles.sticky : "",
         props.className!
     );
 

@@ -1,4 +1,5 @@
 dist
-types
 node_modules
 package-lock.json
+/packages/**/LICENSE
+/packages/**/README.md

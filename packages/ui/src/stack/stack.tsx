@@ -2,7 +2,7 @@ import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./stack.module.css";
 
-interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
 }
 

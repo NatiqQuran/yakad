@@ -2,7 +2,7 @@ import React from "react";
 import { joinClassNames, joinStyles } from "@yakad/lib";
 import styles from "./page.module.css";
 
-interface PageProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface PageProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
 }
 

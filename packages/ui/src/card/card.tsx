@@ -2,7 +2,7 @@ import React from "react";
 import { joinClassNames } from "@yakad/lib";
 import styles from "./card.module.css";
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
 }
 

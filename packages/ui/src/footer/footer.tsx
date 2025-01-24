@@ -2,7 +2,7 @@ import React from "react";
 import { joinClassNames } from "@yakad/lib";
 import styles from "./footer.module.css";
 
-interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
 }
 

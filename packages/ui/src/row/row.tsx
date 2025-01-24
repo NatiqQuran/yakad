@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 import styles from "./row.module.css";
 
-interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
     overflow?: "shrink" | "wrap" | "scroll";
 }

@@ -1,15 +1,17 @@
 {
     "compilerOptions": {
-        "outDir": "build",
-        "rootDir": "./src",
-        "noImplicitAny": true,
-        "module": "es2022",
-        "target": "es2022",
-        "jsx": "react",
-        "allowJs": true,
+        "target": "ES6",
+        "module": "ESNext",
         "moduleResolution": "node",
+        "jsx": "react",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "outDir": "./dist",
+        "rootDir": "./src",
         "declaration": true,
-        "sourceMap": true,
-        "allowSyntheticDefaultImports": true
-    }
+        "sourceMap": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist", "tests"]
 }

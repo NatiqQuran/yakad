@@ -1,10 +1,11 @@
-import React from "react";
-import { joinClassNames } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import Loading from "../loading/loading";
 import styles from "./button.module.css";
 
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-    type?: "button" | "reset" | "submit";
+export interface ButtonProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     size?: "small" | "medium" | "large";
     variant?:
         | "text"
@@ -20,7 +21,6 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     iconposition?: "start" | "end";
     loadingposition?: "auto" | "center";
     loadingvariant?: "scaleOut" | "dots" | "spinner";
-    disabled?: boolean;
 }
 
 interface iconSizeMap {
@@ -35,40 +35,55 @@ const iconSizeMaps: iconSizeMap = {
     large: 3.2,
 };
 
-export default function Button(props: ButtonProps) {
-    const startWithChildren = props.iconposition === "end";
-    const centerLoading =
-        !props.icon ||
-        (props.loadingvariant && props.loadingposition === "center");
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+    (
+        {
+            size = "medium",
+            variant = "text",
+            borderstyle = "rounded",
+            icon,
+            iconposition = "start",
+            loadingposition = "auto",
+            loadingvariant,
+            className,
+            children,
+            ...restProps
+        },
+        ref
+    ) => {
+        const childrenFirst: boolean = Boolean(iconposition === "end");
+        const isLoadingPositionCenter: boolean = Boolean(
+            !icon || loadingposition === "center"
+        );
 
-    const joinedClassNames = joinClassNames(
-        styles.button,
-        props.variant ? styles[props.variant] : styles.text,
-        props.loadingvariant ? styles.loading : "",
-        props.loadingvariant && centerLoading
-            ? styles.loadingpositionCenter
-            : "",
-        props.size ? styles[props.size] : styles.medium,
-        props.borderstyle ? styles[props.borderstyle] : styles.rounded,
-        props.icon && !props.children ? styles.iconButton : "",
-        props.className!
-    );
+        const joinedClassNames = classNames(
+            styles.button,
+            styles[variant],
+            { [styles.loading]: loadingvariant },
+            { [styles.loadingPositionCenter]: isLoadingPositionCenter },
+            styles[size],
+            styles[borderstyle],
+            { [styles.iconButton]: !children && icon },
+            className
+        );
 
-    return (
-        <button {...props} type={props.type} className={joinedClassNames}>
-            {startWithChildren ? props.children : null}
-            {props.loadingvariant ? (
-                <div
-                    className={joinClassNames(
-                        centerLoading ? styles.positionCenter : "",
-                        styles.displayOnDisabled
-                    )}
-                >
-                    <Loading size={props.size} variant={props.loadingvariant} />
-                </div>
-            ) : null}
-            {props.icon ? props.icon : null}
-            {!startWithChildren ? props.children : null}
-        </button>
-    );
-}
+        return (
+            <button ref={ref} className={joinedClassNames} {...restProps}>
+                {childrenFirst && children}
+                {loadingvariant && (
+                    <div
+                        className={classNames(styles.displayOnDisabled, {
+                            [styles.positionCenter]: isLoadingPositionCenter,
+                        })}
+                    >
+                        <Loading size={size} variant={loadingvariant} />
+                    </div>
+                )}
+                {icon}
+                {!childrenFirst && children}
+            </button>
+        );
+    }
+);
+
+export default Button;

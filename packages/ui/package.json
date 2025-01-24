@@ -1,10 +1,11 @@
 {
     "name": "@yakad/ui",
-    "version": "1.3.0",
+    "version": "1.3.13",
     "private": false,
     "author": "Natiq",
     "description": "UI components for NextJS/React",
-    "main": "./build/index.js",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "keywords": [
         "yakad",
         "react",
@@ -21,25 +22,24 @@
     },
     "homepage": "https://yakad.natiq.net",
     "scripts": {
-        "clean": "rimraf build/",
-        "copy-files": "copyfiles -u 1 src/**/*.css build/",
-        "build": "npm run clean && tsc && npm run copy-files"
+        "clean": "rimraf dist/",
+        "copy-files": "copyfiles -u 1 src/**/*.css dist/",
+        "build": "npm run clean && tsc && npm run copy-files",
+        "prepublishOnly": "cp ../../README.md ../../LICENSE ./"
     },
     "dependencies": {
-        "react": "18.3.1",
-        "react-dom": "18.3.1",
         "@yakad/lib": "1.0.8",
-        "@yakad/symbols": "1.0.7"
+        "@yakad/symbols": "1.0.7",
+        "classnames": "2.5.1",
+        "react": "18.3.1",
+        "react-dom": "18.3.1"
     },
     "devDependencies": {
+        "@types/css-modules": "^1.0.5",
         "@types/react": "18.3.3",
         "@types/react-dom": "18.3.0",
         "copyfiles": "2.4.1",
         "rimraf": "6.0.1",
         "typescript": "5.4.5"
-    },
-    "publishConfig": {
-        "access": "public",
-        "directory": "build"
     }
 }

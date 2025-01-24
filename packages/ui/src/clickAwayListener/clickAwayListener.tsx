@@ -2,9 +2,9 @@
 
 import React, { useEffect, useRef } from "react";
 
-export interface ClickAwayListenerProps {
+export interface ClickAwayListenerProps
+    extends React.HTMLAttributes<HTMLDivElement> {
     onclickaway: Function;
-    children?: React.ReactNode;
 }
 
 export default function ClickAwayListener(props: ClickAwayListenerProps) {
@@ -23,5 +23,9 @@ export default function ClickAwayListener(props: ClickAwayListenerProps) {
             document.removeEventListener("click", handleOutSideClick, true);
     }, [props.onclickaway]);
 
-    return <div ref={ref}>{props.children as React.ReactNode}</div>;
+    return (
+        <div ref={ref} {...props}>
+            {props.children as React.ReactNode}
+        </div>
+    );
 }

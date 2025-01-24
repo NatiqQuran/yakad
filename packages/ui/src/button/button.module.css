@@ -159,11 +159,11 @@
     width: calc(100% - var(--padding));
 }
 
-.loadingPositionCenter:disabled {
+.loading.loadingPositionCenter:disabled {
     color: transparent;
     fill: transparent;
 }
-.positionCenter {
+.loading.loadingPositionCenter {
     position: absolute;
     left: 50%;
     transform: translate(-50%);

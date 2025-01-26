@@ -1,18 +1,19 @@
 export type { AppBarProps } from "./appBar/appBar";
 export type { ButtonProps } from "./button/button";
 export type { CardProps } from "./card/card";
-export type { CheckboxProps } from "./checkbox/checkbox";
+export type { CheckBoxProps } from "./checkBox/checkBox";
 export type { ClickAwayListenerProps } from "./clickAwayListener/clickAwayListener";
 export type { CodeBoxProps } from "./codeBox/codeBox";
 export type { CodeFieldsProps } from "./codeField/codeField";
 export type { ContainerProps } from "./container/container";
-export type { DisplayOnScreenProps } from "./displayOnScreen/displayOnScreen";
+export type { DisplayProps } from "./display/display";
 export type { FooterProps } from "./footer/footer";
 export type { GridContainerProps } from "./gridContainer/gridContainer";
 export type { GridItemProps } from "./gridItem/gridItem";
 export type { HrProps } from "./hr/hr";
 export type { InputFieldProps } from "./inputField/inputField";
 export type { ListProps } from "./list/list";
+export type { ListItemProps } from "./listItem/listItem";
 export type { LoadingProps } from "./loading/loading";
 export type { MainProps } from "./main/main";
 export type { NavigationProps } from "./navigation/navigation";
@@ -28,12 +29,12 @@ export type { ThemeProps } from "./theme/theme";
 import AppBar from "./appBar/appBar";
 import Button from "./button/button";
 import Card from "./card/card";
-import Chekbox from "./checkbox/checkbox";
+import ChekBox from "./checkBox/checkBox";
 import ClickAwayListener from "./clickAwayListener/clickAwayListener";
 import CodeBox from "./codeBox/codeBox";
 import CodeField from "./codeField/codeField";
 import Container from "./container/container";
-import DisplayOnScreen from "./displayOnScreen/displayOnScreen";
+import Display from "./display/display";
 import Footer from "./footer/footer";
 import GridContainer from "./gridContainer/gridContainer";
 import GridItem from "./gridItem/gridItem";
@@ -59,12 +60,12 @@ export {
     AppBar,
     Button,
     Card,
-    Chekbox,
+    ChekBox,
     ClickAwayListener,
     CodeBox,
     CodeField,
     Container,
-    DisplayOnScreen,
+    Display,
     Footer,
     GridContainer,
     GridItem,

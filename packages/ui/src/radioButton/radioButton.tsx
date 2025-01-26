@@ -1,29 +1,26 @@
 "use client";
 
-import React, { useState, useRef, forwardRef, useEffect } from "react";
-import styles from "./radioButton.module.css";
-import Button from "../button/button";
-import { joinClassNames } from "@yakad/lib";
+import React, { useRef, useEffect } from "react";
+import classNames from "classnames";
 import Symbol from "@yakad/symbols";
 
+import styles from "./radioButton.module.css";
+import Button from "../button/button";
+
 export interface RadioButtonProps
-    extends React.HTMLAttributes<HTMLInputElement> {
+    extends React.InputHTMLAttributes<HTMLInputElement> {
     namefromradiogroup?: string;
     label?: string;
-    value?: string;
     defaultvalue?: string;
-    checked?: boolean;
-    disabled?: boolean;
     handlechecked?: Function;
 }
 
 export default function RadioButton(props: RadioButtonProps) {
     const inputRef = useRef<HTMLInputElement | null>(null);
 
-    const joinedClassNames = joinClassNames(
-        styles.radiobutton,
-        props.label ? styles.labeled : ""
-    );
+    const joinedClassNames = classNames(styles.radiobutton, {
+        [styles.labeled]: props.label,
+    });
 
     useEffect(() => {
         props.value == props.defaultvalue &&
@@ -64,9 +61,6 @@ export default function RadioButton(props: RadioButtonProps) {
                 className={styles.input}
                 type="radio"
                 name={props.namefromradiogroup}
-                value={props.value}
-                checked={props.checked}
-                disabled={props.disabled}
             />
         </div>
     );

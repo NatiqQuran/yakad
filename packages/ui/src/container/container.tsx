@@ -1,5 +1,6 @@
-import React from "react";
-import { joinClassNames } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./container.module.css";
 
 export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -7,17 +8,24 @@ export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     size?: "xs" | "sm" | "md" | "lg" | "xl";
 }
 
-export default function Container(props: ContainerProps) {
-    const joinedClassNames = joinClassNames(
-        styles.container,
-        props.align ? styles[props.align] : styles.start,
-        props.size ? styles[props.size] : "",
-        props.className!
-    );
+const Container = forwardRef<HTMLDivElement, ContainerProps>(
+    (
+        { align = "start", size = "xl", className, children, ...restProps },
+        ref
+    ) => {
+        const joinedClassNames = classNames(
+            styles.container,
+            styles[align],
+            styles[size],
+            className
+        );
 
-    return (
-        <div {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
-        </div>
-    );
-}
+        return (
+            <div ref={ref} {...restProps} className={joinedClassNames}>
+                {children}
+            </div>
+        );
+    }
+);
+
+export default Container;

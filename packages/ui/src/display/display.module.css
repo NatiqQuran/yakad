@@ -1,51 +1,51 @@
 @media only screen and (max-width: 440px) {
-    .xsLargerThan {
+    .xsMinWidth {
         display: none;
     }
 }
 @media only screen and (max-width: 600px) {
-    .smLargerThan {
+    .smMinWidth {
         display: none;
     }
 }
 @media only screen and (max-width: 900px) {
-    .mdLargerThan {
+    .mdMinWidth {
         display: none;
     }
 }
 @media only screen and (max-width: 1200px) {
-    .lgLargerThan {
+    .lgMinWidth {
         display: none;
     }
 }
 @media only screen and (max-width: 1500px) {
-    .xlLargerThan {
+    .xlMinWidth {
         display: none;
     }
 }
 
 @media only screen and (min-width: 441px) {
-    .xsSmallerOrEqual {
+    .xsMaxWidth {
         display: none;
     }
 }
 @media only screen and (min-width: 601px) {
-    .smSmallerOrEqual {
+    .smMaxWidth {
         display: none;
     }
 }
 @media only screen and (min-width: 901px) {
-    .mdSmallerOrEqual {
+    .mdMaxWidth {
         display: none;
     }
 }
 @media only screen and (min-width: 1201px) {
-    .lgSmallerOrEqual {
+    .lgMaxWidth {
         display: none;
     }
 }
 @media only screen and (min-width: 1501px) {
-    .xlSmallerOrEqual {
+    .xlMaxWidth {
         display: none;
     }
 }

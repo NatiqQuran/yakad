@@ -1,5 +1,6 @@
-import React from "react";
-import { joinClassNames, joinStyles } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./main.module.css";
 
 export interface MainProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -7,19 +8,24 @@ export interface MainProps extends React.HTMLAttributes<HTMLDivElement> {
     navopen?: boolean;
 }
 
-export default function Main(props: MainProps) {
-    const navOpenClass = props.navopen ? styles.navOpen : "";
+const Main = forwardRef<HTMLDivElement, MainProps>(
+    (
+        { align = "start", navopen = false, className, children, ...restProps },
+        ref
+    ) => {
+        const joinedClassNames = classNames(
+            styles.main,
+            styles[align],
+            { [styles.navOpen]: navopen },
+            className
+        );
 
-    const joinedClassNames = joinClassNames(
-        styles.main,
-        props.align ? styles[props.align] : "",
-        navOpenClass,
-        props.className!
-    );
+        return (
+            <main ref={ref} {...restProps} className={joinedClassNames}>
+                {children}
+            </main>
+        );
+    }
+);
 
-    return (
-        <main {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
-        </main>
-    );
-}
+export default Main;

@@ -1,21 +1,26 @@
-import React from "react";
-import { joinClassNames, joinStyles } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./page.module.css";
 
 export interface PageProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
 }
 
-export default function Page(props: PageProps) {
-    const joinedClassNames = joinClassNames(
-        styles.page,
-        props.align ? styles[props.align] : styles.start,
-        props.className!
-    );
+const Page = forwardRef<HTMLDivElement, PageProps>(
+    ({ align = "start", className, children, ...restProps }, ref) => {
+        const joinedClassNames = classNames(
+            styles.page,
+            styles[align],
+            className
+        );
 
-    return (
-        <div {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
-        </div>
-    );
-}
+        return (
+            <div ref={ref} {...restProps} className={joinedClassNames}>
+                {children}
+            </div>
+        );
+    }
+);
+
+export default Page;

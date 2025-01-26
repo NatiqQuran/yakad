@@ -1,5 +1,6 @@
-import React from "react";
-import { joinClassNames } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./list.module.css";
 
 export interface ListProps extends React.HTMLAttributes<HTMLUListElement> {
@@ -7,17 +8,24 @@ export interface ListProps extends React.HTMLAttributes<HTMLUListElement> {
     collapsed?: boolean;
 }
 
-export default function List(props: ListProps) {
-    const joinedClassNames = joinClassNames(
-        styles.list,
-        props.direction ? styles[props.direction] : styles.row,
-        props.collapsed ? styles.collapsed : "",
-        props.className!
-    );
+const List = forwardRef<HTMLUListElement, ListProps>(
+    (
+        { direction = "row", collapsed, className, children, ...restProps },
+        ref
+    ) => {
+        const joinedClassNames = classNames(
+            styles.list,
+            styles[direction],
+            { [styles.collapsed]: collapsed },
+            className
+        );
 
-    return (
-        <ul {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
-        </ul>
-    );
-}
+        return (
+            <ul ref={ref} {...restProps} className={joinedClassNames}>
+                {children}
+            </ul>
+        );
+    }
+);
+
+export default List;

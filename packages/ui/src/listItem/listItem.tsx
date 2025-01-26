@@ -1,10 +1,22 @@
-import React from "react";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./listItem.module.css";
 
-export default function ListItem(props: React.HTMLAttributes<HTMLLIElement>) {
-    return (
-        <li className={styles.listItem} {...props}>
-            {props.children as React.ReactNode}
-        </li>
-    );
-}
+export type ListItemProps = React.HTMLAttributes<HTMLLIElement>;
+
+const ListItem = forwardRef<HTMLLIElement, ListItemProps>(
+    ({ className, children, ...restProps }, ref) => {
+        return (
+            <li
+                ref={ref}
+                {...restProps}
+                className={classNames(styles.listItem, className)}
+            >
+                {children}
+            </li>
+        );
+    }
+);
+
+export default ListItem;

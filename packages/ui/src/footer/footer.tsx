@@ -1,21 +1,27 @@
-import React from "react";
-import { joinClassNames } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./footer.module.css";
 
 export interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
+    children?: React.ReactNode;
 }
 
-export default function Footer(props: FooterProps) {
-    const joinedClassNames = joinClassNames(
-        styles.footer,
-        props.align ? styles[props.align] : styles.start,
-        props.className!
-    );
+const Footer = forwardRef<HTMLDivElement, FooterProps>(
+    ({ align = "start", className, children, ...restProps }, ref) => {
+        const joinedClassNames = classNames(
+            styles.footer,
+            styles[align],
+            className
+        );
 
-    return (
-        <footer {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
-        </footer>
-    );
-}
+        return (
+            <footer ref={ref} {...restProps} className={joinedClassNames}>
+                {children}
+            </footer>
+        );
+    }
+);
+
+export default Footer;

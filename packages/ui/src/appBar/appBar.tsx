@@ -1,21 +1,27 @@
-import React from "react";
-import { joinClassNames, joinStyles } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./appBar.module.css";
 
 export interface AppBarProps extends React.HTMLAttributes<HTMLDivElement> {
     sticky?: boolean;
+    children?: React.ReactNode;
 }
 
-export default function AppBar(props: AppBarProps) {
-    const joinedClassNames = joinClassNames(
-        styles.header,
-        props.sticky ? styles.sticky : "",
-        props.className!
-    );
+const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
+    ({ sticky, className, children, ...restProps }, ref) => {
+        const joinedClassNames = classNames(
+            styles.header,
+            { [styles.sticky]: sticky },
+            className
+        );
 
-    return (
-        <header {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
-        </header>
-    );
-}
+        return (
+            <header ref={ref} {...restProps} className={joinedClassNames}>
+                {children}
+            </header>
+        );
+    }
+);
+
+export default AppBar;

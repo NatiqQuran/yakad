@@ -1,32 +1,38 @@
-import React from "react";
-import { joinClassNames, joinStyles } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./hr.module.css";
 
-export interface HrProps extends React.HTMLAttributes<HTMLElement> {
+export interface HrProps extends React.HTMLAttributes<HTMLHRElement> {
     variant?: "dotted" | "dashed" | "shortLine";
     height?: number;
-    margintopbottom?: number;
+    marginx?: number;
 }
 
-export default function Hr(props: HrProps) {
-    const joinedClassNames = joinClassNames(
-        styles.hr,
-        props.variant ? styles[props.variant] : "",
-        props.className!
-    );
+const Hr = forwardRef<HTMLHRElement, HrProps>(
+    ({ variant, height, marginx, className, style, ...restProps }, ref) => {
+        const joinedClassNames = classNames(
+            styles.hr,
+            variant && styles[variant],
+            className
+        );
 
-    const joinedStyles = joinStyles(
-        props.height ? { borderTopWidth: props.height + "rem" } : {},
-        props.margintopbottom
-            ? joinStyles(
-                  { marginTop: props.margintopbottom + "rem" },
-                  { marginBottom: props.margintopbottom + "rem" }
-              )
-            : {},
-        props.style!
-    );
+        const joinedStyles = {
+            ...style,
+            borderTopWidth: height ? `${height}rem` : style?.borderTopWidth,
+            marginTop: marginx ? `${marginx}rem` : style?.marginTop,
+            marginBottom: marginx ? `${marginx}rem` : style?.marginBottom,
+        };
 
-    return (
-        <hr {...props} className={joinedClassNames} style={joinedStyles}></hr>
-    );
-}
+        return (
+            <hr
+                ref={ref}
+                {...restProps}
+                className={joinedClassNames}
+                style={joinedStyles}
+            />
+        );
+    }
+);
+
+export default Hr;

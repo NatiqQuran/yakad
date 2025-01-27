@@ -1,22 +1,29 @@
-import React from "react";
-import { joinClassNames } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./navigation.module.css";
 
 export interface NavigationProps extends React.HTMLAttributes<HTMLElement> {
     anchor?: "left" | "right" | "top" | "bottom" | "auto";
     open: boolean;
+    children?: React.ReactNode;
 }
 
-export default function Navigation(props: NavigationProps) {
-    const joinedClassNames = joinClassNames(
-        styles.navigation,
-        props.anchor ? styles[props.anchor] : styles.auto,
-        props.open ? styles.open : ""
-    );
+const Navigation = forwardRef<HTMLDivElement, NavigationProps>(
+    (
+        { anchor = "auto", open = false, className, children, ...restProps },
+        ref
+    ) => {
+        const joinedClassNames = classNames(styles.navigation, styles[anchor], {
+            [styles.open]: open,
+        });
 
-    return (
-        <nav {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
-        </nav>
-    );
-}
+        return (
+            <nav ref={ref} {...restProps} className={joinedClassNames}>
+                {children}
+            </nav>
+        );
+    }
+);
+
+export default Navigation;

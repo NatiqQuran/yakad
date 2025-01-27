@@ -1,34 +1,49 @@
-import React, { DetailedHTMLProps, SelectHTMLAttributes } from "react";
-import { joinClassNames } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./select.module.css";
 import inputStyles from "../inputField/inputField.module.css";
 
 export interface SelectProps
-    extends DetailedHTMLProps<
-        SelectHTMLAttributes<HTMLSelectElement>,
-        HTMLSelectElement
-    > {
+    extends React.SelectHTMLAttributes<HTMLSelectElement> {
     variant?: "outlined" | "filled";
     boxsize?: "small" | "normal";
     placeholder?: string;
+    children?: React.ReactNode;
 }
-export default function Select(props: SelectProps) {
-    const joinedClassNames = joinClassNames(
-        styles.select,
-        inputStyles.input,
-        props.variant ? inputStyles[props.variant] : inputStyles.outlined,
-        props.boxsize ? inputStyles[props.boxsize] : inputStyles.normal,
-        props.placeholder ? inputStyles.havePlaceHolder : "",
-        props.className!
-    );
-    return (
-        <div className={inputStyles.div}>
-            <select {...props} className={joinedClassNames}>
-                {props.children}
-            </select>
-            {props.placeholder ? (
-                <label className={inputStyles.label}>{props.placeholder}</label>
-            ) : null}
-        </div>
-    );
-}
+
+const Select = forwardRef<HTMLSelectElement, SelectProps>(
+    (
+        {
+            variant = "outlined",
+            boxsize = "normal",
+            placeholder,
+            className,
+            children,
+            ...restProps
+        },
+        ref
+    ) => {
+        const joinedClassNames = classNames(
+            styles.select,
+            inputStyles.input,
+            inputStyles[variant],
+            inputStyles[boxsize],
+            { [inputStyles.havePlaceHolder]: placeholder },
+            className
+        );
+
+        return (
+            <div className={inputStyles.div}>
+                <select ref={ref} {...restProps} className={joinedClassNames}>
+                    {children}
+                </select>
+                {placeholder ? (
+                    <label className={inputStyles.label}>{placeholder}</label>
+                ) : null}
+            </div>
+        );
+    }
+);
+
+export default Select;

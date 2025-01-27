@@ -1,27 +1,26 @@
 "use client";
 
-import React from "react";
-import { joinClassNames, joinStyles } from "@yakad/lib";
+import React, { forwardRef } from "react";
 import styles from "./codeField.module.css";
+import classNames from "classnames";
 
+type excludedTypes = "minLength" | "maxLength" | "type";
 export interface CodeFieldsProps
-    extends React.HTMLAttributes<HTMLInputElement> {
+    extends Omit<React.InputHTMLAttributes<HTMLInputElement>, excludedTypes> {
     length?: number;
-    name?: string;
-    type?: string;
-    autofocus?: boolean;
-    onfilled?: Function;
+    onfilled?: () => void;
+    children?: React.ReactNode;
 }
 
-function onInputHandler(
+function isInputFilled(
     event: React.FormEvent<HTMLInputElement>,
-    inputLength: number,
-    onFilled: Function | undefined
-): void {
+    inputLength: number
+): boolean {
     const targetInputElement = event.target as HTMLInputElement;
     removeUnNumberChars(targetInputElement);
-    if (inputLength == targetInputElement.value.length && onFilled) onFilled();
+    if (inputLength === targetInputElement.value.length) return true;
     sliceOverLength(targetInputElement, inputLength);
+    return false;
 }
 
 function sliceOverLength(
@@ -37,30 +36,43 @@ function removeUnNumberChars(inputElement: HTMLInputElement): void {
     inputElement.value = inputElement.value.replace(/[^0-9]+/, "");
 }
 
-export default function CodeField(this: any, props: CodeFieldsProps) {
-    const length: number = props.length ? props.length : 6;
+const CodeField = forwardRef<HTMLInputElement, CodeFieldsProps>(
+    (
+        {
+            length = 6,
+            onfilled,
+            autoComplete,
+            pattern,
+            onInput,
+            className,
+            style,
+            children,
+            ...restProps
+        },
+        ref
+    ) => {
+        const joinedClassNames = classNames(styles.input, className);
 
-    const joinedClassNames = joinClassNames(styles.input, props.className!);
+        const joinedStyles = { ...style, width: `calc(1.5ch * ${length})` };
 
-    const joinedStyles = joinStyles(
-        { width: "calc(1.5ch * " + props.length + ")" },
-        props.style!
-    );
+        return (
+            <input
+                ref={ref}
+                {...restProps}
+                className={joinedClassNames}
+                style={joinedStyles}
+                type="number"
+                minLength={length}
+                maxLength={length}
+                autoComplete={autoComplete || "off"}
+                pattern={pattern || "[0-9]"}
+                onInput={(event) => {
+                    isInputFilled(event, length) && onfilled;
+                    onInput;
+                }}
+            />
+        );
+    }
+);
 
-    return (
-        <input
-            name={props.name}
-            type="number"
-            minLength={length}
-            maxLength={length}
-            className={joinedClassNames}
-            style={joinedStyles}
-            onInput={(event) =>
-                onInputHandler(event, length ? length : 6, props.onfilled)
-            }
-            autoComplete="off"
-            pattern="[0-9]"
-            autoFocus={props.autoFocus}
-        />
-    );
-}
+export default CodeField;

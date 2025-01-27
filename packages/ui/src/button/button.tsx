@@ -1,8 +1,8 @@
 import React, { forwardRef } from "react";
 import classNames from "classnames";
 
-import Loading from "../loading/loading";
 import styles from "./button.module.css";
+import Loading from "../loading/loading";
 
 export interface ButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -21,6 +21,7 @@ export interface ButtonProps
     iconposition?: "start" | "end";
     loadingposition?: "auto" | "center";
     loadingvariant?: "scaleOut" | "dots" | "spinner";
+    children?: React.ReactNode;
 }
 
 interface iconSizeMap {

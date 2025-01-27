@@ -1,73 +1,74 @@
 "use client";
 
-import React, { useState, useRef, forwardRef, useEffect } from "react";
-import styles from "./radioButton.module.css";
-import Button from "../button/button";
-import { joinClassNames } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
 import Symbol from "@yakad/symbols";
 
+import styles from "./radioButton.module.css";
+import Button from "../button/button";
+
+type excludedTypes =
+    | "type"
+    | "name"
+    | "defaultValue"
+    | "defaultChecked"
+    | "checked";
 export interface RadioButtonProps
-    extends React.HTMLAttributes<HTMLInputElement> {
-    namefromradiogroup?: string;
+    extends Omit<React.InputHTMLAttributes<HTMLInputElement>, excludedTypes> {
+    value: string | number;
     label?: string;
-    value?: string;
-    defaultvalue?: string;
-    checked?: boolean;
-    disabled?: boolean;
-    handlechecked?: Function;
-}
-
-export default function RadioButton(props: RadioButtonProps) {
-    const inputRef = useRef<HTMLInputElement | null>(null);
-
-    const joinedClassNames = joinClassNames(
-        styles.radiobutton,
-        props.label ? styles.labeled : ""
-    );
-
-    useEffect(() => {
-        props.value == props.defaultvalue &&
-            props.handlechecked &&
-            props.handlechecked();
-    }, []);
-
-    const onClickRadioButtonHandler = () => {
-        props.handlechecked && props.handlechecked();
+    datafromradiogroup?: {
+        name: string;
+        onSelect: () => void;
+        checked: boolean;
     };
-
-    return (
-        <div className={joinedClassNames}>
-            {props.label ? (
-                <label
-                    className={styles.label}
-                    htmlFor={props.namefromradiogroup}
-                >
-                    {props.label}
-                </label>
-            ) : null}
-            <Button
-                disabled={props.disabled}
-                icon={
-                    <Symbol
-                        icon={
-                            props.checked
-                                ? "radio_button_checked"
-                                : "radio_button_unchecked"
-                        }
-                    />
-                }
-                onClick={onClickRadioButtonHandler}
-            />
-            <input
-                ref={inputRef}
-                {...props}
-                className={styles.input}
-                type="radio"
-                name={props.namefromradiogroup}
-                value={props.value}
-                checked={props.checked}
-                disabled={props.disabled}
-            />
-        </div>
-    );
 }
+
+const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
+    ({ datafromradiogroup, label, onClick, className, ...restProps }, ref) => {
+        const joinedClassNames = classNames(styles.radiobutton, {
+            [styles.labeled]: label,
+        });
+
+        const onClickRadioButtonHandler = () => {
+            datafromradiogroup?.onSelect();
+            onClick;
+        };
+
+        return (
+            <div className={joinedClassNames}>
+                {label && (
+                    <label
+                        className={styles.label}
+                        htmlFor={datafromradiogroup?.name}
+                    >
+                        {label}
+                    </label>
+                )}
+                <Button
+                    icon={
+                        <Symbol
+                            icon={
+                                datafromradiogroup?.checked
+                                    ? "radio_button_checked"
+                                    : "radio_button_unchecked"
+                            }
+                        />
+                    }
+                    onClick={onClickRadioButtonHandler}
+                    disabled={restProps.disabled}
+                />
+                <input
+                    ref={ref}
+                    {...restProps}
+                    className={styles.input}
+                    type="radio"
+                    name={datafromradiogroup?.name}
+                    checked={datafromradiogroup?.checked}
+                />
+            </div>
+        );
+    }
+);
+
+export default RadioButton;

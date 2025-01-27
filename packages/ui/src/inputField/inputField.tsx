@@ -1,45 +1,47 @@
-import React from "react";
-import { joinClassNames } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./inputField.module.css";
 
 export interface InputFieldProps
-    extends React.HTMLAttributes<HTMLInputElement> {
+    extends React.InputHTMLAttributes<HTMLInputElement> {
     variant?: "outlined" | "filled";
-    siza?: "small" | "normal";
-    type?: string;
-    placeholder?: string;
-    disabled?: boolean;
-    name?: string;
-    value?: string;
-    required?: boolean;
-    autoFocus?: boolean;
-    error?: boolean;
+    boxsize?: "small" | "normal";
 }
 
-export default function InputField(props: InputFieldProps) {
-    const joinedClassNames = joinClassNames(
-        styles.input,
-        props.variant ? styles[props.variant] : styles.outlined,
-        props.siza ? styles[props.siza] : styles.normal,
-        props.placeholder ? styles.havePlaceHolder : "",
-        props.className!
-    );
+const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
+    (
+        {
+            variant = "outlined",
+            boxsize = "normal",
+            placeholder,
+            className,
+            ...restProps
+        },
+        ref
+    ) => {
+        const joinedClassNames = classNames(
+            styles.input,
+            styles[variant],
+            styles[boxsize],
+            placeholder && styles.havePlaceHolder,
+            className
+        );
 
-    return (
-        <div className={styles.div}>
-            <input
-                {...props}
-                name={props.name}
-                disabled={props.disabled}
-                placeholder=" "
-                className={joinedClassNames}
-                type={props.type}
-                value={props.value}
-                autoFocus={props.autoFocus}
-            />
-            {props.placeholder ? (
-                <label className={styles.label}>{props.placeholder}</label>
-            ) : null}
-        </div>
-    );
-}
+        return (
+            <div className={styles.div}>
+                <input
+                    ref={ref}
+                    {...restProps}
+                    className={joinedClassNames}
+                    placeholder=" "
+                />
+                {placeholder && (
+                    <label className={styles.label}>{placeholder}</label>
+                )}
+            </div>
+        );
+    }
+);
+
+export default InputField;

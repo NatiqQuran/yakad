@@ -1,27 +1,49 @@
 "use client";
 
-import React, { Children, useState } from "react";
+import React, {
+    useState,
+    forwardRef,
+    Children,
+    JSXElementConstructor,
+} from "react";
+import RadioButton, { RadioButtonProps } from "../radioButton/radioButton";
 
-export interface RadioGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+type RadioButtonElement = React.ReactElement<RadioButtonProps>;
+type excludedTypes = "defaultValue" | "children";
+export interface RadioGroupProps
+    extends Omit<React.HTMLAttributes<HTMLDivElement>, excludedTypes> {
     name: string;
     defaultvalue?: string;
+    children?: RadioButtonElement | RadioButtonElement[];
 }
 
-export default function RadioGroup(props: RadioGroupProps) {
-    const [checked, setChecked] = useState<number | null>(null);
+const RadioGroup = forwardRef<HTMLDivElement, RadioGroupProps>(
+    ({ name, defaultvalue, className, children, ...restProps }, ref) => {
+        const [selectedValue, setSelectedValue] = useState<
+            string | number | null
+        >(defaultvalue || null);
 
-    const arrayChildren = Children.toArray(props.children);
+        const arrayChildren = Children.toArray(children);
 
-    const renderChildrens = () =>
-        (arrayChildren as React.ReactElement[]).map(
-            (item: React.ReactElement, index: number) =>
-                React.cloneElement(item as React.ReactElement, {
-                    handlechecked: () => setChecked(index),
-                    namefromradiogroup: props.name,
-                    defaultvalue: props.defaultvalue,
-                    checked: checked == index ? true : false,
-                })
+        const renderChildrens = () =>
+            (arrayChildren as RadioButtonElement[]).map((child, index) => (
+                <RadioButton
+                    key={index}
+                    {...child.props}
+                    datafromradiogroup={{
+                        name: name,
+                        onSelect: () => setSelectedValue(child.props.value),
+                        checked: selectedValue === child.props.value,
+                    }}
+                />
+            ));
+
+        return (
+            <div ref={ref} {...restProps} className={className}>
+                {renderChildrens()}
+            </div>
         );
+    }
+);
 
-    return <div>{props.children ? renderChildrens() : null}</div>;
-}
+export default RadioGroup;

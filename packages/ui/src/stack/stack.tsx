@@ -1,21 +1,27 @@
-import React from "react";
-import { joinClassNames, joinStyles } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./stack.module.css";
 
 export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
+    children?: React.ReactNode;
 }
 
-export default function Stack(props: StackProps) {
-    const joinedClassNames = joinClassNames(
-        styles.stack,
-        props.align ? styles[props.align] : "",
-        props.className!
-    );
+const Stack = forwardRef<HTMLDivElement, StackProps>(
+    ({ align = "start", className, children, ...restProps }, ref) => {
+        const joinedClassNames = classNames(
+            styles.stack,
+            styles[align],
+            className
+        );
 
-    return (
-        <div {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
-        </div>
-    );
-}
+        return (
+            <div ref={ref} {...restProps} className={joinedClassNames}>
+                {children}
+            </div>
+        );
+    }
+);
+
+export default Stack;

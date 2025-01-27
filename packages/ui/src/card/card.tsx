@@ -1,21 +1,27 @@
-import React from "react";
-import { joinClassNames } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./card.module.css";
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
+    children?: React.ReactNode;
 }
 
-export default function Card(props: CardProps) {
-    const joinedClassNames = joinClassNames(
-        styles.card,
-        props.align ? styles[props.align] : styles.start,
-        props.className!
-    );
+const Card = forwardRef<HTMLDivElement, CardProps>(
+    ({ align = "start", className, children, ...restProps }, ref) => {
+        const joinedClassNames = classNames(
+            styles.card,
+            styles[align],
+            className
+        );
 
-    return (
-        <div {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
-        </div>
-    );
-}
+        return (
+            <div ref={ref} {...restProps} className={joinedClassNames}>
+                {children}
+            </div>
+        );
+    }
+);
+
+export default Card;

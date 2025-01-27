@@ -1,73 +1,95 @@
-import React from "react";
-import { joinClassNames } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./table.module.css";
 
-export function Table(props: React.HTMLAttributes<HTMLElement>) {
-    const joinedClassNames = joinClassNames(styles.table, props.className!);
+export const Table = forwardRef<
+    HTMLTableElement,
+    React.TableHTMLAttributes<HTMLTableElement>
+>(({ className, children, ...restProps }, ref) => {
+    const joinedClassNames = classNames(styles.table, className);
 
     return (
-        <table {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
+        <table ref={ref} {...restProps} className={joinedClassNames}>
+            {children}
         </table>
     );
-}
+});
 
-export function Thead(props: React.HTMLAttributes<HTMLElement>) {
-    const joinedClassNames = joinClassNames(styles.thead, props.className!);
+export const Thead = forwardRef<
+    HTMLTableSectionElement,
+    React.HTMLAttributes<HTMLTableSectionElement>
+>(({ className, children, ...restProps }, ref) => {
+    const joinedClassNames = classNames(styles.thead, className);
 
     return (
-        <thead {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
+        <thead ref={ref} {...restProps} className={joinedClassNames}>
+            {children}
         </thead>
     );
-}
+});
 
-export function Tbody(props: React.HTMLAttributes<HTMLElement>) {
-    const joinedClassNames = joinClassNames(styles.tbody, props.className!);
+export const Tbody = forwardRef<
+    HTMLTableSectionElement,
+    React.HTMLAttributes<HTMLTableSectionElement>
+>(({ className, children, ...restProps }, ref) => {
+    const joinedClassNames = classNames(styles.tbody, className);
 
     return (
-        <tbody {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
+        <tbody ref={ref} {...restProps} className={joinedClassNames}>
+            {children}
         </tbody>
     );
-}
+});
 
-export function Tfoot(props: React.HTMLAttributes<HTMLElement>) {
-    const joinedClassNames = joinClassNames(styles.tfoot, props.className!);
+export const Tfoot = forwardRef<
+    HTMLTableSectionElement,
+    React.HTMLAttributes<HTMLTableSectionElement>
+>(({ className, children, ...restProps }, ref) => {
+    const joinedClassNames = classNames(styles.tfoot, className);
 
     return (
-        <tfoot {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
+        <tfoot ref={ref} {...restProps} className={joinedClassNames}>
+            {children}
         </tfoot>
     );
-}
+});
 
-export function Tr(props: React.HTMLAttributes<HTMLElement>) {
-    const joinedClassNames = joinClassNames(styles.tr, props.className!);
+export const Tr = forwardRef<
+    HTMLTableRowElement,
+    React.HTMLAttributes<HTMLTableRowElement>
+>(({ className, children, ...restProps }, ref) => {
+    const joinedClassNames = classNames(styles.tr, className);
 
     return (
-        <tr {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
+        <tr ref={ref} {...restProps} className={joinedClassNames}>
+            {children}
         </tr>
     );
-}
+});
 
-export function Th(props: React.HTMLAttributes<HTMLElement>) {
-    const joinedClassNames = joinClassNames(styles.th, props.className!);
+export const Th = forwardRef<
+    HTMLTableCellElement,
+    React.HTMLAttributes<HTMLTableCellElement>
+>(({ className, children, ...restProps }, ref) => {
+    const joinedClassNames = classNames(styles.th, className);
 
     return (
-        <th {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
+        <th ref={ref} {...restProps} className={joinedClassNames}>
+            {children}
         </th>
     );
-}
+});
 
-export function Td(props: React.HTMLAttributes<HTMLElement>) {
-    const joinedClassNames = joinClassNames(styles.td, props.className!);
+export const Td = forwardRef<
+    HTMLTableCellElement,
+    React.HTMLAttributes<HTMLTableCellElement>
+>(({ className, children, ...restProps }, ref) => {
+    const joinedClassNames = classNames(styles.td, className);
 
     return (
-        <td {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
+        <td ref={ref} {...restProps} className={joinedClassNames}>
+            {children}
         </td>
     );
-}
+});

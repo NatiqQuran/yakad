@@ -5,6 +5,7 @@ import styles from "./card.module.css";
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
+    children?: React.ReactNode;
 }
 
 const Card = forwardRef<HTMLDivElement, CardProps>(

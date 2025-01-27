@@ -5,6 +5,7 @@ import styles from "./appBar.module.css";
 
 export interface AppBarProps extends React.HTMLAttributes<HTMLDivElement> {
     sticky?: boolean;
+    children?: React.ReactNode;
 }
 
 const AppBar = forwardRef<HTMLDivElement, AppBarProps>(

@@ -6,6 +6,7 @@ import styles from "./row.module.css";
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
     overflow?: "shrink" | "wrap" | "scroll";
+    children?: React.ReactNode;
 }
 
 const Row = forwardRef<HTMLDivElement, RowProps>(

@@ -10,6 +10,7 @@ import Button from "../button/button";
 export interface CheckBoxProps
     extends React.InputHTMLAttributes<HTMLInputElement> {
     label?: string;
+    children?: React.ReactNode;
 }
 
 const CheckBox = forwardRef<HTMLInputElement, CheckBoxProps>(

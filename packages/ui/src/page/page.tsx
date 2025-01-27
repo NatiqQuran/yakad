@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 
 export interface PageProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
+    children?: React.ReactNode;
 }
 
 const Page = forwardRef<HTMLDivElement, PageProps>(

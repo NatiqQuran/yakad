@@ -5,6 +5,7 @@ import styles from "./svgIcon.module.css";
 
 export interface SvgIconProps extends React.HTMLAttributes<HTMLElement> {
     size?: number;
+    children?: React.ReactNode;
 }
 
 const SvgIcon = forwardRef<HTMLDivElement, SvgIconProps>(

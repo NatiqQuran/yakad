@@ -7,6 +7,7 @@ export interface GridContainerProps
     extends React.HTMLAttributes<HTMLDivElement> {
     gap?: number;
     columns?: 10 | 12;
+    children?: React.ReactNode;
 }
 
 const GridContainer = forwardRef<HTMLDivElement, GridContainerProps>(

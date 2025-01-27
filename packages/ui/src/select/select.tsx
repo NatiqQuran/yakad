@@ -9,6 +9,7 @@ export interface SelectProps
     variant?: "outlined" | "filled";
     boxsize?: "small" | "normal";
     placeholder?: string;
+    children?: React.ReactNode;
 }
 
 const Select = forwardRef<HTMLSelectElement, SelectProps>(

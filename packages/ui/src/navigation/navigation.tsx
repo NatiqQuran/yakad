@@ -6,6 +6,7 @@ import styles from "./navigation.module.css";
 export interface NavigationProps extends React.HTMLAttributes<HTMLElement> {
     anchor?: "left" | "right" | "top" | "bottom" | "auto";
     open: boolean;
+    children?: React.ReactNode;
 }
 
 const Navigation = forwardRef<HTMLDivElement, NavigationProps>(

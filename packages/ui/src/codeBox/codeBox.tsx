@@ -8,6 +8,7 @@ import Button from "../button/button";
 
 export interface CodeBoxProps extends React.HTMLAttributes<HTMLDivElement> {
     copybutton?: boolean;
+    children?: React.ReactNode;
 }
 
 const CodeBox = forwardRef<HTMLDivElement, CodeBoxProps>(

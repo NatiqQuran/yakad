@@ -6,6 +6,7 @@ import styles from "./list.module.css";
 export interface ListProps extends React.HTMLAttributes<HTMLUListElement> {
     direction?: "row" | "column";
     collapsed?: boolean;
+    children?: React.ReactNode;
 }
 
 const List = forwardRef<HTMLUListElement, ListProps>(

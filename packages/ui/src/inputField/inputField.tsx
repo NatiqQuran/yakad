@@ -16,7 +16,6 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
             boxsize = "normal",
             placeholder,
             className,
-            children,
             ...restProps
         },
         ref

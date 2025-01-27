@@ -6,6 +6,7 @@ import styles from "./display.module.css";
 export interface DisplayProps extends React.HTMLAttributes<HTMLElement> {
     minWidth?: "xs" | "sm" | "md" | "lg" | "xl";
     maxWidth?: "xs" | "sm" | "md" | "lg" | "xl";
+    children?: React.ReactNode;
 }
 
 const Display = forwardRef<HTMLDivElement, DisplayProps>(

@@ -6,6 +6,7 @@ import styles from "./main.module.css";
 export interface MainProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
     navopen?: boolean;
+    children?: React.ReactNode;
 }
 
 const Main = forwardRef<HTMLDivElement, MainProps>(

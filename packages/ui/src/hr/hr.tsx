@@ -10,10 +10,7 @@ export interface HrProps extends React.HTMLAttributes<HTMLHRElement> {
 }
 
 const Hr = forwardRef<HTMLHRElement, HrProps>(
-    (
-        { variant, height, marginx, className, style, children, ...restProps },
-        ref
-    ) => {
+    ({ variant, height, marginx, className, style, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.hr,
             variant && styles[variant],

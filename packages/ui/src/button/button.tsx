@@ -21,6 +21,7 @@ export interface ButtonProps
     iconposition?: "start" | "end";
     loadingposition?: "auto" | "center";
     loadingvariant?: "scaleOut" | "dots" | "spinner";
+    children?: React.ReactNode;
 }
 
 interface iconSizeMap {

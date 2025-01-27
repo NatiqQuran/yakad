@@ -10,6 +10,7 @@ export interface GridItemProps extends React.HTMLAttributes<HTMLDivElement> {
     md?: GridColumn;
     lg?: GridColumn;
     xl?: GridColumn;
+    children?: React.ReactNode;
 }
 
 const GridItem = forwardRef<HTMLDivElement, GridItemProps>(

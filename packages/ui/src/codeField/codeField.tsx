@@ -9,6 +9,7 @@ export interface CodeFieldsProps
     extends Omit<React.InputHTMLAttributes<HTMLInputElement>, excludedTypes> {
     length?: number;
     onfilled?: () => void;
+    children?: React.ReactNode;
 }
 
 function isInputFilled(

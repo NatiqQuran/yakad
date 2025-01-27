@@ -5,6 +5,7 @@ import styles from "./stack.module.css";
 
 export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
+    children?: React.ReactNode;
 }
 
 const Stack = forwardRef<HTMLDivElement, StackProps>(

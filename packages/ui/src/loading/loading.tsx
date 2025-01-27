@@ -10,13 +10,7 @@ export interface LoadingProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Loading = forwardRef<HTMLDivElement, LoadingProps>(
     (
-        {
-            size = "medium",
-            variant = "spinner",
-            className,
-            children,
-            ...restProps
-        },
+        { size = "medium", variant = "spinner", className, ...restProps },
         ref
     ) => {
         const joinedClassNames = classNames(

@@ -5,6 +5,7 @@ import styles from "./footer.module.css";
 
 export interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
+    children?: React.ReactNode;
 }
 
 const Footer = forwardRef<HTMLDivElement, FooterProps>(

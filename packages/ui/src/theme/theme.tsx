@@ -8,6 +8,7 @@ export interface ThemeProps extends React.HTMLAttributes<HTMLDivElement> {
     mode?: "light" | "dark" | "system";
     color?: "green" | "red" | "yellow" | "blue" | "purple";
     zoom?: number;
+    children?: React.ReactNode;
 }
 
 const Theme = forwardRef<HTMLDivElement, ThemeProps>(

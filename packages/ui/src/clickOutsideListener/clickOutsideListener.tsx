@@ -5,6 +5,7 @@ import React, { forwardRef, useEffect, useRef } from "react";
 export interface ClickOutsideListenerProps
     extends React.HTMLAttributes<HTMLDivElement> {
     onclickoutside: () => void;
+    children?: React.ReactNode;
 }
 
 const ClickOutsideListener = ({

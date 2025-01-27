@@ -6,6 +6,7 @@ import styles from "./container.module.css";
 export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
     size?: "xs" | "sm" | "md" | "lg" | "xl";
+    children?: React.ReactNode;
 }
 
 const Container = forwardRef<HTMLDivElement, ContainerProps>(

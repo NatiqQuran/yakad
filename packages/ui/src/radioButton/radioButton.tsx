@@ -7,35 +7,31 @@ import Symbol from "@yakad/symbols";
 import styles from "./radioButton.module.css";
 import Button from "../button/button";
 
-type excludedTypes = "type" | "name" | "defaultValue" | "checked";
+type excludedTypes =
+    | "type"
+    | "name"
+    | "defaultValue"
+    | "defaultChecked"
+    | "checked";
 export interface RadioButtonProps
     extends Omit<React.InputHTMLAttributes<HTMLInputElement>, excludedTypes> {
+    value: string | number;
+    label?: string;
     datafromradiogroup?: {
         name: string;
-        setChecked: () => void;
+        onSelect: () => void;
         checked: boolean;
     };
-    label?: string;
 }
 
 const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
-    (
-        {
-            datafromradiogroup,
-            label,
-            onClick,
-            className,
-            children,
-            ...restProps
-        },
-        ref
-    ) => {
+    ({ datafromradiogroup, label, onClick, className, ...restProps }, ref) => {
         const joinedClassNames = classNames(styles.radiobutton, {
             [styles.labeled]: label,
         });
 
         const onClickRadioButtonHandler = () => {
-            datafromradiogroup?.setChecked();
+            datafromradiogroup?.onSelect();
             onClick;
         };
 
@@ -74,5 +70,7 @@ const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
         );
     }
 );
+
+RadioButton.displayName = "YakadRadioButton";
 
 export default RadioButton;

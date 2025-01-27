@@ -71,6 +71,4 @@ const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
     }
 );
 
-RadioButton.displayName = "YakadRadioButton";
-
 export default RadioButton;

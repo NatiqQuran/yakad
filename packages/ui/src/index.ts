@@ -2,7 +2,7 @@ export type { AppBarProps } from "./appBar/appBar";
 export type { ButtonProps } from "./button/button";
 export type { CardProps } from "./card/card";
 export type { CheckBoxProps } from "./checkBox/checkBox";
-export type { ClickAwayListenerProps } from "./clickAwayListener/clickAwayListener";
+export type { ClickOutsideListenerProps } from "./clickOutsideListener/clickOutsideListener";
 export type { CodeBoxProps } from "./codeBox/codeBox";
 export type { CodeFieldsProps } from "./codeField/codeField";
 export type { ContainerProps } from "./container/container";
@@ -30,7 +30,7 @@ import AppBar from "./appBar/appBar";
 import Button from "./button/button";
 import Card from "./card/card";
 import ChekBox from "./checkBox/checkBox";
-import ClickAwayListener from "./clickAwayListener/clickAwayListener";
+import ClickOutsideListener from "./clickOutsideListener/clickOutsideListener";
 import CodeBox from "./codeBox/codeBox";
 import CodeField from "./codeField/codeField";
 import Container from "./container/container";
@@ -61,7 +61,7 @@ export {
     Button,
     Card,
     ChekBox,
-    ClickAwayListener,
+    ClickOutsideListener,
     CodeBox,
     CodeField,
     Container,

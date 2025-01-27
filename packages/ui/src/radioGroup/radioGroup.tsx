@@ -1,10 +1,12 @@
 "use client";
 
-import React, { useState, forwardRef, Children } from "react";
+import React, { useState, forwardRef, Children, useEffect } from "react";
 import RadioButton, { RadioButtonProps } from "../radioButton/radioButton";
 
 type RadioButtonElement = React.ReactElement<RadioButtonProps>;
-export interface RadioGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+type excludedTypes = "defaultValue" | "children";
+export interface RadioGroupProps
+    extends Omit<React.HTMLAttributes<HTMLDivElement>, excludedTypes> {
     name: string;
     defaultvalue?: string;
     children?: RadioButtonElement | RadioButtonElement[];
@@ -16,7 +18,7 @@ const RadioGroup = forwardRef<HTMLDivElement, RadioGroupProps>(
 
         const arrayChildren = Children.toArray(children);
 
-        const renderChildrens = () =>
+        useEffect(() => {
             (arrayChildren as RadioButtonElement[]).map((item, index) => {
                 if (
                     defaultvalue
@@ -24,6 +26,11 @@ const RadioGroup = forwardRef<HTMLDivElement, RadioGroupProps>(
                         : item.props.defaultChecked
                 )
                     setChecked(index);
+            });
+        }, []);
+
+        const renderChildrens = () =>
+            (arrayChildren as RadioButtonElement[]).map((item, index) => {
                 return (
                     <RadioButton
                         {...item.props}

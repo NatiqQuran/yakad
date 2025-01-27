@@ -21,8 +21,8 @@ const GridContainer = forwardRef<HTMLDivElement, GridContainerProps>(
         );
         const joinedStyles = {
             ...style,
-            columnGap: style?.columnGap && `${gap}rem`,
-            rowGap: style?.rowGap && `${gap}rem`,
+            columnGap: style?.columnGap || `${gap}rem`,
+            rowGap: style?.rowGap || `${gap}rem`,
         };
 
         return (

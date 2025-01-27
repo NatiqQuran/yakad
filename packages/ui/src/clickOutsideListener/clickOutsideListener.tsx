@@ -2,22 +2,22 @@
 
 import React, { forwardRef, useEffect, useRef } from "react";
 
-export interface ClickAwayListenerProps
+export interface ClickOutsideListenerProps
     extends React.HTMLAttributes<HTMLDivElement> {
-    onclickaway: () => void;
+    onclickoutside: () => void;
 }
 
-const ClickAwayListener = ({
-    onclickaway,
+const ClickOutsideListener = ({
+    onclickoutside,
     children,
     ...restProps
-}: ClickAwayListenerProps) => {
+}: ClickOutsideListenerProps) => {
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const handleOutSideClick = (event: MouseEvent) => {
             if (ref.current && !(ref.current as any).contains(event.target))
-                onclickaway;
+                onclickoutside();
         };
 
         document.addEventListener("click", handleOutSideClick, true);
@@ -25,7 +25,7 @@ const ClickAwayListener = ({
         // CleanUp When element unmount
         return () =>
             document.removeEventListener("click", handleOutSideClick, true);
-    }, [onclickaway]);
+    }, [onclickoutside]);
 
     return (
         <div ref={ref} {...restProps}>
@@ -34,4 +34,4 @@ const ClickAwayListener = ({
     );
 };
 
-export default ClickAwayListener;
+export default ClickOutsideListener;

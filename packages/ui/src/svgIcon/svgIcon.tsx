@@ -1,24 +1,31 @@
-import React from "react";
-import { joinClassNames, joinStyles } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./svgIcon.module.css";
 
 export interface SvgIconProps extends React.HTMLAttributes<HTMLElement> {
     size?: number;
 }
 
-export default function SvgIcon(props: SvgIconProps) {
-    const joinedClassNames = joinClassNames(styles.svg, props.className!);
+const SvgIcon = forwardRef<HTMLDivElement, SvgIconProps>(
+    ({ size, className, style, children, ...restProps }, ref) => {
+        const joinedClassNames = classNames(styles.svg, className!);
 
-    const joinedStyles = joinStyles(
-        props.size
-            ? { width: props.size + "rem", height: props.size + "rem" }
-            : {},
-        props.style!
-    );
+        const sizeStyle = size && { width: `${size}rem`, height: `${size}rem` };
 
-    return (
-        <div {...props} className={joinedClassNames} style={joinedStyles}>
-            {props.children as React.ReactNode}
-        </div>
-    );
-}
+        return (
+            <div
+                {...restProps}
+                className={joinedClassNames}
+                style={{
+                    ...style,
+                    ...sizeStyle,
+                }}
+            >
+                {children}
+            </div>
+        );
+    }
+);
+
+export default SvgIcon;

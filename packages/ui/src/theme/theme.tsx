@@ -1,28 +1,43 @@
-import React from "react";
-import { joinClassNames, joinStyles } from "@yakad/lib";
-import styles from "./theme.module.css";
-import "./zoom.css";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
 
-export interface ThemeProps extends React.HTMLAttributes<HTMLElement> {
+import "./globals.css";
+import styles from "./theme.module.css";
+
+export interface ThemeProps extends React.HTMLAttributes<HTMLDivElement> {
     mode?: "light" | "dark" | "system";
     color?: "green" | "red" | "yellow" | "blue" | "purple";
     zoom?: number;
 }
 
-export default function Theme(props: ThemeProps) {
-    const zoomPercentage = props.zoom ? (props.zoom / 100) * 62.5 : 62.5;
-    //   document.documentElement.style.setProperty("font-size", zoomPercentage + "%");
+const Theme = forwardRef<HTMLDivElement, ThemeProps>(
+    (
+        {
+            mode = "system",
+            color = "blue",
+            zoom,
+            className,
+            children,
+            ...restProps
+        },
+        ref
+    ) => {
+        const zoomPercentage = zoom ? (zoom / 100) * 62.5 : 62.5;
+        //   document.documentElement.style.setProperty("font-size", zoomPercentage + "%");
 
-    const joinedClassNames = joinClassNames(
-        props.mode ? styles[props.mode] : styles.system,
-        props.color ? styles[props.color] : styles.blue,
-        styles.theme,
-        props.className!
-    );
+        const joinedClassNames = classNames(
+            styles[mode],
+            styles[color],
+            styles.theme,
+            className
+        );
 
-    return (
-        <div {...props} className={joinedClassNames}>
-            {props.children as React.ReactNode}
-        </div>
-    );
-}
+        return (
+            <div ref={ref} {...restProps} className={joinedClassNames}>
+                {children}
+            </div>
+        );
+    }
+);
+
+export default Theme;

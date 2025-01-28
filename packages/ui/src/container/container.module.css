@@ -2,8 +2,10 @@ div.container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 2rem;
-    margin: 0 auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-right: auto;
+    margin-left: auto;
     box-sizing: border-box;
 }
 

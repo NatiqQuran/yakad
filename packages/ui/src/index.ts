@@ -24,6 +24,13 @@ export type { RowProps } from "./row/row";
 export type { SelectProps } from "./select/select";
 export type { StackProps } from "./stack/stack";
 export type { SvgIconProps } from "./svgIcon/svgIcon";
+export type { TableProps } from "./table/table";
+export type { TheadProps } from "./table/table";
+export type { TbodyProps } from "./table/table";
+export type { TfootProps } from "./table/table";
+export type { TrProps } from "./table/table";
+export type { ThProps } from "./table/table";
+export type { TdProps } from "./table/table";
 export type { ThemeProps } from "./theme/theme";
 
 import AppBar from "./appBar/appBar";

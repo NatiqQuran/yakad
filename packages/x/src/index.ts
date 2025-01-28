@@ -1,3 +1,5 @@
+export type { XbackgroundProps } from "./Xbackground/Xbackground";
+
 import Xbackground from "./Xbackground/Xbackground";
 import XdataMap from "./XdataMap/XdataMap";
 import XgetStart from "./XgetStart/XgetStart";

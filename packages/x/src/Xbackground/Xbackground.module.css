@@ -45,6 +45,7 @@
         transparent
     );
 }
+
 .shadowinside {
     border-bottom: 1px solid rgb(203 213 224);
     box-shadow: inset 0px -11px 16px -10px rgb(125 125 125);

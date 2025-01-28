@@ -1,39 +1,32 @@
-import React, { MouseEventHandler } from "react";
-import { Button, List, ListItem, Spacer } from "@yakad/ui";
+import React, { forwardRef } from "react";
+import { Button, List, ListItem, ListProps, Spacer } from "@yakad/ui";
 
 interface MenuItem {
     name: string;
-    onclick?: MouseEventHandler<HTMLButtonElement>;
-    childs?: MenuItemChild[];
+    onclick?: () => void;
+    childs?: Omit<MenuItem, "childs">[];
     selected?: boolean;
 }
 
-interface MenuItemChild {
-    name: string;
-    onclick?: MouseEventHandler<HTMLButtonElement>;
-    selected?: boolean;
+interface XmenuListProps extends Omit<ListProps, "children"> {
+    items: MenuItem[];
 }
 
-interface XmenuListProps extends React.HTMLAttributes<HTMLElement> {
-    items?: MenuItem[];
-}
+const XmenuList = forwardRef<HTMLUListElement, XmenuListProps>(
+    ({ items, direction = "column", ...restProps }, ref) => {
+        const [collapsedList, setCollapsedList] = React.useState<{
+            [n: number]: boolean;
+        }>({});
 
-interface CollapseList {
-    [n: number]: boolean;
-}
-export default function XmenuList(props: XmenuListProps) {
-    const [collapsedList, setcollapsedList] = React.useState<CollapseList>({});
+        const handleClickcollapseList = (index: number) =>
+            setCollapsedList((prev) => ({
+                ...prev,
+                [index]: prev[index] ? !prev[index] : true,
+            }));
 
-    const handleClickcollapseList = (index: number) =>
-        setcollapsedList((object) => ({
-            ...object,
-            [index]: object[index] ? !object[index] : true,
-        }));
-
-    return (
-        <List direction="column">
-            {props.items ? (
-                props.items.map((item, index) => (
+        return (
+            <List ref={ref} direction={direction} {...restProps}>
+                {items.map((item, index) => (
                     <ListItem key={index}>
                         <Button
                             variant={
@@ -54,39 +47,35 @@ export default function XmenuList(props: XmenuListProps) {
                             <Spacer />
                         </Button>
                         <List
-                            direction="column"
-                            collapsed={collapsedList[index] ? false : true}
                             key={index}
+                            direction="column"
+                            collapsed={!collapsedList[index]}
                             style={{
                                 marginInlineStart: "1rem",
                                 marginBottom: "0.5rem",
                                 borderInlineStart: "0.1rem solid #72727272",
                             }}
                         >
-                            {item.childs
-                                ? item.childs.map((child) => (
-                                      <ListItem>
-                                          <Button
-                                              size="small"
-                                              borderstyle="semi"
-                                              variant={
-                                                  child.selected
-                                                      ? "filled"
-                                                      : "text"
-                                              }
-                                              onClick={child.onclick}
-                                          >
-                                              {child.name}
-                                          </Button>
-                                      </ListItem>
-                                  ))
-                                : null}
+                            {item.childs?.map((child, childIndex) => (
+                                <ListItem key={childIndex}>
+                                    <Button
+                                        size="small"
+                                        borderstyle="semi"
+                                        variant={
+                                            child.selected ? "filled" : "text"
+                                        }
+                                        onClick={child.onclick}
+                                    >
+                                        {child.name}
+                                    </Button>
+                                </ListItem>
+                            ))}
                         </List>
                     </ListItem>
-                ))
-            ) : (
-                <h3>No menu items</h3>
-            )}
-        </List>
-    );
-}
+                ))}
+            </List>
+        );
+    }
+);
+
+export default XmenuList;

@@ -1,31 +1,54 @@
-import React, { PropsWithChildren } from "react";
-import { joinClassNames, joinStyles } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import styles from "./Xbackground.module.css";
 
-interface XbackgroundProps extends React.HTMLAttributes<HTMLElement> {
+export interface XbackgroundProps extends React.HTMLAttributes<HTMLDivElement> {
     variant?: "dotted" | "strips";
     separator?: "shadowinside" | "shadowoutside";
-    image?: any;
+    imageSrc?: string;
     fixed?: boolean;
+    children?: React.ReactNode;
 }
 
-export default function Xbackground(props: XbackgroundProps) {
-    const joinedClassNames = joinClassNames(
-        styles.background,
-        props.variant ? styles[props.variant] : "",
-        props.fixed ? styles.fixed : "",
-        props.image ? styles.image : "",
-        props.separator ? styles[props.separator] : "",
-        props.className!
-    );
-    const joinedStyles = joinStyles(
-        props.image ? { backgroundImage: `url(${props.image.src})` } : {},
-        props.style!
-    );
+const Xbackground = forwardRef<HTMLDivElement, XbackgroundProps>(
+    (
+        {
+            variant = "dotted",
+            separator,
+            imageSrc,
+            fixed,
+            className,
+            style,
+            children,
+            ...restProps
+        },
+        ref
+    ) => {
+        const joinedClassNames = classNames(
+            styles.background,
+            styles[variant],
+            { [styles[separator as string]]: separator },
+            { [styles.image]: imageSrc },
+            { [styles.fixed]: fixed },
+            className
+        );
 
-    return (
-        <div style={joinedStyles} className={joinedClassNames}>
-            {props.children as React.ReactNode}
-        </div>
-    );
-}
+        const joinedStyles = imageSrc
+            ? { ...style, backgroundImage: `url(${imageSrc})` }
+            : style;
+
+        return (
+            <div
+                ref={ref}
+                {...restProps}
+                className={joinedClassNames}
+                style={joinedStyles}
+            >
+                {children}
+            </div>
+        );
+    }
+);
+
+export default Xbackground;

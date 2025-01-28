@@ -5,7 +5,7 @@ interface RowData {
     [key: string]: string | number | boolean | any;
 }
 
-interface XdataMapProps
+export interface XdataMapProps
     extends Omit<React.TableHTMLAttributes<HTMLTableElement>, "children"> {
     data: RowData[];
 }

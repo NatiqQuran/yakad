@@ -1,3 +1,4 @@
+// Types
 export type { AppBarProps } from "./appBar/appBar";
 export type { ButtonProps } from "./button/button";
 export type { CardProps } from "./card/card";
@@ -33,70 +34,39 @@ export type { ThProps } from "./table/table";
 export type { TdProps } from "./table/table";
 export type { ThemeProps } from "./theme/theme";
 
-import AppBar from "./appBar/appBar";
-import Button from "./button/button";
-import Card from "./card/card";
-import ChekBox from "./checkBox/checkBox";
-import ClickOutsideListener from "./clickOutsideListener/clickOutsideListener";
-import CodeBox from "./codeBox/codeBox";
-import CodeField from "./codeField/codeField";
-import Container from "./container/container";
-import Display from "./display/display";
-import Footer from "./footer/footer";
-import GridContainer from "./gridContainer/gridContainer";
-import GridItem from "./gridItem/gridItem";
-import Hr from "./hr/hr";
-import InputField from "./inputField/inputField";
-import List from "./list/list";
-import ListItem from "./listItem/listItem";
-import Loading from "./loading/loading";
-import Main from "./main/main";
-import Navigation from "./navigation/navigation";
-import Page from "./page/page";
-import RadioButton from "./radioButton/radioButton";
-import RadioGroup from "./radioGroup/radioGroup";
-import Row from "./row/row";
-import Select from "./select/select";
-import Spacer from "./spacer/spacer";
-import Stack from "./stack/stack";
-import SvgIcon from "./svgIcon/svgIcon";
-import { Table, Thead, Tbody, Tfoot, Tr, Th, Td } from "./table/table";
-import Theme from "./theme/theme";
-
-export {
-    AppBar,
-    Button,
-    Card,
-    ChekBox,
-    ClickOutsideListener,
-    CodeBox,
-    CodeField,
-    Container,
-    Display,
-    Footer,
-    GridContainer,
-    GridItem,
-    Hr,
-    InputField,
-    List,
-    ListItem,
-    Loading,
-    Main,
-    Navigation,
-    Page,
-    RadioButton,
-    RadioGroup,
-    Row,
-    Select,
-    Spacer,
-    Stack,
-    SvgIcon,
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    Theme,
-};
+// Components
+export { default as AppBar } from "./appBar/appBar";
+export { default as Button } from "./button/button";
+export { default as Card } from "./card/card";
+export { default as ChekBox } from "./checkBox/checkBox";
+export { default as ClickOutsideListener } from "./clickOutsideListener/clickOutsideListener";
+export { default as CodeBox } from "./codeBox/codeBox";
+export { default as CodeField } from "./codeField/codeField";
+export { default as Container } from "./container/container";
+export { default as Display } from "./display/display";
+export { default as Footer } from "./footer/footer";
+export { default as GridContainer } from "./gridContainer/gridContainer";
+export { default as GridItem } from "./gridItem/gridItem";
+export { default as Hr } from "./hr/hr";
+export { default as InputField } from "./inputField/inputField";
+export { default as List } from "./list/list";
+export { default as ListItem } from "./listItem/listItem";
+export { default as Loading } from "./loading/loading";
+export { default as Main } from "./main/main";
+export { default as Navigation } from "./navigation/navigation";
+export { default as Page } from "./page/page";
+export { default as RadioButton } from "./radioButton/radioButton";
+export { default as RadioGroup } from "./radioGroup/radioGroup";
+export { default as Row } from "./row/row";
+export { default as Select } from "./select/select";
+export { default as Spacer } from "./spacer/spacer";
+export { default as Stack } from "./stack/stack";
+export { default as SvgIcon } from "./svgIcon/svgIcon";
+export { Table } from "./table/table";
+export { Thead } from "./table/table";
+export { Tbody } from "./table/table";
+export { Tfoot } from "./table/table";
+export { Tr } from "./table/table";
+export { Th } from "./table/table";
+export { Td } from "./table/table";
+export { default as Theme } from "./theme/theme";

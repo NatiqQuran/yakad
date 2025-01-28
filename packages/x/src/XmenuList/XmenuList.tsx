@@ -8,7 +8,7 @@ interface MenuItem {
     selected?: boolean;
 }
 
-interface XmenuListProps extends Omit<ListProps, "children"> {
+export interface XmenuListProps extends Omit<ListProps, "children"> {
     items: MenuItem[];
 }
 

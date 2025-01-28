@@ -10,7 +10,7 @@ import {
 
 import styles from "./XgetStart.module.css";
 
-interface XgetStartProps extends ContainerProps {
+export interface XgetStartProps extends ContainerProps {
     logo?: any;
     //what type we should choose for logo?
     children?: React.ReactNode;

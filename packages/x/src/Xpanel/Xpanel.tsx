@@ -12,7 +12,7 @@ import {
 } from "@yakad/ui";
 import Symbol from "@yakad/symbols";
 
-interface XpanelProps extends PageProps {
+export interface XpanelProps extends PageProps {
     name?: string;
     appbarchildren?: React.ReactNode;
     navigationchildren?: React.ReactNode;

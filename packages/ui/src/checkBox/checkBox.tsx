@@ -4,8 +4,9 @@ import Symbol from "@yakad/symbols";
 
 import styles from "./checkBox.module.css";
 
+type ExcludedTypes = "type";
 export interface CheckBoxProps
-    extends React.InputHTMLAttributes<HTMLInputElement> {
+    extends Omit<React.InputHTMLAttributes<HTMLInputElement>, ExcludedTypes> {
     label?: string;
 }
 
@@ -14,6 +15,7 @@ const CheckBox = forwardRef<HTMLInputElement, CheckBoxProps>(
         const joinedClassNames = classNames(
             styles.label,
             { [styles.labeled]: label },
+            { [styles.disabled]: restProps.disabled },
             className
         );
 

@@ -8,12 +8,16 @@
     font-size: 1.6rem;
     box-sizing: border-box;
     user-select: none;
+    cursor: pointer;
 }
 .label.labeled {
     width: 100%;
 }
+.label.disabled {
+    cursor: default;
+}
 
-.label input {
+.label .input {
     display: none;
 }
 
@@ -28,17 +32,22 @@
     margin-inline-start: auto;
 }
 .label:hover .symbolContainer {
+    box-shadow: inset 0 0 10rem #00000010;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .label:active .symbolContainer {
     box-shadow: inset 0 0 10rem #7d7d7d30;
 }
+.label.disabled .symbolContainer {
+    box-shadow: none;
+    box-shadow: inset 0 0 10rem #7d7d7d20;
+}
 
 .label .symbolContainer .symbolChecked,
-.label input:checked + .symbolContainer .symbolUnChecked {
+.label .input:checked + .symbolContainer .symbolUnChecked {
     display: none;
 }
 .label .symbolContainer .symbolUnChecked,
-.label input:checked + .symbolContainer .symbolChecked {
+.label .input:checked + .symbolContainer .symbolChecked {
     display: block;
 }

@@ -7,14 +7,14 @@ import Symbol from "@yakad/symbols";
 import styles from "./radioButton.module.css";
 import Button from "../button/button";
 
-type excludedTypes =
+type ExcludedTypes =
     | "type"
     | "name"
     | "defaultValue"
     | "defaultChecked"
     | "checked";
 export interface RadioButtonProps
-    extends Omit<React.InputHTMLAttributes<HTMLInputElement>, excludedTypes> {
+    extends Omit<React.InputHTMLAttributes<HTMLInputElement>, ExcludedTypes> {
     value: string | number;
     label?: string;
     datafromradiogroup?: {

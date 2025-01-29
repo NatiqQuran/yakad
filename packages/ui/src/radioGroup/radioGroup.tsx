@@ -4,9 +4,9 @@ import React, { useState, forwardRef, Children } from "react";
 import RadioButton, { RadioButtonProps } from "../radioButton/radioButton";
 
 type RadioButtonElement = React.ReactElement<RadioButtonProps>;
-type excludedTypes = "defaultValue" | "children";
+type ExcludedTypes = "defaultValue" | "children";
 export interface RadioGroupProps
-    extends Omit<React.HTMLAttributes<HTMLDivElement>, excludedTypes> {
+    extends Omit<React.HTMLAttributes<HTMLDivElement>, ExcludedTypes> {
     name: string;
     defaultvalue?: string;
     children?: RadioButtonElement | RadioButtonElement[];

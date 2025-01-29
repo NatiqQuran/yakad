@@ -4,9 +4,9 @@ import React, { forwardRef } from "react";
 import styles from "./codeField.module.css";
 import classNames from "classnames";
 
-type excludedTypes = "minLength" | "maxLength" | "type";
+type ExcludedTypes = "minLength" | "maxLength" | "type";
 export interface CodeFieldsProps
-    extends Omit<React.InputHTMLAttributes<HTMLInputElement>, excludedTypes> {
+    extends Omit<React.InputHTMLAttributes<HTMLInputElement>, ExcludedTypes> {
     length?: number;
     onfilled?: () => void;
     children?: React.ReactNode;

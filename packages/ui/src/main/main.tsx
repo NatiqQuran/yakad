@@ -10,13 +10,10 @@ export interface MainProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Main = forwardRef<HTMLDivElement, MainProps>(
-    (
-        { align = "start", navopen = false, className, children, ...restProps },
-        ref
-    ) => {
+    ({ align, navopen = false, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.main,
-            styles[align],
+            { [styles[align as string]]: align },
             { [styles.navOpen]: navopen },
             className
         );

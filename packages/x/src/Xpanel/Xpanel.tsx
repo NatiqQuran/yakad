@@ -6,13 +6,13 @@ import {
     Button,
     Main,
     Navigation,
-    Page,
-    PageProps,
+    Screen,
+    ScreenProps,
     Spacer,
 } from "@yakad/ui";
 import Symbol from "@yakad/symbols";
 
-export interface XpanelProps extends PageProps {
+export interface XpanelProps extends ScreenProps {
     name?: string;
     appbarchildren?: React.ReactNode;
     navigationchildren?: React.ReactNode;
@@ -49,7 +49,7 @@ const Xpanel = forwardRef<HTMLDivElement, XpanelProps>(
         }, []);
 
         return (
-            <Page ref={ref} {...restProps}>
+            <Screen ref={ref} {...restProps}>
                 <AppBar sticky>
                     <Button
                         icon={<Symbol icon="menu" />}
@@ -70,7 +70,7 @@ const Xpanel = forwardRef<HTMLDivElement, XpanelProps>(
                 </Main>
 
                 <Navigation open={navOpen}>{navigationchildren}</Navigation>
-            </Page>
+            </Screen>
         );
     }
 );

@@ -1,6 +1,4 @@
 div.container {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     padding-right: 2rem;
     padding-left: 2rem;
@@ -26,16 +24,22 @@ div.container.xl {
 }
 
 .start {
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
 }
 .center {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
 }
 .end {
+    display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-content: flex-end;
     align-items: flex-end;

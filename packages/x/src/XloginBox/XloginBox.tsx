@@ -1,10 +1,10 @@
 import React, { forwardRef } from "react";
 import classNames from "classnames";
-import { AppBar, Card, Main, Page, PageProps } from "@yakad/ui";
+import { AppBar, Card, Main, Screen, ScreenProps } from "@yakad/ui";
 
 import styles from "./XloginBox.module.css";
 
-export interface XloginBoxProps extends PageProps {
+export interface XloginBoxProps extends ScreenProps {
     classnamecard?: string;
     stylecard?: React.CSSProperties;
     children?: React.ReactNode;
@@ -13,7 +13,7 @@ export interface XloginBoxProps extends PageProps {
 const XloginBox = forwardRef<HTMLDivElement, XloginBoxProps>(
     ({ classnamecard, stylecard, children, ...restProps }, ref) => {
         return (
-            <Page ref={ref} {...restProps}>
+            <Screen ref={ref} {...restProps}>
                 <AppBar className={styles.header}></AppBar>
                 <Main className={styles.main}>
                     <Card
@@ -23,7 +23,7 @@ const XloginBox = forwardRef<HTMLDivElement, XloginBoxProps>(
                         {children}
                     </Card>
                 </Main>
-            </Page>
+            </Screen>
         );
     }
 );

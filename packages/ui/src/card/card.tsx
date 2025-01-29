@@ -9,10 +9,10 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Card = forwardRef<HTMLDivElement, CardProps>(
-    ({ align = "start", className, children, ...restProps }, ref) => {
+    ({ align, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.card,
-            styles[align],
+            { [styles[align as string]]: align },
             className
         );
 

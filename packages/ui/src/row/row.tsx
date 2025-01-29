@@ -11,18 +11,12 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Row = forwardRef<HTMLDivElement, RowProps>(
     (
-        {
-            align = "start",
-            overflow = "shrink",
-            className,
-            children,
-            ...restProps
-        },
+        { align, overflow = "shrink", className, children, ...restProps },
         ref
     ) => {
         const joinedClassNames = classNames(
             styles.row,
-            styles[align],
+            { [styles[align as string]]: align },
             styles[overflow],
             className
         );

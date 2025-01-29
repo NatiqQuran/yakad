@@ -1,18 +1,18 @@
 import React, { forwardRef } from "react";
 import classNames from "classnames";
 
-import styles from "./page.module.css";
+import styles from "./screen.module.css";
 
-export interface PageProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface ScreenProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
     children?: React.ReactNode;
 }
 
-const Page = forwardRef<HTMLDivElement, PageProps>(
-    ({ align = "start", className, children, ...restProps }, ref) => {
+const Screen = forwardRef<HTMLDivElement, ScreenProps>(
+    ({ align, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
-            styles.page,
-            styles[align],
+            styles.screen,
+            { [styles[align as string]]: align },
             className
         );
 
@@ -24,4 +24,4 @@ const Page = forwardRef<HTMLDivElement, PageProps>(
     }
 );
 
-export default Page;
+export default Screen;

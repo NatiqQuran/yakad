@@ -1,6 +1,6 @@
 {
     "name": "@yakad/x",
-    "version": "1.1.4",
+    "version": "1.1.6",
     "private": false,
     "author": "Natiq",
     "description": "Extreme components for NextJS",
@@ -28,8 +28,8 @@
         "prepublishOnly": "cp ../../README.md ../../LICENSE ./"
     },
     "dependencies": {
-        "@yakad/symbols": "1.0.17",
-        "@yakad/ui": "1.3.26",
+        "@yakad/symbols": "1.0.20",
+        "@yakad/ui": "1.3.31",
         "classnames": "2.5.1",
         "react": "18.3.1",
         "react-dom": "18.3.1"

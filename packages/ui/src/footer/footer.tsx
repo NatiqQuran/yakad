@@ -9,10 +9,10 @@ export interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Footer = forwardRef<HTMLDivElement, FooterProps>(
-    ({ align = "start", className, children, ...restProps }, ref) => {
+    ({ align, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.footer,
-            styles[align],
+            { [styles[align as string]]: align },
             className
         );
 

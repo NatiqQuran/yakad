@@ -9,10 +9,10 @@ export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Stack = forwardRef<HTMLDivElement, StackProps>(
-    ({ align = "start", className, children, ...restProps }, ref) => {
+    ({ align, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.stack,
-            styles[align],
+            { [styles[align as string]]: align },
             className
         );
 

@@ -4,13 +4,13 @@ import { AppBar, Card, Main, Page, PageProps } from "@yakad/ui";
 
 import styles from "./XloginBox.module.css";
 
-interface XloginBox extends PageProps {
+export interface XloginBoxProps extends PageProps {
     classnamecard?: string;
     stylecard?: React.CSSProperties;
     children?: React.ReactNode;
 }
 
-const XloginBox = forwardRef<HTMLDivElement, XloginBox>(
+const XloginBox = forwardRef<HTMLDivElement, XloginBoxProps>(
     ({ classnamecard, stylecard, children, ...restProps }, ref) => {
         return (
             <Page ref={ref} {...restProps}>

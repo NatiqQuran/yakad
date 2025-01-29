@@ -1,22 +1,44 @@
-.checkbox {
+.label {
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 4rem;
     height: 4rem;
+    line-height: 4rem;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    user-select: none;
 }
-.checkbox.labeled {
+.label.labeled {
     width: 100%;
 }
 
-.input {
+.label input {
     display: none;
 }
 
-.label {
+.label .symbolContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 1.8rem;
+    margin: 0.1rem;
+    margin-inline-start: auto;
+}
+.label:hover .symbolContainer {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.label:active .symbolContainer {
+    box-shadow: inset 0 0 10rem #7d7d7d30;
+}
+
+.label .symbolContainer .symbolChecked,
+.label input:checked + .symbolContainer .symbolUnChecked {
+    display: none;
+}
+.label .symbolContainer .symbolUnChecked,
+.label input:checked + .symbolContainer .symbolChecked {
     display: block;
-    width: auto;
-    margin: 0.9rem 1rem;
-    margin-inline-end: auto;
-    line-height: 2.2rem;
-    font-size: 2rem;
 }

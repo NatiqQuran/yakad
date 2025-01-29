@@ -3,12 +3,12 @@
     "version": "1.0.9",
     "private": false,
     "author": "Natiq",
-    "description": "JS frontend library for NextJS/React",
-    "main": "./build/index.js",
+    "description": "JS frontend library",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "keywords": [
         "yakad",
-        "react",
-        "react-component"
+        "library"
     ],
     "repository": {
         "type": "git",
@@ -21,17 +21,10 @@
     },
     "homepage": "https://yakad.natiq.net",
     "scripts": {
-        "build": "tsc"
-    },
-    "dependencies": {
-        "react": "18.3.1"
+        "build": "tsc",
+        "prepublishOnly": "cp ../../README.md ../../LICENSE ./"
     },
     "devDependencies": {
-        "@types/react": "18.3.3",
         "typescript": "5.4.5"
-    },
-    "publishConfig": {
-        "access": "public",
-        "directory": "build"
     }
 }

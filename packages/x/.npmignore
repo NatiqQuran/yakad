@@ -1,10 +1,8 @@
 # Exclude everything except essential files
 /src/
 /tests/
-/scripts/
 /*.ts
 /dist/
-/types/
 tsconfig.json
 
 # Include the built files in the final package

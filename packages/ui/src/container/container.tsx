@@ -10,13 +10,10 @@ export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Container = forwardRef<HTMLDivElement, ContainerProps>(
-    (
-        { align = "start", size = "xl", className, children, ...restProps },
-        ref
-    ) => {
+    ({ align, size = "xl", className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.container,
-            styles[align],
+            { [styles[align as string]]: align },
             styles[size],
             className
         );

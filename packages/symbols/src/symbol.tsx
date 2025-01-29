@@ -1,5 +1,6 @@
-import React from "react";
-import { joinClassNames, joinStyles } from "@yakad/lib";
+import React, { forwardRef } from "react";
+import classNames from "classnames";
+
 import { IconCode } from "./types";
 import styles from "./public/css/style.module.css";
 
@@ -21,29 +22,48 @@ const symbolSizeMaps: SymbolSizeMap = {
     large: 3.2,
 };
 
-export default function Symbol(props: SymbolProps) {
-    const joinedClassNames = joinClassNames(
-        styles.materialIcons,
-        props.type ? styles[props.type] : styles.default,
-        props.mirror ? styles[props.mirror + "Mirror"] : "",
-        props.className!
-    );
+const Symbol = forwardRef<HTMLSpanElement, SymbolProps>(
+    (
+        {
+            icon,
+            type = "default",
+            size = 2.4,
+            mirror,
+            className,
+            style,
+            children,
+            ...restProps
+        },
+        ref
+    ) => {
+        const joinedClassNames = classNames(
+            styles.materialIcons,
+            styles[type],
+            { [styles[mirror + "Mirror"]]: mirror },
+            className
+        );
 
-    const size =
-        (props.size
-            ? typeof props.size === "number"
-                ? props.size
-                : symbolSizeMaps[props.size]
-            : 2.4) + "rem";
+        const sizeValue: string =
+            (typeof size === "number" ? size : symbolSizeMaps[size]) + "rem";
 
-    const joinedStyles = joinStyles(
-        { width: size, height: size, fontSize: size, lineHeight: size },
-        props.style!
-    );
+        const joinedStyles = {
+            ...style,
+            width: sizeValue,
+            height: sizeValue,
+            fontSize: sizeValue,
+            lineHeight: sizeValue,
+        };
 
-    return (
-        <span {...props} className={joinedClassNames} style={joinedStyles}>
-            {props.icon}
-        </span>
-    );
-}
+        return (
+            <span
+                {...restProps}
+                className={joinedClassNames}
+                style={joinedStyles}
+            >
+                {icon}
+            </span>
+        );
+    }
+);
+
+export default Symbol;

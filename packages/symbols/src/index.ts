@@ -1,6 +1,5 @@
-import { IconCode } from "./types";
 import Symbol from "./symbol";
 
-export { type IconCode };
+export { type IconCode } from "./types";
 
 export default Symbol;

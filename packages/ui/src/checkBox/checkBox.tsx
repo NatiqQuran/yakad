@@ -1,60 +1,42 @@
-"use client";
-
 import React, { forwardRef } from "react";
 import classNames from "classnames";
 import Symbol from "@yakad/symbols";
 
 import styles from "./checkBox.module.css";
-import Button from "../button/button";
 
 export interface CheckBoxProps
     extends React.InputHTMLAttributes<HTMLInputElement> {
     label?: string;
-    children?: React.ReactNode;
 }
 
 const CheckBox = forwardRef<HTMLInputElement, CheckBoxProps>(
     ({ label, className, style, ...restProps }, ref) => {
-        const joinedClassNames = classNames(styles.checkbox, {
-            [styles.labeled]: label,
-        });
-
-        const [checked, setChecked] = React.useState<boolean>(
-            restProps.checked || false
+        const joinedClassNames = classNames(
+            styles.label,
+            { [styles.labeled]: label },
+            className
         );
-        const toggleCheckbox = () => {
-            setChecked((value) => !value);
-        };
 
         return (
-            <div className={joinedClassNames} style={style}>
-                {label && (
-                    <label className={styles.label} htmlFor={restProps.name}>
-                        {label}
-                    </label>
-                )}
-                <Button
-                    type="button"
-                    icon={
-                        <Symbol
-                            icon={
-                                checked
-                                    ? "check_box"
-                                    : "check_box_outline_blank"
-                            }
-                        />
-                    }
-                    onClick={toggleCheckbox}
-                    disabled={restProps.disabled}
-                />
+            <label className={joinedClassNames} style={style}>
+                {label}
                 <input
                     ref={ref}
                     {...restProps}
                     className={styles.input}
                     type="checkbox"
-                    checked={checked}
                 />
-            </div>
+                <div className={styles.symbolContainer}>
+                    <Symbol
+                        className={styles.symbolChecked}
+                        icon={"check_box"}
+                    />
+                    <Symbol
+                        className={styles.symbolUnChecked}
+                        icon={"check_box_outline_blank"}
+                    />
+                </div>
+            </label>
         );
     }
 );

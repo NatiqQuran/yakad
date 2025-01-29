@@ -38,7 +38,7 @@ export type { ThemeProps } from "./theme/theme";
 export { default as AppBar } from "./appBar/appBar";
 export { default as Button } from "./button/button";
 export { default as Card } from "./card/card";
-export { default as ChekBox } from "./checkBox/checkBox";
+export { default as CheckBox } from "./checkBox/checkBox";
 export { default as ClickOutsideListener } from "./clickOutsideListener/clickOutsideListener";
 export { default as CodeBox } from "./codeBox/codeBox";
 export { default as CodeField } from "./codeField/codeField";

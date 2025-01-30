@@ -1,6 +1,6 @@
 {
     "name": "@yakad/lib",
-    "version": "1.0.11",
+    "version": "1.0.13",
     "private": false,
     "author": "Natiq",
     "description": "JS frontend library",

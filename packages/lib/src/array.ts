@@ -31,10 +31,11 @@ const filterArrayBySearch = <T>(
             return true;
 
         // If the item is an array, recursively search its elements
-        if (Array.isArray(item)) {
-            if (filterArrayBySearch(item, searchValue, searchKeys).length > 0)
-                return true;
-        }
+        if (
+            Array.isArray(item) &&
+            filterArrayBySearch(item, searchValue, searchKeys).length > 0
+        )
+            return true;
 
         // If the item is an object (not null), recursively search its values
         if (typeof item === "object" && item != null) {

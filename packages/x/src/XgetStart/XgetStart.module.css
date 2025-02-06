@@ -1,10 +1,10 @@
 .xgetstart {
-    padding-top: "6rem";
-    padding-bottom: "6rem";
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 @media (max-width: 400px) {
     .xgetstart {
-        padding-top: "2rem";
+        padding-top: 2rem;
     }
 }

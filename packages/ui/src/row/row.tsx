@@ -5,18 +5,27 @@ import styles from "./row.module.css";
 
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     overflow?: "shrink" | "wrap" | "scroll";
     children?: React.ReactNode;
 }
 
 const Row = forwardRef<HTMLDivElement, RowProps>(
     (
-        { align, overflow = "shrink", className, children, ...restProps },
+        {
+            align,
+            size = "xl",
+            overflow = "shrink",
+            className,
+            children,
+            ...restProps
+        },
         ref
     ) => {
         const joinedClassNames = classNames(
             styles.row,
             { [styles[align as string]]: align },
+            styles[size],
             styles[overflow],
             className
         );

@@ -2,6 +2,7 @@
     align-self: flex-end;
     box-sizing: border-box;
     width: 100%;
+    flex-grow: 1;
     transition: width 0.3s;
 }
 

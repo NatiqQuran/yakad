@@ -27,7 +27,7 @@ const XgetStart = forwardRef<HTMLDivElement, XgetStartProps>(
                 {...restProps}
                 className={joinedClassNames}
             >
-                <GridContainer>
+                <GridContainer gap={2}>
                     <GridItem md={12} xl={5}>
                         <SvgIcon
                             style={{
@@ -47,7 +47,6 @@ const XgetStart = forwardRef<HTMLDivElement, XgetStartProps>(
                             flexDirection: "column",
                             justifyContent: "center",
                             alignItems: "center",
-                            padding: "0 2rem",
                         }}
                     >
                         {children}

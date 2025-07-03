@@ -3,8 +3,26 @@
     flex-direction: row;
     align-items: center;
     width: 100%;
-    gap: 1.5rem;
+    gap: 1rem;
+    margin-right: auto;
+    margin-left: auto;
     box-sizing: border-box;
+}
+
+.row.xs {
+    max-width: 44.4rem;
+}
+.row.sm {
+    max-width: 60rem;
+}
+.row.md {
+    max-width: 90rem;
+}
+.row.lg {
+    max-width: 120rem;
+}
+.row.xl {
+    max-width: 150rem;
 }
 
 .shrink {

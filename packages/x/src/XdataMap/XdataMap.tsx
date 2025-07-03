@@ -29,7 +29,15 @@ const XdataMap = forwardRef<HTMLTableElement, XdataMapProps>(
                     {data.map((row, index) => (
                         <Tr key={index}>
                             {dataKeys?.map((cell) => (
-                                <Td key={cell}>{row[cell]}</Td>
+                                <Td key={cell}>
+                                    {typeof row[cell] === "object" ? (
+                                        <pre>
+                                            {JSON.stringify(row[cell], null, 2)}
+                                        </pre>
+                                    ) : (
+                                        row[cell]
+                                    )}
+                                </Td>
                             ))}
                         </Tr>
                     ))}

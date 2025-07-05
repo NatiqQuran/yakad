@@ -9,7 +9,7 @@ export interface MainProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
 }
 
-const Main = forwardRef<HTMLDivElement, MainProps>(
+export const Main = forwardRef<HTMLDivElement, MainProps>(
     ({ align, navopen = false, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.main,
@@ -25,5 +25,3 @@ const Main = forwardRef<HTMLDivElement, MainProps>(
         );
     }
 );
-
-export default Main;

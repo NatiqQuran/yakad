@@ -8,7 +8,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
 }
 
-const Card = forwardRef<HTMLDivElement, CardProps>(
+export const Card = forwardRef<HTMLDivElement, CardProps>(
     ({ align, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.card,
@@ -23,5 +23,3 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
         );
     }
 );
-
-export default Card;

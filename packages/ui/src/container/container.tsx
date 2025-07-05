@@ -9,7 +9,7 @@ export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
 }
 
-const Container = forwardRef<HTMLDivElement, ContainerProps>(
+export const Container = forwardRef<HTMLDivElement, ContainerProps>(
     ({ align, size = "xl", className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.container,
@@ -25,5 +25,3 @@ const Container = forwardRef<HTMLDivElement, ContainerProps>(
         );
     }
 );
-
-export default Container;

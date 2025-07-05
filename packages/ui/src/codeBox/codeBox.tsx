@@ -11,7 +11,7 @@ export interface CodeBoxProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
 }
 
-const CodeBox = forwardRef<HTMLDivElement, CodeBoxProps>(
+export const CodeBox = forwardRef<HTMLDivElement, CodeBoxProps>(
     ({ copybutton, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(styles.ZZZZZZZZZZ, className);
 
@@ -23,5 +23,3 @@ const CodeBox = forwardRef<HTMLDivElement, CodeBoxProps>(
         );
     }
 );
-
-export default CodeBox;

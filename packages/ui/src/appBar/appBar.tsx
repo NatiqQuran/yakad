@@ -8,7 +8,7 @@ export interface AppBarProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
 }
 
-const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
+export const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
     ({ sticky, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.header,
@@ -23,5 +23,3 @@ const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
         );
     }
 );
-
-export default AppBar;

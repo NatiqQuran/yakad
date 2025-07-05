@@ -8,7 +8,7 @@ export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
 }
 
-const Stack = forwardRef<HTMLDivElement, StackProps>(
+export const Stack = forwardRef<HTMLDivElement, StackProps>(
     ({ align, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.stack,
@@ -23,5 +23,3 @@ const Stack = forwardRef<HTMLDivElement, StackProps>(
         );
     }
 );
-
-export default Stack;

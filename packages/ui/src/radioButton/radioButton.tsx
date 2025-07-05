@@ -24,7 +24,7 @@ export interface RadioButtonProps
     };
 }
 
-const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
+export const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
     ({ datafromradiogroup, label, onClick, className, ...restProps }, ref) => {
         const joinedClassNames = classNames(styles.radiobutton, {
             [styles.labeled]: label,
@@ -70,5 +70,3 @@ const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
         );
     }
 );
-
-export default RadioButton;

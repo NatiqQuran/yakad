@@ -10,7 +10,7 @@ export interface GridContainerProps
     children?: React.ReactNode;
 }
 
-const GridContainer = forwardRef<HTMLDivElement, GridContainerProps>(
+export const GridContainer = forwardRef<HTMLDivElement, GridContainerProps>(
     (
         { gap = 1.5, columns = 12, className, style, children, ...restProps },
         ref
@@ -38,5 +38,3 @@ const GridContainer = forwardRef<HTMLDivElement, GridContainerProps>(
         );
     }
 );
-
-export default GridContainer;

@@ -5,7 +5,7 @@ import styles from "./listItem.module.css";
 
 export type ListItemProps = React.HTMLAttributes<HTMLLIElement>;
 
-const ListItem = forwardRef<HTMLLIElement, ListItemProps>(
+export const ListItem = forwardRef<HTMLLIElement, ListItemProps>(
     ({ className, children, ...restProps }, ref) => {
         return (
             <li
@@ -18,5 +18,3 @@ const ListItem = forwardRef<HTMLLIElement, ListItemProps>(
         );
     }
 );
-
-export default ListItem;

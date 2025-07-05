@@ -8,7 +8,7 @@ export interface ScreenProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
 }
 
-const Screen = forwardRef<HTMLDivElement, ScreenProps>(
+export const Screen = forwardRef<HTMLDivElement, ScreenProps>(
     ({ align, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.screen,
@@ -23,5 +23,3 @@ const Screen = forwardRef<HTMLDivElement, ScreenProps>(
         );
     }
 );
-
-export default Screen;

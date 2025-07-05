@@ -8,7 +8,7 @@ export interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
 }
 
-const Footer = forwardRef<HTMLDivElement, FooterProps>(
+export const Footer = forwardRef<HTMLDivElement, FooterProps>(
     ({ align, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.footer,
@@ -23,5 +23,3 @@ const Footer = forwardRef<HTMLDivElement, FooterProps>(
         );
     }
 );
-
-export default Footer;

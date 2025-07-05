@@ -9,7 +9,7 @@ export interface InputFieldProps
     boxsize?: "small" | "normal";
 }
 
-const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
+export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
     (
         {
             variant = "outlined",
@@ -43,5 +43,3 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
         );
     }
 );
-
-export default InputField;

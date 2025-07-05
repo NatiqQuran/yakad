@@ -9,7 +9,7 @@ export interface ListProps extends React.HTMLAttributes<HTMLUListElement> {
     children?: React.ReactNode;
 }
 
-const List = forwardRef<HTMLUListElement, ListProps>(
+export const List = forwardRef<HTMLUListElement, ListProps>(
     (
         { direction = "row", collapsed, className, children, ...restProps },
         ref
@@ -28,5 +28,3 @@ const List = forwardRef<HTMLUListElement, ListProps>(
         );
     }
 );
-
-export default List;

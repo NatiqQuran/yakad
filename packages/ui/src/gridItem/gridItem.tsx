@@ -13,7 +13,7 @@ export interface GridItemProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
 }
 
-const GridItem = forwardRef<HTMLDivElement, GridItemProps>(
+export const GridItem = forwardRef<HTMLDivElement, GridItemProps>(
     ({ xs, sm, md, lg, xl, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             { [styles[`xs${xs}`]]: xs },
@@ -31,5 +31,3 @@ const GridItem = forwardRef<HTMLDivElement, GridItemProps>(
         );
     }
 );
-
-export default GridItem;

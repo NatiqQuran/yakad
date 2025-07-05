@@ -9,7 +9,7 @@ export interface HrProps extends React.HTMLAttributes<HTMLHRElement> {
     marginx?: number;
 }
 
-const Hr = forwardRef<HTMLHRElement, HrProps>(
+export const Hr = forwardRef<HTMLHRElement, HrProps>(
     ({ variant, height, marginx, className, style, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.hr,
@@ -34,5 +34,3 @@ const Hr = forwardRef<HTMLHRElement, HrProps>(
         );
     }
 );
-
-export default Hr;

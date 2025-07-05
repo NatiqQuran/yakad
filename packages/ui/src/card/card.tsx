@@ -5,14 +5,16 @@ import styles from "./card.module.css";
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
+    blur?: boolean;
     children?: React.ReactNode;
 }
 
-const Card = forwardRef<HTMLDivElement, CardProps>(
-    ({ align, className, children, ...restProps }, ref) => {
+export const Card = forwardRef<HTMLDivElement, CardProps>(
+    ({ align, blur, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.card,
             { [styles[align as string]]: align },
+            { [styles.blur]: blur },
             className
         );
 
@@ -23,5 +25,3 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
         );
     }
 );
-
-export default Card;

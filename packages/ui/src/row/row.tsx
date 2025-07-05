@@ -10,7 +10,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
 }
 
-const Row = forwardRef<HTMLDivElement, RowProps>(
+export const Row = forwardRef<HTMLDivElement, RowProps>(
     (
         {
             align,
@@ -37,5 +37,3 @@ const Row = forwardRef<HTMLDivElement, RowProps>(
         );
     }
 );
-
-export default Row;

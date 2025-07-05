@@ -3,15 +3,15 @@ import classNames from "classnames";
 import Symbol from "@yakad/symbols";
 
 import styles from "./codeBox.module.css";
-import Card from "../card/card";
-import Button from "../button/button";
+import { Card } from "../card/card";
+import { Button } from "../button/button";
 
 export interface CodeBoxProps extends React.HTMLAttributes<HTMLDivElement> {
     copybutton?: boolean;
     children?: React.ReactNode;
 }
 
-const CodeBox = forwardRef<HTMLDivElement, CodeBoxProps>(
+export const CodeBox = forwardRef<HTMLDivElement, CodeBoxProps>(
     ({ copybutton, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(styles.ZZZZZZZZZZ, className);
 
@@ -23,5 +23,3 @@ const CodeBox = forwardRef<HTMLDivElement, CodeBoxProps>(
         );
     }
 );
-
-export default CodeBox;

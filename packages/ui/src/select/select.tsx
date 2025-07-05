@@ -12,7 +12,7 @@ export interface SelectProps
     children?: React.ReactNode;
 }
 
-const Select = forwardRef<HTMLSelectElement, SelectProps>(
+export const Select = forwardRef<HTMLSelectElement, SelectProps>(
     (
         {
             variant = "outlined",
@@ -45,5 +45,3 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
         );
     }
 );
-
-export default Select;

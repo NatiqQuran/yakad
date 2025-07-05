@@ -8,7 +8,7 @@ export interface ClickOutsideListenerProps
     children?: React.ReactNode;
 }
 
-const ClickOutsideListener = ({
+export const ClickOutsideListener = ({
     onclickoutside,
     children,
     ...restProps
@@ -34,5 +34,3 @@ const ClickOutsideListener = ({
         </div>
     );
 };
-
-export default ClickOutsideListener;

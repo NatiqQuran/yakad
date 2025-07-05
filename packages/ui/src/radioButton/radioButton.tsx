@@ -5,7 +5,7 @@ import classNames from "classnames";
 import Symbol from "@yakad/symbols";
 
 import styles from "./radioButton.module.css";
-import Button from "../button/button";
+import { Button } from "../button/button";
 
 type ExcludedTypes =
     | "type"
@@ -24,7 +24,7 @@ export interface RadioButtonProps
     };
 }
 
-const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
+export const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
     ({ datafromradiogroup, label, onClick, className, ...restProps }, ref) => {
         const joinedClassNames = classNames(styles.radiobutton, {
             [styles.labeled]: label,
@@ -70,5 +70,3 @@ const RadioButton = forwardRef<HTMLInputElement, RadioButtonProps>(
         );
     }
 );
-
-export default RadioButton;

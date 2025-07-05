@@ -36,7 +36,7 @@ function removeUnNumberChars(inputElement: HTMLInputElement): void {
     inputElement.value = inputElement.value.replace(/[^0-9]+/, "");
 }
 
-const CodeField = forwardRef<HTMLInputElement, CodeFieldsProps>(
+export const CodeField = forwardRef<HTMLInputElement, CodeFieldsProps>(
     (
         {
             length = 6,
@@ -74,5 +74,3 @@ const CodeField = forwardRef<HTMLInputElement, CodeFieldsProps>(
         );
     }
 );
-
-export default CodeField;

@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import classNames from "classnames";
 
 import styles from "./button.module.css";
-import Loading from "../loading/loading";
+import { Loading } from "../loading/loading";
 
 export interface ButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -36,7 +36,7 @@ const iconSizeMaps: iconSizeMap = {
     large: 3.2,
 };
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     (
         {
             size = "medium",
@@ -86,5 +86,3 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         );
     }
 );
-
-export default Button;

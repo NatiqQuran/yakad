@@ -11,7 +11,7 @@ export interface ThemeProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
 }
 
-const Theme = forwardRef<HTMLDivElement, ThemeProps>(
+export const Theme = forwardRef<HTMLDivElement, ThemeProps>(
     (
         {
             mode = "system",
@@ -40,5 +40,3 @@ const Theme = forwardRef<HTMLDivElement, ThemeProps>(
         );
     }
 );
-
-export default Theme;

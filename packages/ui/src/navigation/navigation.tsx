@@ -9,7 +9,7 @@ export interface NavigationProps extends React.HTMLAttributes<HTMLElement> {
     children?: React.ReactNode;
 }
 
-const Navigation = forwardRef<HTMLDivElement, NavigationProps>(
+export const Navigation = forwardRef<HTMLDivElement, NavigationProps>(
     (
         { anchor = "auto", open = false, className, children, ...restProps },
         ref
@@ -25,5 +25,3 @@ const Navigation = forwardRef<HTMLDivElement, NavigationProps>(
         );
     }
 );
-
-export default Navigation;

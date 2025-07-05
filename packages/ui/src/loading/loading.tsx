@@ -8,7 +8,7 @@ export interface LoadingProps extends React.HTMLAttributes<HTMLDivElement> {
     variant?: "scaleOut" | "dots" | "spinner";
 }
 
-const Loading = forwardRef<HTMLDivElement, LoadingProps>(
+export const Loading = forwardRef<HTMLDivElement, LoadingProps>(
     (
         { size = "medium", variant = "spinner", className, ...restProps },
         ref
@@ -27,5 +27,3 @@ const Loading = forwardRef<HTMLDivElement, LoadingProps>(
         );
     }
 );
-
-export default Loading;

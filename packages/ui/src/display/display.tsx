@@ -9,7 +9,7 @@ export interface DisplayProps extends React.HTMLAttributes<HTMLElement> {
     children?: React.ReactNode;
 }
 
-const Display = forwardRef<HTMLDivElement, DisplayProps>(
+export const Display = forwardRef<HTMLDivElement, DisplayProps>(
     ({ minWidth, maxWidth, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             { [styles[`${minWidth}MinWidth`]]: minWidth },
@@ -24,5 +24,3 @@ const Display = forwardRef<HTMLDivElement, DisplayProps>(
         );
     }
 );
-
-export default Display;

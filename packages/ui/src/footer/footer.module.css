@@ -23,3 +23,17 @@
 .end {
     justify-content: flex-end;
 }
+
+.footer.sticky {
+    position: sticky;
+    bottom: 0;
+}
+
+.footer.blur {
+    background-color: color-mix(
+        in srgb,
+        rgb(var(--surfaceContainerColor, 243 237 247)) 85%,
+        transparent
+    );
+    backdrop-filter: blur(0.5rem);
+}

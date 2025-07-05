@@ -1,2 +1,3 @@
-export * from "./symbol";
+import Symbol from "./symbol";
+export default Symbol;
 export * from "./types";

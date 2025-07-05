@@ -5,14 +5,18 @@ import styles from "./footer.module.css";
 
 export interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
+    sticky?: boolean;
+    blur?: boolean;
     children?: React.ReactNode;
 }
 
-const Footer = forwardRef<HTMLDivElement, FooterProps>(
-    ({ align, className, children, ...restProps }, ref) => {
+export const Footer = forwardRef<HTMLDivElement, FooterProps>(
+    ({ align, sticky, blur, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.footer,
             { [styles[align as string]]: align },
+            { [styles.sticky]: sticky },
+            { [styles.blur]: blur },
             className
         );
 
@@ -23,5 +27,3 @@ const Footer = forwardRef<HTMLDivElement, FooterProps>(
         );
     }
 );
-
-export default Footer;

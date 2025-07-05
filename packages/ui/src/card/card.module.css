@@ -29,3 +29,12 @@
     align-content: flex-end;
     align-items: flex-end;
 }
+
+.card.blur {
+    background-color: color-mix(
+        in srgb,
+        rgb(var(--surfaceContainerHighestColor, 230 224 233)) 85%,
+        transparent
+    );
+    backdrop-filter: blur(0.5rem);
+}

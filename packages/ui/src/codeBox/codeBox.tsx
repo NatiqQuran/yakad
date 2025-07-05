@@ -3,8 +3,8 @@ import classNames from "classnames";
 import Symbol from "@yakad/symbols";
 
 import styles from "./codeBox.module.css";
-import Card from "../card/card";
-import Button from "../button/button";
+import { Card } from "../card/card";
+import { Button } from "../button/button";
 
 export interface CodeBoxProps extends React.HTMLAttributes<HTMLDivElement> {
     copybutton?: boolean;

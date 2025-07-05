@@ -5,7 +5,7 @@ import classNames from "classnames";
 import Symbol from "@yakad/symbols";
 
 import styles from "./radioButton.module.css";
-import Button from "../button/button";
+import { Button } from "../button/button";
 
 type ExcludedTypes =
     | "type"

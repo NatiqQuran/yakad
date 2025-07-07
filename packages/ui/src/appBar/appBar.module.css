@@ -17,20 +17,30 @@
     user-select: none;
 }
 
+.start {
+    justify-content: flex-start;
+}
+.center {
+    justify-content: center;
+}
+.end {
+    justify-content: flex-end;
+}
+
 .header.sticky {
     position: sticky;
     top: 0;
 }
 
+.header.hidden {
+    transform: translateY(-100%);
+}
+
 .header.blur {
     background-color: color-mix(
         in srgb,
-        rgb(var(--surfaceContainerColor, 243 237 247)) 85%,
+        rgb(var(--surfaceContainerColor, 243 237 247)) 90%,
         transparent
     );
     backdrop-filter: blur(0.5rem);
-}
-
-.header.hidden {
-    transform: translateY(-100%);
 }

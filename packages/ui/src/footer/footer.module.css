@@ -32,7 +32,7 @@
 .footer.blur {
     background-color: color-mix(
         in srgb,
-        rgb(var(--surfaceContainerColor, 243 237 247)) 85%,
+        rgb(var(--surfaceContainerColor, 243 237 247)) 90%,
         transparent
     );
     backdrop-filter: blur(0.5rem);

@@ -1,17 +1,42 @@
 .footer {
     display: flex;
-    box-sizing: border-box;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
     min-height: 6rem;
-    padding: 0.5rem 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 1rem;
+    box-sizing: border-box;
     z-index: 1;
     background: rgb(var(--surfaceContainerColor, 243 237 247));
     color: rgb(var(--onSurfaceColor, 28 27 31));
     fill: rgb(var(--onSurfaceColor, 28 27 31));
+    transition: transform 0.3s ease;
+    will-change: transform;
+    user-select: none;
+}
+
+.xs {
+    padding-left: max(2rem, calc(50% - 44.4rem / 2 + 2rem));
+    padding-right: max(2rem, calc(50% - 44.4rem / 2 + 2rem));
+}
+.sm {
+    padding-left: max(2rem, calc(50% - 60rem / 2 + 2rem));
+    padding-right: max(2rem, calc(50% - 60rem / 2 + 2rem));
+}
+.md {
+    padding-left: max(2rem, calc(50% - 90rem / 2 + 2rem));
+    padding-right: max(2rem, calc(50% - 90rem / 2 + 2rem));
+}
+.lg {
+    padding-left: max(2rem, calc(50% - 120rem / 2 + 2rem));
+    padding-right: max(2rem, calc(50% - 120rem / 2 + 2rem));
+}
+.xl {
+    padding-left: max(2rem, calc(50% - 150rem / 2 + 2rem));
+    padding-right: max(2rem, calc(50% - 150rem / 2 + 2rem));
 }
 
 .start {
@@ -24,12 +49,15 @@
     justify-content: flex-end;
 }
 
-.footer.sticky {
+.sticky {
     position: sticky;
     bottom: 0;
 }
+.hidden {
+    transform: translateY(100%);
+}
 
-.footer.blur {
+.blur {
     background-color: color-mix(
         in srgb,
         rgb(var(--surfaceContainerColor, 243 237 247)) 90%,

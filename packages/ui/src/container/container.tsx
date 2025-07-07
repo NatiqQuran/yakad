@@ -4,17 +4,17 @@ import classNames from "classnames";
 import styles from "./container.module.css";
 
 export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
-    align?: "start" | "center" | "end";
     size?: "xs" | "sm" | "md" | "lg" | "xl";
+    align?: "start" | "center" | "end";
     children?: React.ReactNode;
 }
 
 export const Container = forwardRef<HTMLDivElement, ContainerProps>(
-    ({ align, size = "xl", className, children, ...restProps }, ref) => {
+    ({ size = "xl", align, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.container,
-            { [styles[align as string]]: align },
             styles[size],
+            { [styles[align as string]]: align },
             className
         );
 

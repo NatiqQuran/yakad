@@ -4,7 +4,8 @@ import classNames from "classnames";
 import styles from "./appBar.module.css";
 
 export interface AppBarProps extends React.HTMLAttributes<HTMLDivElement> {
-    position?: "initial" | "sticky" | "autohide";
+    position?: "initial" | "sticky" | "scroll";
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
     align?: "start" | "center" | "end";
     blur?: boolean;
     children?: React.ReactNode;
@@ -14,6 +15,7 @@ export const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
     (
         {
             position = "initial",
+            size,
             align,
             blur,
             className,
@@ -26,7 +28,7 @@ export const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
         const [lastScrollY, setLastScrollY] = useState(0);
 
         useEffect(() => {
-            if (position !== "autohide") return;
+            if (position !== "scroll") return;
 
             const handleScroll = () => {
                 const currentScrollY = window.scrollY;
@@ -49,12 +51,12 @@ export const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
         const joinedClassNames = classNames(
             styles.header,
             {
-                [styles.sticky]:
-                    position === "sticky" || position === "autohide",
-                [styles.hidden]: position === "autohide" && !show,
-                [styles[align as string]]: align,
-                [styles.blur]: blur,
+                [styles.sticky]: position === "sticky" || position === "scroll",
             },
+            { [styles.hidden]: position === "scroll" && !show },
+            { [styles[size as string]]: size },
+            { [styles[align as string]]: align },
+            { [styles.blur]: blur },
             className
         );
 

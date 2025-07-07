@@ -13,6 +13,9 @@ type TextVariant =
     | "body1"
     | "body2"
     | "body3"
+    | "body4"
+    | "body5"
+    | "body6"
     | "caption"
     | "span";
 
@@ -116,7 +119,7 @@ export interface ParagraphProps
     children?: React.ReactNode;
 }
 export const P = forwardRef<HTMLParagraphElement, ParagraphProps>(
-    ({ variant = "body2", className, children, ...restProps }, ref) => {
+    ({ variant = "body5", className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
             styles.text,
             styles[variant as string],
@@ -145,6 +148,24 @@ export const Span = forwardRef<HTMLSpanElement, SpanProps>(
             <span ref={ref} {...restProps} className={joinedClassNames}>
                 {children}
             </span>
+        );
+    }
+);
+
+export interface TextProps extends React.HTMLAttributes<HTMLDivElement> {
+    variant?: TextVariant;
+    children?: React.ReactNode;
+}
+export const Text = forwardRef<HTMLDivElement, TextProps>(
+    ({ variant = "body5", className, children, ...restProps }, ref) => {
+        const joinedClassNames = classNames(
+            styles[variant as string],
+            className
+        );
+        return (
+            <div ref={ref} {...restProps} className={joinedClassNames}>
+                {children}
+            </div>
         );
     }
 );

@@ -33,23 +33,38 @@
     line-height: 2.2rem;
 }
 .body1 {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 3.8rem;
+}
+.body2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 3rem;
+}
+.body3 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+}
+.body4 {
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 2.4rem;
 }
-.body2 {
+.body5 {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 2.2rem;
 }
-.body3 {
+.body6 {
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 2rem;
 }
 .caption {
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.6rem;
 }
 .span {

@@ -26,4 +26,5 @@ export * from "./spacer/spacer";
 export * from "./stack/stack";
 export * from "./svgIcon/svgIcon";
 export * from "./table/table";
+export * from "./text/text";
 export * from "./theme/theme";

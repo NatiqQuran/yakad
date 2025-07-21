@@ -4,7 +4,7 @@ import React, { forwardRef, useEffect, useRef } from "react";
 
 export interface ClickOutsideListenerProps
     extends React.HTMLAttributes<HTMLDivElement> {
-    onclickoutside: () => void;
+    onclickoutside?: () => void;
     children?: React.ReactNode;
 }
 
@@ -18,7 +18,7 @@ export const ClickOutsideListener = ({
     useEffect(() => {
         const handleOutSideClick = (event: MouseEvent) => {
             if (ref.current && !(ref.current as any).contains(event.target))
-                onclickoutside();
+                onclickoutside?.();
         };
 
         document.addEventListener("click", handleOutSideClick, true);

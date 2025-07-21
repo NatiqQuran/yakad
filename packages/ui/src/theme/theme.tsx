@@ -1,13 +1,15 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect } from "react";
 import classNames from "classnames";
 
 import "./globals.css";
 import styles from "./theme.module.css";
 
+export type ThemeMode = "light" | "dark" | "system";
+export type ThemeColor = "green" | "red" | "yellow" | "blue" | "purple";
 export interface ThemeProps extends React.HTMLAttributes<HTMLDivElement> {
-    mode?: "light" | "dark" | "system";
-    color?: "green" | "red" | "yellow" | "blue" | "purple";
-    zoom?: number;
+    mode?: ThemeMode;
+    color?: ThemeColor;
+    zoom?: number; //Percentage zoom level (e.g., 100 for 100%)
     children?: React.ReactNode;
 }
 
@@ -16,7 +18,7 @@ export const Theme = forwardRef<HTMLDivElement, ThemeProps>(
         {
             mode = "system",
             color = "blue",
-            zoom,
+            zoom = 100,
             className,
             children,
             ...restProps
@@ -24,12 +26,18 @@ export const Theme = forwardRef<HTMLDivElement, ThemeProps>(
         ref
     ) => {
         const zoomPercentage = zoom ? (zoom / 100) * 62.5 : 62.5;
-        //   document.documentElement.style.setProperty("font-size", zoomPercentage + "%");
+
+        useEffect(() => {
+            document.documentElement.style.setProperty(
+                "font-size",
+                zoomPercentage + "%"
+            );
+        }, [zoomPercentage]);
 
         const joinedClassNames = classNames(
+            styles.theme,
             styles[mode],
             styles[color],
-            styles.theme,
             className
         );
 

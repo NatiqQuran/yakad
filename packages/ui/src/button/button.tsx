@@ -1,8 +1,8 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import classNames from "classnames";
 
 import styles from "./button.module.css";
-import { Loading } from "../loading/loading";
+import { Loading } from "../";
 
 export interface ButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement> {

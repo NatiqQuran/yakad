@@ -1,11 +1,11 @@
 "use client";
 
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import classNames from "classnames";
 import Symbol from "@yakad/symbols";
 
 import styles from "./radioButton.module.css";
-import { Button } from "../button/button";
+import { Button } from "../";
 
 type ExcludedTypes =
     | "type"

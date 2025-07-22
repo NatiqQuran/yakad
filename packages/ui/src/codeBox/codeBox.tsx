@@ -1,10 +1,9 @@
-import React, { forwardRef, useReducer, useRef } from "react";
+import { forwardRef, useReducer, useRef } from "react";
 import classNames from "classnames";
 import Symbol from "@yakad/symbols";
 
 import styles from "./codeBox.module.css";
-import { Card } from "../card/card";
-import { Button } from "../button/button";
+import { Button, Card } from "../";
 
 export interface CodeBoxProps extends React.HTMLAttributes<HTMLDivElement> {
     copybutton?: boolean;

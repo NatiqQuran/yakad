@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import classNames from "classnames";
 
 import styles from "./appBar.module.css";

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import { Table, TableProps } from "@yakad/ui";
 
 export interface XTableProps extends TableProps {}

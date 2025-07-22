@@ -1,6 +1,6 @@
 "use client";
 
-import React, { forwardRef, useEffect, useRef } from "react";
+import { forwardRef, useEffect, useRef } from "react";
 
 export interface ClickOutsideListenerProps
     extends React.HTMLAttributes<HTMLDivElement> {

@@ -1,4 +1,4 @@
-import React, { forwardRef, useState, useEffect } from "react";
+import { forwardRef, useState, useEffect } from "react";
 import classNames from "classnames";
 
 import styles from "./footer.module.css";

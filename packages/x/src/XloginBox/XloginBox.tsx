@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import classNames from "classnames";
 import { AppBar, Card, Main, Screen, ScreenProps } from "@yakad/ui";
 

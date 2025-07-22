@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import { Button, List, ListItem, ListProps, Spacer } from "@yakad/ui";
 
 interface MenuItem {

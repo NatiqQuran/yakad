@@ -1,6 +1,6 @@
 "use client";
 
-import React, { forwardRef, useEffect } from "react";
+import { forwardRef, useEffect } from "react";
 import {
     AppBar,
     Button,

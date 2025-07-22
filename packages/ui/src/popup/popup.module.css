@@ -1,0 +1,20 @@
+.popupscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(var(--surfaceContainerColor, 243 237 247), 0.2);
+    backdrop-filter: blur(0.2rem);
+    z-index: 3;
+}
+
+.popup {
+    min-height: 10rem;
+    width: 90%;
+    max-width: 60rem;
+    max-height: 90vh;
+}

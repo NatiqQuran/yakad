@@ -1,5 +1,4 @@
 import { Card } from "@yakad/ui";
-import React from "react";
 
 export interface XtColumnProps {
     datakey: string;
@@ -12,6 +11,6 @@ export interface XtColumnProps {
     defaulthidden?: boolean;
 }
 
-export default function XtColumn(props: XtColumnProps) {
-    return <Card>Just use XtColumn inside Xtable!</Card>;
-}
+export const XtColumn = (props: XtColumnProps) => (
+    <Card>Just use XtColumn inside Xtable!</Card>
+);

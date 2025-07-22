@@ -1,4 +1,4 @@
-import React, { Children, ReactElement, forwardRef } from "react";
+import { Children, ReactElement, forwardRef } from "react";
 import { Td, Tfoot, TfootProps, Tr } from "@yakad/ui";
 import { XTrProps, XTfProps, AcceptedFootFuncs } from "./Xtrhdf";
 

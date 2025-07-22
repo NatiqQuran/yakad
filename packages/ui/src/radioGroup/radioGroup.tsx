@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, forwardRef, Children } from "react";
-import { RadioButton, RadioButtonProps } from "../radioButton/radioButton";
+import { useState, forwardRef, Children } from "react";
+import { RadioButton, RadioButtonProps } from "../";
 
 type RadioButtonElement = React.ReactElement<RadioButtonProps>;
 type ExcludedTypes = "defaultValue" | "children";

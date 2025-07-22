@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import { Tr, Th, Td, TrProps, ThProps, TdProps } from "@yakad/ui";
 
 export interface XTrProps extends TrProps {

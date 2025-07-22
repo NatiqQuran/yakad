@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import { Table, Thead, Tbody, Tr, Th, Td } from "@yakad/ui";
 
 interface RowData {

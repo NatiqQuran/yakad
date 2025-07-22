@@ -17,6 +17,7 @@ export * from "./listItem/listItem";
 export * from "./loading/loading";
 export * from "./main/main";
 export * from "./navigation/navigation";
+export * from "./popup/popup";
 export * from "./radioButton/radioButton";
 export * from "./radioGroup/radioGroup";
 export * from "./row/row";

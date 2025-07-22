@@ -13,8 +13,8 @@
 }
 
 .popup {
-    min-height: 50rem;
-    width: 100%;
+    min-height: 10rem;
+    width: 90%;
     max-width: 60rem;
-    max-height: 100vh;
+    max-height: 90vh;
 }

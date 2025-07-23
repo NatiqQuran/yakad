@@ -7,7 +7,7 @@ import styles from "./theme.module.css";
 export type DarkStyle = "light" | "dark" | "system";
 export type ThemeColor = "green" | "red" | "yellow" | "blue" | "purple";
 export interface ThemeProps extends React.HTMLAttributes<HTMLDivElement> {
-    darkStyle?: DarkStyle;
+    darkstyle?: DarkStyle;
     color?: ThemeColor;
     zoom?: number; //Percentage zoom level (e.g., 100 for 100%)
     children?: React.ReactNode;
@@ -16,7 +16,7 @@ export interface ThemeProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Theme = forwardRef<HTMLDivElement, ThemeProps>(
     (
         {
-            darkStyle = "system",
+            darkstyle = "system",
             color = "blue",
             zoom = 100,
             className,
@@ -36,7 +36,7 @@ export const Theme = forwardRef<HTMLDivElement, ThemeProps>(
 
         const joinedClassNames = classNames(
             styles.theme,
-            styles[darkStyle],
+            styles[darkstyle],
             styles[color],
             className
         );

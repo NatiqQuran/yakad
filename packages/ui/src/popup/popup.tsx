@@ -28,7 +28,7 @@ export const Popup = forwardRef<
                 onclickoutside={onclosebuttonclick}
                 className={styles.popup}
             >
-                <Card ref={ref} {...restProps} className={styles.popup}>
+                <Card ref={ref} {...restProps}>
                     <Row style={{ marginBottom: "2rem" }}>
                         <Text variant="heading4">{heading}</Text>
                         <Spacer />

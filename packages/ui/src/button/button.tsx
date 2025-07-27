@@ -17,7 +17,7 @@ export interface ButtonProps
         | "link"
         | "fab";
     borderstyle?: "none" | "semi" | "squircle" | "rounded";
-    icon?: JSX.Element;
+    icon?: React.ReactNode;
     iconposition?: "start" | "end";
     loadingposition?: "auto" | "center";
     loadingvariant?: "scaleOut" | "dots" | "spinner";

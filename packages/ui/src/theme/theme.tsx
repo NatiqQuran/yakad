@@ -3,10 +3,12 @@ import classNames from "classnames";
 
 import "./globals.css";
 import styles from "./theme.module.css";
+import boxingStyles from "../boxing.module.css";
 
 export type DarkStyle = "light" | "dark" | "system";
 export type ThemeColor = "green" | "red" | "yellow" | "blue" | "purple";
 export interface ThemeProps extends React.HTMLAttributes<HTMLDivElement> {
+    align?: "start" | "center" | "end";
     darkstyle?: DarkStyle;
     color?: ThemeColor;
     zoom?: number; //Percentage zoom level (e.g., 100 for 100%)
@@ -16,6 +18,7 @@ export interface ThemeProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Theme = forwardRef<HTMLDivElement, ThemeProps>(
     (
         {
+            align,
             darkstyle = "system",
             color = "blue",
             zoom = 100,
@@ -35,6 +38,8 @@ export const Theme = forwardRef<HTMLDivElement, ThemeProps>(
         }, [zoomPercentage]);
 
         const joinedClassNames = classNames(
+            boxingStyles.flexColumnBox,
+            { [boxingStyles[align as string]]: align },
             styles.theme,
             styles[darkstyle],
             styles[color],

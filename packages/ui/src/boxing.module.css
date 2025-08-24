@@ -4,10 +4,6 @@
     flex-direction: column;
     box-sizing: border-box;
 }
-/* fullWidthLover */
-.flexColumnBox > :global(.fullWidthLover) {
-    width: 100%;
-}
 /* align */
 .flexColumnBox.start {
     justify-content: flex-start;
@@ -20,6 +16,10 @@
 .flexColumnBox.end {
     justify-content: flex-end;
     align-items: flex-end;
+}
+/* fullWidthLover */
+.flexColumnBox > :global(.fullWidthLover) {
+    width: 100%;
 }
 
 /* Row Box */
@@ -39,6 +39,10 @@
 }
 .flexRowBox.end {
     justify-content: flex-end;
+}
+/* fullWidthLover */
+.flexRowBox.shrink > :global(.fullWidthLover) {
+    width: 100%;
 }
 /* overflow */
 .flexRowBox.shrink {

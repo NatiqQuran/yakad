@@ -2,7 +2,6 @@
     position: relative;
     display: inline-block;
     box-sizing: border-box;
-    width: 100%;
     padding-top: 0.6rem;
 }
 .input {

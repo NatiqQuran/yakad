@@ -1,3 +1,5 @@
+//Tags: FormTag
+
 import { forwardRef } from "react";
 import classNames from "classnames";
 import Symbol from "@yakad/symbols";
@@ -13,6 +15,7 @@ export interface CheckBoxProps
 export const CheckBox = forwardRef<HTMLInputElement, CheckBoxProps>(
     ({ label, className, style, ...restProps }, ref) => {
         const joinedClassNames = classNames(
+            label && "fullWidthLover",
             styles.label,
             { [styles.labeled]: label },
             { [styles.disabled]: restProps.disabled },

@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 import { Button, List, ListItem, ListProps, Spacer } from "@yakad/ui";
 
 interface MenuItem {
@@ -14,7 +14,7 @@ export interface XmenuListProps extends Omit<ListProps, "children"> {
 
 const XmenuList = forwardRef<HTMLUListElement, XmenuListProps>(
     ({ items, direction = "column", ...restProps }, ref) => {
-        const [collapsedList, setCollapsedList] = React.useState<{
+        const [collapsedList, setCollapsedList] = useState<{
             [n: number]: boolean;
         }>({});
 

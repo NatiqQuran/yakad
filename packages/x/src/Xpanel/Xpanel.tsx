@@ -1,6 +1,6 @@
 "use client";
 
-import { forwardRef, useEffect } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import {
     AppBar,
     Button,
@@ -30,7 +30,7 @@ const Xpanel = forwardRef<HTMLDivElement, XpanelProps>(
         },
         ref
     ) => {
-        const [navOpen, setNavOpen] = React.useState<boolean>(false);
+        const [navOpen, setNavOpen] = useState<boolean>(false);
         const toggleNavOpen = () => setNavOpen((prev) => !prev);
 
         const handleClickAwayNav = () =>
@@ -50,7 +50,7 @@ const Xpanel = forwardRef<HTMLDivElement, XpanelProps>(
 
         return (
             <Screen ref={ref} {...restProps}>
-                <AppBar sticky>
+                <AppBar position="sticky">
                     <Button
                         icon={<Symbol icon="menu" />}
                         onClick={toggleNavOpen}

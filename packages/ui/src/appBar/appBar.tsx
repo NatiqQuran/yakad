@@ -2,11 +2,13 @@ import { forwardRef, useEffect, useState } from "react";
 import classNames from "classnames";
 
 import styles from "./appBar.module.css";
+import boxingStyles from "../boxing.module.css";
 
 export interface AppBarProps extends React.HTMLAttributes<HTMLDivElement> {
+    align?: "start" | "center" | "end";
+    overflow?: "shrink" | "wrap" | "scroll";
     position?: "initial" | "sticky" | "scroll";
     size?: "xs" | "sm" | "md" | "lg" | "xl";
-    align?: "start" | "center" | "end";
     blur?: boolean;
     children?: React.ReactNode;
 }
@@ -14,9 +16,10 @@ export interface AppBarProps extends React.HTMLAttributes<HTMLDivElement> {
 export const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
     (
         {
+            align,
+            overflow = "shrink",
             position = "initial",
             size,
-            align,
             blur,
             className,
             children,
@@ -49,13 +52,15 @@ export const AppBar = forwardRef<HTMLDivElement, AppBarProps>(
         }, [lastScrollY, position]);
 
         const joinedClassNames = classNames(
+            boxingStyles.flexRowBox,
+            { [boxingStyles[align as string]]: align },
+            boxingStyles[overflow],
             styles.header,
             {
                 [styles.sticky]: position === "sticky" || position === "scroll",
             },
             { [styles.hidden]: position === "scroll" && !show },
             { [styles[size as string]]: size },
-            { [styles[align as string]]: align },
             { [styles.blur]: blur },
             className
         );

@@ -1,15 +1,9 @@
 .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
     min-height: 6rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    box-shadow: 0 0.1rem 0 0 rgb(var(--onSurfaceColor, 28 27 31) / 0.1);
     gap: 1rem;
-    box-sizing: border-box;
+    box-shadow: 0 0.1rem 0 0 rgb(var(--onSurfaceColor, 28 27 31) / 0.1);
     z-index: 2;
     background: rgb(var(--surfaceContainerColor, 243 237 247));
     color: rgb(var(--onSurfaceColor, 28 27 31));
@@ -38,16 +32,6 @@
 .xl {
     padding-left: max(2rem, calc(50% - 150rem / 2 + 2rem));
     padding-right: max(2rem, calc(50% - 150rem / 2 + 2rem));
-}
-
-.start {
-    justify-content: flex-start;
-}
-.center {
-    justify-content: center;
-}
-.end {
-    justify-content: flex-end;
 }
 
 .sticky {

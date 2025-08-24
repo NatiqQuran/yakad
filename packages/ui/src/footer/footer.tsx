@@ -2,11 +2,13 @@ import { forwardRef, useState, useEffect } from "react";
 import classNames from "classnames";
 
 import styles from "./footer.module.css";
+import boxingStyles from "../boxing.module.css";
 
 export interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
+    align?: "start" | "center" | "end";
+    overflow?: "shrink" | "wrap" | "scroll";
     position?: "initial" | "sticky" | "scroll";
     size?: "xs" | "sm" | "md" | "lg" | "xl";
-    align?: "start" | "center" | "end";
     blur?: boolean;
     children?: React.ReactNode;
 }
@@ -14,9 +16,10 @@ export interface FooterProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Footer = forwardRef<HTMLDivElement, FooterProps>(
     (
         {
+            align,
+            overflow = "shrink",
             position = "initial",
             size,
-            align,
             blur,
             className,
             children,
@@ -49,11 +52,13 @@ export const Footer = forwardRef<HTMLDivElement, FooterProps>(
         }, [lastScrollY, position]);
 
         const joinedClassNames = classNames(
+            boxingStyles.flexRowBox,
+            { [boxingStyles[align as string]]: align },
+            boxingStyles[overflow],
             styles.footer,
             { [styles.sticky]: position === "sticky" || position === "scroll" },
             { [styles.hidden]: position === "scroll" && !show },
             { [styles[size as string]]: size },
-            { [styles[align as string]]: align },
             { [styles.blur]: blur },
             className
         );

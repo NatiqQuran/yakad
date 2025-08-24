@@ -1,12 +1,5 @@
 .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
     gap: 1rem;
-    margin-right: auto;
-    margin-left: auto;
-    box-sizing: border-box;
 }
 
 .row.xs {
@@ -23,44 +16,4 @@
 }
 .row.xl {
     max-width: 150rem;
-}
-
-.shrink {
-    white-space: nowrap;
-}
-.wrap {
-    flex-wrap: wrap;
-}
-.scroll {
-    overflow-x: auto;
-    white-space: nowrap;
-}
-.scroll > * {
-    flex-shrink: 0;
-}
-.scroll::-webkit-scrollbar {
-    height: 0.6rem;
-}
-.scroll::-webkit-scrollbar-thumb {
-    border-radius: 0.3rem;
-    background: transparent;
-}
-.scroll:hover::-webkit-scrollbar-thumb {
-    background-color: rgba(125, 125, 125, 0.16);
-}
-.scroll::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(125, 125, 125, 0.24);
-}
-.scroll::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.start {
-    justify-content: flex-start;
-}
-.center {
-    justify-content: center;
-}
-.end {
-    justify-content: flex-end;
 }

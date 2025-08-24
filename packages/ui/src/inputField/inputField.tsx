@@ -1,3 +1,5 @@
+//Tags: FormTag
+
 import React, { forwardRef } from "react";
 import classNames from "classnames";
 
@@ -29,7 +31,7 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
         );
 
         return (
-            <div className={styles.div}>
+            <div className={classNames("fullWidthLover", styles.div)}>
                 <input
                     ref={ref}
                     {...restProps}

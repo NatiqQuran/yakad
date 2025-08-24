@@ -6,6 +6,7 @@
     background: none;
     border: none;
     border-top: 0.1rem solid rgb(var(--primaryContainerColor, 211 227 253));
+    box-sizing: border-box;
 }
 .dotted {
     border-top: 0.4rem dotted rgb(var(--primaryContainerColor, 211 227 253));

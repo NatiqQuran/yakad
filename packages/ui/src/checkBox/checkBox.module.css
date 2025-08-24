@@ -10,9 +10,6 @@
     user-select: none;
     cursor: pointer;
 }
-.label.labeled {
-    width: 100%;
-}
 .label.disabled {
     cursor: default;
 }

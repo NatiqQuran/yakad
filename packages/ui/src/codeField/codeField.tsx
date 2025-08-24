@@ -1,3 +1,4 @@
+//Tags: FormTag
 "use client";
 
 import { forwardRef } from "react";
@@ -51,7 +52,11 @@ export const CodeField = forwardRef<HTMLInputElement, CodeFieldsProps>(
         },
         ref
     ) => {
-        const joinedClassNames = classNames(styles.input, className);
+        const joinedClassNames = classNames(
+            "fullWidthLover",
+            styles.input,
+            className
+        );
 
         const joinedStyles = { ...style, width: `calc(1.5ch * ${length})` };
 

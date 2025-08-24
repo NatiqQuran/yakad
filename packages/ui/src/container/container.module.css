@@ -1,12 +1,9 @@
 .container {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     padding: 2rem;
     gap: 2rem;
     margin-right: auto;
     margin-left: auto;
-    box-sizing: border-box;
 }
 
 .container.xs {
@@ -23,20 +20,4 @@
 }
 .container.xl {
     max-width: 150rem;
-}
-
-.start {
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
-}
-.center {
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-.end {
-    justify-content: flex-end;
-    align-content: flex-end;
-    align-items: flex-end;
 }

@@ -7,26 +7,27 @@ import {
     Spacer,
     Stack,
     Text,
-} from "../";
+} from "@yakad/ui";
 import Symbol from "@yakad/symbols";
-import styles from "./popup.module.css";
 
-export interface PopupProps {
+import styles from "./Xpopup.module.css";
+
+export interface XpopupProps {
     align?: "start" | "center" | "end";
     heading?: string;
     onclosebuttonclick?: () => void;
     children?: React.ReactNode;
 }
 
-export const Popup = forwardRef<
+export const Xpopup = forwardRef<
     HTMLDivElement,
-    Omit<PopupProps, "className" | "style">
+    Omit<XpopupProps, "className" | "style">
 >(({ align, heading, onclosebuttonclick, children, ...restProps }, ref) => {
     return (
-        <div className={styles.popupscreen}>
+        <div className={styles.xpopupscreen}>
             <ClickOutsideListener
                 onclickoutside={onclosebuttonclick}
-                className={styles.popup}
+                className={styles.xpopup}
             >
                 <Card ref={ref} {...restProps}>
                     <Row style={{ marginBottom: "2rem" }}>
@@ -50,4 +51,4 @@ export const Popup = forwardRef<
     );
 });
 
-Popup.displayName = "Popup";
+Xpopup.displayName = "Xpopup";

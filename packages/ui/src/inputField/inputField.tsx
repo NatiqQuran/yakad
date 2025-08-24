@@ -1,5 +1,3 @@
-//Tags: FormTag
-
 import React, { forwardRef } from "react";
 import classNames from "classnames";
 

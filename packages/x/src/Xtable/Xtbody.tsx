@@ -7,7 +7,7 @@ export interface XTbodyProps extends TbodyProps {
     children: ReactElement<XTrProps> | ReactElement<XTrProps>[];
 }
 
-const XTbody = forwardRef<HTMLTableSectionElement, XTbodyProps>(
+export const XTbody = forwardRef<HTMLTableSectionElement, XTbodyProps>(
     ({ children, ...restProps }, ref) => {
         const arrayChildren = Children.toArray(children);
 
@@ -30,5 +30,4 @@ const XTbody = forwardRef<HTMLTableSectionElement, XTbodyProps>(
         );
     }
 );
-
-export default XTbody;
+XTbody.displayName = "XTbody";

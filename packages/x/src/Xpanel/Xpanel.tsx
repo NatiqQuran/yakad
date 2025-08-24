@@ -19,7 +19,7 @@ export interface XpanelProps extends ScreenProps {
     children?: React.ReactNode;
 }
 
-const Xpanel = forwardRef<HTMLDivElement, XpanelProps>(
+export const Xpanel = forwardRef<HTMLDivElement, XpanelProps>(
     (
         {
             name = "Yakad Panel",
@@ -74,5 +74,4 @@ const Xpanel = forwardRef<HTMLDivElement, XpanelProps>(
         );
     }
 );
-
-export default Xpanel;
+Xpanel.displayName = "Xpanel";

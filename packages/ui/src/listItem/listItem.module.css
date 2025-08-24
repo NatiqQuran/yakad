@@ -4,3 +4,6 @@
     align-items: stretch;
     box-sizing: border-box;
 }
+.listItem > :global(.allowFullWidth) {
+    width: 100%;
+}

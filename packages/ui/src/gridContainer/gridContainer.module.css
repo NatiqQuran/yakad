@@ -1,11 +1,41 @@
 .gridcontainer {
     display: grid;
-    box-sizing: border-box;
     width: 100%;
+    box-sizing: border-box;
 }
 
+.gridColumns1 {
+    grid-template-columns: 1fr;
+}
+.gridColumns2 {
+    grid-template-columns: 1fr 1fr;
+}
+.gridColumns3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.gridColumns4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.gridColumns5 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.gridColumns6 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.gridColumns7 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.gridColumns8 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.gridColumns9 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
 .gridColumns10 {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.gridColumns11 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .gridColumns12 {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;

@@ -11,6 +11,7 @@ export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Stack = forwardRef<HTMLDivElement, StackProps>(
     ({ align, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
+            "allowFullWidth",
             styles.stack,
             { [styles[align as string]]: align },
             className

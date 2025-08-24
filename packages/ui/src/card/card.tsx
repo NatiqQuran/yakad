@@ -12,6 +12,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Card = forwardRef<HTMLDivElement, CardProps>(
     ({ align, blur, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
+            "allowFullWidth",
             styles.card,
             { [styles[align as string]]: align },
             { [styles.blur]: blur },

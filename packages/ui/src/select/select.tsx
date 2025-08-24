@@ -1,3 +1,5 @@
+//Tags: FormTag
+
 import { forwardRef } from "react";
 import classNames from "classnames";
 
@@ -34,7 +36,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
         );
 
         return (
-            <div className={inputStyles.div}>
+            <div className={classNames("allowFullWidth", inputStyles.div)}>
                 <select ref={ref} {...restProps} className={joinedClassNames}>
                     {children}
                 </select>

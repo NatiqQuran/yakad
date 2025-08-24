@@ -8,7 +8,7 @@
     margin-left: auto;
     box-sizing: border-box;
 }
-.container > * {
+.container > :global(.allowFullWidth) {
     width: 100%;
 }
 

@@ -4,6 +4,9 @@
     gap: 2rem;
     box-sizing: border-box;
 }
+.stack > :global(.allowFullWidth) {
+    width: 100%;
+}
 
 .start {
     justify-content: flex-start;

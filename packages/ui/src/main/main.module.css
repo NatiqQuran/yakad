@@ -1,38 +1,37 @@
 .main {
-    align-self: flex-end;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    align-self: flex-end;
     flex-grow: 1;
     transition: width 0.3s;
+    box-sizing: border-box;
+}
+.main > :global(.allowFullWidth) {
+    width: 100%;
 }
 
 .navOpen {
-    width: calc(100% - 22rem);
+    max-width: calc(100% - 22rem);
 }
 
 @media screen and (max-width: 1000px) {
     .navOpen {
-        width: 100%;
+        max-width: initial;
     }
 }
 
 .start {
-    display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     align-content: flex-start;
     align-items: flex-start;
 }
 .center {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
 }
 .end {
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
     align-content: flex-end;
     align-items: flex-end;

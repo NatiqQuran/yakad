@@ -1,12 +1,15 @@
 .screen {
     display: flex;
     flex-direction: column;
+    width: 100%;
     min-height: 100vh;
     box-sizing: border-box;
-    width: 100%;
     background: rgb(var(--surfaceColor, 254 247 255));
     color: rgb(var(--onSurfaceColor, 28 27 31));
     fill: rgb(var(--onSurfaceColor, 28 27 31));
+}
+.screen > :global(.allowFullWidth) {
+    width: 100%;
 }
 
 .start {

@@ -15,6 +15,7 @@ export const List = forwardRef<HTMLUListElement, ListProps>(
         ref
     ) => {
         const joinedClassNames = classNames(
+            "allowFullWidth",
             styles.list,
             styles[direction],
             { [styles.collapsed]: collapsed },

@@ -9,7 +9,11 @@ export interface TableProps
 }
 export const Table = forwardRef<HTMLTableElement, TableProps>(
     ({ className, children, ...restProps }, ref) => {
-        const joinedClassNames = classNames(styles.table, className);
+        const joinedClassNames = classNames(
+            "allowFullWidth",
+            styles.table,
+            className
+        );
 
         return (
             <table ref={ref} {...restProps} className={joinedClassNames}>

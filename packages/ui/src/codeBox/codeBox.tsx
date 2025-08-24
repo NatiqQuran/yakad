@@ -12,7 +12,11 @@ export interface CodeBoxProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const CodeBox = forwardRef<HTMLDivElement, CodeBoxProps>(
     ({ copybutton, className, children, ...restProps }, ref) => {
-        const joinedClassNames = classNames(styles.ZZZZZZZZZZ, className);
+        const joinedClassNames = classNames(
+            "allowFullWidth",
+            styles.ZZZZZZZZZZ,
+            className
+        );
 
         return (
             <Card ref={ref} {...restProps} className={joinedClassNames}>

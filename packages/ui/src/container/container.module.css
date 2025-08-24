@@ -8,6 +8,9 @@
     margin-left: auto;
     box-sizing: border-box;
 }
+.container > * {
+    width: 100%;
+}
 
 .container.xs {
     max-width: 44.4rem;

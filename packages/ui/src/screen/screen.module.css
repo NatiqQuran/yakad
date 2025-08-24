@@ -1,29 +1,7 @@
 .screen {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    box-sizing: border-box;
     background: rgb(var(--surfaceColor, 254 247 255));
     color: rgb(var(--onSurfaceColor, 28 27 31));
     fill: rgb(var(--onSurfaceColor, 28 27 31));
-}
-.screen > :global(.allowFullWidth) {
-    width: 100%;
-}
-
-.start {
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
-}
-.center {
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-.end {
-    justify-content: flex-end;
-    align-content: flex-end;
-    align-items: flex-end;
 }

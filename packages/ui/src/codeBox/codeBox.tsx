@@ -13,7 +13,7 @@ export interface CodeBoxProps extends React.HTMLAttributes<HTMLDivElement> {
 export const CodeBox = forwardRef<HTMLDivElement, CodeBoxProps>(
     ({ copybutton, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
-            "allowFullWidth",
+            "fullWidthLover",
             styles.ZZZZZZZZZZ,
             className
         );

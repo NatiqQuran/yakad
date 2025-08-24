@@ -1,19 +1,13 @@
 .navigation {
     position: fixed;
-    display: flex;
-    flex-direction: column;
     max-width: 100%;
     padding: 1rem 0;
-    box-sizing: border-box;
     z-index: 3;
     background: rgb(var(--surfaceContainerColor, 243 237 247));
     color: rgb(var(--onSurfaceColor, 28 27 31));
     fill: rgb(var(--onSurfaceColor, 28 27 31));
     transition: transform 0.3s;
     overflow-y: auto;
-}
-.navigation > :global(.allowFullWidth) {
-    width: 100%;
 }
 
 .auto,

@@ -53,7 +53,7 @@ export const CodeField = forwardRef<HTMLInputElement, CodeFieldsProps>(
         ref
     ) => {
         const joinedClassNames = classNames(
-            "allowFullWidth",
+            "fullWidthLover",
             styles.input,
             className
         );

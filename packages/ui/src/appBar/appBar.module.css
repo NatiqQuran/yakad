@@ -8,6 +8,8 @@
     background: rgb(var(--surfaceContainerColor, 243 237 247));
     color: rgb(var(--onSurfaceColor, 28 27 31));
     fill: rgb(var(--onSurfaceColor, 28 27 31));
+    transition: transform 0.3s ease;
+    will-change: transform;
     user-select: none;
 }
 

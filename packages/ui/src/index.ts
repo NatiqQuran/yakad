@@ -9,7 +9,6 @@ export * from "./stack/stack";
 export * from "./row/row";
 export * from "./gridContainer/gridContainer";
 export * from "./gridItem/gridItem";
-export * from "./popup/popup";
 export * from "./card/card";
 // Theme & Styling
 export * from "./theme/theme";

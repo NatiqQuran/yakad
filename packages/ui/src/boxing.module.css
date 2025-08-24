@@ -1,11 +1,14 @@
+/* Column Box */
 .flexColumnBox {
     display: flex;
     flex-direction: column;
-    width: 100%;
     box-sizing: border-box;
-    transition: transform 0.3s ease;
-    will-change: transform;
 }
+/* fullWidthLover */
+.flexColumnBox > :global(.fullWidthLover) {
+    width: 100%;
+}
+/* align */
 .flexColumnBox.start {
     justify-content: flex-start;
     align-items: flex-start;
@@ -19,14 +22,13 @@
     align-items: flex-end;
 }
 
+/* Row Box */
 .flexRowBox {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    transition: transform 0.3s ease;
-    will-change: transform;
 }
 /* align */
 .flexRowBox.start {

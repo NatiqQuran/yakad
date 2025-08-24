@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import classNames from "classnames";
 
 import styles from "./stack.module.css";
+import boxingStyles from "../boxing.module.css";
 
 export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
@@ -11,9 +12,10 @@ export interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Stack = forwardRef<HTMLDivElement, StackProps>(
     ({ align, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
-            "allowFullWidth",
+            boxingStyles.flexColumnBox,
+            { [boxingStyles[align as string]]: align },
+            "fullWidthLover",
             styles.stack,
-            { [styles[align as string]]: align },
             className
         );
 

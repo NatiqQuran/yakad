@@ -1,14 +1,8 @@
 .main {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     align-self: flex-end;
     flex-grow: 1;
     transition: width 0.3s;
-    box-sizing: border-box;
-}
-.main > :global(.allowFullWidth) {
-    width: 100%;
 }
 
 .navOpen {
@@ -19,20 +13,4 @@
     .navOpen {
         max-width: initial;
     }
-}
-
-.start {
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
-}
-.center {
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-.end {
-    justify-content: flex-end;
-    align-content: flex-end;
-    align-items: flex-end;
 }

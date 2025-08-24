@@ -12,7 +12,7 @@ export interface DisplayProps extends React.HTMLAttributes<HTMLElement> {
 export const Display = forwardRef<HTMLDivElement, DisplayProps>(
     ({ minWidth, maxWidth, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
-            "allowFullWidth",
+            "fullWidthLover",
             { [styles[`${minWidth}MinWidth`]]: minWidth },
             { [styles[`${maxWidth}MaxWidth`]]: maxWidth },
             className

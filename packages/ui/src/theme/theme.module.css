@@ -1,11 +1,7 @@
 .theme {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     font-family: sans-serif;
     font-size: 1.6rem;
-}
-.theme > :global(.allowFullWidth) {
-    width: 100%;
 }
 
 .blue {

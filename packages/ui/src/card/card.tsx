@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import classNames from "classnames";
 
 import styles from "./card.module.css";
+import boxingStyles from "../boxing.module.css";
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
     align?: "start" | "center" | "end";
@@ -12,9 +13,10 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Card = forwardRef<HTMLDivElement, CardProps>(
     ({ align, blur, className, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(
-            "allowFullWidth",
+            boxingStyles.flexColumnBox,
+            { [boxingStyles[align as string]]: align },
+            "fullWidthLover",
             styles.card,
-            { [styles[align as string]]: align },
             { [styles.blur]: blur },
             className
         );

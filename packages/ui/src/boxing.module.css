@@ -1,0 +1,71 @@
+.flexColumnBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+.flexColumnBox.start {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.flexColumnBox.center {
+    justify-content: center;
+    align-items: center;
+}
+.flexColumnBox.end {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.flexRowBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+/* align */
+.flexRowBox.start {
+    justify-content: flex-start;
+}
+.flexRowBox.center {
+    justify-content: center;
+}
+.flexRowBox.end {
+    justify-content: flex-end;
+}
+/* overflow */
+.flexRowBox.shrink {
+    white-space: nowrap;
+}
+.flexRowBox.wrap {
+    flex-wrap: wrap;
+}
+.flexRowBox.scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
+}
+.flexRowBox.scroll > * {
+    flex-shrink: 0;
+}
+.flexRowBox.scroll::-webkit-scrollbar {
+    height: 0.6rem;
+}
+.flexRowBox.scroll::-webkit-scrollbar-thumb {
+    border-radius: 0.3rem;
+    background: transparent;
+}
+.flexRowBox.scroll:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(125, 125, 125, 0.16);
+}
+.flexRowBox.scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(125, 125, 125, 0.24);
+}
+.flexRowBox.scroll::-webkit-scrollbar-track {
+    background: transparent;
+}

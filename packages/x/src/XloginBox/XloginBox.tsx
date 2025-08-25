@@ -10,7 +10,7 @@ export interface XloginBoxProps extends ScreenProps {
     children?: React.ReactNode;
 }
 
-const XloginBox = forwardRef<HTMLDivElement, XloginBoxProps>(
+export const XloginBox = forwardRef<HTMLDivElement, XloginBoxProps>(
     ({ classnamecard, stylecard, children, ...restProps }, ref) => {
         return (
             <Screen ref={ref} {...restProps}>
@@ -27,5 +27,4 @@ const XloginBox = forwardRef<HTMLDivElement, XloginBoxProps>(
         );
     }
 );
-
-export default XloginBox;
+XloginBox.displayName = "XloginBox";

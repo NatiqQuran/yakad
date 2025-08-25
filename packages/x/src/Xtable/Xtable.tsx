@@ -5,7 +5,7 @@ import { Table, TableProps } from "@yakad/ui";
 
 export interface XTableProps extends TableProps {}
 
-const XTable = forwardRef<HTMLTableElement, XTableProps>(
+export const XTable = forwardRef<HTMLTableElement, XTableProps>(
     ({ children, ...restProps }, ref) => {
         return (
             <Table ref={ref} {...restProps}>
@@ -14,5 +14,4 @@ const XTable = forwardRef<HTMLTableElement, XTableProps>(
         );
     }
 );
-
-export default XTable;
+XTable.displayName = "XTable";

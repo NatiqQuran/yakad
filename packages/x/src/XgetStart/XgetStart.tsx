@@ -16,7 +16,7 @@ export interface XgetStartProps extends ContainerProps {
     children?: React.ReactNode;
 }
 
-const XgetStart = forwardRef<HTMLDivElement, XgetStartProps>(
+export const XgetStart = forwardRef<HTMLDivElement, XgetStartProps>(
     ({ logo, size = "lg", className, style, children, ...restProps }, ref) => {
         const joinedClassNames = classNames(styles.xgetstart, className);
 
@@ -56,5 +56,4 @@ const XgetStart = forwardRef<HTMLDivElement, XgetStartProps>(
         );
     }
 );
-
-export default XgetStart;
+XgetStart.displayName = "XgetStart";

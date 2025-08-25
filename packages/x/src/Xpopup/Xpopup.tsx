@@ -50,5 +50,4 @@ export const Xpopup = forwardRef<
         </div>
     );
 });
-
 Xpopup.displayName = "Xpopup";

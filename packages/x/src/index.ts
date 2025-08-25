@@ -5,6 +5,7 @@ export * from "./XgetStart/XgetStart";
 export * from "./Xpanel/Xpanel";
 export * from "./XmenuList/XmenuList";
 export * from "./Xpopup/Xpopup";
+export * from "./XscrollContainer/XscrollContainer";
 export * from "./Xtable/Xtable";
 export * from "./Xtable/Xthead";
 export * from "./Xtable/Xtbody";
